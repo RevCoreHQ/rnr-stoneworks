@@ -1,4 +1,6 @@
-import { Quote } from 'lucide-react';
+import { Quote, ArrowUpRight } from 'lucide-react';
+
+const GOOGLE_REVIEWS_URL = 'https://share.google/E0p9OvVIvtdbw18jH';
 
 const featured = {
   quote: "Both my husband and I are extremely glad we picked Rock N Roll Stoneworks for our outdoor project. Jordan and Jason were a pleasure to work with from the planning of the design details to the completed backyard of our dreams. They actually listened to the ideas we had and incorporated them into the plan. We had an extensive plan — outdoor kitchen, large hardscape area with mixed materials, a raised garden bed, sod, plants, and even a beach area. We were amazed at how well everything turned out. We now have our own backyard oasis!",
@@ -39,7 +41,19 @@ export function TestimonialCards() {
   return (
     <section className="section-pad bg-white">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
-        <p className="label mb-12 text-center">Client Experiences</p>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12">
+          <p className="label">Client Experiences</p>
+          <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-body text-[11px] tracking-[0.18em] uppercase text-ink-400 hover:text-gold-600 transition-colors border-b border-gold-200 hover:border-gold-400 pb-0.5"
+          >
+            <span className="text-gold-500">★★★★★</span>
+            See All Google Reviews
+            <ArrowUpRight className="w-3 h-3" />
+          </a>
+        </div>
 
         {/* Featured pull-quote */}
         <div className="relative border border-gold-200 rounded-sm p-10 lg:p-16 mb-8 overflow-hidden">
@@ -83,6 +97,19 @@ export function TestimonialCards() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-body text-sm text-ink-400 hover:text-gold-600 transition-colors"
+          >
+            <span className="text-gold-500 text-base">★★★★★</span>
+            <span>Read all reviews on Google</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </a>
         </div>
       </div>
     </section>
