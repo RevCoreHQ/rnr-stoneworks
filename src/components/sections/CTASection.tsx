@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/Button';
+import Link from 'next/link';
 import { siteConfig } from '@/data/site-config';
 import { Phone } from 'lucide-react';
 
@@ -8,61 +8,46 @@ interface CTASectionProps {
   variant?: 'dark' | 'light' | 'brand';
 }
 
-function cn(...classes: (string | undefined)[]) {
-  return classes.filter(Boolean).join(' ');
-}
-
 export function CTASection({
-  headline = 'Ready to Transform Your Outdoor Space?',
-  description = 'Get a free estimate from our team. We will visit your property, listen to your vision, and provide a detailed proposal — no obligation.',
-  variant = 'dark',
+  headline = 'Ready to Begin?',
+  description = 'Every project starts with a free consultation — we visit your property, understand your vision, and provide a no-obligation proposal with a full 3D design.',
 }: CTASectionProps) {
-  const bgClasses = {
-    dark: 'bg-stone-900 text-white',
-    light: 'bg-parchment-50 text-stone-900',
-    brand: 'bg-brand-800 text-white',
-  };
-
   return (
-    <section className={cn(bgClasses[variant], 'section-padding relative overflow-hidden')}>
-      {/* Amber accent line at top */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-amber/50 to-transparent" />
+    <section className="relative bg-ink-950 overflow-hidden">
+      {/* Gold accent top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/50 to-transparent" />
 
-      {/* Decorative orbs */}
-      {variant === 'dark' && (
-        <>
-          <div className="orb w-[400px] h-[400px] bg-brand-700/10 -top-[20%] -right-[10%]" />
-          <div className="orb w-[300px] h-[300px] bg-brand-600/5 -bottom-[15%] -left-[10%]" />
-        </>
-      )}
+      {/* Subtle texture orbs */}
+      <div className="absolute w-[600px] h-[600px] rounded-full bg-gold-600/5 -top-[20%] -right-[10%] blur-3xl pointer-events-none" />
+      <div className="absolute w-[400px] h-[400px] rounded-full bg-gold-600/4 -bottom-[15%] -left-[5%] blur-3xl pointer-events-none" />
 
-      <div className="container-narrow text-center relative z-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-5">
-          {headline}
-        </h2>
-        <p
-          className={cn(
-            'text-lg leading-relaxed mb-8 max-w-2xl mx-auto',
-            variant === 'dark'
-              ? 'text-stone-300'
-              : variant === 'brand'
-              ? 'text-brand-100'
-              : 'text-stone-600'
-          )}
-        >
-          {description}
-        </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button href="/contact" size="lg" variant={variant === 'light' ? 'primary' : 'secondary'}>
-            Get Your Free Estimate
-          </Button>
-          <a
-            href={`tel:${siteConfig.phoneRaw}`}
-            className="inline-flex items-center gap-2 text-lg font-medium hover:opacity-80 transition-opacity"
+      <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 py-24 lg:py-36">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="label-dark mb-8">Start Your Project</p>
+          <h2
+            className="font-display font-light text-white leading-[1.06] mb-8"
+            style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)' }}
           >
-            <Phone className="w-5 h-5" />
-            {siteConfig.phone}
-          </a>
+            {headline}
+          </h2>
+          <p className="font-body text-white/50 text-lg leading-relaxed mb-12">
+            {description}
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-10 py-4 bg-gold-500 text-ink-950 font-body font-semibold text-[13px] tracking-[0.12em] uppercase hover:bg-gold-400 transition-colors duration-300 rounded-sm shadow-glow"
+            >
+              Begin Your Project
+            </Link>
+            <a
+              href={`tel:${siteConfig.phoneRaw}`}
+              className="inline-flex items-center gap-2.5 font-body text-sm text-white/50 hover:text-gold-400 transition-colors duration-300"
+            >
+              <Phone className="w-4 h-4" />
+              {siteConfig.phone}
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,39 +1,50 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { siteConfig } from '@/data/site-config';
 import { mainNav } from '@/data/navigation';
-import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/97 backdrop-blur-md border-b border-stone-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo — text wordmark until brand logo is provided */}
-          <Link href="/" className="shrink-0 flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center">
-              <span className="text-white font-display font-bold text-sm leading-none">RNR</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-display text-lg font-bold text-stone-900 leading-tight block">
+    <header
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+        scrolled || mobileOpen
+          ? 'bg-ink-950/95 backdrop-blur-xl border-b border-white/5 shadow-ink'
+          : 'bg-transparent'
+      )}
+    >
+      <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="flex items-center justify-between h-18 lg:h-22">
+
+          {/* Logo wordmark */}
+          <Link href="/" className="shrink-0 group">
+            <div className="flex flex-col leading-none">
+              <span className="font-display text-xl lg:text-2xl font-light text-white tracking-[0.06em] group-hover:text-gold-400 transition-colors duration-300">
                 Rock N Roll
               </span>
-              <span className="text-xs font-medium text-brand-700 uppercase tracking-widest leading-tight block">
+              <span className="font-body text-[10px] font-medium tracking-[0.3em] uppercase text-gold-500 mt-0.5">
                 Stoneworks
               </span>
             </div>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
-            {mainNav.map((item) => (
+          <nav className="hidden lg:flex items-center gap-0" aria-label="Main navigation">
+            {mainNav.filter(n => n.label !== 'Home').map((item) => (
               <div
                 key={item.href}
                 className="relative"
@@ -42,27 +53,27 @@ export function Header() {
               >
                 <Link
                   href={item.href}
-                  className={cn(
-                    'flex items-center gap-1 px-3 py-2 text-sm font-medium text-stone-700 hover:text-brand-700 transition-colors rounded-lg hover:bg-brand-50/60 whitespace-nowrap',
-                    item.children && 'pr-2'
-                  )}
+                  className="flex items-center gap-0.5 px-3.5 py-2 text-[13px] font-body font-medium text-white/70 hover:text-white transition-colors duration-200 whitespace-nowrap tracking-wide"
                 >
                   {item.label}
-                  {item.children && <ChevronDown className="w-3.5 h-3.5" />}
+                  {item.children && <ChevronDown className="w-3 h-3 ml-0.5 opacity-60" />}
                 </Link>
 
                 {item.children && openDropdown === item.label && (
-                  <div className="absolute top-full left-0 pt-2 z-50">
-                    <div className="w-64 bg-white rounded-xl shadow-elevated border border-stone-100 py-2 animate-fade-in">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block px-4 py-2.5 text-sm text-stone-700 hover:text-brand-700 hover:bg-brand-50/60 transition-colors"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                  <div className="absolute top-full left-0 pt-3 z-50">
+                    <div className="w-60 bg-ink-900/98 backdrop-blur-xl rounded-xl border border-white/8 py-2 shadow-ink animate-fade-in">
+                      <div className="absolute top-3 left-6 right-6 h-px bg-gradient-to-r from-transparent via-gold-600/50 to-transparent" />
+                      <div className="pt-3">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="block px-5 py-2.5 text-[13px] text-white/60 hover:text-gold-400 hover:bg-white/4 transition-all duration-150 font-body"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 )}
@@ -71,50 +82,53 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-5">
             <a
               href={`tel:${siteConfig.phoneRaw}`}
-              className="flex items-center gap-2 text-sm font-medium text-stone-700 hover:text-brand-700 transition-colors whitespace-nowrap"
+              className="flex items-center gap-2 text-[13px] font-medium text-white/60 hover:text-gold-400 transition-colors duration-200 whitespace-nowrap font-body"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-3.5 h-3.5" />
               {siteConfig.phone}
             </a>
-            <Button href="/contact" size="sm">
-              Free Estimate
-            </Button>
+            <Link
+              href="/contact"
+              className="px-5 py-2.5 text-[13px] font-medium font-body tracking-wide border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 hover:border-gold-500 transition-all duration-300 rounded-sm"
+            >
+              Begin Your Project
+            </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-stone-700 hover:text-brand-700 transition-colors"
+            className="lg:hidden p-2 text-white/70 hover:text-white transition-colors"
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-stone-100 bg-white animate-fade-in">
-          <nav className="px-4 py-4 space-y-1" aria-label="Mobile navigation">
+        <div className="lg:hidden border-t border-white/8 animate-fade-in">
+          <nav className="px-6 py-5 space-y-0.5">
             {mainNav.map((item) => (
               <div key={item.href}>
                 <Link
                   href={item.href}
-                  className="block px-3 py-2.5 text-base font-medium text-stone-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors"
+                  className="block py-3 text-base font-body font-medium text-white/70 hover:text-gold-400 transition-colors border-b border-white/5"
                   onClick={() => !item.children && setMobileOpen(false)}
                 >
                   {item.label}
                 </Link>
                 {item.children && (
-                  <div className="pl-6 space-y-0.5">
+                  <div className="pl-4 pt-1 pb-2 space-y-0">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block px-3 py-2 text-sm text-stone-600 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors"
+                        className="block py-2 text-sm text-white/45 hover:text-gold-400 transition-colors font-body"
                         onClick={() => setMobileOpen(false)}
                       >
                         {child.label}
@@ -125,16 +139,20 @@ export function Header() {
               </div>
             ))}
           </nav>
-          <div className="px-4 pb-4 pt-2 flex gap-3">
-            <Button href="/contact" className="flex-1" size="sm">
-              Free Estimate
-            </Button>
+          <div className="px-6 pb-6 pt-2 flex gap-3">
+            <Link
+              href="/contact"
+              className="flex-1 py-3 text-center text-sm font-medium font-body border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 transition-all rounded-sm"
+              onClick={() => setMobileOpen(false)}
+            >
+              Begin Your Project
+            </Link>
             <a
               href={`tel:${siteConfig.phoneRaw}`}
-              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-xl border-2 border-brand-700 text-brand-800 hover:bg-brand-50 transition-colors"
+              className="flex-1 py-3 text-center text-sm font-medium font-body text-white/60 border border-white/15 rounded-sm hover:border-white/30 transition-all"
             >
-              <Phone className="w-4 h-4" />
-              Call Now
+              <Phone className="w-4 h-4 inline mr-1.5" />
+              Call
             </a>
           </div>
         </div>

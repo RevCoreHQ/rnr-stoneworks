@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 
 interface ButtonProps {
   href?: string;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   children: React.ReactNode;
@@ -12,48 +11,35 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary:
-    'bg-gradient-to-r from-brand-700 to-brand-600 text-white hover:from-brand-800 hover:to-brand-700 shadow-lg shadow-brand-700/25 hover:shadow-xl hover:shadow-brand-700/30 hover:-translate-y-0.5',
-  secondary:
-    'bg-gradient-to-r from-stone-800 to-stone-900 text-white hover:from-stone-700 hover:to-stone-800 shadow-lg shadow-stone-900/25 hover:-translate-y-0.5',
-  outline:
-    'border-2 border-brand-600 text-brand-700 hover:bg-brand-50 hover:shadow-md hover:-translate-y-0.5',
-  ghost: 'text-brand-700 hover:bg-brand-50',
+  primary: 'bg-gold-500 text-ink-950 hover:bg-gold-400 shadow-glow',
+  ghost: 'border border-white/20 text-white/70 hover:border-gold-500/50 hover:text-gold-400',
+  outline: 'border border-gold-400 text-gold-700 hover:bg-gold-50',
 };
 
 const sizes = {
-  sm: 'px-4 py-2 text-sm',
-  md: 'px-6 py-3 text-base',
-  lg: 'px-8 py-4 text-lg',
+  sm: 'px-5 py-2.5 text-[12px]',
+  md: 'px-7 py-3.5 text-[13px]',
+  lg: 'px-10 py-4 text-[13px]',
 };
 
 export function Button({
   href,
   variant = 'primary',
   size = 'md',
-  className,
+  className = '',
   children,
   onClick,
   type = 'button',
 }: ButtonProps) {
-  const classes = cn(
-    'inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2',
+  const classes = [
+    'inline-flex items-center justify-center font-body font-semibold tracking-[0.12em] uppercase rounded-sm transition-colors duration-300 focus:outline-none',
     variants[variant],
     sizes[size],
-    className
-  );
+    className,
+  ].join(' ');
 
   if (href) {
-    return (
-      <Link href={href} className={classes}>
-        {children}
-      </Link>
-    );
+    return <Link href={href} className={classes}>{children}</Link>;
   }
-
-  return (
-    <button type={type} onClick={onClick} className={classes}>
-      {children}
-    </button>
-  );
+  return <button type={type} onClick={onClick} className={classes}>{children}</button>;
 }

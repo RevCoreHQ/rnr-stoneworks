@@ -1,81 +1,68 @@
-import { Star } from 'lucide-react';
+import { Quote } from 'lucide-react';
 
-const testimonials = [
+const featured = {
+  quote: "Rock N Roll Stoneworks completely transformed our backyard. The 3D tour they showed us before starting was spot on. The paver patio, fire pit, and retaining wall all came out beautifully — exactly what we envisioned. Our neighbors keep asking who did the work.",
+  author: 'Marcus D.',
+  location: 'Lafayette, CO',
+  service: 'Paver Patio, Fire Pit & Retaining Wall',
+  rating: 5,
+};
+
+const secondary = [
   {
-    id: 'review-1',
-    quote:
-      "Rock N Roll Stoneworks completely transformed our backyard. They handled the entire design process — the 3D tour they showed us before starting was spot on. The paver patio, fire pit, and retaining wall all came out beautifully. Our neighbors keep asking who did the work.",
-    author: 'Marcus D.',
-    location: 'Lafayette, CO',
-    service: 'Paver Patio & Fire Pit',
-    rating: 5,
-  },
-  {
-    id: 'review-2',
-    quote:
-      "We had a sloped backyard that we never used. RNR came in, built a two-tier retaining wall system with a lower patio and upper lawn area, and installed an outdoor kitchen. Now it's the best part of our house. Professional crew, clean jobsite every evening, and the work is exceptional quality.",
+    quote: "We had a sloped backyard that we never used. RNR built a two-tier retaining wall system with a lower patio and upper lawn area, then added an outdoor kitchen. Now it is the best part of our house. Professional crew, clean jobsite every evening.",
     author: 'Sarah K.',
     location: 'Erie, CO',
     service: 'Retaining Walls & Outdoor Kitchen',
-    rating: 5,
   },
   {
-    id: 'review-3',
-    quote:
-      "The color-changing waterfall feature they installed is stunning — especially at night with the LED lighting. We get compliments every time someone comes over. Rock N Roll Stoneworks is the real deal. Payment was only due when we were 100% satisfied. That alone shows you the confidence they have in their work.",
+    quote: "The color-changing waterfall feature they installed is stunning — especially at night with the LED lighting. Payment was only due when we were 100% satisfied. That alone shows the confidence they have in their work.",
     author: 'Jennifer L.',
     location: 'Boulder, CO',
-    service: 'Water Feature & Lighting',
-    rating: 5,
+    service: 'Water Feature & LED Lighting',
   },
 ];
 
 export function TestimonialCards() {
   return (
-    <section className="section-padding bg-gradient-to-b from-parchment-50 to-white relative overflow-hidden">
-      <div className="orb w-[300px] h-[300px] bg-brand-100/30 top-[10%] -right-[5%]" />
+    <section className="section-pad bg-white">
+      <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+        <p className="label mb-12 text-center">Client Experiences</p>
 
-      <div className="container-wide relative z-10">
-        <div className="text-center mb-12 lg:mb-16">
-          <p className="inline-flex items-center gap-2 text-sm font-medium tracking-wider uppercase mb-3">
-            <span className="w-6 h-px bg-accent-amber" />
-            <span className="gradient-text-amber">Client Experiences</span>
-            <span className="w-6 h-px bg-accent-amber" />
-          </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-stone-900">
-            What Our Clients Say
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {testimonials.map((t) => (
-            <div
-              key={t.id}
-              className="relative bg-white rounded-2xl p-6 lg:p-8 shadow-soft border border-stone-100 border-l-4 border-l-brand-600 hover:shadow-card transition-all duration-300"
+        {/* Featured pull-quote */}
+        <div className="relative border border-gold-200 rounded-sm p-10 lg:p-16 mb-8 overflow-hidden">
+          <div className="absolute top-6 left-8 text-gold-200">
+            <Quote className="w-14 h-14 fill-gold-100 stroke-gold-200" />
+          </div>
+          <div className="relative z-10 max-w-3xl mx-auto text-center">
+            <p
+              className="font-display font-light text-ink-900 leading-relaxed mb-10"
+              style={{ fontSize: 'clamp(1.3rem, 2.5vw, 2rem)' }}
             >
-              <span className="absolute top-4 right-5 text-6xl font-display text-brand-100/60 leading-none select-none pointer-events-none">
-                &ldquo;
-              </span>
+              &ldquo;{featured.quote}&rdquo;
+            </p>
+            <div className="flex flex-col items-center gap-1">
+              <p className="font-body font-semibold text-ink-900">{featured.author}</p>
+              <p className="font-body text-ink-400 text-sm">{featured.location} · {featured.service}</p>
+              <div className="flex gap-1 mt-2">
+                {Array.from({ length: featured.rating }).map((_, i) => (
+                  <span key={i} className="text-gold-500 text-sm">★</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
-              <div className="relative z-10">
-                <div className="flex gap-0.5 mb-4">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent-amber text-accent-amber" />
-                  ))}
-                </div>
-                <p className="text-stone-700 leading-relaxed mb-5 italic">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-100 to-brand-200 flex items-center justify-center">
-                    <span className="text-sm font-bold text-brand-800">{t.author[0]}</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-stone-900">{t.author}</p>
-                    <p className="text-sm text-stone-500">
-                      {t.location} · {t.service}
-                    </p>
-                  </div>
-                </div>
+        {/* Secondary quotes */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {secondary.map((t, i) => (
+            <div key={i} className="bg-cream-50 border border-gold-100 rounded-sm p-8">
+              <p className="font-body text-ink-600 leading-relaxed mb-6 italic text-[15px]">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <div className="border-t border-gold-100 pt-5">
+                <p className="font-body font-semibold text-ink-900 text-sm">{t.author}</p>
+                <p className="font-body text-ink-400 text-xs mt-0.5">{t.location} · {t.service}</p>
               </div>
             </div>
           ))}
