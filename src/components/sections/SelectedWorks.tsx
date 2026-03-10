@@ -4,26 +4,26 @@ import { ArrowUpRight } from 'lucide-react';
 
 const works = [
   {
-    title: 'Elevated Patio & Fire Sanctuary',
+    title: 'Full Backyard Hardscape & Outdoor Kitchen',
     location: 'Lafayette, CO',
-    category: 'Paver Installation · Fire Feature',
-    src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop',
+    category: 'Paver Installation · Outdoor Kitchen',
+    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69aa9a13b003fa04e8de88ee.jpg',
     href: '/gallery',
     wide: true,
   },
   {
-    title: 'Bespoke Outdoor Kitchen',
-    location: 'Boulder, CO',
-    category: 'Outdoor Kitchen · Stone Veneer',
-    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=800&fit=crop',
+    title: 'Custom Paver Patio & Fire Feature',
+    location: 'Erie, CO',
+    category: 'Paver Patio · Fire Pit',
+    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69aa9a1336702f66070d71c3.jpg',
     href: '/gallery',
     wide: false,
   },
   {
-    title: 'Water Feature & Hardscape',
-    location: 'Erie, CO',
-    category: 'Water Feature · Retaining Walls',
-    src: 'https://images.unsplash.com/photo-1572331165267-854da2b021d9?w=800&h=800&fit=crop',
+    title: 'Retaining Walls & Tiered Landscape',
+    location: 'Boulder, CO',
+    category: 'Retaining Walls · Hardscape',
+    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69aa9a13b003fa9b0bde88ef.jpg',
     href: '/gallery',
     wide: false,
   },
@@ -52,7 +52,6 @@ export function SelectedWorks() {
           </Link>
         </div>
 
-        {/* Grid: 1 wide + 2 square */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-5">
           {works.map((w, i) => (
             <Link
@@ -68,18 +67,12 @@ export function SelectedWorks() {
                 alt={w.title}
                 fill
                 sizes={w.wide ? '(max-width: 1024px) 100vw, 60vw' : '(max-width: 1024px) 100vw, 40vw'}
-                quality={75}
+                quality={80}
                 priority={i === 0}
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-[1.2s] ease-out"
               />
-
-              {/* Persistent gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/20 to-transparent" />
-
-              {/* Hover overlay */}
               <div className="absolute inset-0 bg-ink-950/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
                 <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold-400/70 mb-2 font-medium">
                   {w.category}
@@ -96,8 +89,6 @@ export function SelectedWorks() {
                   </div>
                 </div>
               </div>
-
-              {/* Gold top accent */}
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-gold-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Link>
           ))}

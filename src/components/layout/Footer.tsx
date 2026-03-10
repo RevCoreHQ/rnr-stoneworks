@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
 import { siteConfig } from '@/data/site-config';
 import { footerNav } from '@/data/navigation';
+
+const LOGO_URL = 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/699191dd24813c44b3afb6e9.webp';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,12 +19,13 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
-              <span className="font-display text-2xl font-light text-white tracking-wide">
-                Rock N Roll
-              </span>
-              <span className="block font-body text-[11px] tracking-[0.28em] uppercase text-gold-500 mt-0.5">
-                Stoneworks
-              </span>
+              <Image
+                src={LOGO_URL}
+                alt="Rock N Roll Stoneworks"
+                width={160}
+                height={48}
+                className="h-10 w-auto object-contain"
+              />
             </Link>
             <p className="font-body text-sm text-white/40 leading-relaxed mb-8 max-w-sm">
               Custom outdoor living environments for discerning homeowners across the Colorado Front Range. Belgard Authorized. ICPI Certified. Design–build specialists.

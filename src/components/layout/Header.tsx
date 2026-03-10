@@ -2,10 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { siteConfig } from '@/data/site-config';
 import { mainNav } from '@/data/navigation';
 import { cn } from '@/lib/utils';
+
+const LOGO_URL = 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/699191dd24813c44b3afb6e9.webp';
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -30,16 +33,16 @@ export function Header() {
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between h-18 lg:h-22">
 
-          {/* Logo wordmark */}
+          {/* Logo image */}
           <Link href="/" className="shrink-0 group">
-            <div className="flex flex-col leading-none">
-              <span className="font-display text-xl lg:text-2xl font-light text-white tracking-[0.06em] group-hover:text-gold-400 transition-colors duration-300">
-                Rock N Roll
-              </span>
-              <span className="font-body text-[10px] font-medium tracking-[0.3em] uppercase text-gold-500 mt-0.5">
-                Stoneworks
-              </span>
-            </div>
+            <Image
+              src={LOGO_URL}
+              alt="Rock N Roll Stoneworks"
+              width={160}
+              height={48}
+              className="h-10 lg:h-12 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

@@ -23,16 +23,16 @@ export default function GalleryPage() {
           { name: 'Gallery', url: `${siteConfig.url}/gallery` },
         ])}
       />
-      <div className="section-padding pb-0">
-        <div className="container-wide">
+      <div className="pt-32 pb-16 bg-cream-50 border-b border-gold-200/40">
+        <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumbs items={[{ label: 'Gallery', href: '/gallery' }]} />
-          <div className="max-w-3xl mb-4">
-            <p className="text-brand-700 font-medium text-sm tracking-wide uppercase mb-3">Our Work</p>
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-stone-900 mb-4">
+          <div className="max-w-3xl mt-8">
+            <p className="label mb-4">Our Work</p>
+            <h1 className="font-display font-light text-ink-900 mb-4" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
               Projects That Speak for Themselves
             </h1>
-            <p className="text-lg text-stone-600 leading-relaxed">
-              Every project in our portfolio represents a homeowner who trusted Rock N Roll Stoneworks to transform their outdoor space. Browse our work and imagine what we can build for you.
+            <p className="font-body text-lg text-ink-500 leading-relaxed">
+              Every project in our portfolio represents a homeowner who trusted Rock N Roll Stoneworks to transform their outdoor space.
             </p>
           </div>
         </div>
