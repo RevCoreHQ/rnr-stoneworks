@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+  --amber: #d97706;
+  --amber-light: #f59e0b;
+  --amber-dark: #b45309;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-stone-800 bg-white;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-brand-100 text-brand-900;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-700 to-brand-500;
+  }
+
+  .gradient-text-amber {
+    background: linear-gradient(135deg, var(--amber) 0%, var(--amber-light) 50%, var(--amber) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Premium placeholder for missing images */
+  .image-placeholder {
+    @apply relative overflow-hidden rounded-2xl;
+    background: linear-gradient(135deg, #ece3d4 0%, #ddd0bc 50%, #c8b9a0 100%);
+  }
+
+  .image-placeholder::after {
+    content: 'IMAGE NEEDED';
+    @apply absolute inset-0 flex items-center justify-center text-sm font-medium text-parchment-400/60 tracking-widest;
+  }
+
+  /* Premium image placeholder with animated shimmer */
+  .image-placeholder-premium {
+    @apply relative overflow-hidden rounded-2xl;
+    background: linear-gradient(135deg, #052e16 0%, #14532d 25%, #166534 50%, #15803d 75%, #052e16 100%);
+  }
+
+  .image-placeholder-premium::before {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(
+      105deg,
+      transparent 30%,
+      rgba(217, 119, 6, 0.08) 45%,
+      rgba(217, 119, 6, 0.15) 50%,
+      rgba(217, 119, 6, 0.08) 55%,
+      transparent 70%
+    );
+    animation: shimmer 4s ease-in-out infinite;
+  }
+
+  /* Glass card effect */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Amber accent line */
+  .amber-accent {
+    @apply relative;
+  }
+
+  .amber-accent::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-px;
+    width: 60px;
+    background: linear-gradient(90deg, var(--amber), transparent);
+  }
+
+  /* Decorative orb */
+  .orb {
+    @apply absolute rounded-full pointer-events-none;
+    filter: blur(80px);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out both;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(5px) rotate(-1deg); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 4s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 8s ease-in-out 2s infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+}
