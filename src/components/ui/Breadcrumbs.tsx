@@ -21,7 +21,7 @@ export function Breadcrumbs({ items, variant = 'light' }: BreadcrumbsProps) {
             href="/"
             className={cn(
               'flex items-center hover:opacity-100 transition-opacity',
-              variant === 'dark' ? 'text-slate-400 hover:text-white opacity-70' : 'text-stone-500 hover:text-brand-600 opacity-80'
+              variant === 'dark' ? 'text-slate-400 hover:text-white opacity-70' : 'text-ink-400 hover:text-gold-600 opacity-80'
             )}
           >
             <Home className="w-3.5 h-3.5" />
@@ -32,7 +32,7 @@ export function Breadcrumbs({ items, variant = 'light' }: BreadcrumbsProps) {
             <ChevronRight
               className={cn(
                 'w-3.5 h-3.5',
-                variant === 'dark' ? 'text-slate-600' : 'text-stone-300'
+                variant === 'dark' ? 'text-slate-600' : 'text-ink-300'
               )}
             />
             <Link
@@ -41,7 +41,7 @@ export function Breadcrumbs({ items, variant = 'light' }: BreadcrumbsProps) {
                 'font-medium transition-colors',
                 variant === 'dark'
                   ? 'text-slate-300 hover:text-white'
-                  : 'text-stone-600 hover:text-brand-600'
+                  : 'text-ink-500 hover:text-gold-600'
               )}
             >
               {item.label}

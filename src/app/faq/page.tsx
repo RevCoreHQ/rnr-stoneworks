@@ -89,17 +89,17 @@ export default function FAQPage() {
           faqSchema(faqs),
         ]}
       />
-      <div className="section-padding pb-0">
-        <div className="container-narrow">
+      <div className="section-pad pb-0">
+        <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumbs items={[{ label: 'FAQ', href: '/faq' }]} />
           <div className="mb-4">
-            <p className="text-brand-700 font-medium text-sm tracking-wide uppercase mb-3">
+            <p className="text-gold-700 font-medium text-sm tracking-wide uppercase mb-3">
               Got Questions?
             </p>
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-stone-900 mb-4">
+            <h1 className="text-4xl sm:text-5xl font-display font-bold text-ink-900 mb-4">
               Frequently Asked Questions
             </h1>
-            <p className="text-lg text-stone-600 leading-relaxed">
+            <p className="text-lg text-ink-500 leading-relaxed">
               Answers to the most common questions about paver installation, hardscape construction, our process, and working with Rock N Roll Stoneworks.
             </p>
           </div>

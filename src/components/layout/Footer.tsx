@@ -18,14 +18,22 @@ export function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block mb-6">
+            <Link href="/" className="inline-flex items-center gap-3 mb-6">
               <Image
                 src={LOGO_URL}
-                alt="Rock N Roll Stoneworks"
-                width={160}
-                height={48}
-                className="h-10 w-auto object-contain"
+                alt="Rock N Roll Stoneworks logo"
+                width={44}
+                height={44}
+                className="h-11 w-11 object-contain shrink-0"
               />
+              <div className="flex flex-col leading-none">
+                <span className="font-display text-base font-semibold text-white tracking-wide">
+                  Rock N Roll
+                </span>
+                <span className="font-body text-[10px] font-medium tracking-[0.26em] uppercase text-gold-500 mt-0.5">
+                  Stoneworks
+                </span>
+              </div>
             </Link>
             <p className="font-body text-sm text-white/40 leading-relaxed mb-8 max-w-sm">
               Custom outdoor living environments for discerning homeowners across the Colorado Front Range. Belgard Authorized. ICPI Certified. Design–build specialists.
@@ -56,7 +64,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Nav cols */}
           <div>
             <p className="font-body text-[10px] tracking-[0.2em] uppercase text-white/30 mb-5 font-medium">Services</p>
             <ul className="space-y-3">

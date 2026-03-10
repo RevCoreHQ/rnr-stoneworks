@@ -57,13 +57,13 @@ export function ContactForm() {
   if (status === 'success') {
     return (
       <div className="text-center py-12">
-        <div className="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
-          <svg className="w-8 h-8 text-brand-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="w-16 h-16 rounded-full bg-gold-100 flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-gold-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-display font-bold text-stone-900 mb-2">Message Received</h3>
-        <p className="text-stone-600">Thank you! We will be in touch within one business day.</p>
+        <h3 className="text-2xl font-display font-bold text-ink-900 mb-2">Message Received</h3>
+        <p className="text-ink-500">Thank you! We will be in touch within one business day.</p>
       </div>
     );
   }
@@ -72,7 +72,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="firstName" className="block text-sm font-medium text-stone-700 mb-1.5">
+          <label htmlFor="firstName" className="block text-sm font-medium text-ink-700 mb-1.5">
             First Name <span className="text-red-500">*</span>
           </label>
           <input
@@ -81,12 +81,12 @@ export function ContactForm() {
             type="text"
             required
             autoComplete="given-name"
-            className="w-full px-4 py-3 rounded-xl border border-stone-200 text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 rounded-xl border border-cream-200 text-ink-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
             placeholder="John"
           />
         </div>
         <div>
-          <label htmlFor="lastName" className="block text-sm font-medium text-stone-700 mb-1.5">
+          <label htmlFor="lastName" className="block text-sm font-medium text-ink-700 mb-1.5">
             Last Name <span className="text-red-500">*</span>
           </label>
           <input
@@ -95,14 +95,14 @@ export function ContactForm() {
             type="text"
             required
             autoComplete="family-name"
-            className="w-full px-4 py-3 rounded-xl border border-stone-200 text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 rounded-xl border border-cream-200 text-ink-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
             placeholder="Smith"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-1.5">
+        <label htmlFor="email" className="block text-sm font-medium text-ink-700 mb-1.5">
           Email <span className="text-red-500">*</span>
         </label>
         <input
@@ -111,13 +111,13 @@ export function ContactForm() {
           type="email"
           required
           autoComplete="email"
-          className="w-full px-4 py-3 rounded-xl border border-stone-200 text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+          className="w-full px-4 py-3 rounded-xl border border-cream-200 text-ink-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
           placeholder="john@example.com"
         />
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-stone-700 mb-1.5">
+        <label htmlFor="phone" className="block text-sm font-medium text-ink-700 mb-1.5">
           Phone <span className="text-red-500">*</span>
         </label>
         <input
@@ -126,19 +126,19 @@ export function ContactForm() {
           type="tel"
           required
           autoComplete="tel"
-          className="w-full px-4 py-3 rounded-xl border border-stone-200 text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+          className="w-full px-4 py-3 rounded-xl border border-cream-200 text-ink-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
           placeholder="(303) 555-0000"
         />
       </div>
 
       <div>
-        <label htmlFor="service" className="block text-sm font-medium text-stone-700 mb-1.5">
+        <label htmlFor="service" className="block text-sm font-medium text-ink-700 mb-1.5">
           Service Interested In
         </label>
         <select
           id="service"
           name="service"
-          className="w-full px-4 py-3 rounded-xl border border-stone-200 text-stone-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all bg-white"
+          className="w-full px-4 py-3 rounded-xl border border-cream-200 text-ink-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all bg-white"
         >
           <option value="">Select a service...</option>
           {services.map((s) => (
@@ -150,7 +150,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="cityZip" className="block text-sm font-medium text-stone-700 mb-1.5">
+        <label htmlFor="cityZip" className="block text-sm font-medium text-ink-700 mb-1.5">
           City / ZIP Code <span className="text-red-500">*</span>
         </label>
         <input
@@ -158,20 +158,20 @@ export function ContactForm() {
           name="cityZip"
           type="text"
           required
-          className="w-full px-4 py-3 rounded-xl border border-stone-200 text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+          className="w-full px-4 py-3 rounded-xl border border-cream-200 text-ink-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
           placeholder="Lafayette, CO 80026"
         />
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-stone-700 mb-1.5">
+        <label htmlFor="message" className="block text-sm font-medium text-ink-700 mb-1.5">
           Tell Us About Your Project
         </label>
         <textarea
           id="message"
           name="message"
           rows={4}
-          className="w-full px-4 py-3 rounded-xl border border-stone-200 text-stone-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-cream-200 text-ink-900 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all resize-none"
           placeholder="Describe your project, budget range, or any questions..."
         />
       </div>
@@ -184,7 +184,7 @@ export function ContactForm() {
         {status === 'loading' ? 'Sending...' : 'Send My Request'}
       </Button>
 
-      <p className="text-xs text-stone-400 text-center">
+      <p className="text-xs text-ink-400 text-center">
         We respond within one business day. No spam, ever.
       </p>
     </form>

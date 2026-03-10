@@ -33,16 +33,24 @@ export function Header() {
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between h-18 lg:h-22">
 
-          {/* Logo image */}
-          <Link href="/" className="shrink-0 group">
+          {/* Logo: image + full name */}
+          <Link href="/" className="shrink-0 group flex items-center gap-3">
             <Image
               src={LOGO_URL}
-              alt="Rock N Roll Stoneworks"
-              width={160}
-              height={48}
-              className="h-10 lg:h-12 w-auto object-contain"
+              alt="Rock N Roll Stoneworks logo"
+              width={44}
+              height={44}
+              className="h-10 w-10 object-contain shrink-0"
               priority
             />
+            <div className="flex flex-col leading-none">
+              <span className="font-display text-[15px] font-semibold text-white tracking-wide group-hover:text-gold-400 transition-colors duration-300">
+                Rock N Roll
+              </span>
+              <span className="font-body text-[10px] font-medium tracking-[0.26em] uppercase text-gold-500 mt-0.5">
+                Stoneworks
+              </span>
+            </div>
           </Link>
 
           {/* Desktop nav */}

@@ -58,7 +58,7 @@ export default async function ServiceAreaPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="relative py-16 lg:py-24 bg-stone-950 overflow-hidden">
+      <section className="relative py-16 lg:py-24 bg-ink-950 overflow-hidden">
         {area.heroImage && (
           <>
             <Image
@@ -70,11 +70,11 @@ export default async function ServiceAreaPage({ params }: Props) {
               quality={60}
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-stone-950/80" />
+            <div className="absolute inset-0 bg-ink-950/80" />
           </>
         )}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-amber/40 to-transparent" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent" />
+        <div className="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs
             items={[
               { label: 'Service Areas', href: '/service-areas' },
@@ -83,17 +83,17 @@ export default async function ServiceAreaPage({ params }: Props) {
             variant="dark"
           />
           <div className="max-w-3xl mt-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium bg-brand-700/20 text-brand-300 rounded-full mb-4 border border-brand-600/30">
+            <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium bg-gold-700/20 text-gold-300 rounded-full mb-4 border border-gold-600/30">
               <MapPin className="w-3.5 h-3.5" />
               {area.isPrimary ? 'Primary Service Area' : 'Extended Service Area'}
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6">
               {area.h1}
             </h1>
-            <p className="text-xl text-stone-300 leading-relaxed mb-8">{area.intro}</p>
+            <p className="text-xl text-ink-300 leading-relaxed mb-8">{area.intro}</p>
             {area.nearbyNote && (
-              <div className="bg-brand-700/10 border border-brand-500/20 rounded-xl p-4 mb-8">
-                <p className="text-brand-200 text-sm">{area.nearbyNote}</p>
+              <div className="bg-gold-700/10 border border-gold-500/20 rounded-xl p-4 mb-8">
+                <p className="text-gold-200 text-sm">{area.nearbyNote}</p>
               </div>
             )}
             <div className="flex flex-col sm:flex-row gap-4">
@@ -115,13 +115,13 @@ export default async function ServiceAreaPage({ params }: Props) {
       <TrustStrip />
 
       {/* Services available */}
-      <section className="section-padding">
-        <div className="container-wide">
+      <section className="section-pad">
+        <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-stone-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-ink-900 mb-4">
               Services Available in {area.city}
             </h2>
-            <p className="text-stone-600 leading-relaxed">
+            <p className="text-ink-500 leading-relaxed">
               Rock N Roll Stoneworks offers a full range of outdoor living services
               {area.isPrimary ? ` throughout ${area.city}` : ` near ${area.city}`}.
             </p>
@@ -131,12 +131,12 @@ export default async function ServiceAreaPage({ params }: Props) {
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="flex items-center justify-between px-5 py-4 bg-white rounded-xl border border-stone-100 shadow-soft hover:shadow-card hover:border-brand-200 transition-all group"
+                className="flex items-center justify-between px-5 py-4 bg-white rounded-xl border border-cream-200 shadow-panel hover:shadow-elevate hover:border-gold-200 transition-all group"
               >
-                <span className="text-sm font-medium text-stone-700 group-hover:text-brand-700 transition-colors">
+                <span className="text-sm font-medium text-ink-700 group-hover:text-gold-700 transition-colors">
                   {s.title}
                 </span>
-                <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-brand-600 transition-colors shrink-0" />
+                <ArrowRight className="w-4 h-4 text-ink-300 group-hover:text-gold-600 transition-colors shrink-0" />
               </Link>
             ))}
           </div>
@@ -145,15 +145,15 @@ export default async function ServiceAreaPage({ params }: Props) {
 
       {/* Body content */}
       {area.body.length > 0 && (
-        <section className="section-padding bg-gradient-to-b from-parchment-50 to-white">
-          <div className="container-narrow">
+        <section className="section-pad bg-gradient-to-b from-cream-50 to-white">
+          <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16">
             <div className="space-y-12">
               {area.body.map((section, i) => (
                 <div key={i}>
-                  <h2 className="text-2xl sm:text-3xl font-display font-bold text-stone-900 mb-4">
+                  <h2 className="text-2xl sm:text-3xl font-display font-bold text-ink-900 mb-4">
                     {section.heading}
                   </h2>
-                  <p className="text-stone-600 leading-relaxed text-base lg:text-lg">
+                  <p className="text-ink-500 leading-relaxed text-base lg:text-lg">
                     {section.text}
                   </p>
                 </div>
@@ -164,10 +164,10 @@ export default async function ServiceAreaPage({ params }: Props) {
       )}
 
       {/* Why RNR */}
-      <section className="section-padding bg-parchment-50">
-        <div className="container-wide">
+      <section className="section-pad bg-cream-50">
+        <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl font-display font-bold text-stone-900 mb-4">
+            <h2 className="text-3xl font-display font-bold text-ink-900 mb-4">
               Why {area.city} Homeowners Choose Rock N Roll Stoneworks
             </h2>
           </div>
@@ -178,10 +178,10 @@ export default async function ServiceAreaPage({ params }: Props) {
               { icon: CheckCircle, title: '3D Design', text: 'See a full 3D virtual tour of your project before a single stone is placed.' },
               { icon: Clock, title: 'Free Estimates', text: 'Free on-site consultations and detailed estimates with no obligation to proceed.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white p-6 rounded-2xl border border-stone-100 shadow-soft">
-                <item.icon className="w-8 h-8 text-brand-700 mb-3" />
-                <h3 className="font-display font-semibold text-stone-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-stone-600 leading-relaxed">{item.text}</p>
+              <div key={item.title} className="bg-white p-6 rounded-2xl border border-cream-200 shadow-panel">
+                <item.icon className="w-8 h-8 text-gold-700 mb-3" />
+                <h3 className="font-display font-semibold text-ink-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-ink-500 leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
@@ -189,9 +189,9 @@ export default async function ServiceAreaPage({ params }: Props) {
       </section>
 
       {/* Other areas */}
-      <section className="section-padding">
-        <div className="container-wide">
-          <h2 className="text-2xl font-display font-bold text-stone-900 mb-6">
+      <section className="section-pad">
+        <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+          <h2 className="text-2xl font-display font-bold text-ink-900 mb-6">
             We Also Serve These Colorado Communities
           </h2>
           <div className="flex flex-wrap gap-3">
@@ -199,7 +199,7 @@ export default async function ServiceAreaPage({ params }: Props) {
               <Link
                 key={a.slug}
                 href={`/service-areas/${a.slug}`}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-parchment-50 rounded-full text-sm font-medium text-stone-700 hover:bg-brand-50 hover:text-brand-800 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-cream-50 rounded-full text-sm font-medium text-ink-700 hover:bg-gold-50 hover:text-gold-800 transition-colors"
               >
                 <MapPin className="w-3.5 h-3.5" />
                 {a.city}, {a.state}

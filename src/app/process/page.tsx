@@ -65,17 +65,17 @@ export default function ProcessPage() {
           { name: 'Our Process', url: `${siteConfig.url}/process` },
         ])}
       />
-      <div className="section-padding">
-        <div className="container-wide">
+      <div className="section-pad">
+        <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumbs items={[{ label: 'Our Process', href: '/process' }]} />
           <div className="max-w-3xl mb-16">
-            <p className="text-brand-700 font-medium text-sm tracking-wide uppercase mb-3">
+            <p className="text-gold-700 font-medium text-sm tracking-wide uppercase mb-3">
               How We Work
             </p>
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-stone-900 mb-4">
+            <h1 className="text-4xl sm:text-5xl font-display font-bold text-ink-900 mb-4">
               From Vision to Reality
             </h1>
-            <p className="text-lg text-stone-600 leading-relaxed">
+            <p className="text-lg text-ink-500 leading-relaxed">
               Every Rock N Roll Stoneworks project follows a structured process designed to eliminate surprises, ensure your design is exactly what you want, and deliver a finished result that exceeds your expectations.
             </p>
           </div>
@@ -86,15 +86,15 @@ export default function ProcessPage() {
                 key={step.number}
                 className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 lg:gap-8 items-start"
               >
-                <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gradient-to-br from-brand-50 to-brand-100 border-2 border-brand-200 flex items-center justify-center shadow-soft shrink-0">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gradient-to-br from-gold-50 to-gold-100 border-2 border-gold-200 flex items-center justify-center shadow-panel shrink-0">
                   <span className="text-xl font-display font-bold gradient-text">{step.number}</span>
                 </div>
-                <div className="bg-white rounded-2xl border border-stone-100 shadow-soft p-6 lg:p-8">
-                  <h2 className="text-2xl font-display font-bold text-stone-900 mb-3">
+                <div className="bg-white rounded-2xl border border-cream-200 shadow-panel p-6 lg:p-8">
+                  <h2 className="text-2xl font-display font-bold text-ink-900 mb-3">
                     {step.title}
                   </h2>
-                  <p className="text-stone-700 leading-relaxed mb-4">{step.description}</p>
-                  <p className="text-sm text-stone-500 leading-relaxed border-t border-stone-100 pt-4">
+                  <p className="text-ink-700 leading-relaxed mb-4">{step.description}</p>
+                  <p className="text-sm text-ink-400 leading-relaxed border-t border-cream-200 pt-4">
                     {step.detail}
                   </p>
                 </div>

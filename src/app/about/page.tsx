@@ -51,19 +51,19 @@ export default function AboutPage() {
           { name: 'About', url: `${siteConfig.url}/about` },
         ])}
       />
-      <div className="section-padding">
-        <div className="container-wide">
+      <div className="section-pad">
+        <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumbs items={[{ label: 'About', href: '/about' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
-              <p className="text-brand-700 font-medium text-sm tracking-wide uppercase mb-3">
+              <p className="text-gold-700 font-medium text-sm tracking-wide uppercase mb-3">
                 Who We Are
               </p>
-              <h1 className="text-4xl sm:text-5xl font-display font-bold text-stone-900 mb-6">
+              <h1 className="text-4xl sm:text-5xl font-display font-bold text-ink-900 mb-6">
                 Colorado&apos;s Outdoor Living Craftsmen
               </h1>
-              <div className="space-y-4 text-stone-600 leading-relaxed">
+              <div className="space-y-4 text-ink-500 leading-relaxed">
                 <p>
                   Rock N Roll Stoneworks, LLC is a hardscape and outdoor living contractor based in Lafayette, Colorado. We design and build custom paver installations, fire features, outdoor kitchens, water features, retaining walls, and complete outdoor living environments for homeowners across the Front Range.
                 </p>
@@ -79,21 +79,21 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-brand-50 rounded-2xl p-6 text-center border border-brand-100">
-                <p className="text-5xl font-display font-bold text-brand-800 mb-2">2</p>
-                <p className="text-sm font-medium text-stone-600">Year Workmanship Guarantee</p>
+              <div className="bg-gold-50 rounded-2xl p-6 text-center border border-gold-100">
+                <p className="text-5xl font-display font-bold text-gold-800 mb-2">2</p>
+                <p className="text-sm font-medium text-ink-500">Year Workmanship Guarantee</p>
               </div>
-              <div className="bg-parchment-50 rounded-2xl p-6 text-center border border-parchment-200">
-                <p className="text-5xl font-display font-bold text-stone-800 mb-2">∞</p>
-                <p className="text-sm font-medium text-stone-600">Belgard Material Warranty</p>
+              <div className="bg-cream-50 rounded-2xl p-6 text-center border border-cream-200">
+                <p className="text-5xl font-display font-bold text-ink-800 mb-2">∞</p>
+                <p className="text-sm font-medium text-ink-500">Belgard Material Warranty</p>
               </div>
-              <div className="bg-stone-900 rounded-2xl p-6 text-center">
+              <div className="bg-ink-900 rounded-2xl p-6 text-center">
                 <p className="text-4xl font-display font-bold text-white mb-2">ICPI</p>
-                <p className="text-sm font-medium text-stone-400">Certified Installer</p>
+                <p className="text-sm font-medium text-ink-400">Certified Installer</p>
               </div>
-              <div className="bg-parchment-50 rounded-2xl p-6 text-center border border-parchment-200">
-                <p className="text-xl font-display font-bold text-stone-800 mb-2">Belgard</p>
-                <p className="text-sm font-medium text-stone-600">Authorized Contractor</p>
+              <div className="bg-cream-50 rounded-2xl p-6 text-center border border-cream-200">
+                <p className="text-xl font-display font-bold text-ink-800 mb-2">Belgard</p>
+                <p className="text-sm font-medium text-ink-500">Authorized Contractor</p>
               </div>
             </div>
           </div>
@@ -102,11 +102,11 @@ export default function AboutPage() {
           <div className="mb-8">
             <div className="text-center mb-12">
               <p className="inline-flex items-center gap-2 text-sm font-medium tracking-wider uppercase mb-3">
-                <span className="w-6 h-px bg-accent-amber" />
-                <span className="gradient-text-amber">What We Stand For</span>
-                <span className="w-6 h-px bg-accent-amber" />
+                <span className="w-6 h-px bg-gold-500" />
+                <span className="text-gold-gradient">What We Stand For</span>
+                <span className="w-6 h-px bg-gold-500" />
               </p>
-              <h2 className="text-3xl sm:text-4xl font-display font-bold text-stone-900">
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-ink-900">
                 Our Values
               </h2>
             </div>
@@ -114,14 +114,14 @@ export default function AboutPage() {
               {values.map((v) => {
                 const Icon = v.icon;
                 return (
-                  <div key={v.title} className="bg-white rounded-2xl border border-stone-100 p-6 shadow-soft">
-                    <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-brand-700" />
+                  <div key={v.title} className="bg-white rounded-2xl border border-cream-200 p-6 shadow-panel">
+                    <div className="w-12 h-12 rounded-xl bg-gold-50 flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-gold-700" />
                     </div>
-                    <h3 className="font-display font-semibold text-stone-900 text-lg mb-2">
+                    <h3 className="font-display font-semibold text-ink-900 text-lg mb-2">
                       {v.title}
                     </h3>
-                    <p className="text-stone-600 leading-relaxed text-sm">{v.description}</p>
+                    <p className="text-ink-500 leading-relaxed text-sm">{v.description}</p>
                   </div>
                 );
               })}
