@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'Raleway', system-ui, sans-serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
-  --gold: #c9a96e;
-  --gold-light: #e4a83c;
-  --gold-dark: #a8854e;
-  --ink: #0a0806;
-  --cream: #faf7f0;
+  --blue: #1AABE3;
+  --blue-dark: #1280b4;
+  --blue-light: #29b5e5;
+  --navy: #060c10;
+  --cream: #f0f4f8;
 }
 
 @layer base {
@@ -20,7 +20,7 @@
   }
 
   body {
-    @apply font-body text-ink-800 bg-cream-100;
+    @apply font-body text-ink-800 bg-white;
     font-feature-settings: 'kern' 1, 'liga' 1;
   }
 
@@ -29,8 +29,8 @@
   }
 
   ::selection {
-    background: rgba(201, 169, 110, 0.25);
-    color: #1f1a14;
+    background: rgba(26, 171, 227, 0.20);
+    color: #0b1219;
   }
 }
 
@@ -44,41 +44,33 @@
     @apply py-12 sm:py-16 lg:py-20;
   }
 
-  .container-xl {
-    @apply max-w-screen-xl mx-auto;
-  }
-
-  .container-lg {
-    @apply max-w-5xl mx-auto;
-  }
-
-  /* Gold accent line — the signature element */
+  /* Blue accent line */
   .gold-line {
     display: block;
-    width: 40px;
-    height: 1px;
-    background: var(--gold);
+    width: 36px;
+    height: 2px;
+    background: var(--blue);
   }
 
   .gold-line-lg {
     display: block;
-    width: 80px;
-    height: 1px;
-    background: linear-gradient(90deg, var(--gold), transparent);
+    width: 72px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--blue), transparent);
   }
 
-  /* Label / eyebrow text */
+  /* Label / eyebrow — all-caps small sans */
   .label {
-    @apply font-body text-xs font-medium tracking-[0.2em] uppercase text-gold-500;
+    @apply font-display text-[11px] font-semibold tracking-[0.22em] uppercase text-gold-500;
   }
 
   .label-dark {
-    @apply font-body text-xs font-medium tracking-[0.2em] uppercase text-gold-400;
+    @apply font-display text-[11px] font-semibold tracking-[0.22em] uppercase text-gold-400;
   }
 
-  /* Gradient text — gold */
+  /* Blue gradient text */
   .text-gold-gradient {
-    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-light) 100%);
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 60%, var(--blue-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -86,14 +78,14 @@
 
   /* Dark glass panel */
   .glass-dark {
-    background: rgba(10, 8, 6, 0.7);
+    background: rgba(6, 12, 16, 0.75);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
 
-  /* Cream glass panel */
+  /* Light glass */
   .glass-cream {
-    background: rgba(250, 247, 240, 0.85);
+    background: rgba(240, 244, 248, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
   }
@@ -101,26 +93,12 @@
   /* Section divider */
   .divider-gold {
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    opacity: 0.4;
-  }
-
-  /* Image placeholder — dark luxury */
-  .img-placeholder {
-    @apply relative overflow-hidden;
-    background: linear-gradient(135deg, #1f1a14 0%, #332d24 50%, #1f1a14 100%);
-  }
-
-  .img-placeholder::after {
-    content: '';
-    @apply absolute inset-0;
-    background: linear-gradient(105deg, transparent 40%, rgba(201,169,110,0.06) 50%, transparent 60%);
-    animation: shimmer 3s ease-in-out infinite;
+    background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    opacity: 0.35;
   }
 }
 
 @layer utilities {
-  /* Scroll-driven animations via data attributes */
   [data-animate] {
     animation: fadeUp 0.9s ease-out both;
   }
@@ -140,12 +118,7 @@
     100% { transform: translateX(100%); }
   }
 
-  @keyframes scaleIn {
-    from { opacity: 0; transform: scale(0.96); }
-    to   { opacity: 1; transform: scale(1); }
-  }
-
-  /* Hover underline — gold */
+  /* Hover underline — brand blue */
   .hover-gold-line {
     @apply relative;
   }
@@ -161,13 +134,12 @@
     width: 100%;
   }
 
-  /* Vertical text (for side labels) */
+  /* Vertical text */
   .text-vertical {
     writing-mode: vertical-rl;
     text-orientation: mixed;
   }
 
-  /* Clamp utilities */
   .line-clamp-2 {
     overflow: hidden;
     display: -webkit-box;
