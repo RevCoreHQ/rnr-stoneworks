@@ -26,7 +26,7 @@ export function Hero({
   backgroundVideo,
 }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden grain">
 
       {/* Background — fills full viewport including behind the nav */}
       {backgroundVideo ? (
@@ -51,11 +51,24 @@ export function Hero({
       {/* Top-down gradient — keeps nav area readable */}
       <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 via-transparent to-transparent" />
 
-      {/* Breathing gradient overlay */}
+      {/* Aurora mesh — three overlapping radial gradients for ambient depth */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-gold-500/5 via-transparent to-gold-600/8"
-        animate={{ opacity: [0.3, 0.6, 0.3] }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse 60% 50% at 20% 50%, rgba(26,171,227,0.06), transparent)' }}
+        animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
+        transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
+      />
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse 50% 60% at 70% 30%, rgba(18,128,180,0.05), transparent)' }}
+        animate={{ x: [0, -30, 0], y: [0, 40, 0] }}
+        transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+      />
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse 40% 40% at 50% 70%, rgba(41,181,229,0.04), transparent)' }}
+        animate={{ x: [0, 20, -20, 0], y: [0, -20, 10, 0] }}
+        transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut', delay: 7 }}
       />
 
       {/* Brand blue accent at bottom */}
@@ -74,7 +87,7 @@ export function Hero({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 pb-20 lg:pb-28 pt-48">
+      <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 pt-32 lg:pt-40 pb-16 lg:pb-20">
         <div className="max-w-3xl">
           {subheadline && (
             <ScrollReveal direction="right" delay={0.2}>

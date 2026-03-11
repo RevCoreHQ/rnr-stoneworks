@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { ScrollReveal } from '@/components/motion/ScrollReveal';
+import { TiltCard } from '@/components/motion/TiltCard';
 
 const works = [
   {
@@ -37,7 +38,7 @@ const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export function SelectedWorks() {
   return (
-    <section className="section-pad bg-ink-950">
+    <section className="section-pad bg-ink-950 grain">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
         <ScrollReveal direction="up">
           <div className="flex items-end justify-between mb-14">
@@ -62,14 +63,13 @@ export function SelectedWorks() {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-5">
           {works.map((w, i) => (
-            <motion.div
-              key={i}
-              initial={{ clipPath: 'inset(100% 0 0 0)' }}
-              whileInView={{ clipPath: 'inset(0% 0 0 0)' }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.8, delay: i * 0.15, ease }}
-              className={w.wide ? 'lg:col-span-3' : 'lg:col-span-2'}
-            >
+            <TiltCard key={i} className={w.wide ? 'lg:col-span-3' : 'lg:col-span-2'} maxTilt={2.5} scale={1.01}>
+              <motion.div
+                initial={{ clipPath: 'inset(100% 0 0 0)' }}
+                whileInView={{ clipPath: 'inset(0% 0 0 0)' }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.8, delay: i * 0.15, ease }}
+              >
               <Link
                 href={w.href}
                 className={[
@@ -106,7 +106,8 @@ export function SelectedWorks() {
                 </div>
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-gold-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </Link>
-            </motion.div>
+              </motion.div>
+            </TiltCard>
           ))}
         </div>
 

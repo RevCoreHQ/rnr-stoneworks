@@ -64,7 +64,7 @@ export function TestimonialCards() {
 
         {/* Featured pull-quote */}
         <ScrollReveal direction="up" duration={0.9}>
-          <div className="relative border border-gold-200 rounded-sm p-10 lg:p-16 mb-8 overflow-hidden">
+          <div className="relative border border-gold-200 rounded-sm p-10 lg:p-16 mb-8 overflow-hidden hover:border-gold-300 hover:shadow-glow-sm transition-all duration-500">
             <motion.div
               initial={{ scale: 0, rotate: -20 }}
               whileInView={{ scale: 1, rotate: 0 }}
@@ -106,7 +106,13 @@ export function TestimonialCards() {
         {/* Secondary quotes — 2x2 grid */}
         <StaggerChildren stagger={0.1} className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {secondary.map((t, i) => (
-            <motion.div key={i} variants={staggerItem} className="bg-cream-50 border border-gold-100 rounded-sm p-7">
+            <motion.div
+              key={i}
+              variants={staggerItem}
+              whileHover={{ y: -4, boxShadow: '0 20px 50px -12px rgba(11, 18, 25, 0.12)' }}
+              transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+              className="bg-cream-50 border border-gold-100 rounded-sm p-7 cursor-default"
+            >
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <motion.span

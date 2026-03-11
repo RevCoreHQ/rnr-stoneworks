@@ -66,20 +66,31 @@ export function ProcessSteps() {
                 <motion.div
                   key={i}
                   variants={staggerItem}
+                  whileHover={{ backgroundColor: 'rgba(26, 171, 227, 0.03)' }}
+                  transition={{ duration: 0.3 }}
                   className={[
-                    'flex gap-8 py-8 relative',
+                    'flex gap-8 py-8 relative rounded-sm -mx-4 px-4',
                     i !== steps.length - 1 ? 'border-b border-gold-200/50' : '',
                   ].join(' ')}
                 >
-                  <motion.span
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.2 + i * 0.2, type: 'spring', stiffness: 200, damping: 15 }}
-                    className="font-display text-[2.5rem] font-light text-gold-300 leading-none shrink-0 w-14 relative z-10"
-                  >
-                    {s.num}
-                  </motion.span>
+                  <div className="relative shrink-0 w-14">
+                    <motion.div
+                      initial={{ scale: 0, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.3 + i * 0.2, type: 'spring' }}
+                      className="absolute -inset-2 rounded-full border border-gold-200/30"
+                    />
+                    <motion.span
+                      initial={{ scale: 0.5, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.2 + i * 0.2, type: 'spring', stiffness: 200, damping: 15 }}
+                      className="font-display text-[2.5rem] font-light text-gold-300 leading-none relative z-10 block"
+                    >
+                      {s.num}
+                    </motion.span>
+                  </div>
                   <div>
                     <h3 className="font-body font-semibold text-ink-900 text-lg mb-2">{s.title}</h3>
                     <p className="font-body text-ink-500 leading-relaxed">{s.body}</p>

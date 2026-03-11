@@ -18,7 +18,7 @@ export function CTASection({
   description = 'Every project starts with a free consultation — we visit your property, understand your vision, and provide a no-obligation proposal with a full 3D design.',
 }: CTASectionProps) {
   return (
-    <section className="relative bg-ink-950 overflow-hidden">
+    <section className="relative bg-ink-950 overflow-hidden grain">
       {/* Gold accent top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/50 to-transparent" />
 
@@ -35,13 +35,19 @@ export function CTASection({
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
         style={{ bottom: '-15%', left: '-5%' }}
       />
+      <motion.div
+        className="absolute w-[500px] h-[500px] rounded-full bg-gold-500/3 blur-3xl pointer-events-none"
+        animate={{ x: [0, 15, -15, 0], y: [0, -25, 10, 0], scale: [1, 1.15, 0.95, 1] }}
+        transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
+        style={{ top: '30%', left: '30%' }}
+      />
 
       <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 py-24 lg:py-36">
         <StaggerChildren stagger={0.15} className="max-w-2xl mx-auto text-center">
           <motion.p variants={staggerItem} className="label-dark mb-8">Free Consultation</motion.p>
           <motion.h2
             variants={staggerItem}
-            className="font-display font-light text-white leading-[1.06] mb-8"
+            className="font-display font-light leading-[1.06] mb-8 text-shimmer"
             style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)' }}
           >
             {headline}

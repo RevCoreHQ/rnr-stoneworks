@@ -60,7 +60,13 @@ export default function HomePage() {
 
       <EditorialIntro />
 
+      {/* Light-to-dark transition */}
+      <div className="h-24 lg:h-32 bg-gradient-to-b from-white to-ink-950" />
+
       <SelectedWorks />
+
+      {/* Dark-to-light transition */}
+      <div className="h-24 lg:h-32 bg-gradient-to-b from-ink-950 to-cream-50" />
 
       <ServicesList />
 
@@ -71,6 +77,9 @@ export default function HomePage() {
       <TestimonialCards />
 
       <FAQAccordion faqs={homeFaqs} title="Frequently Asked Questions" subtitle="Common Questions" />
+
+      {/* Light-to-dark transition */}
+      <div className="h-24 lg:h-32 bg-gradient-to-b from-white to-ink-950" />
 
       <CTASection />
     </>

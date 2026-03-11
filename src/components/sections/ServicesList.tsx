@@ -61,7 +61,7 @@ export function ServicesList() {
                 >
                   <Link
                     href={s.href}
-                    className="group flex items-center justify-between py-5 border-b border-gold-100 hover:border-gold-300 transition-colors duration-300"
+                    className="group flex items-center justify-between py-5 border-b border-gold-100 hover:border-gold-300 transition-all duration-300 hover:bg-gradient-to-r hover:from-gold-50/50 hover:to-transparent"
                   >
                     <div className="flex items-center gap-6">
                       <span className="font-display text-xl font-light text-gold-300 w-9 shrink-0">{s.num}</span>

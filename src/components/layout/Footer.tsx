@@ -17,7 +17,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-ink-950 text-cream-100 relative">
+    <footer className="bg-ink-950 text-cream-100 relative grain">
       {/* Animated divider */}
       <motion.div
         className="absolute top-0 left-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent"
@@ -27,7 +27,7 @@ export function Footer() {
         transition={{ duration: 1, ease }}
       />
 
-      <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 pt-20 pb-10">
+      <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 pt-20 pb-10">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 pb-16 border-b border-white/8">
 
           {/* Brand */}

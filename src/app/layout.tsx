@@ -5,6 +5,8 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { MobileBottomBar } from '@/components/layout/MobileBottomBar';
 import { MotionProvider } from '@/components/motion/MotionProvider';
+import { ScrollProgress } from '@/components/motion/ScrollProgress';
+import { BackToTop } from '@/components/motion/BackToTop';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { localBusinessSchema } from '@/lib/schema';
 import '@/styles/globals.css';
@@ -61,10 +63,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen flex flex-col bg-white">
         <MotionProvider>
+          <ScrollProgress />
           <Header />
           <main className="flex-1 pb-16 lg:pb-0">{children}</main>
           <Footer />
           <MobileBottomBar />
+          <BackToTop />
         </MotionProvider>
       </body>
     </html>
