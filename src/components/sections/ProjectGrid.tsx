@@ -11,15 +11,15 @@ const REAL = [
 ];
 
 const projects = [
-  { src: REAL[0], alt: 'Custom paver patio and outdoor kitchen in Colorado backyard', label: 'Full Hardscape & Kitchen — Lafayette, CO' },
-  { src: REAL[1], alt: 'Custom paver patio with fire feature', label: 'Paver Patio & Fire Pit — Erie, CO' },
-  { src: REAL[2], alt: 'Retaining walls and tiered landscape installation', label: 'Retaining Walls — Boulder, CO' },
-  { src: REAL[3], alt: 'Custom outdoor hardscape project', label: 'Outdoor Hardscape — Lafayette, CO' },
-  { src: REAL[0], alt: 'Paver patio installation in Colorado', label: 'Paver Installation — Westminster, CO' },
-  { src: REAL[1], alt: 'Outdoor living space with paver surround', label: 'Outdoor Living — Longmont, CO' },
-  { src: REAL[2], alt: 'Custom hardscape and landscape project', label: 'Hardscape & Landscape — Erie, CO' },
-  { src: REAL[3], alt: 'Backyard transformation with pavers', label: 'Backyard Transformation — Boulder, CO' },
-  { src: REAL[0], alt: 'Custom paver and fire feature installation', label: 'Pavers & Fire — Lafayette, CO' },
+  { src: REAL[0], alt: 'Custom paver patio and outdoor kitchen in Colorado backyard', label: 'Full Hardscape & Kitchen, Lafayette, CO' },
+  { src: REAL[1], alt: 'Custom paver patio with fire feature', label: 'Paver Patio & Fire Pit, Erie, CO' },
+  { src: REAL[2], alt: 'Retaining walls and tiered landscape installation', label: 'Retaining Walls, Boulder, CO' },
+  { src: REAL[3], alt: 'Custom outdoor hardscape project', label: 'Outdoor Hardscape, Lafayette, CO' },
+  { src: REAL[0], alt: 'Paver patio installation in Colorado', label: 'Paver Installation, Westminster, CO' },
+  { src: REAL[1], alt: 'Outdoor living space with paver surround', label: 'Outdoor Living, Longmont, CO' },
+  { src: REAL[2], alt: 'Custom hardscape and landscape project', label: 'Hardscape & Landscape, Erie, CO' },
+  { src: REAL[3], alt: 'Backyard transformation with pavers', label: 'Backyard Transformation, Boulder, CO' },
+  { src: REAL[0], alt: 'Custom paver and fire feature installation', label: 'Pavers & Fire, Lafayette, CO' },
 ];
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;

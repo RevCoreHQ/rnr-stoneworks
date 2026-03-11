@@ -11,7 +11,7 @@ import { breadcrumbSchema } from '@/lib/schema';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Blog — Outdoor Living & Hardscape Guides | Rock N Roll Stoneworks CO',
+  title: 'Blog, Outdoor Living & Hardscape Guides | Rock N Roll Stoneworks CO',
   description:
     'Expert guides on paver installation, fire pits, outdoor kitchens, and hardscape construction for Colorado homeowners from Rock N Roll Stoneworks.',
   path: '/blog',

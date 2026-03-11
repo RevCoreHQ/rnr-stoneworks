@@ -52,7 +52,7 @@ export default function HomePage() {
       <Hero
         headline="Luxury Outdoor Living, Crafted for Colorado"
         subheadline="Belgard Authorized · Lafayette, CO"
-        description="Complete design–build for paver installations, fire features, outdoor kitchens, water elements, and hardscape environments across the Colorado Front Range."
+        description="Complete design and build for paver installations, fire features, outdoor kitchens, water elements, and hardscape environments across the Colorado Front Range."
         backgroundImage="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69aa9a13b003fa04e8de88ee.jpg"
       />
 

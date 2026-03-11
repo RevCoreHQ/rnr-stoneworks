@@ -6,7 +6,7 @@ const items = [
   'Belgard Lifetime Material Warranty',
   'Colorado Front Range',
   '150k – 500k Projects',
-  'Custom Design–Build',
+  'Custom Design & Build',
   'Licensed & Insured',
   'Belgard Authorized Contractor',
   'ICPI Certified Installer',
@@ -15,7 +15,7 @@ const items = [
   'Belgard Lifetime Material Warranty',
   'Colorado Front Range',
   '150k – 500k Projects',
-  'Custom Design–Build',
+  'Custom Design & Build',
   'Licensed & Insured',
 ];
 

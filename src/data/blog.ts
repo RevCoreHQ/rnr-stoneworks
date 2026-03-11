@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
     heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=700&fit=crop',
     heroAlt: 'Completed paver patio in Colorado backyard',
     category: 'Guides',
-    body: `Paver patios are one of the most popular outdoor living investments among Colorado homeowners — and for good reason. They look beautiful, last for decades, and add measurable value to a property. But the cost range can feel confusing. A 400-square-foot patio might cost $6,000 from one contractor and $14,000 from another. What drives that gap?
+    body: `Paver patios are one of the most popular outdoor living investments among Colorado homeowners, and for good reason. They look beautiful, last for decades, and add measurable value to a property. But the cost range can feel confusing. A 400-square-foot patio might cost $6,000 from one contractor and $14,000 from another. What drives that gap?
 
 ## What You Can Expect to Pay
 
@@ -36,7 +36,7 @@ In the Lafayette, Boulder, and Erie area, professionally installed paver patios 
 
 **Paver quality**: Belgard pavers and other premium brands cost more per unit than commodity pavers, but they carry lifetime warranties on the material itself and perform significantly better over time.
 
-**Base depth and preparation**: A proper base for Colorado soils requires more aggregate depth than many other regions. Cutting corners here is the most common way cheap installers keep their bids low — and the most common reason pavers settle and shift within a few years.
+**Base depth and preparation**: A proper base for Colorado soils requires more aggregate depth than many other regions. Cutting corners here is the most common way cheap installers keep their bids low, and the most common reason pavers settle and shift within a few years.
 
 **Design complexity**: Simple rectangular patios are less expensive than curved designs, multi-level layouts, or intricate patterns that require more cutting and fitting time.
 
@@ -75,7 +75,7 @@ Our Warming Trends burner systems produce a full, beautiful flame and are availa
 
 ## Outdoor Fireplaces: Architectural, Dramatic, Higher Impact
 
-An outdoor fireplace is an architectural feature — a statement piece that anchors one side of an outdoor room the way an interior fireplace anchors a living room. It creates a defined focal point and a sense of structure that a fire pit does not. Outdoor fireplaces also provide a heat-reflective surface that radiates warmth more directionally than a fire pit, making them somewhat more effective at warming a seating area in cool Colorado evenings.
+An outdoor fireplace is an architectural feature, a statement piece that anchors one side of an outdoor room the way an interior fireplace anchors a living room. It creates a defined focal point and a sense of structure that a fire pit does not. Outdoor fireplaces also provide a heat-reflective surface that radiates warmth more directionally than a fire pit, making them somewhat more effective at warming a seating area in cool Colorado evenings.
 
 The trade-off is cost and footprint. A masonry outdoor fireplace requires significantly more material and labor than a fire pit, and it occupies more space in your backyard design.
 
@@ -83,7 +83,7 @@ The trade-off is cost and footprint. A masonry outdoor fireplace requires signif
 
 ## Colorado Air Quality Considerations
 
-Colorado's Front Range has air quality action days that restrict wood burning during certain weather conditions. Gas fire features — both fire pits and gas-burning fireplaces — are not subject to these restrictions and can be used year-round. If you want a wood-burning fireplace, confirm the regulations in your specific municipality before committing to that design.
+Colorado's Front Range has air quality action days that restrict wood burning during certain weather conditions. Gas fire features, both fire pits and gas-burning fireplaces, are not subject to these restrictions and can be used year-round. If you want a wood-burning fireplace, confirm the regulations in your specific municipality before committing to that design.
 
 ## Our Recommendation
 
@@ -118,13 +118,13 @@ Contact Rock N Roll Stoneworks for a free consultation on your fire feature proj
 
 **Polymeric sand re-application**: Every two to three years, inspect your joints and top up with polymeric sand where needed. This is especially important after pressure washing, which can remove joint sand.
 
-**Sealing**: Sealing your pavers every two to three years protects color, reduces staining, and makes cleaning easier. Sealer also helps lock polymeric sand in place. We recommend a penetrating sealer rather than a topical film-forming sealer for most applications — penetrating sealers do not alter the surface appearance and do not peel or flake over time.
+**Sealing**: Sealing your pavers every two to three years protects color, reduces staining, and makes cleaning easier. Sealer also helps lock polymeric sand in place. We recommend a penetrating sealer rather than a topical film-forming sealer for most applications, penetrating sealers do not alter the surface appearance and do not peel or flake over time.
 
 ## Colorado-Specific Concerns
 
-**Ice and snow management**: Avoid metal-bladed shovels on pavers — they can chip and scratch the surface. Use a plastic-bladed shovel or a snow blower with a rubber-edged blade. For de-icing, sand is safest. If you use chemical de-icers, avoid products containing ammonium sulfate or ammonium nitrate, which can damage concrete-based pavers. Calcium chloride and magnesium chloride are safer options.
+**Ice and snow management**: Avoid metal-bladed shovels on pavers, they can chip and scratch the surface. Use a plastic-bladed shovel or a snow blower with a rubber-edged blade. For de-icing, sand is safest. If you use chemical de-icers, avoid products containing ammonium sulfate or ammonium nitrate, which can damage concrete-based pavers. Calcium chloride and magnesium chloride are safer options.
 
-**Freeze-thaw cycles**: Colorado's freeze-thaw cycles are hard on any hardscape. Properly installed pavers with a well-compacted aggregate base handle this better than any other surface material — the flexibility of individual units allows them to move slightly without cracking. If you notice significant settling or heaving in a localized area, contact us — individual sections can often be lifted and reset without disturbing the surrounding installation.
+**Freeze-thaw cycles**: Colorado's freeze-thaw cycles are hard on any hardscape. Properly installed pavers with a well-compacted aggregate base handle this better than any other surface material, the flexibility of individual units allows them to move slightly without cracking. If you notice significant settling or heaving in a localized area, contact us, individual sections can often be lifted and reset without disturbing the surrounding installation.
 
 For any maintenance questions or concerns about your Rock N Roll Stoneworks installation, contact us directly.`,
   },

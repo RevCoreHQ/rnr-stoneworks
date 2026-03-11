@@ -7,9 +7,9 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Our Process — From Design to Installation | Rock N Roll Stoneworks CO',
+  title: 'Our Process, From Design to Installation | Rock N Roll Stoneworks CO',
   description:
-    'Learn how Rock N Roll Stoneworks takes your outdoor project from vision to reality — free consultation, 3D design, ICPI-certified installation, and final walkthrough.',
+    'Learn how Rock N Roll Stoneworks takes your outdoor project from vision to reality, free consultation, 3D design, ICPI-certified installation, and final walkthrough.',
   path: '/process',
 });
 
@@ -20,7 +20,7 @@ const steps = [
     description:
       'We visit your property in person, walk the space with you, and listen to your vision. We ask questions about how you want to use the space, your style preferences, and your budget range. There is no cost and no obligation to this visit.',
     detail:
-      'Most consultations take 30–60 minutes. We like to see the space in context — how it relates to the home, where the sun hits, what drainage challenges exist, and how the project will be used day-to-day.',
+      'Most consultations take 30–60 minutes. We like to see the space in context, how it relates to the home, where the sun hits, what drainage challenges exist, and how the project will be used day-to-day.',
   },
   {
     number: '02',
@@ -28,13 +28,13 @@ const steps = [
     description:
       'Based on your consultation, our design team creates a 2D layout showing dimensions and materials, plus a full 3D virtual tour that lets you walk through your completed project before any work begins.',
     detail:
-      'The 3D design phase is where the vision becomes real. You can see exactly how the paver pattern looks, where the fire pit sits in relation to the seating wall, how the retaining wall integrates with the planting areas. If you want changes, we revise until you are satisfied — no charge for revisions.',
+      'The 3D design phase is where the vision becomes real. You can see exactly how the paver pattern looks, where the fire pit sits in relation to the seating wall, how the retaining wall integrates with the planting areas. If you want changes, we revise until you are satisfied, no charge for revisions.',
   },
   {
     number: '03',
     title: 'Proposal & Contract',
     description:
-      'Once the design is approved, we provide a detailed written proposal with line-item costs, materials specified, and a project timeline. We do not issue vague estimates — you know exactly what you are getting and what it costs.',
+      'Once the design is approved, we provide a detailed written proposal with line-item costs, materials specified, and a project timeline. We do not issue vague estimates, you know exactly what you are getting and what it costs.',
     detail:
       'We require a deposit to schedule your project and order materials. The balance is due only upon satisfactory completion. We do not ask for full payment until you are happy with the finished result.',
   },
@@ -42,9 +42,9 @@ const steps = [
     number: '04',
     title: 'Expert Installation',
     description:
-      'Our ICPI-certified crew handles every phase of installation — site preparation, excavation, base compaction, material placement, and final finishing. We handle permit coordination for projects that require it.',
+      'Our ICPI-certified crew handles every phase of installation, site preparation, excavation, base compaction, material placement, and final finishing. We handle permit coordination for projects that require it.',
     detail:
-      'We take base preparation seriously. The base is what determines whether a paver installation lasts 5 years or 50. We use proper aggregate depth, plate compaction at multiple stages, and edge restraints that are anchored correctly — not just spiked into soft soil.',
+      'We take base preparation seriously. The base is what determines whether a paver installation lasts 5 years or 50. We use proper aggregate depth, plate compaction at multiple stages, and edge restraints that are anchored correctly, not just spiked into soft soil.',
   },
   {
     number: '05',
@@ -106,7 +106,7 @@ export default function ProcessPage() {
 
       <CTASection
         headline="Ready to Start Your Project?"
-        description="The first step is a free on-site consultation. No pressure, no obligation — just a conversation about what you want to build."
+        description="The first step is a free on-site consultation. No pressure, no obligation, just a conversation about what you want to build."
       />
     </>
   );

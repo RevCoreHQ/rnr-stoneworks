@@ -8,7 +8,7 @@ const steps = [
   {
     num: '01',
     title: 'Consultation & Vision',
-    body: 'We visit your property, learn what you want to achieve, and assess the space. No sales pitch — just a genuine conversation about your goals.',
+    body: 'We visit your property, learn what you want to achieve, and assess the space. No sales pitch, just a genuine conversation about your goals.',
   },
   {
     num: '02',
@@ -45,7 +45,7 @@ export function ProcessSteps() {
                 className="font-display font-light text-ink-900 leading-[1.08]"
                 style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)' }}
               >
-                From first call to final approval — a seamless experience.
+                From first call to final approval, a seamless experience.
               </h2>
             </ScrollReveal>
           </div>

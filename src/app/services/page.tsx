@@ -8,7 +8,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Our Services — Pavers, Fire Pits, Outdoor Kitchens & More | Rock N Roll Stoneworks CO',
+  title: 'Our Services, Pavers, Fire Pits, Outdoor Kitchens & More | Rock N Roll Stoneworks CO',
   description:
     'Explore the full range of outdoor living services from Rock N Roll Stoneworks: paver installations, fire pits, outdoor kitchens, water features, retaining walls, lighting, turf, and more.',
   path: '/services',
@@ -32,7 +32,7 @@ export default function ServicesPage() {
               Complete Outdoor Living Services
             </h1>
             <p className="font-body text-lg text-ink-500 leading-relaxed">
-              From custom paver patios and fire features to outdoor kitchens, water features, and complete backyard transformations — Rock N Roll Stoneworks delivers every aspect of outdoor living construction.
+              From custom paver patios and fire features to outdoor kitchens, water features, and complete backyard transformations, Rock N Roll Stoneworks delivers every aspect of outdoor living construction.
             </p>
           </div>
         </div>

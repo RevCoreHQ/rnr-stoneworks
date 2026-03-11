@@ -174,7 +174,7 @@ export default async function ServiceAreaPage({ params }: Props) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Star, title: 'Belgard Authorized', text: 'Certified Belgard contractor and reseller with lifetime warranties on qualifying installations.' },
-              { icon: Shield, title: 'ICPI Certified', text: 'Interlocking Concrete Pavement Institute certified installer — the industry standard for paver installation.' },
+              { icon: Shield, title: 'ICPI Certified', text: 'Interlocking Concrete Pavement Institute certified installer, the industry standard for paver installation.' },
               { icon: CheckCircle, title: '3D Design', text: 'See a full 3D virtual tour of your project before a single stone is placed.' },
               { icon: Clock, title: 'Free Estimates', text: 'Free on-site consultations and detailed estimates with no obligation to proceed.' },
             ].map((item) => (

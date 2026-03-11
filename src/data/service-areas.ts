@@ -33,11 +33,11 @@ export const serviceAreas: ServiceAreaData[] = [
     body: [
       {
         heading: 'Your Local Lafayette Hardscape Contractor',
-        text: 'Rock N Roll Stoneworks is headquartered at 12420 Arapahoe Road, right here in Lafayette. When you hire us, you are hiring your neighbors — a team that cares about the quality of work visible in our own community. We have built relationships with local inspectors, material suppliers, and subcontractors that allow us to move projects efficiently while maintaining the quality standards our Lafayette clients expect. Our trucks are in Lafayette neighborhoods most weeks of the year, and our reputation here is built on the completed projects visible in yards throughout the city.',
+        text: 'Rock N Roll Stoneworks is headquartered at 12420 Arapahoe Road, right here in Lafayette. When you hire us, you are hiring your neighbors, a team that cares about the quality of work visible in our own community. We have built relationships with local inspectors, material suppliers, and subcontractors that allow us to move projects efficiently while maintaining the quality standards our Lafayette clients expect. Our trucks are in Lafayette neighborhoods most weeks of the year, and our reputation here is built on the completed projects visible in yards throughout the city.',
       },
       {
         heading: 'Lafayette Soil and Site Conditions',
-        text: 'Lafayette sits on the Colorado Front Range where expansive clay soils are common. These soils expand when wet and contract when dry, creating movement that can damage poorly engineered hardscape structures over time. Rock N Roll Stoneworks accounts for Lafayette\'s soil conditions in every project design — using proper compacted aggregate bases, reinforced retaining wall systems, and drainage solutions that manage water movement and minimize soil movement beneath installed surfaces. This attention to geotechnical reality is what separates our work from contractors who use the same base preparation everywhere regardless of local conditions.',
+        text: 'Lafayette sits on the Colorado Front Range where expansive clay soils are common. These soils expand when wet and contract when dry, creating movement that can damage poorly engineered hardscape structures over time. Rock N Roll Stoneworks accounts for Lafayette\'s soil conditions in every project design, using proper compacted aggregate bases, reinforced retaining wall systems, and drainage solutions that manage water movement and minimize soil movement beneath installed surfaces. This attention to geotechnical reality is what separates our work from contractors who use the same base preparation everywhere regardless of local conditions.',
       },
       {
         heading: 'Lafayette Permit Process',
@@ -54,13 +54,13 @@ export const serviceAreas: ServiceAreaData[] = [
       'Custom paver installations, fire pits, outdoor kitchens, and hardscape in Erie, CO. Belgard authorized. ICPI certified installer. Free estimates.',
     h1: 'Hardscape & Outdoor Living in Erie, CO',
     intro:
-      'Erie is one of the fastest-growing communities on the Colorado Front Range, and Rock N Roll Stoneworks serves Erie homeowners with the full range of outdoor living services — from paver patios and fire pits to complete backyard transformations. Whether your home is in a new Erie subdivision or an established neighborhood, our team brings the same craftsmanship to every project.',
+      'Erie is one of the fastest-growing communities on the Colorado Front Range, and Rock N Roll Stoneworks serves Erie homeowners with the full range of outdoor living services, from paver patios and fire pits to complete backyard transformations. Whether your home is in a new Erie subdivision or an established neighborhood, our team brings the same craftsmanship to every project.',
     isPrimary: true,
     heroImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=700&fit=crop',
     body: [
       {
         heading: 'New Construction Outdoor Living in Erie',
-        text: 'Erie\'s rapid growth means many homeowners move into properties with builder-grade minimal landscaping or completely blank backyard slates. This is an opportunity to design your outdoor space exactly as you want it from the start, without working around existing features or installations. Rock N Roll Stoneworks specializes in taking blank-slate Erie backyards and transforming them into complete outdoor living environments. Our 3D design process is particularly valuable in this context — giving new homeowners the ability to visualize their finished backyard before any concrete is poured or any stone is placed.',
+        text: 'Erie\'s rapid growth means many homeowners move into properties with builder-grade minimal landscaping or completely blank backyard slates. This is an opportunity to design your outdoor space exactly as you want it from the start, without working around existing features or installations. Rock N Roll Stoneworks specializes in taking blank-slate Erie backyards and transforming them into complete outdoor living environments. Our 3D design process is particularly valuable in this context, giving new homeowners the ability to visualize their finished backyard before any concrete is poured or any stone is placed.',
       },
       {
         heading: 'Erie HOA Considerations',
@@ -83,7 +83,7 @@ export const serviceAreas: ServiceAreaData[] = [
     body: [
       {
         heading: 'Boulder\'s Outdoor Culture',
-        text: 'Boulder\'s active outdoor culture extends naturally into how residents use and value their outdoor living spaces. A well-designed outdoor environment in Boulder is not a luxury — it is a genuine extension of how people live. Rock N Roll Stoneworks brings a design sensibility that resonates with Boulder\'s appreciation for natural materials, functional spaces, and craftsmanship that respects the surrounding environment. We design with natural stone, native-compatible plantings, and water-wise approaches that fit Boulder\'s ethos.',
+        text: 'Boulder\'s active outdoor culture extends naturally into how residents use and value their outdoor living spaces. A well-designed outdoor environment in Boulder is not a luxury, it is a genuine extension of how people live. Rock N Roll Stoneworks brings a design sensibility that resonates with Boulder\'s appreciation for natural materials, functional spaces, and craftsmanship that respects the surrounding environment. We design with natural stone, native-compatible plantings, and water-wise approaches that fit Boulder\'s ethos.',
       },
       {
         heading: 'Boulder Building Regulations',
@@ -106,7 +106,7 @@ export const serviceAreas: ServiceAreaData[] = [
     body: [
       {
         heading: 'Westminster\'s Outdoor Living Market',
-        text: 'Westminster\'s mix of established neighborhoods and newer development creates demand for both backyard transformations of existing spaces and ground-up outdoor living designs for newer properties. Rock N Roll Stoneworks has experience with both — whether retrofitting an outdated existing patio or designing a complete outdoor environment for a newly built home. Our consultation process starts with understanding what you have and what you want, then developing a design that achieves your goals within your budget.',
+        text: 'Westminster\'s mix of established neighborhoods and newer development creates demand for both backyard transformations of existing spaces and ground-up outdoor living designs for newer properties. Rock N Roll Stoneworks has experience with both, whether retrofitting an outdated existing patio or designing a complete outdoor environment for a newly built home. Our consultation process starts with understanding what you have and what you want, then developing a design that achieves your goals within your budget.',
       },
     ],
   },
@@ -139,14 +139,14 @@ export const serviceAreas: ServiceAreaData[] = [
       'Custom paver installations, fire pits, and outdoor living in Firestone and Frederick, CO. Rock N Roll Stoneworks. Belgard authorized. Free estimates.',
     h1: 'Hardscape & Outdoor Living in Firestone & Frederick, CO',
     intro:
-      'Rock N Roll Stoneworks serves homeowners in Firestone and Frederick with premium outdoor living construction. These growing communities offer larger lots and newer homes — an ideal canvas for comprehensive outdoor living projects that include paver patios, fire pits, outdoor kitchens, and complete backyard transformations.',
+      'Rock N Roll Stoneworks serves homeowners in Firestone and Frederick with premium outdoor living construction. These growing communities offer larger lots and newer homes, an ideal canvas for comprehensive outdoor living projects that include paver patios, fire pits, outdoor kitchens, and complete backyard transformations.',
     isPrimary: false,
     nearbyNote: 'Firestone and Frederick are at the northern edge of our primary service area. Call us to discuss your project and confirm availability.',
     heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=700&fit=crop',
     body: [
       {
         heading: 'Growing Communities, Bigger Opportunities',
-        text: 'Firestone and Frederick have seen significant residential growth as families seek more space and value north of Boulder and east of Longmont. The larger lots common in these communities create excellent opportunities for comprehensive outdoor living projects. Many homeowners in these areas are building outdoor spaces for the first time, and Rock N Roll Stoneworks helps them design complete environments — from the driveway approach to the back patio fire feature — that make the most of their property and investment.',
+        text: 'Firestone and Frederick have seen significant residential growth as families seek more space and value north of Boulder and east of Longmont. The larger lots common in these communities create excellent opportunities for comprehensive outdoor living projects. Many homeowners in these areas are building outdoor spaces for the first time, and Rock N Roll Stoneworks helps them design complete environments, from the driveway approach to the back patio fire feature, that make the most of their property and investment.',
       },
     ],
   },

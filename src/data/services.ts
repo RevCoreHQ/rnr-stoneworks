@@ -37,12 +37,12 @@ export const services: ServiceData[] = [
       'Custom paver driveways, walkways, patios, and full backyard hardscape installs in Lafayette, Erie, Boulder, and surrounding Colorado communities. Free estimates.',
     h1: 'Custom Paver Installations in Colorado',
     intro:
-      "Transform your driveway, walkway, patio, or entire backyard with a custom paver installation designed to last. Rock N Roll Stoneworks specializes in Belgard paver systems — from initial 2D and 3D design through final installation. We handle every detail so you can enjoy a seamless build and a finished outdoor space that adds lasting value to your home.",
+      "Transform your driveway, walkway, patio, or entire backyard with a custom paver installation designed to last. Rock N Roll Stoneworks specializes in Belgard paver systems, from initial 2D and 3D design through final installation. We handle every detail so you can enjoy a seamless build and a finished outdoor space that adds lasting value to your home.",
     heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=700&fit=crop',
-    heroAlt: 'Custom paver patio installation in Lafayette, Colorado — Rock N Roll Stoneworks',
+    heroAlt: 'Custom paver patio installation in Lafayette, Colorado, Rock N Roll Stoneworks',
     features: [
       'Driveways, walkways, patios, and full backyard installs',
-      'Belgard paver systems — authorized contractor and reseller',
+      'Belgard paver systems, authorized contractor and reseller',
       '2D design and 3D virtual tour before any work begins',
       'ICPI certified installation techniques',
       'Proper base preparation and edge restraints for lasting results',
@@ -53,15 +53,15 @@ export const services: ServiceData[] = [
     body: [
       {
         heading: 'Why Pavers Outperform Poured Concrete',
-        text: "Poured concrete cracks. It is not a question of if — it is a question of when, especially in Colorado where freeze-thaw cycles put extreme stress on rigid slabs. Pavers, by contrast, flex with the ground and can be lifted and reset if any settling occurs. A well-installed paver system will outlast a poured slab by decades and look better the entire time. Rock N Roll Stoneworks uses Belgard pavers exclusively for their superior engineering, warranty coverage, and the sheer range of design options they offer. Whether you want a tumbled, rustic look or a sleek modern finish, there is a paver product that delivers it.",
+        text: "Poured concrete cracks. It is not a question of if, it is a question of when, especially in Colorado where freeze-thaw cycles put extreme stress on rigid slabs. Pavers, by contrast, flex with the ground and can be lifted and reset if any settling occurs. A well-installed paver system will outlast a poured slab by decades and look better the entire time. Rock N Roll Stoneworks uses Belgard pavers exclusively for their superior engineering, warranty coverage, and the sheer range of design options they offer. Whether you want a tumbled, rustic look or a sleek modern finish, there is a paver product that delivers it.",
       },
       {
-        heading: 'From Driveway to Backyard — Complete Hardscape Solutions',
-        text: "Our paver work is not limited to patios. We design and install complete outdoor environments that combine driveways, walkways, pool decks, patio areas, steps, and borders into a single cohesive design. Many homeowners start with one element — a front walkway or a back patio — and expand after seeing the quality of the finished result. We are always happy to design your project with future phases in mind so that additions blend seamlessly when the time comes.",
+        heading: 'From Driveway to Backyard, Complete Hardscape Solutions',
+        text: "Our paver work is not limited to patios. We design and install complete outdoor environments that combine driveways, walkways, pool decks, patio areas, steps, and borders into a single cohesive design. Many homeowners start with one element, a front walkway or a back patio, and expand after seeing the quality of the finished result. We are always happy to design your project with future phases in mind so that additions blend seamlessly when the time comes.",
       },
       {
         heading: 'The Rock N Roll Stoneworks Installation Process',
-        text: "Every paver project begins with a site assessment and design consultation. We measure your space, discuss your goals and budget, and create a 2D layout with a 3D virtual tour so you can visualize the finished result before we break ground. Once approved, our ICPI-certified crew handles excavation, base preparation, sand bedding, paver placement, and final compaction and sealing. We do not rush jobs or cut corners on the base — the foundation is what separates a lasting installation from one that settles and shifts in two years.",
+        text: "Every paver project begins with a site assessment and design consultation. We measure your space, discuss your goals and budget, and create a 2D layout with a 3D virtual tour so you can visualize the finished result before we break ground. Once approved, our ICPI-certified crew handles excavation, base preparation, sand bedding, paver placement, and final compaction and sealing. We do not rush jobs or cut corners on the base, the foundation is what separates a lasting installation from one that settles and shifts in two years.",
       },
     ],
     faqs: [
@@ -99,12 +99,12 @@ export const services: ServiceData[] = [
       'Custom outdoor fire pits and fireplaces in Lafayette, Erie, Boulder, and surrounding Colorado communities. Hand-lit or Bluetooth remote start. Free design consultation.',
     h1: 'Custom Outdoor Fire Pits & Fireplaces in Colorado',
     intro:
-      "A fire feature transforms your outdoor space into a true gathering place — one you can enjoy from early spring through the end of Colorado autumn. Rock N Roll Stoneworks designs and builds custom fire pits and outdoor fireplaces in a wide range of shapes, sizes, and finishes. From a simple round gas fire pit to a full masonry fireplace with stone surround, our team brings the same craftsmanship to every fire feature we build.",
+      "A fire feature transforms your outdoor space into a true gathering place, one you can enjoy from early spring through the end of Colorado autumn. Rock N Roll Stoneworks designs and builds custom fire pits and outdoor fireplaces in a wide range of shapes, sizes, and finishes. From a simple round gas fire pit to a full masonry fireplace with stone surround, our team brings the same craftsmanship to every fire feature we build.",
     heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=700&fit=crop',
     heroAlt: 'Custom outdoor fire pit installation in Lafayette, Colorado',
     features: [
       'Custom design in any shape, size, or style',
-      'Warming Trends burner systems — hand-lit or Bluetooth remote start',
+      'Warming Trends burner systems, hand-lit or Bluetooth remote start',
       'Customizable fire glass, lava rock, or ceramic logs',
       'Natural gas or propane options',
       'Full masonry or modern metal fire pit options',
@@ -119,7 +119,7 @@ export const services: ServiceData[] = [
       },
       {
         heading: 'Designing Your Fire Feature',
-        text: "Every fire feature we build is custom designed for your specific space. Round, square, rectangular, or freeform — the shape and dimensions are entirely up to you. We pair fire features with complementary paver surrounds, built-in seating walls, and landscape elements to create a cohesive outdoor living area rather than an isolated feature. The fire glass, lava rock, and ceramic log options allow you to customize the visual style from the inside out, and color-changing flame technology can add a dramatic visual element if you want something truly unique.",
+        text: "Every fire feature we build is custom designed for your specific space. Round, square, rectangular, or freeform, the shape and dimensions are entirely up to you. We pair fire features with complementary paver surrounds, built-in seating walls, and landscape elements to create a cohesive outdoor living area rather than an isolated feature. The fire glass, lava rock, and ceramic log options allow you to customize the visual style from the inside out, and color-changing flame technology can add a dramatic visual element if you want something truly unique.",
       },
     ],
     faqs: [
@@ -152,7 +152,7 @@ export const services: ServiceData[] = [
       'Custom outdoor kitchen installations in Lafayette, Erie, Boulder, and surrounding Colorado communities. Grills, countertops, refrigeration, and full outdoor entertaining spaces.',
     h1: 'Custom Outdoor Kitchens in Colorado',
     intro:
-      "An outdoor kitchen extends your living space and transforms how you entertain. Rock N Roll Stoneworks designs and builds complete outdoor kitchen installations — from a simple built-in grill station to a full L-shaped kitchen with refrigeration, sink, storage, and countertops. We integrate outdoor kitchens seamlessly into your broader patio and hardscape design for a finished, cohesive result.",
+      "An outdoor kitchen extends your living space and transforms how you entertain. Rock N Roll Stoneworks designs and builds complete outdoor kitchen installations, from a simple built-in grill station to a full L-shaped kitchen with refrigeration, sink, storage, and countertops. We integrate outdoor kitchens seamlessly into your broader patio and hardscape design for a finished, cohesive result.",
     heroImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=700&fit=crop',
     heroAlt: 'Custom outdoor kitchen build in Lafayette Colorado by Rock N Roll Stoneworks',
     features: [
@@ -168,11 +168,11 @@ export const services: ServiceData[] = [
     body: [
       {
         heading: 'Building for Colorado\'s Climate',
-        text: "Colorado\'s Front Range offers more than 300 days of sunshine per year, making outdoor cooking genuinely practical for a large portion of the calendar. But the climate also brings temperature swings, occasional hail, and UV exposure that demands durable materials. Rock N Roll Stoneworks selects outdoor kitchen materials specifically for the Colorado climate — stainless steel appliances rated for outdoor use, countertop materials that resist freeze-thaw damage, and structural frameworks engineered for longevity. Your outdoor kitchen will look and function beautifully for years, not just the first season.",
+        text: "Colorado\'s Front Range offers more than 300 days of sunshine per year, making outdoor cooking genuinely practical for a large portion of the calendar. But the climate also brings temperature swings, occasional hail, and UV exposure that demands durable materials. Rock N Roll Stoneworks selects outdoor kitchen materials specifically for the Colorado climate, stainless steel appliances rated for outdoor use, countertop materials that resist freeze-thaw damage, and structural frameworks engineered for longevity. Your outdoor kitchen will look and function beautifully for years, not just the first season.",
       },
       {
         heading: 'Integration With Your Outdoor Space',
-        text: "The best outdoor kitchens do not feel like an afterthought — they feel like a natural extension of the home. We design outdoor kitchens as part of a complete outdoor living plan that may include a paver patio, pergola or shade structure, fire pit or fireplace, and landscaping. Our 3D design process lets you see the finished environment before any work begins, so you can adjust layouts, materials, and features until the design is exactly what you envisioned.",
+        text: "The best outdoor kitchens do not feel like an afterthought, they feel like a natural extension of the home. We design outdoor kitchens as part of a complete outdoor living plan that may include a paver patio, pergola or shade structure, fire pit or fireplace, and landscaping. Our 3D design process lets you see the finished environment before any work begins, so you can adjust layouts, materials, and features until the design is exactly what you envisioned.",
       },
     ],
     faqs: [
@@ -184,7 +184,7 @@ export const services: ServiceData[] = [
       {
         question: 'How do I protect my outdoor kitchen in winter?',
         answer:
-          'We recommend appliance covers for the winter months and shutting off water lines to prevent freeze damage if you have a sink. Most of the structural components — stone, stucco, and stainless steel — are built to withstand Colorado winters without special treatment.',
+          'We recommend appliance covers for the winter months and shutting off water lines to prevent freeze damage if you have a sink. Most of the structural components, stone, stucco, and stainless steel, are built to withstand Colorado winters without special treatment.',
       },
     ],
     relatedSlugs: ['fire-pits-fireplaces', 'paver-installations', 'decks-pergolas'],
@@ -200,7 +200,7 @@ export const services: ServiceData[] = [
       'Custom water features, color-changing waterfalls, and spillways in Lafayette, Erie, Boulder, and surrounding Colorado areas. Add sound and ambiance to your outdoor space.',
     h1: 'Custom Water Features for Colorado Outdoor Spaces',
     intro:
-      "The sound of moving water transforms an outdoor space. Rock N Roll Stoneworks designs and installs custom water features — from color-changing LED waterfalls and spillways to bubbling pondless fountains and stream installations. Whether you want to mask street noise, create a focal point, or simply add a layer of tranquility to your backyard, we have a water feature solution that fits your space and budget.",
+      "The sound of moving water transforms an outdoor space. Rock N Roll Stoneworks designs and installs custom water features, from color-changing LED waterfalls and spillways to bubbling pondless fountains and stream installations. Whether you want to mask street noise, create a focal point, or simply add a layer of tranquility to your backyard, we have a water feature solution that fits your space and budget.",
     heroImage: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&h=700&fit=crop',
     heroAlt: 'Custom water feature installation in Colorado by Rock N Roll Stoneworks',
     features: [
@@ -220,7 +220,7 @@ export const services: ServiceData[] = [
       },
       {
         heading: 'Noise Reduction and Privacy',
-        text: "A well-placed water feature does more than look beautiful — it provides meaningful sound masking for yards near busy streets, neighbors, or commercial areas. The consistent, natural sound of moving water is far more effective at creating a sense of privacy and calm than fencing or planting alone. We help you identify the right size and placement for a water feature to maximize its acoustic benefit for your specific property.",
+        text: "A well-placed water feature does more than look beautiful, it provides meaningful sound masking for yards near busy streets, neighbors, or commercial areas. The consistent, natural sound of moving water is far more effective at creating a sense of privacy and calm than fencing or planting alone. We help you identify the right size and placement for a water feature to maximize its acoustic benefit for your specific property.",
       },
     ],
     faqs: [
@@ -232,7 +232,7 @@ export const services: ServiceData[] = [
       {
         question: 'How much maintenance does a water feature require?',
         answer:
-          'Pondless systems require minimal maintenance — primarily occasional cleaning of the pump vault and basin. We design our installations for easy access to all components. Seasonal startup and shutdown typically takes less than an hour.',
+          'Pondless systems require minimal maintenance, primarily occasional cleaning of the pump vault and basin. We design our installations for easy access to all components. Seasonal startup and shutdown typically takes less than an hour.',
       },
     ],
     relatedSlugs: ['paver-installations', 'fire-pits-fireplaces', 'swimming-pools'],
@@ -252,7 +252,7 @@ export const services: ServiceData[] = [
     heroImage: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&h=700&fit=crop',
     heroAlt: 'Retaining wall installation in Colorado by Rock N Roll Stoneworks',
     features: [
-      'Belgard retaining wall systems — engineered for Colorado soils',
+      'Belgard retaining wall systems, engineered for Colorado soils',
       'Single and multi-tiered wall designs',
       'Custom staircase and step construction',
       'Drainage engineering to protect walls and foundations',
@@ -300,7 +300,7 @@ export const services: ServiceData[] = [
     heroImage: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&h=700&fit=crop',
     heroAlt: 'Outdoor LED landscape lighting installation in Colorado',
     features: [
-      'LED systems — ~75% energy savings vs. incandescent',
+      'LED systems, ~75% energy savings vs. incandescent',
       'Path and walkway lighting',
       'Uplighting for trees and architectural features',
       'Built-in patio and step lighting',
@@ -316,7 +316,7 @@ export const services: ServiceData[] = [
       },
       {
         heading: 'Lighting as Part of a Complete Outdoor Design',
-        text: "The best outdoor lighting designs are planned alongside the hardscape and landscape, not added as an afterthought. When we design your paver patio, retaining walls, or outdoor kitchen, we identify lighting opportunities at every stage — in wall caps, under stair treads, along path edges, and in overhead structures. This integrated approach produces a far more polished result than installing fixtures after the fact and eliminates the need to disturb finished surfaces to run wire.",
+        text: "The best outdoor lighting designs are planned alongside the hardscape and landscape, not added as an afterthought. When we design your paver patio, retaining walls, or outdoor kitchen, we identify lighting opportunities at every stage, in wall caps, under stair treads, along path edges, and in overhead structures. This integrated approach produces a far more polished result than installing fixtures after the fact and eliminates the need to disturb finished surfaces to run wire.",
       },
     ],
     faqs: [
@@ -328,7 +328,7 @@ export const services: ServiceData[] = [
       {
         question: 'Is low-voltage outdoor lighting safe?',
         answer:
-          'Low-voltage landscape lighting (typically 12V) is extremely safe — it does not pose a shock hazard even if a cable is accidentally nicked during gardening. It is the standard for residential landscape lighting installations.',
+          'Low-voltage landscape lighting (typically 12V) is extremely safe, it does not pose a shock hazard even if a cable is accidentally nicked during gardening. It is the standard for residential landscape lighting installations.',
       },
     ],
     relatedSlugs: ['paver-installations', 'fire-pits-fireplaces', 'retaining-walls-stairs'],
@@ -344,7 +344,7 @@ export const services: ServiceData[] = [
       'Professional artificial turf installation in Lafayette, Erie, Boulder, and surrounding Colorado communities. Year-round green, minimal maintenance, drought-friendly.',
     h1: 'Artificial Turf Installation in Colorado',
     intro:
-      "Colorado\'s semi-arid climate makes maintaining a lush natural lawn a constant battle against heat, drought, and water restrictions. Artificial turf eliminates the problem entirely — delivering a perfectly green lawn year-round with minimal maintenance and no irrigation requirements. Rock N Roll Stoneworks installs premium artificial turf products designed to withstand Colorado\'s UV exposure, temperature swings, and pet traffic while looking and feeling natural.",
+      "Colorado\'s semi-arid climate makes maintaining a lush natural lawn a constant battle against heat, drought, and water restrictions. Artificial turf eliminates the problem entirely, delivering a perfectly green lawn year-round with minimal maintenance and no irrigation requirements. Rock N Roll Stoneworks installs premium artificial turf products designed to withstand Colorado\'s UV exposure, temperature swings, and pet traffic while looking and feeling natural.",
     heroImage: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&h=700&fit=crop',
     heroAlt: 'Artificial turf installation in Colorado backyard',
     features: [
@@ -364,7 +364,7 @@ export const services: ServiceData[] = [
       },
       {
         heading: 'Not All Turf Is Created Equal',
-        text: "The quality gap between premium and budget artificial turf is significant. Cheap products look obviously synthetic, heat up excessively in direct sun, mat down under heavy foot traffic, and degrade quickly under Colorado\'s intense UV exposure. Rock N Roll Stoneworks sources premium products with realistic blade shapes, color variation, and thatching that closely mimic natural grass. Proper base preparation — crushed aggregate base, weed barrier, and drainage layer — is equally important for longevity and performance.",
+        text: "The quality gap between premium and budget artificial turf is significant. Cheap products look obviously synthetic, heat up excessively in direct sun, mat down under heavy foot traffic, and degrade quickly under Colorado\'s intense UV exposure. Rock N Roll Stoneworks sources premium products with realistic blade shapes, color variation, and thatching that closely mimic natural grass. Proper base preparation, crushed aggregate base, weed barrier, and drainage layer, is equally important for longevity and performance.",
       },
     ],
     faqs: [
@@ -401,7 +401,7 @@ export const services: ServiceData[] = [
     heroImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=700&fit=crop',
     heroAlt: 'Custom deck and pergola build in Colorado',
     features: [
-      'Custom pergola structures — wood, aluminum, or vinyl',
+      'Custom pergola structures, wood, aluminum, or vinyl',
       'Attached and freestanding deck designs',
       'Shade sail and retractable cover integration',
       'String lighting and built-in fixture options',
@@ -413,7 +413,7 @@ export const services: ServiceData[] = [
     body: [
       {
         heading: 'Extending Your Outdoor Season',
-        text: "Colorado\'s summers are spectacular, but the shoulder seasons in spring and fall can be unpredictable. A covered structure — whether a full pergola with shade sails or an attached covered patio — makes your outdoor space genuinely usable in light rain, intense sun, and cooler temperatures. Adding outdoor heaters extends the usable season even further, often well into November. Rock N Roll Stoneworks designs structures with these Colorado realities in mind, selecting materials and configurations that maximize year-round comfort.",
+        text: "Colorado\'s summers are spectacular, but the shoulder seasons in spring and fall can be unpredictable. A covered structure, whether a full pergola with shade sails or an attached covered patio, makes your outdoor space genuinely usable in light rain, intense sun, and cooler temperatures. Adding outdoor heaters extends the usable season even further, often well into November. Rock N Roll Stoneworks designs structures with these Colorado realities in mind, selecting materials and configurations that maximize year-round comfort.",
       },
     ],
     faqs: [
@@ -441,11 +441,11 @@ export const services: ServiceData[] = [
       'Custom stamped and colored concrete patios, driveways, and walkways in Lafayette, Erie, Boulder, and surrounding Colorado communities. Free estimates.',
     h1: 'Stamped Concrete Patios & Driveways in Colorado',
     intro:
-      "Stamped concrete offers the look of stone, tile, or brick at a lower cost than individual paver systems — making it an excellent choice for large surface areas where budget is a primary consideration. Rock N Roll Stoneworks installs decorative stamped concrete with proper reinforcement, control joints, and integral or applied color for a finished result that holds up through Colorado\'s demanding freeze-thaw cycles.",
+      "Stamped concrete offers the look of stone, tile, or brick at a lower cost than individual paver systems, making it an excellent choice for large surface areas where budget is a primary consideration. Rock N Roll Stoneworks installs decorative stamped concrete with proper reinforcement, control joints, and integral or applied color for a finished result that holds up through Colorado\'s demanding freeze-thaw cycles.",
     heroImage: 'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=1200&h=700&fit=crop',
     heroAlt: 'Stamped concrete patio installation in Colorado',
     features: [
-      'Wide selection of patterns — slate, flagstone, cobblestone, wood plank',
+      'Wide selection of patterns, slate, flagstone, cobblestone, wood plank',
       'Integral and applied color options',
       'Properly reinforced and jointed for Colorado climate',
       'Sealing for color protection and durability',
@@ -456,8 +456,8 @@ export const services: ServiceData[] = [
     ],
     body: [
       {
-        heading: 'Stamped Concrete vs. Pavers — Which Is Right for You?',
-        text: "Stamped concrete and pavers both have their place in an outdoor design. Stamped concrete costs less per square foot for large areas and offers a seamless, monolithic surface without joints. Pavers are more repairable — individual units can be lifted and reset if settlement occurs — and offer superior flexibility over time. For many projects, combining both materials creates the best result: stamped concrete for large field areas with paver borders, steps, or accent bands that add design interest and simplify repairs.",
+        heading: 'Stamped Concrete vs. Pavers, Which Is Right for You?',
+        text: "Stamped concrete and pavers both have their place in an outdoor design. Stamped concrete costs less per square foot for large areas and offers a seamless, monolithic surface without joints. Pavers are more repairable, individual units can be lifted and reset if settlement occurs, and offer superior flexibility over time. For many projects, combining both materials creates the best result: stamped concrete for large field areas with paver borders, steps, or accent bands that add design interest and simplify repairs.",
       },
     ],
     faqs: [
@@ -485,7 +485,7 @@ export const services: ServiceData[] = [
       'Interior fireplace surrounds and exterior stone veneer applications in Lafayette, Erie, Boulder, and surrounding Colorado communities. Natural and manufactured stone options.',
     h1: 'Stone Veneers & Fireplace Surrounds in Colorado',
     intro:
-      "Stone veneer transforms the visual character of both interior and exterior surfaces — from an interior fireplace surround that becomes the focal point of a living room to an exterior facade that elevates the entire curb appeal of a home. Rock N Roll Stoneworks installs both natural and manufactured stone veneer systems with proper substrate preparation and waterproofing for results that look beautiful and last decades.",
+      "Stone veneer transforms the visual character of both interior and exterior surfaces, from an interior fireplace surround that becomes the focal point of a living room to an exterior facade that elevates the entire curb appeal of a home. Rock N Roll Stoneworks installs both natural and manufactured stone veneer systems with proper substrate preparation and waterproofing for results that look beautiful and last decades.",
     heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=700&fit=crop',
     heroAlt: 'Stone veneer fireplace surround installation in Colorado',
     features: [
@@ -501,7 +501,7 @@ export const services: ServiceData[] = [
     body: [
       {
         heading: 'Interior and Exterior Applications',
-        text: "Stone veneer is one of the most versatile design materials available. Indoors, it adds warmth and texture to fireplace surrounds, accent walls, and kitchen backsplashes. Outside, it transforms plain stucco or siding into a natural-looking stone facade that dramatically increases curb appeal and perceived home value. Rock N Roll Stoneworks coordinates interior and exterior stone selections to create continuity between your home\'s indoor and outdoor aesthetic — a particularly effective strategy for homes with open-plan layouts that connect indoor living areas to outdoor patios and fire features.",
+        text: "Stone veneer is one of the most versatile design materials available. Indoors, it adds warmth and texture to fireplace surrounds, accent walls, and kitchen backsplashes. Outside, it transforms plain stucco or siding into a natural-looking stone facade that dramatically increases curb appeal and perceived home value. Rock N Roll Stoneworks coordinates interior and exterior stone selections to create continuity between your home\'s indoor and outdoor aesthetic, a particularly effective strategy for homes with open-plan layouts that connect indoor living areas to outdoor patios and fire features.",
       },
     ],
     faqs: [
@@ -528,23 +528,23 @@ export const services: ServiceData[] = [
     heroImage: 'https://images.unsplash.com/photo-1572331165267-854da2b021d9?w=1200&h=700&fit=crop',
     heroAlt: 'Fiberglass swimming pool installation in Colorado by Rock N Roll Pools',
     features: [
-      'Fiberglass pool shells — low maintenance, smooth finish',
+      'Fiberglass pool shells, low maintenance, smooth finish',
       'Custom paver pool decks and surrounds',
       'Water feature and spillway integration',
       'Integrated spa and hot tub options',
       'LED color-changing pool lighting',
       'Automation and smart control systems',
       'Full outdoor living environment design',
-      'Coordinated with Rock N Roll Pools — our sister company',
+      'Coordinated with Rock N Roll Pools, our sister company',
     ],
     body: [
       {
         heading: 'Why Fiberglass for Colorado',
-        text: "Fiberglass pools are the preferred choice for Colorado\'s climate. The flexible composite shell handles ground movement and freeze-thaw cycles better than gunite or vinyl liner pools. The non-porous surface resists algae growth, reducing chemical use and maintenance. Fiberglass pools are also faster to install than gunite — typically ready to swim in within two to four weeks of excavation. The gel coat finish is smooth to the touch and available in a range of colors and textures.",
+        text: "Fiberglass pools are the preferred choice for Colorado\'s climate. The flexible composite shell handles ground movement and freeze-thaw cycles better than gunite or vinyl liner pools. The non-porous surface resists algae growth, reducing chemical use and maintenance. Fiberglass pools are also faster to install than gunite, typically ready to swim in within two to four weeks of excavation. The gel coat finish is smooth to the touch and available in a range of colors and textures.",
       },
       {
         heading: 'A Complete Outdoor Living Solution',
-        text: "The advantage of working with Rock N Roll Stoneworks for your pool project is that we do not just install the pool — we design and build the entire outdoor environment surrounding it. A beautiful pool surrounded by a poorly executed patio, inadequate lighting, or mismatched landscape elements diminishes the overall result. Our integrated approach ensures that every element — pool, deck, fire feature, outdoor kitchen, and landscaping — is designed together and built to the same standard.",
+        text: "The advantage of working with Rock N Roll Stoneworks for your pool project is that we do not just install the pool, we design and build the entire outdoor environment surrounding it. A beautiful pool surrounded by a poorly executed patio, inadequate lighting, or mismatched landscape elements diminishes the overall result. Our integrated approach ensures that every element, pool, deck, fire feature, outdoor kitchen, and landscaping, is designed together and built to the same standard.",
       },
     ],
     faqs: [

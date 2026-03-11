@@ -8,7 +8,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema, faqSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'FAQ — Common Questions About Paver & Hardscape Installation | Rock N Roll Stoneworks',
+  title: 'FAQ, Common Questions About Paver & Hardscape Installation | Rock N Roll Stoneworks',
   description:
     'Answers to common questions about paver installation, fire pits, outdoor kitchens, pricing, timelines, guarantees, and working with Rock N Roll Stoneworks in Colorado.',
   path: '/faq',
@@ -23,7 +23,7 @@ const faqs = [
   {
     question: 'What is an ICPI certified installer?',
     answer:
-      'ICPI stands for Interlocking Concrete Pavement Institute. ICPI certification is the recognized industry credential for professional paver installers. It covers design, base preparation, installation techniques, and drainage — the factors that determine whether a paver installation lasts decades or fails in a few years.',
+      'ICPI stands for Interlocking Concrete Pavement Institute. ICPI certification is the recognized industry credential for professional paver installers. It covers design, base preparation, installation techniques, and drainage, the factors that determine whether a paver installation lasts decades or fails in a few years.',
   },
   {
     question: 'Do you offer free estimates?',
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: 'When do I pay?',
     answer:
-      'We require a deposit to schedule your project and order materials. Full payment is due only upon satisfactory completion of the project — after you have done a final walkthrough with us and confirmed the work meets your expectations.',
+      'We require a deposit to schedule your project and order materials. Full payment is due only upon satisfactory completion of the project, after you have done a final walkthrough with us and confirmed the work meets your expectations.',
   },
   {
     question: 'What is your guarantee?',
@@ -48,7 +48,7 @@ const faqs = [
   {
     question: 'How long does a paver installation take?',
     answer:
-      'Most paver projects take three to seven days depending on size and complexity. Larger projects with multiple elements — paver patio, retaining walls, fire pit, and kitchen — may take two to three weeks. We provide a specific timeline in your written proposal.',
+      'Most paver projects take three to seven days depending on size and complexity. Larger projects with multiple elements, paver patio, retaining walls, fire pit, and kitchen, may take two to three weeks. We provide a specific timeline in your written proposal.',
   },
   {
     question: 'What areas do you serve?',
@@ -58,7 +58,7 @@ const faqs = [
   {
     question: 'Do you handle permits?',
     answer:
-      'Yes. For projects that require permits — retaining walls over certain heights, gas connections, decks, and structural elements — Rock N Roll Stoneworks researches requirements, prepares documentation, and manages the permit process.',
+      'Yes. For projects that require permits, retaining walls over certain heights, gas connections, decks, and structural elements, Rock N Roll Stoneworks researches requirements, prepares documentation, and manages the permit process.',
   },
   {
     question: 'Can I add to my project later?',
@@ -68,7 +68,7 @@ const faqs = [
   {
     question: 'Do pavers crack like concrete?',
     answer:
-      'Individual pavers can crack, but unlike poured concrete, a cracked paver can be lifted and replaced without disturbing surrounding units. More importantly, the interlocking system is designed to flex with ground movement — the most common cause of concrete cracking in Colorado\'s freeze-thaw climate.',
+      'Individual pavers can crack, but unlike poured concrete, a cracked paver can be lifted and replaced without disturbing surrounding units. More importantly, the interlocking system is designed to flex with ground movement, the most common cause of concrete cracking in Colorado\'s freeze-thaw climate.',
   },
   {
     question: 'Is artificial turf appropriate for Colorado\'s climate?',

@@ -9,7 +9,7 @@ import { breadcrumbSchema } from '@/lib/schema';
 import { BadgeCheck, Flame, Layers, Users } from 'lucide-react';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'About Rock N Roll Stoneworks — Lafayette, CO Hardscape Contractor',
+  title: 'About Rock N Roll Stoneworks, Lafayette, CO Hardscape Contractor',
   description:
     'Rock N Roll Stoneworks is a Belgard Authorized, ICPI Certified hardscape contractor based in Lafayette, CO. Custom outdoor spaces built to last.',
   path: '/about',
@@ -20,7 +20,7 @@ const values = [
     icon: Layers,
     title: 'Quality Over Speed',
     description:
-      'We prioritize exceptional craftsmanship over rushing to the next job. Every installation is done right the first time — starting with a proper base and ending with a finish that will last for decades.',
+      'We prioritize exceptional craftsmanship over rushing to the next job. Every installation is done right the first time, starting with a proper base and ending with a finish that will last for decades.',
   },
   {
     icon: BadgeCheck,
@@ -68,10 +68,10 @@ export default function AboutPage() {
                   Rock N Roll Stoneworks, LLC is a hardscape and outdoor living contractor based in Lafayette, Colorado. We design and build custom paver installations, fire features, outdoor kitchens, water features, retaining walls, and complete outdoor living environments for homeowners across the Front Range.
                 </p>
                 <p>
-                  We are a Belgard Authorized Contractor and Reseller — meaning we have completed Belgard&apos;s rigorous certification program and maintain the quality standards required to offer Belgard&apos;s lifetime material warranties. We are also ICPI Certified Installers (Interlocking Concrete Pavement Institute), the recognized credential for professional paver installation.
+                  We are a Belgard Authorized Contractor and Reseller, meaning we have completed Belgard&apos;s rigorous certification program and maintain the quality standards required to offer Belgard&apos;s lifetime material warranties. We are also ICPI Certified Installers (Interlocking Concrete Pavement Institute), the recognized credential for professional paver installation.
                 </p>
                 <p>
-                  Our process starts with a free on-site consultation and continues through 2D and 3D design, expert installation, and a final walkthrough where you confirm everything meets your expectations before full payment is due. That last part matters — we believe a contractor who requires full payment only upon your satisfaction is a contractor you can trust.
+                  Our process starts with a free on-site consultation and continues through 2D and 3D design, expert installation, and a final walkthrough where you confirm everything meets your expectations before full payment is due. That last part matters, we believe a contractor who requires full payment only upon your satisfaction is a contractor you can trust.
                 </p>
                 <p>
                   We serve Lafayette, Erie, Boulder, Westminster, Longmont, Firestone, Frederick, and surrounding communities. If you are in the Front Range, there is a good chance we can help with your project.

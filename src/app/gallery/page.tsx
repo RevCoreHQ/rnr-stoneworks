@@ -8,7 +8,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Gallery — Paver Patios, Fire Pits & Outdoor Living Portfolio | Rock N Roll Stoneworks CO',
+  title: 'Gallery, Paver Patios, Fire Pits & Outdoor Living Portfolio | Rock N Roll Stoneworks CO',
   description:
     'Browse our portfolio of custom paver patios, fire pits, outdoor kitchens, water features, and retaining walls across Lafayette, Erie, Boulder, and the Colorado Front Range.',
   path: '/gallery',

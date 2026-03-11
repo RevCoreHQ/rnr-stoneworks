@@ -8,7 +8,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Contact Rock N Roll Stoneworks — Free Estimate | Lafayette & Boulder, CO',
+  title: 'Contact Rock N Roll Stoneworks, Free Estimate | Lafayette & Boulder, CO',
   description:
     'Get a free estimate for paver installation, fire pits, outdoor kitchens, or any hardscape project. Call (303) 587-3035 or fill out our form. Lafayette, CO.',
   path: '/contact',
@@ -37,7 +37,7 @@ export default function ContactPage() {
                 Request Your Free Estimate
               </h1>
               <p className="text-lg text-ink-500 leading-relaxed mb-8">
-                Tell us about your project and we will be in touch within one business day with a consultation plan. Or call us directly — we are happy to talk.
+                Tell us about your project and we will be in touch within one business day with a consultation plan. Or call us directly, we are happy to talk.
               </p>
 
               <div className="space-y-5">
