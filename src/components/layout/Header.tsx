@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { siteConfig } from '@/data/site-config';
@@ -13,6 +14,8 @@ const LOGO_URL = 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/6
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export function Header() {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +26,8 @@ export function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const isActive = scrolled || mobileOpen;
+  // Transparent only on homepage before scrolling; solid everywhere else
+  const isActive = !isHomePage || scrolled || mobileOpen;
 
   return (
     <motion.header
