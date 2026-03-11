@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const REAL = [
   'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69aa9a13b003fa04e8de88ee.jpg',
@@ -19,14 +22,20 @@ const projects = [
   { src: REAL[0], alt: 'Custom paver and fire feature installation', label: 'Pavers & Fire — Lafayette, CO' },
 ];
 
+const ease = [0.25, 0.46, 0.45, 0.94] as const;
+
 export function ProjectGrid() {
   return (
     <section className="section-pad bg-white">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
           {projects.map((project, i) => (
-            <div
+            <motion.div
               key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.6, delay: (i % 3) * 0.1, ease }}
               className="group relative aspect-[4/3] rounded-sm overflow-hidden bg-ink-900"
             >
               <Image
@@ -42,7 +51,7 @@ export function ProjectGrid() {
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                 <p className="font-body text-white text-sm font-medium">{project.label}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

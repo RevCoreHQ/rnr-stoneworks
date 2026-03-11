@@ -181,7 +181,7 @@ export function ContactForm() {
       )}
 
       <Button type="submit" className={cn('w-full', status === 'loading' && 'opacity-70 cursor-not-allowed')} size="lg">
-        {status === 'loading' ? 'Sending...' : 'Send My Request'}
+        {status === 'loading' ? 'Sending...' : 'Request My Free Design'}
       </Button>
 
       <p className="text-xs text-ink-400 text-center">

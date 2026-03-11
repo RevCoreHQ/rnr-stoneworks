@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 interface ButtonProps {
   href?: string;
@@ -11,7 +14,7 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary: 'bg-gold-500 text-ink-950 hover:bg-gold-400 shadow-glow',
+  primary: 'bg-gold-500 text-ink-950 hover:bg-gold-400 shadow-glow btn-shimmer',
   ghost: 'border border-white/20 text-white/70 hover:border-gold-500/50 hover:text-gold-400',
   outline: 'border border-gold-400 text-gold-700 hover:bg-gold-50',
 };
@@ -21,6 +24,10 @@ const sizes = {
   md: 'px-7 py-3.5 text-[13px]',
   lg: 'px-10 py-4 text-[13px]',
 };
+
+const MotionLink = motion.create(Link);
+
+const springTransition = { type: 'spring' as const, stiffness: 400, damping: 20 };
 
 export function Button({
   href,
@@ -39,7 +46,28 @@ export function Button({
   ].join(' ');
 
   if (href) {
-    return <Link href={href} className={classes}>{children}</Link>;
+    return (
+      <MotionLink
+        href={href}
+        className={classes}
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
+        transition={springTransition}
+      >
+        {children}
+      </MotionLink>
+    );
   }
-  return <button type={type} onClick={onClick} className={classes}>{children}</button>;
+  return (
+    <motion.button
+      type={type}
+      onClick={onClick}
+      className={classes}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      transition={springTransition}
+    >
+      {children}
+    </motion.button>
+  );
 }

@@ -1,5 +1,9 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { BadgeCheck, Shield, Star, FileText } from 'lucide-react';
 import { siteConfig } from '@/data/site-config';
+import { ScrollReveal } from '@/components/motion/ScrollReveal';
 
 const iconMap = { BadgeCheck, Shield, Star, FileText } as const;
 
@@ -11,17 +15,25 @@ export function TrustStrip() {
           {siteConfig.trustPoints.map((point, i) => {
             const Icon = iconMap[point.icon];
             return (
-              <div
-                key={point.label}
-                className={[
-                  'flex items-center gap-3 py-5',
-                  i !== siteConfig.trustPoints.length - 1 ? 'border-r border-gold-200/40' : '',
-                  i > 0 ? 'pl-6' : '',
-                ].join(' ')}
-              >
-                <Icon className="w-4 h-4 text-gold-500 shrink-0" />
-                <span className="font-body text-sm font-medium text-ink-700">{point.label}</span>
-              </div>
+              <ScrollReveal key={point.label} delay={i * 0.1} direction="up">
+                <div
+                  className={[
+                    'flex items-center gap-3 py-5',
+                    i !== siteConfig.trustPoints.length - 1 ? 'border-r border-gold-200/40' : '',
+                    i > 0 ? 'pl-6' : '',
+                  ].join(' ')}
+                >
+                  <motion.div
+                    initial={{ scale: 0, rotate: -90 }}
+                    whileInView={{ scale: 1, rotate: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1, type: 'spring', stiffness: 200, damping: 12 }}
+                  >
+                    <Icon className="w-4 h-4 text-gold-500 shrink-0" />
+                  </motion.div>
+                  <span className="font-body text-sm font-medium text-ink-700">{point.label}</span>
+                </div>
+              </ScrollReveal>
             );
           })}
         </div>

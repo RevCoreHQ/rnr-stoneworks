@@ -1,6 +1,11 @@
+'use client';
+
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { siteConfig } from '@/data/site-config';
 import { Phone } from 'lucide-react';
+import { StaggerChildren, staggerItem } from '@/components/motion/StaggerChildren';
+import { MagneticButton } from '@/components/motion/MagneticButton';
 
 interface CTASectionProps {
   headline?: string;
@@ -17,29 +22,54 @@ export function CTASection({
       {/* Gold accent top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/50 to-transparent" />
 
-      {/* Subtle texture orbs */}
-      <div className="absolute w-[600px] h-[600px] rounded-full bg-gold-600/5 -top-[20%] -right-[10%] blur-3xl pointer-events-none" />
-      <div className="absolute w-[400px] h-[400px] rounded-full bg-gold-600/4 -bottom-[15%] -left-[5%] blur-3xl pointer-events-none" />
+      {/* Animated background orbs */}
+      <motion.div
+        className="absolute w-[600px] h-[600px] rounded-full bg-gold-600/5 blur-3xl pointer-events-none"
+        animate={{ x: [0, 30, 0], y: [0, -20, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ top: '-20%', right: '-10%' }}
+      />
+      <motion.div
+        className="absolute w-[400px] h-[400px] rounded-full bg-gold-600/4 blur-3xl pointer-events-none"
+        animate={{ x: [0, -20, 0], y: [0, 15, 0], scale: [1, 1.08, 1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+        style={{ bottom: '-15%', left: '-5%' }}
+      />
 
       <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 py-24 lg:py-36">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="label-dark mb-8">Start Your Project</p>
-          <h2
+        <StaggerChildren stagger={0.15} className="max-w-2xl mx-auto text-center">
+          <motion.p variants={staggerItem} className="label-dark mb-8">Free Consultation</motion.p>
+          <motion.h2
+            variants={staggerItem}
             className="font-display font-light text-white leading-[1.06] mb-8"
             style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)' }}
           >
             {headline}
-          </h2>
-          <p className="font-body text-white/50 text-lg leading-relaxed mb-12">
+          </motion.h2>
+          <motion.p variants={staggerItem} className="font-body text-white/50 text-lg leading-relaxed mb-12">
             {description}
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-10 py-4 bg-gold-500 text-ink-950 font-body font-semibold text-[13px] tracking-[0.12em] uppercase hover:bg-gold-400 transition-colors duration-300 rounded-sm shadow-glow"
-            >
-              Begin Your Project
-            </Link>
+          </motion.p>
+          <motion.div variants={staggerItem} className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <MagneticButton>
+              <motion.div
+                animate={{
+                  boxShadow: [
+                    '0 0 30px rgba(26,171,227,0.2)',
+                    '0 0 50px rgba(26,171,227,0.35)',
+                    '0 0 30px rgba(26,171,227,0.2)',
+                  ],
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                className="rounded-sm"
+              >
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-10 py-4 bg-gold-500 text-ink-950 font-body font-semibold text-[13px] tracking-[0.12em] uppercase hover:bg-gold-400 transition-colors duration-300 rounded-sm btn-shimmer"
+                >
+                  Get Your Free 3D Design
+                </Link>
+              </motion.div>
+            </MagneticButton>
             <a
               href={`tel:${siteConfig.phoneRaw}`}
               className="inline-flex items-center gap-2.5 font-body text-sm text-white/50 hover:text-gold-400 transition-colors duration-300"
@@ -47,8 +77,11 @@ export function CTASection({
               <Phone className="w-4 h-4" />
               {siteConfig.phone}
             </a>
-          </div>
-        </div>
+          </motion.div>
+          <motion.p variants={staggerItem} className="text-white/30 text-xs mt-6 font-body">
+            Free consultation. No obligation. Response within 24 hours.
+          </motion.p>
+        </StaggerChildren>
       </div>
     </section>
   );

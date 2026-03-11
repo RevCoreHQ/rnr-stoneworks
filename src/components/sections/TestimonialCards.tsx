@@ -1,4 +1,9 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { Quote, ArrowUpRight } from 'lucide-react';
+import { ScrollReveal } from '@/components/motion/ScrollReveal';
+import { StaggerChildren, staggerItem } from '@/components/motion/StaggerChildren';
 
 const GOOGLE_REVIEWS_URL = 'https://share.google/E0p9OvVIvtdbw18jH';
 
@@ -41,51 +46,79 @@ export function TestimonialCards() {
   return (
     <section className="section-pad bg-white">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12">
-          <p className="label">Client Experiences</p>
-          <a
-            href={GOOGLE_REVIEWS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-body text-[11px] tracking-[0.18em] uppercase text-ink-400 hover:text-gold-600 transition-colors border-b border-gold-200 hover:border-gold-400 pb-0.5"
-          >
-            <span className="text-gold-500">★★★★★</span>
-            See All Google Reviews
-            <ArrowUpRight className="w-3 h-3" />
-          </a>
-        </div>
+        <ScrollReveal direction="up">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12">
+            <p className="label">Client Experiences</p>
+            <a
+              href={GOOGLE_REVIEWS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-body text-[11px] tracking-[0.18em] uppercase text-ink-400 hover:text-gold-600 transition-colors border-b border-gold-200 hover:border-gold-400 pb-0.5"
+            >
+              <span className="text-gold-500">★★★★★</span>
+              See All Google Reviews
+              <ArrowUpRight className="w-3 h-3" />
+            </a>
+          </div>
+        </ScrollReveal>
 
         {/* Featured pull-quote */}
-        <div className="relative border border-gold-200 rounded-sm p-10 lg:p-16 mb-8 overflow-hidden">
-          <div className="absolute top-6 left-8 text-gold-100">
-            <Quote className="w-14 h-14 fill-gold-100 stroke-gold-200" />
-          </div>
-          <div className="relative z-10 max-w-3xl mx-auto text-center">
-            <p
-              className="font-display font-light text-ink-900 leading-relaxed mb-10"
-              style={{ fontSize: 'clamp(1.3rem, 2.5vw, 1.9rem)' }}
+        <ScrollReveal direction="up" duration={0.9}>
+          <div className="relative border border-gold-200 rounded-sm p-10 lg:p-16 mb-8 overflow-hidden">
+            <motion.div
+              initial={{ scale: 0, rotate: -20 }}
+              whileInView={{ scale: 1, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3, type: 'spring', stiffness: 150 }}
+              className="absolute top-6 left-8 text-gold-100"
             >
-              &ldquo;{featured.quote}&rdquo;
-            </p>
-            <div className="flex flex-col items-center gap-1">
-              <p className="font-body font-semibold text-ink-900">{featured.author}</p>
-              <p className="font-body text-ink-400 text-sm">{featured.date} · {featured.service}</p>
-              <div className="flex gap-1 mt-2">
-                {Array.from({ length: featured.rating }).map((_, i) => (
-                  <span key={i} className="text-gold-500 text-sm">★</span>
-                ))}
+              <Quote className="w-14 h-14 fill-gold-100 stroke-gold-200" />
+            </motion.div>
+            <div className="relative z-10 max-w-3xl mx-auto text-center">
+              <p
+                className="font-display font-light text-ink-900 leading-relaxed mb-10"
+                style={{ fontSize: 'clamp(1.3rem, 2.5vw, 1.9rem)' }}
+              >
+                &ldquo;{featured.quote}&rdquo;
+              </p>
+              <div className="flex flex-col items-center gap-1">
+                <p className="font-body font-semibold text-ink-900">{featured.author}</p>
+                <p className="font-body text-ink-400 text-sm">{featured.date} · {featured.service}</p>
+                <div className="flex gap-1 mt-2">
+                  {Array.from({ length: featured.rating }).map((_, i) => (
+                    <motion.span
+                      key={i}
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.5 + i * 0.08, type: 'spring', stiffness: 300 }}
+                      className="text-gold-500 text-sm"
+                    >
+                      ★
+                    </motion.span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Secondary quotes — 2x2 grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <StaggerChildren stagger={0.1} className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {secondary.map((t, i) => (
-            <div key={i} className="bg-cream-50 border border-gold-100 rounded-sm p-7">
+            <motion.div key={i} variants={staggerItem} className="bg-cream-50 border border-gold-100 rounded-sm p-7">
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: 5 }).map((_, j) => (
-                  <span key={j} className="text-gold-500 text-xs">★</span>
+                  <motion.span
+                    key={j}
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + j * 0.06, type: 'spring', stiffness: 300 }}
+                    className="text-gold-500 text-xs"
+                  >
+                    ★
+                  </motion.span>
                 ))}
               </div>
               <p className="font-body text-ink-600 leading-relaxed mb-5 italic text-[15px]">
@@ -95,22 +128,24 @@ export function TestimonialCards() {
                 <p className="font-body font-semibold text-ink-900 text-sm">{t.author}</p>
                 <p className="font-body text-ink-400 text-xs mt-0.5">{t.date} · {t.service}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </StaggerChildren>
 
-        <div className="text-center mt-10">
-          <a
-            href={GOOGLE_REVIEWS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-body text-sm text-ink-400 hover:text-gold-600 transition-colors"
-          >
-            <span className="text-gold-500 text-base">★★★★★</span>
-            <span>Read all reviews on Google</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
-        </div>
+        <ScrollReveal direction="up" delay={0.2}>
+          <div className="text-center mt-10">
+            <a
+              href={GOOGLE_REVIEWS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-body text-sm text-ink-400 hover:text-gold-600 transition-colors"
+            >
+              <span className="text-gold-500 text-base">★★★★★</span>
+              <span>Read all reviews on Google</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import { siteConfig } from '@/data/site-config';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { MobileBottomBar } from '@/components/layout/MobileBottomBar';
+import { MotionProvider } from '@/components/motion/MotionProvider';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { localBusinessSchema } from '@/lib/schema';
 import '@/styles/globals.css';
@@ -59,10 +60,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd data={localBusinessSchema()} />
       </head>
       <body className="min-h-screen flex flex-col bg-white">
-        <Header />
-        <main className="flex-1 pb-16 lg:pb-0">{children}</main>
-        <Footer />
-        <MobileBottomBar />
+        <MotionProvider>
+          <Header />
+          <main className="flex-1 pb-16 lg:pb-0">{children}</main>
+          <Footer />
+          <MobileBottomBar />
+        </MotionProvider>
       </body>
     </html>
   );

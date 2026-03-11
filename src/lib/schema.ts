@@ -64,6 +64,12 @@ export function localBusinessSchema() {
       { '@type': 'City', name: 'Firestone', addressRegion: 'CO' },
       { '@type': 'City', name: 'Frederick', addressRegion: 'CO' },
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '25',
+      bestRating: '5',
+    },
     sameAs,
     priceRange: '$$$',
     knowsAbout: [

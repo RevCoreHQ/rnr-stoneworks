@@ -3,12 +3,14 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { siteConfig } from '@/data/site-config';
 import { mainNav } from '@/data/navigation';
-import { cn } from '@/lib/utils';
 
 const LOGO_URL = 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/699191dd24813c44b3afb6e9.webp';
+
+const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -21,14 +23,18 @@ export function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const isActive = scrolled || mobileOpen;
+
   return (
-    <header
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-        scrolled || mobileOpen
-          ? 'bg-ink-950/95 backdrop-blur-xl border-b border-white/5 shadow-ink'
-          : 'bg-transparent'
-      )}
+    <motion.header
+      animate={{
+        backgroundColor: isActive ? 'rgba(6, 12, 16, 0.95)' : 'rgba(0, 0, 0, 0)',
+        backdropFilter: isActive ? 'blur(20px)' : 'blur(0px)',
+        borderBottomColor: isActive ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0)',
+        boxShadow: isActive ? '0 20px 60px -15px rgba(6, 12, 16, 0.5)' : '0 0 0 0 rgba(0,0,0,0)',
+      }}
+      transition={{ duration: 0.4, ease }}
+      className="fixed top-0 left-0 right-0 z-50 border-b"
     >
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between h-18 lg:h-22">
@@ -67,27 +73,42 @@ export function Header() {
                   className="flex items-center gap-0.5 px-3.5 py-2 text-[13px] font-body font-medium text-white/70 hover:text-white transition-colors duration-200 whitespace-nowrap tracking-wide"
                 >
                   {item.label}
-                  {item.children && <ChevronDown className="w-3 h-3 ml-0.5 opacity-60" />}
+                  {item.children && (
+                    <motion.span
+                      animate={{ rotate: openDropdown === item.label ? 180 : 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <ChevronDown className="w-3 h-3 ml-0.5 opacity-60" />
+                    </motion.span>
+                  )}
                 </Link>
 
-                {item.children && openDropdown === item.label && (
-                  <div className="absolute top-full left-0 pt-3 z-50">
-                    <div className="w-60 bg-ink-900/98 backdrop-blur-xl rounded-xl border border-white/8 py-2 shadow-ink animate-fade-in">
-                      <div className="absolute top-3 left-6 right-6 h-px bg-gradient-to-r from-transparent via-gold-600/50 to-transparent" />
-                      <div className="pt-3">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block px-5 py-2.5 text-[13px] text-white/60 hover:text-gold-400 hover:bg-white/4 transition-all duration-150 font-body"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                <AnimatePresence>
+                  {item.children && openDropdown === item.label && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -8, scale: 0.96 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -4, scale: 0.98 }}
+                      transition={{ duration: 0.2, ease }}
+                      className="absolute top-full left-0 pt-3 z-50"
+                    >
+                      <div className="w-60 bg-ink-900/98 backdrop-blur-xl rounded-xl border border-white/8 py-2 shadow-ink">
+                        <div className="absolute top-3 left-6 right-6 h-px bg-gradient-to-r from-transparent via-gold-600/50 to-transparent" />
+                        <div className="pt-3">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className="block px-5 py-2.5 text-[13px] text-white/60 hover:text-gold-400 hover:bg-white/4 transition-all duration-150 font-body"
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </nav>
@@ -103,9 +124,9 @@ export function Header() {
             </a>
             <Link
               href="/contact"
-              className="px-5 py-2.5 text-[13px] font-medium font-body tracking-wide border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 hover:border-gold-500 transition-all duration-300 rounded-sm"
+              className="px-5 py-2.5 text-[13px] font-medium font-body tracking-wide border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 hover:border-gold-500 transition-all duration-300 rounded-sm btn-shimmer"
             >
-              Begin Your Project
+              Get Your Free Design
             </Link>
           </div>
 
@@ -121,53 +142,61 @@ export function Header() {
       </div>
 
       {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="lg:hidden border-t border-white/8 animate-fade-in">
-          <nav className="px-6 py-5 space-y-0.5">
-            {mainNav.map((item) => (
-              <div key={item.href}>
-                <Link
-                  href={item.href}
-                  className="block py-3 text-base font-body font-medium text-white/70 hover:text-gold-400 transition-colors border-b border-white/5"
-                  onClick={() => !item.children && setMobileOpen(false)}
-                >
-                  {item.label}
-                </Link>
-                {item.children && (
-                  <div className="pl-4 pt-1 pb-2 space-y-0">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        className="block py-2 text-sm text-white/45 hover:text-gold-400 transition-colors font-body"
-                        onClick={() => setMobileOpen(false)}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-          <div className="px-6 pb-6 pt-2 flex gap-3">
-            <Link
-              href="/contact"
-              className="flex-1 py-3 text-center text-sm font-medium font-body border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 transition-all rounded-sm"
-              onClick={() => setMobileOpen(false)}
-            >
-              Begin Your Project
-            </Link>
-            <a
-              href={`tel:${siteConfig.phoneRaw}`}
-              className="flex-1 py-3 text-center text-sm font-medium font-body text-white/60 border border-white/15 rounded-sm hover:border-white/30 transition-all"
-            >
-              <Phone className="w-4 h-4 inline mr-1.5" />
-              Call
-            </a>
-          </div>
-        </div>
-      )}
-    </header>
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease }}
+            className="lg:hidden border-t border-white/8 overflow-hidden"
+          >
+            <nav className="px-6 py-5 space-y-0.5">
+              {mainNav.map((item) => (
+                <div key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="block py-3 text-base font-body font-medium text-white/70 hover:text-gold-400 transition-colors border-b border-white/5"
+                    onClick={() => !item.children && setMobileOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                  {item.children && (
+                    <div className="pl-4 pt-1 pb-2 space-y-0">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className="block py-2 text-sm text-white/45 hover:text-gold-400 transition-colors font-body"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+            <div className="px-6 pb-6 pt-2 flex gap-3">
+              <Link
+                href="/contact"
+                className="flex-1 py-3 text-center text-sm font-medium font-body border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 transition-all rounded-sm"
+                onClick={() => setMobileOpen(false)}
+              >
+                Get Your Free Design
+              </Link>
+              <a
+                href={`tel:${siteConfig.phoneRaw}`}
+                className="flex-1 py-3 text-center text-sm font-medium font-body text-white/60 border border-white/15 rounded-sm hover:border-white/30 transition-all"
+              >
+                <Phone className="w-4 h-4 inline mr-1.5" />
+                Call
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 }

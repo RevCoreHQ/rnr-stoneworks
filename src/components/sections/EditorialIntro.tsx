@@ -1,5 +1,18 @@
+'use client';
+
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { ScrollReveal } from '@/components/motion/ScrollReveal';
+import { StaggerChildren, staggerItem } from '@/components/motion/StaggerChildren';
+import { TextReveal } from '@/components/motion/TextReveal';
+
+const credentials = [
+  ['Belgard Authorized', 'Highest Tier Certification'],
+  ['ICPI Certified', 'Industry-Standard Mastery'],
+  ['3D Design Included', 'Visualize Before We Build'],
+  ['2-Year Guarantee', 'Workmanship Backed'],
+] as const;
 
 export function EditorialIntro() {
   return (
@@ -9,47 +22,49 @@ export function EditorialIntro() {
 
           {/* Left — large editorial headline */}
           <div>
-            <p className="label mb-8">Who We Are</p>
-            <h2
+            <ScrollReveal direction="right">
+              <p className="label mb-8">Who We Are</p>
+            </ScrollReveal>
+            <TextReveal
+              text="Colorado's premier design–build team for luxury outdoor living."
+              as="h2"
               className="font-display font-light text-ink-900 leading-[1.06] mb-0"
-              style={{ fontSize: 'clamp(2.4rem, 5vw, 4.5rem)' }}
-            >
-              Colorado's premier{' '}
-              <em className="italic text-gold-600">design–build</em>{' '}
-              team for luxury outdoor living.
-            </h2>
+              delay={0.2}
+            />
           </div>
 
           {/* Right — body copy + credentials */}
-          <div className="pt-0 lg:pt-16">
-            <p className="font-body text-ink-500 text-lg leading-relaxed mb-6">
+          <StaggerChildren stagger={0.12} className="pt-0 lg:pt-16">
+            <motion.p variants={staggerItem} className="font-body text-ink-500 text-lg leading-relaxed mb-6">
               Rock N Roll Stoneworks was built on a single principle: that your outdoor space should be as refined as the home it surrounds. Every project we take begins with a free 3D design consultation and ends with a space that commands attention.
-            </p>
-            <p className="font-body text-ink-500 text-lg leading-relaxed mb-10">
+            </motion.p>
+            <motion.p variants={staggerItem} className="font-body text-ink-500 text-lg leading-relaxed mb-10">
               As a Belgard Authorized Contractor and ICPI Certified installer, we bring the highest level of craftsmanship to paver installations, fire features, outdoor kitchens, water elements, and complete hardscape environments across Lafayette, Boulder, and the Colorado Front Range.
-            </p>
+            </motion.p>
 
-            <div className="grid grid-cols-2 gap-6 mb-10">
-              {[
-                ['Belgard Authorized', 'Highest Tier Certification'],
-                ['ICPI Certified', 'Industry-Standard Mastery'],
-                ['3D Design Included', 'Visualize Before We Build'],
-                ['2-Year Guarantee', 'Workmanship Backed'],
-              ].map(([title, sub]) => (
-                <div key={title} className="border-l-2 border-gold-400 pl-4">
+            <motion.div variants={staggerItem} className="grid grid-cols-2 gap-6 mb-10">
+              {credentials.map(([title, sub]) => (
+                <motion.div
+                  key={title}
+                  whileHover={{ x: 4 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  className="border-l-2 border-gold-400 pl-4"
+                >
                   <p className="font-body font-semibold text-ink-900 text-sm">{title}</p>
                   <p className="font-body text-ink-400 text-xs mt-0.5">{sub}</p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 font-body text-[12px] tracking-[0.15em] uppercase font-semibold text-ink-900 hover-gold-line pb-0.5"
-            >
-              Learn Our Story <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
+            <motion.div variants={staggerItem}>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 font-body text-[12px] tracking-[0.15em] uppercase font-semibold text-ink-900 hover-gold-line pb-0.5"
+              >
+                Learn Our Story <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </motion.div>
+          </StaggerChildren>
         </div>
       </div>
     </section>
