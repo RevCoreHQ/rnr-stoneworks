@@ -58,7 +58,7 @@ export default async function ServiceAreaPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-24 bg-ink-950 overflow-hidden">
+      <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-24 bg-ink-950 overflow-hidden grain">
         {area.heroImage && (
           <>
             <Image
@@ -115,7 +115,7 @@ export default async function ServiceAreaPage({ params }: Props) {
       <TrustStrip />
 
       {/* Services available */}
-      <section className="section-pad">
+      <section className="section-pad relative overflow-hidden grain-light">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-ink-900 mb-4">
@@ -145,7 +145,7 @@ export default async function ServiceAreaPage({ params }: Props) {
 
       {/* Body content */}
       {area.body.length > 0 && (
-        <section className="section-pad bg-gradient-to-b from-cream-50 to-white">
+        <section className="section-pad bg-gradient-to-b from-cream-50 to-white relative overflow-hidden topo-lines">
           <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16">
             <div className="space-y-12">
               {area.body.map((section, i) => (
@@ -164,7 +164,7 @@ export default async function ServiceAreaPage({ params }: Props) {
       )}
 
       {/* Why RNR */}
-      <section className="section-pad bg-cream-50">
+      <section className="section-pad bg-cream-50 relative overflow-hidden dot-grid">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl font-display font-bold text-ink-900 mb-4">
@@ -189,7 +189,7 @@ export default async function ServiceAreaPage({ params }: Props) {
       </section>
 
       {/* Other areas */}
-      <section className="section-pad">
+      <section className="section-pad relative overflow-hidden grain-light">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <h2 className="text-2xl font-display font-bold text-ink-900 mb-6">
             We Also Serve These Colorado Communities

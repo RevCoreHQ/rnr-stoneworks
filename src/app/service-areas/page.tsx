@@ -28,7 +28,7 @@ export default function ServiceAreasPage() {
           { name: 'Service Areas', url: `${siteConfig.url}/service-areas` },
         ])}
       />
-      <div className="pt-36 lg:pt-44 pb-20 sm:pb-24">
+      <div className="pt-36 lg:pt-44 pb-20 sm:pb-24 relative overflow-hidden grain-light">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumbs items={[{ label: 'Service Areas', href: '/service-areas' }]} />
           <div className="max-w-3xl mb-10">
@@ -45,7 +45,7 @@ export default function ServiceAreasPage() {
         </div>
       </div>
 
-      <section className="section-pad pt-0">
+      <section className="section-pad pt-0 relative overflow-hidden grain-light">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <h2 className="text-2xl font-display font-bold text-ink-900 mb-6">Primary Service Areas</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">

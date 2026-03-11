@@ -65,7 +65,7 @@ export default function ProcessPage() {
           { name: 'Our Process', url: `${siteConfig.url}/process` },
         ])}
       />
-      <div className="section-pad">
+      <div className="section-pad relative overflow-hidden grain-light">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumbs items={[{ label: 'Our Process', href: '/process' }]} />
           <div className="max-w-3xl mb-16">

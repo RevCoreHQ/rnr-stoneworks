@@ -23,7 +23,7 @@ export default function ServicesPage() {
           { name: 'Services', url: `${siteConfig.url}/services` },
         ])}
       />
-      <div className="pt-36 lg:pt-44 pb-16 bg-cream-50 border-b border-gold-200/40">
+      <div className="pt-36 lg:pt-44 pb-16 bg-cream-50 border-b border-gold-200/40 relative overflow-hidden topo-lines">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumbs items={[{ label: 'Services', href: '/services' }]} />
           <div className="max-w-3xl mt-8">
@@ -38,7 +38,7 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      <section className="section-pad bg-white">
+      <section className="section-pad bg-white relative overflow-hidden grain-light">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="mb-12">
             <p className="label mb-3">Hardscape</p>

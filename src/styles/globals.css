@@ -194,6 +194,61 @@
     mix-blend-mode: overlay;
   }
 
+  /* Light paper/linen grain — subtle texture for white sections */
+  .grain-light {
+    position: relative;
+  }
+
+  .grain-light::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 512px 512px;
+    mix-blend-mode: multiply;
+  }
+
+  /* Topographic contour lines — stone/terrain texture for cream sections */
+  .topo-lines {
+    position: relative;
+  }
+
+  .topo-lines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.025;
+    background-image:
+      radial-gradient(ellipse 600px 600px at 20% 50%, transparent 58%, #0b1219 58.5%, transparent 59%),
+      radial-gradient(ellipse 450px 400px at 60% 30%, transparent 58%, #0b1219 58.5%, transparent 59%),
+      radial-gradient(ellipse 350px 500px at 80% 70%, transparent 58%, #0b1219 58.5%, transparent 59%),
+      radial-gradient(ellipse 500px 300px at 40% 80%, transparent 58%, #0b1219 58.5%, transparent 59%),
+      radial-gradient(ellipse 700px 500px at 10% 20%, transparent 58%, #0b1219 58.5%, transparent 59%),
+      radial-gradient(ellipse 300px 450px at 90% 40%, transparent 58%, #0b1219 58.5%, transparent 59%);
+  }
+
+  /* Fine dot grid — precision/engineering texture for cream sections */
+  .dot-grid {
+    position: relative;
+  }
+
+  .dot-grid::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.04;
+    background-image: radial-gradient(circle 0.75px at center, #0b1219 0%, transparent 100%);
+    background-size: 24px 24px;
+  }
+
   /* Animated shimmer gradient text */
   @keyframes gradientShift {
     0%, 100% { background-position: 0% 50%; }

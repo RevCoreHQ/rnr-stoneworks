@@ -23,7 +23,7 @@ export default function ContactPage() {
           { name: 'Contact', url: `${siteConfig.url}/contact` },
         ])}
       />
-      <div className="section-pad">
+      <div className="section-pad relative overflow-hidden grain-light">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumbs items={[{ label: 'Contact', href: '/contact' }]} />
 

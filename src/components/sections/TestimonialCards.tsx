@@ -44,8 +44,9 @@ const secondary = [
 
 export function TestimonialCards() {
   return (
-    <section className="section-pad bg-white">
-      <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="section-pad bg-white relative overflow-hidden grain-light">
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] pointer-events-none" style={{ background: 'radial-gradient(ellipse at 0% 100%, rgba(26,171,227,0.02), transparent 70%)' }} />
+      <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
         <ScrollReveal direction="up">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12">
             <p className="label">Client Experiences</p>

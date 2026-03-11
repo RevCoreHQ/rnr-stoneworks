@@ -31,7 +31,7 @@ const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export function ProcessSteps() {
   return (
-    <section className="section-pad bg-cream-50 border-y border-gold-200/40">
+    <section className="section-pad bg-cream-50 border-y border-gold-200/40 relative overflow-hidden topo-lines">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
 

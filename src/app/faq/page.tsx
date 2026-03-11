@@ -89,7 +89,7 @@ export default function FAQPage() {
           faqSchema(faqs),
         ]}
       />
-      <div className="section-pad pb-0">
+      <div className="section-pad pb-0 relative overflow-hidden grain-light">
         <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumbs items={[{ label: 'FAQ', href: '/faq' }]} />
           <div className="mb-4">

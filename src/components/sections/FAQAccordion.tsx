@@ -66,7 +66,7 @@ export function FAQAccordion({ faqs, title, subtitle }: FAQAccordionProps) {
   ));
 
   return (
-    <section className="section-pad bg-white">
+    <section className="section-pad bg-white relative overflow-hidden grain-light">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
         {title ? (
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-24 items-start">

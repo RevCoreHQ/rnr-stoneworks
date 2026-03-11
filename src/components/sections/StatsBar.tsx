@@ -15,15 +15,7 @@ const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export function StatsBar() {
   return (
-    <section className="relative bg-cream-50 border-y border-gold-200/60 overflow-hidden">
-      {/* Subtle diagonal line pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 20px, currentColor 20px, currentColor 21px)',
-          color: '#1AABE3',
-        }}
-      />
+    <section className="relative bg-cream-50 border-y border-gold-200/60 overflow-hidden dot-grid">
 
       {/* Animated top accent line */}
       <motion.div

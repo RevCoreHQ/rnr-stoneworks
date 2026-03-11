@@ -54,7 +54,7 @@ export default async function ServicePage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-24 bg-ink-950 overflow-hidden">
+      <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-24 bg-ink-950 overflow-hidden grain">
         {service.heroImage && (
           <>
             <Image
@@ -106,7 +106,7 @@ export default async function ServicePage({ params }: Props) {
       </section>
 
       {/* Features */}
-      <section className="section-pad">
+      <section className="section-pad relative overflow-hidden grain-light">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <h2 className="text-3xl font-display font-bold text-ink-900 mb-8">
             What&apos;s Included
@@ -126,7 +126,7 @@ export default async function ServicePage({ params }: Props) {
 
       {/* Body content */}
       {service.body.length > 0 && (
-        <section className="section-pad bg-gradient-to-b from-cream-50 to-white">
+        <section className="section-pad bg-gradient-to-b from-cream-50 to-white relative overflow-hidden topo-lines">
           <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16">
             <div className="space-y-12">
               {service.body.map((section, i) => (
@@ -149,7 +149,7 @@ export default async function ServicePage({ params }: Props) {
 
       {/* Related Services */}
       {related.length > 0 && (
-        <section className="section-pad">
+        <section className="section-pad relative overflow-hidden grain-light">
           <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
             <h2 className="text-3xl font-display font-bold text-ink-900 mb-8">
               Related Services
