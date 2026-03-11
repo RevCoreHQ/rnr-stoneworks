@@ -21,7 +21,7 @@ export function Hero({
   return (
     <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
 
-      {/* Background */}
+      {/* Background — fills full viewport including behind the nav */}
       {backgroundVideo ? (
         <>
           {backgroundImage && (
@@ -37,12 +37,15 @@ export function Hero({
         <div className="absolute inset-0 bg-ink-950" />
       )}
 
-      {/* Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/50 to-ink-950/10" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink-950/60 via-transparent to-transparent" />
+      {/* Bottom-up gradient — darkens where text lives */}
+      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/75 to-ink-950/25" />
+      {/* Left-side vignette — frames the text */}
+      <div className="absolute inset-0 bg-gradient-to-r from-ink-950/80 via-ink-950/30 to-transparent" />
+      {/* Top-down gradient — keeps nav area readable */}
+      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 via-transparent to-transparent" />
 
       {/* Brand blue accent at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-gold-500/80 via-gold-400/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-gold-500 via-gold-400/60 to-transparent" />
 
       {/* Scroll indicator */}
       <div className="absolute top-1/2 right-8 lg:right-14 -translate-y-1/2 hidden lg:flex flex-col items-center gap-3">
@@ -63,13 +66,16 @@ export function Hero({
 
           <h1
             className="font-display font-light text-white leading-[1.04] mb-8 tracking-[-0.02em]"
-            style={{ fontSize: 'clamp(2.8rem, 6.5vw, 6rem)' }}
+            style={{
+              fontSize: 'clamp(2.8rem, 6.5vw, 6rem)',
+              textShadow: '0 2px 40px rgba(0,0,0,0.5)',
+            }}
           >
             {headline}
           </h1>
 
           {description && (
-            <p className="font-body text-lg lg:text-xl text-white/55 leading-relaxed mb-12 max-w-xl font-light">
+            <p className="font-body text-lg lg:text-xl text-white/80 leading-relaxed mb-12 max-w-xl">
               {description}
             </p>
           )}
@@ -83,7 +89,7 @@ export function Hero({
             </Link>
             <a
               href={`tel:${siteConfig.phoneRaw}`}
-              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-white/20 text-white/65 font-body font-medium text-[13px] tracking-wide hover:border-gold-500/60 hover:text-gold-400 transition-all duration-300 rounded-sm"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-white/30 text-white/80 font-body font-medium text-[13px] tracking-wide hover:border-gold-500/70 hover:text-gold-400 transition-all duration-300 rounded-sm"
             >
               <Phone className="w-4 h-4" />
               {siteConfig.phone}
