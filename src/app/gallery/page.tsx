@@ -23,7 +23,7 @@ export default function GalleryPage() {
           { name: 'Gallery', url: `${siteConfig.url}/gallery` },
         ])}
       />
-      <div className="pt-32 pb-16 bg-cream-50 border-b border-gold-200/40">
+      <div className="pt-36 lg:pt-44 pb-16 bg-cream-50 border-b border-gold-200/40">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumbs items={[{ label: 'Gallery', href: '/gallery' }]} />
           <div className="max-w-3xl mt-8">

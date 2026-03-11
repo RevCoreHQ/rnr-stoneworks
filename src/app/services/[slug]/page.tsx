@@ -54,7 +54,7 @@ export default async function ServicePage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="relative py-16 lg:py-24 bg-ink-950 overflow-hidden">
+      <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-24 bg-ink-950 overflow-hidden">
         {service.heroImage && (
           <>
             <Image

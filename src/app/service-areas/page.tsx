@@ -28,7 +28,7 @@ export default function ServiceAreasPage() {
           { name: 'Service Areas', url: `${siteConfig.url}/service-areas` },
         ])}
       />
-      <div className="section-pad pb-0">
+      <div className="pt-36 lg:pt-44 pb-20 sm:pb-24">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumbs items={[{ label: 'Service Areas', href: '/service-areas' }]} />
           <div className="max-w-3xl mb-10">
