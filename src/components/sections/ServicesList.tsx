@@ -33,6 +33,7 @@ export function ServicesList() {
               text="Every element of a refined outdoor environment."
               as="h2"
               className="font-display font-light text-ink-900 leading-[1.08]"
+              style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)' }}
               delay={0.2}
             />
             <ScrollReveal direction="up" delay={0.4}>

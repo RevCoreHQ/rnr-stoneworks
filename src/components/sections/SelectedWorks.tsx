@@ -66,7 +66,7 @@ export function SelectedWorks() {
               key={i}
               initial={{ clipPath: 'inset(100% 0 0 0)' }}
               whileInView={{ clipPath: 'inset(0% 0 0 0)' }}
-              viewport={{ once: true, margin: '-80px' }}
+              viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.8, delay: i * 0.15, ease }}
               className={w.wide ? 'lg:col-span-3' : 'lg:col-span-2'}
             >

@@ -89,6 +89,7 @@ export function Hero({
             text={headline}
             as="h1"
             className="font-display font-light text-white leading-[1.04] mb-8 tracking-[-0.02em]"
+            style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5rem)' }}
             delay={0.3}
           />
 

@@ -37,30 +37,30 @@ export function Header() {
       className="fixed top-0 left-0 right-0 z-50 border-b"
     >
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="flex items-center justify-between h-18 lg:h-22">
+        <div className="flex items-center justify-between h-20 lg:h-24">
 
           {/* Logo: image + full name */}
           <Link href="/" className="shrink-0 group flex items-center gap-3">
             <Image
               src={LOGO_URL}
               alt="Rock N Roll Stoneworks logo"
-              width={44}
-              height={44}
-              className="h-10 w-10 object-contain shrink-0"
+              width={52}
+              height={52}
+              className="h-12 w-12 object-contain shrink-0"
               priority
             />
             <div className="flex flex-col leading-none">
-              <span className="font-display text-[15px] font-semibold text-white tracking-wide group-hover:text-gold-400 transition-colors duration-300">
+              <span className="font-display text-[17px] font-semibold text-white tracking-wide group-hover:text-gold-400 transition-colors duration-300">
                 Rock N Roll
               </span>
-              <span className="font-body text-[10px] font-medium tracking-[0.26em] uppercase text-gold-500 mt-0.5">
+              <span className="font-body text-[11px] font-medium tracking-[0.26em] uppercase text-gold-500 mt-0.5">
                 Stoneworks
               </span>
             </div>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-0" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
             {mainNav.filter(n => n.label !== 'Home').map((item) => (
               <div
                 key={item.href}
@@ -70,7 +70,7 @@ export function Header() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center gap-0.5 px-3.5 py-2 text-[13px] font-body font-medium text-white/70 hover:text-white transition-colors duration-200 whitespace-nowrap tracking-wide"
+                  className="flex items-center gap-0.5 px-4 py-2.5 text-[14px] font-body font-medium text-white/70 hover:text-white transition-colors duration-200 whitespace-nowrap tracking-wide"
                 >
                   {item.label}
                   {item.children && (
@@ -78,7 +78,7 @@ export function Header() {
                       animate={{ rotate: openDropdown === item.label ? 180 : 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <ChevronDown className="w-3 h-3 ml-0.5 opacity-60" />
+                      <ChevronDown className="w-3.5 h-3.5 ml-0.5 opacity-60" />
                     </motion.span>
                   )}
                 </Link>
@@ -86,20 +86,21 @@ export function Header() {
                 <AnimatePresence>
                   {item.children && openDropdown === item.label && (
                     <motion.div
+                      key={`dropdown-${item.label}`}
                       initial={{ opacity: 0, y: -8, scale: 0.96 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -4, scale: 0.98 }}
                       transition={{ duration: 0.2, ease }}
-                      className="absolute top-full left-0 pt-3 z-50"
+                      className="absolute top-full left-0 pt-2 z-50"
                     >
-                      <div className="w-60 bg-ink-900/98 backdrop-blur-xl rounded-xl border border-white/8 py-2 shadow-ink">
-                        <div className="absolute top-3 left-6 right-6 h-px bg-gradient-to-r from-transparent via-gold-600/50 to-transparent" />
-                        <div className="pt-3">
+                      <div className="w-64 bg-ink-950 backdrop-blur-xl rounded-xl border border-white/10 py-2 shadow-ink">
+                        <div className="absolute top-2 left-6 right-6 h-px bg-gradient-to-r from-transparent via-gold-600/50 to-transparent" />
+                        <div className="pt-2">
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="block px-5 py-2.5 text-[13px] text-white/60 hover:text-gold-400 hover:bg-white/4 transition-all duration-150 font-body"
+                              className="block px-5 py-2.5 text-[13px] text-white/60 hover:text-gold-400 hover:bg-white/5 transition-all duration-150 font-body"
                             >
                               {child.label}
                             </Link>
@@ -117,14 +118,14 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-5">
             <a
               href={`tel:${siteConfig.phoneRaw}`}
-              className="flex items-center gap-2 text-[13px] font-medium text-white/60 hover:text-gold-400 transition-colors duration-200 whitespace-nowrap font-body"
+              className="flex items-center gap-2 text-[14px] font-medium text-white/60 hover:text-gold-400 transition-colors duration-200 whitespace-nowrap font-body"
             >
-              <Phone className="w-3.5 h-3.5" />
+              <Phone className="w-4 h-4" />
               {siteConfig.phone}
             </a>
             <Link
               href="/contact"
-              className="px-5 py-2.5 text-[13px] font-medium font-body tracking-wide border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 hover:border-gold-500 transition-all duration-300 rounded-sm btn-shimmer"
+              className="px-6 py-3 text-[13px] font-medium font-body tracking-wide border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 hover:border-gold-500 transition-all duration-300 rounded-sm btn-shimmer"
             >
               Get Your Free Design
             </Link>
@@ -136,7 +137,7 @@ export function Header() {
             className="lg:hidden p-2 text-white/70 hover:text-white transition-colors"
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
@@ -145,6 +146,7 @@ export function Header() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
+            key="mobile-menu"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -181,14 +183,14 @@ export function Header() {
             <div className="px-6 pb-6 pt-2 flex gap-3">
               <Link
                 href="/contact"
-                className="flex-1 py-3 text-center text-sm font-medium font-body border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 transition-all rounded-sm"
+                className="flex-1 py-3.5 text-center text-sm font-medium font-body border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 transition-all rounded-sm"
                 onClick={() => setMobileOpen(false)}
               >
                 Get Your Free Design
               </Link>
               <a
                 href={`tel:${siteConfig.phoneRaw}`}
-                className="flex-1 py-3 text-center text-sm font-medium font-body text-white/60 border border-white/15 rounded-sm hover:border-white/30 transition-all"
+                className="flex-1 py-3.5 text-center text-sm font-medium font-body text-white/60 border border-white/15 rounded-sm hover:border-white/30 transition-all"
               >
                 <Phone className="w-4 h-4 inline mr-1.5" />
                 Call

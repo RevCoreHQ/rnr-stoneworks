@@ -40,7 +40,7 @@ export function ScrollReveal({
     <motion.div
       initial={hidden}
       whileInView={visible}
-      viewport={{ once: true, margin: '-80px' }}
+      viewport={{ once: true, margin: '-40px' }}
       className={className}
     >
       {children}

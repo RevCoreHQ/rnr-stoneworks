@@ -40,7 +40,7 @@ export function StaggerChildren({
       variants={container(stagger, delayStart)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '-60px' }}
+      viewport={{ once: true, margin: '-30px' }}
       className={className}
     >
       {children}

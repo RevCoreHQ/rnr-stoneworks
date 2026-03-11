@@ -25,8 +25,6 @@ const sizes = {
   lg: 'px-10 py-4 text-[13px]',
 };
 
-const MotionLink = motion.create(Link);
-
 const springTransition = { type: 'spring' as const, stiffness: 400, damping: 20 };
 
 export function Button({
@@ -47,15 +45,16 @@ export function Button({
 
   if (href) {
     return (
-      <MotionLink
-        href={href}
-        className={classes}
+      <motion.div
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
         transition={springTransition}
+        className="inline-block"
       >
-        {children}
-      </MotionLink>
+        <Link href={href} className={classes}>
+          {children}
+        </Link>
+      </motion.div>
     );
   }
   return (

@@ -29,6 +29,7 @@ export function EditorialIntro() {
               text="Colorado's premier design–build team for luxury outdoor living."
               as="h2"
               className="font-display font-light text-ink-900 leading-[1.06] mb-0"
+              style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
               delay={0.2}
             />
           </div>
