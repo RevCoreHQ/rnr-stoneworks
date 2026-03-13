@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'Rock N Roll Stoneworks',
   tagline: 'Custom Outdoor Spaces Built to Last',
   description:
-    "Colorado's trusted hardscape and outdoor living contractor. Custom paver installations, fire pits, outdoor kitchens, water features, and retaining walls in Lafayette, Erie, Boulder, and surrounding areas. Belgard Authorized. Free estimates.",
+    "Colorado's trusted hardscape and outdoor living contractor. Custom paver installations, fire pits, outdoor kitchens, water features, pool installations, and retaining walls in Lafayette, Erie, Boulder, and surrounding areas. Belgard Authorized. Latham Pools Dealer. Free estimates.",
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://rnrstoneworks.com',
   ogImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=630&fit=crop',
   phone: '(303) 587-3035',
@@ -29,6 +29,7 @@ export const siteConfig = {
   trustPoints: [
     { label: 'Belgard Authorized Contractor', icon: 'BadgeCheck' as const },
     { label: 'ICPI Certified Installer', icon: 'Shield' as const },
+    { label: 'Latham Pools Authorized Dealer', icon: 'BadgeCheck' as const },
     { label: '2-Year Guarantee', icon: 'Star' as const },
     { label: 'Free Estimates', icon: 'FileText' as const },
   ],

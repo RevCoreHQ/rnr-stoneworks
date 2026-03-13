@@ -519,48 +519,53 @@ export const services: ServiceData[] = [
     title: 'Swimming Pools',
     shortTitle: 'Swimming Pools',
     category: 'outdoor-living',
-    metaTitle: 'Fiberglass Swimming Pools in Lafayette & Boulder County, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Latham Fiberglass Pools, Authorized Dealer | Rock N Roll Stoneworks, Lafayette CO',
     metaDescription:
-      'Fiberglass swimming pool installation in Lafayette, Erie, Boulder, and surrounding Colorado communities through our sister company Rock N Roll Pools. Free consultation.',
-    h1: 'Swimming Pool Installation in Colorado',
+      'Latham Pools Authorized Dealer serving Lafayette, Erie, Boulder, and the Colorado Front Range. Premium fiberglass pool installation with complete outdoor living design. Free consultation.',
+    h1: 'Latham Pools Authorized Dealer in Colorado',
     intro:
-      "Rock N Roll Stoneworks offers swimming pool installation through our sister company Rock N Roll Pools, giving you a single, integrated outdoor living solution. From the pool shell to the surrounding paver deck, fire features, outdoor kitchen, and landscaping, we design and build a complete outdoor environment that works together as a cohesive whole. Our pool installations focus on fiberglass shells for their durability, low maintenance, and smooth non-abrasive finish.",
+      "As a Latham Pools Authorized Dealer, Rock N Roll Stoneworks brings you the industry's leading fiberglass pool products backed by decades of manufacturing expertise. From the pool shell to the surrounding paver deck, fire features, outdoor kitchen, and landscaping, we design and build a complete outdoor environment that works together as a cohesive whole. Latham's fiberglass shells offer unmatched durability, low maintenance, and a smooth non-abrasive finish, perfect for Colorado's climate.",
     heroImage: 'https://images.unsplash.com/photo-1572331165267-854da2b021d9?w=1200&h=700&fit=crop',
-    heroAlt: 'Fiberglass swimming pool installation in Colorado by Rock N Roll Pools',
+    heroAlt: 'Latham fiberglass swimming pool installation in Colorado by Rock N Roll Stoneworks',
     features: [
-      'Fiberglass pool shells, low maintenance, smooth finish',
+      'Latham Pools Authorized Dealer',
+      'Premium fiberglass pool shells with lifetime structural warranty',
       'Custom paver pool decks and surrounds',
       'Water feature and spillway integration',
       'Integrated spa and hot tub options',
       'LED color-changing pool lighting',
-      'Automation and smart control systems',
       'Full outdoor living environment design',
-      'Coordinated with Rock N Roll Pools, our sister company',
+      'Complete installation from excavation to finish',
     ],
     body: [
       {
-        heading: 'Why Fiberglass for Colorado',
-        text: "Fiberglass pools are the preferred choice for Colorado\'s climate. The flexible composite shell handles ground movement and freeze-thaw cycles better than gunite or vinyl liner pools. The non-porous surface resists algae growth, reducing chemical use and maintenance. Fiberglass pools are also faster to install than gunite, typically ready to swim in within two to four weeks of excavation. The gel coat finish is smooth to the touch and available in a range of colors and textures.",
+        heading: 'Why Latham Fiberglass Pools',
+        text: "Latham is the largest manufacturer of in-ground residential swimming pools in North America, and as an Authorized Dealer, we offer their full line of fiberglass pool models. Latham fiberglass pools are engineered for Colorado's climate, the flexible composite shell handles ground movement and freeze-thaw cycles better than gunite or vinyl liner alternatives. The non-porous gel coat surface resists algae growth, reducing chemical use and ongoing maintenance. With dozens of shapes, sizes, and colors available, there is a Latham pool that fits your yard and your vision.",
       },
       {
         heading: 'A Complete Outdoor Living Solution',
-        text: "The advantage of working with Rock N Roll Stoneworks for your pool project is that we do not just install the pool, we design and build the entire outdoor environment surrounding it. A beautiful pool surrounded by a poorly executed patio, inadequate lighting, or mismatched landscape elements diminishes the overall result. Our integrated approach ensures that every element, pool, deck, fire feature, outdoor kitchen, and landscaping, is designed together and built to the same standard.",
+        text: "The advantage of choosing Rock N Roll Stoneworks for your Latham pool installation is that we do not just install the pool, we design and build the entire outdoor environment surrounding it. A beautiful pool surrounded by a poorly executed patio, inadequate lighting, or mismatched landscape elements diminishes the overall result. Our integrated approach ensures that every element, pool, deck, fire feature, outdoor kitchen, and landscaping, is designed together and built to the same standard of craftsmanship.",
       },
     ],
     faqs: [
       {
-        question: 'Can I have a pool in Colorado year-round?',
+        question: 'Why choose a Latham fiberglass pool over gunite or vinyl?',
         answer:
-          'Most Colorado homeowners close their pools for winter (typically November through April) and reopen in spring. Pool heaters and heat pumps can extend the season significantly, and some homeowners with covered pool enclosures or indoor pools swim year-round.',
+          'Latham fiberglass pools offer faster installation (typically weeks, not months), lower lifetime maintenance costs, a smooth non-abrasive finish, and superior resistance to algae. The flexible shell also handles Colorado\'s freeze-thaw cycles better than rigid gunite. Latham backs their pools with a lifetime structural warranty.',
       },
       {
-        question: 'How long does a fiberglass pool installation take?',
+        question: 'How long does a Latham pool installation take?',
         answer:
-          'A fiberglass pool installation typically takes four to eight weeks from excavation to completion, depending on site conditions, permitting, and the complexity of surrounding hardscape work.',
+          'A Latham fiberglass pool installation typically takes four to eight weeks from excavation to completion, depending on site conditions, permitting, and the complexity of surrounding hardscape work. Fiberglass pools install significantly faster than gunite alternatives.',
+      },
+      {
+        question: 'What Latham pool models are available?',
+        answer:
+          'As an Authorized Dealer, we have access to Latham\'s full catalog of fiberglass pool models, including freeform, rectangular, and contemporary designs in a range of sizes and colors. We will help you select the right model for your yard, lifestyle, and budget during our free design consultation.',
       },
     ],
     relatedSlugs: ['paver-installations', 'water-features', 'outdoor-kitchens'],
-    primaryKeyword: 'fiberglass pool installation Lafayette CO',
+    primaryKeyword: 'Latham pool dealer Lafayette CO',
   },
 ];
 

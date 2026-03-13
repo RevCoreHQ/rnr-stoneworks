@@ -64,7 +64,7 @@ export function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-2" aria-label="Main navigation">
             {mainNav.filter(n => n.label !== 'Home').map((item) => (
               <div
                 key={item.href}
@@ -74,7 +74,7 @@ export function Header() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center gap-0.5 px-4 py-2.5 text-[14px] font-body font-medium text-white/70 hover:text-white transition-colors duration-200 whitespace-nowrap tracking-wide"
+                  className="flex items-center gap-0.5 px-5 py-2.5 text-[14px] font-body font-medium text-white/70 hover:text-white transition-colors duration-200 whitespace-nowrap tracking-wide"
                 >
                   {item.label}
                   {item.children && (
