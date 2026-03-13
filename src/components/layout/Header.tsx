@@ -119,19 +119,19 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-4">
             <a
               href={`tel:${siteConfig.phoneRaw}`}
-              className="flex items-center gap-2 text-[14px] font-medium text-white/60 hover:text-gold-400 transition-colors duration-200 whitespace-nowrap font-body"
+              className="flex items-center gap-1.5 text-[13px] font-medium text-white/50 hover:text-gold-400 transition-colors duration-200 whitespace-nowrap font-body"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-3.5 h-3.5" />
               {siteConfig.phone}
             </a>
             <Link
               href="/contact"
-              className="px-6 py-3 text-[13px] font-medium font-body tracking-wide border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 hover:border-gold-500 transition-all duration-300 rounded-sm btn-shimmer"
+              className="px-4 py-2 text-[12px] font-medium font-body tracking-wide border border-gold-500/40 text-gold-400 hover:bg-gold-500 hover:text-ink-950 hover:border-gold-500 transition-all duration-300 rounded-sm"
             >
-              Get Your Free Design
+              Free Estimate
             </Link>
           </div>
 
