@@ -45,11 +45,11 @@ export function Hero({
       )}
 
       {/* Bottom-up gradient — darkens where text lives */}
-      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/75 to-ink-950/25" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/55 to-ink-950/10" />
       {/* Left-side vignette — frames the text */}
-      <div className="absolute inset-0 bg-gradient-to-r from-ink-950/80 via-ink-950/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink-950/60 via-ink-950/20 to-transparent" />
       {/* Top-down gradient — keeps nav area readable */}
-      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/40 via-transparent to-transparent" />
 
       {/* Aurora mesh — three overlapping radial gradients for ambient depth */}
       <motion.div
