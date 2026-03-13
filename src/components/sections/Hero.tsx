@@ -71,8 +71,7 @@ export function Hero({
         transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut', delay: 7 }}
       />
 
-      {/* Brand blue accent at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-gold-500 via-gold-400/60 to-transparent" />
+
 
       {/* Scroll indicator */}
       <div className="absolute top-1/2 right-8 lg:right-14 -translate-y-1/2 hidden lg:flex flex-col items-center gap-3">
