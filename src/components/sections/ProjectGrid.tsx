@@ -3,23 +3,21 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const REAL = [
-  'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69aa9a13b003fa04e8de88ee.jpg',
-  'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69aa9a1336702f66070d71c3.jpg',
-  'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69aa9a13b003fa9b0bde88ef.jpg',
-  'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69919554899b88de64bf5ef5.webp',
-];
-
 const projects = [
-  { src: REAL[0], alt: 'Custom paver patio and outdoor kitchen in Colorado backyard', label: 'Full Hardscape & Kitchen, Lafayette, CO' },
-  { src: REAL[1], alt: 'Custom paver patio with fire feature', label: 'Paver Patio & Fire Pit, Erie, CO' },
-  { src: REAL[2], alt: 'Retaining walls and tiered landscape installation', label: 'Retaining Walls, Boulder, CO' },
-  { src: REAL[3], alt: 'Custom outdoor hardscape project', label: 'Outdoor Hardscape, Lafayette, CO' },
-  { src: REAL[0], alt: 'Paver patio installation in Colorado', label: 'Paver Installation, Westminster, CO' },
-  { src: REAL[1], alt: 'Outdoor living space with paver surround', label: 'Outdoor Living, Longmont, CO' },
-  { src: REAL[2], alt: 'Custom hardscape and landscape project', label: 'Hardscape & Landscape, Erie, CO' },
-  { src: REAL[3], alt: 'Backyard transformation with pavers', label: 'Backyard Transformation, Boulder, CO' },
-  { src: REAL[0], alt: 'Custom paver and fire feature installation', label: 'Pavers & Fire, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c68ea7458e3.jpg', alt: 'Custom paver patio and outdoor kitchen in Colorado backyard', label: 'Full Hardscape & Kitchen, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb277ba028b8ce2268.jpg', alt: 'Custom paver patio with fire feature', label: 'Paver Patio & Fire Pit, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb070c5827655cf949.jpg', alt: 'Retaining walls and tiered landscape installation', label: 'Retaining Walls, Boulder, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbbfc81f7607ecedf1.jpg', alt: 'Custom outdoor hardscape project', label: 'Outdoor Hardscape, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbd548174caf1be587.jpg', alt: 'Paver patio installation in Colorado', label: 'Paver Installation, Westminster, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb0b5c435534dabbdc.jpg', alt: 'Outdoor living space with paver surround', label: 'Outdoor Living, Longmont, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb0b5c430b62dabbdb.jpg', alt: 'Custom hardscape and landscape project', label: 'Hardscape & Landscape, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487466a20d049.jpg', alt: 'Backyard transformation with pavers', label: 'Backyard Transformation, Boulder, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487d1ff20d048.jpg', alt: 'Custom paver and fire feature installation', label: 'Pavers & Fire, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbfb38ca4dc08ccfd8.jpg', alt: 'Outdoor kitchen and patio design', label: 'Outdoor Kitchen & Patio, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbcab7f75114aa984e.jpg', alt: 'Premium hardscape installation', label: 'Premium Hardscape, Westminster, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487271b20d047.jpg', alt: 'Complete outdoor living environment', label: 'Outdoor Living, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c54027458e7.jpg', alt: 'Stone patio and fire pit project', label: 'Patio & Fire Feature, Boulder, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c245a7458ee.jpg', alt: 'Custom outdoor space with pavers', label: 'Custom Paver Design, Longmont, CO' },
 ];
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
@@ -44,7 +42,7 @@ export function ProjectGrid() {
                 fill
                 sizes="(max-width: 1024px) 50vw, 33vw"
                 quality={75}
-                priority={i < 4}
+                priority={i < 3}
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
