@@ -24,7 +24,6 @@ export const mainNav: NavItem[] = [
     ],
   },
   { label: 'Gallery', href: '/gallery' },
-  { label: 'Process', href: '/process' },
   {
     label: 'Areas',
     href: '/service-areas',
@@ -38,9 +37,6 @@ export const mainNav: NavItem[] = [
     ],
   },
   { label: 'About', href: '/about' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' },
 ];
 
 export const footerNav = {
