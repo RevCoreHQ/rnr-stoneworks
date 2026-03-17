@@ -8,9 +8,9 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Contact Rock N Roll Stoneworks, Free Estimate | Lafayette & Boulder, CO',
+  title: 'Free Estimate | Rock N Roll Stoneworks Lafayette CO',
   description:
-    'Get a free estimate for paver installation, fire pits, outdoor kitchens, or any hardscape project. Call (303) 587-3035 or fill out our form. Lafayette, CO.',
+    'Get a free estimate for pavers, fire pits, outdoor kitchens, or any hardscape project. Call (303) 587-3035. Lafayette, CO.',
   path: '/contact',
 });
 

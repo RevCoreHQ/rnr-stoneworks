@@ -64,12 +64,41 @@ export function localBusinessSchema() {
       { '@type': 'City', name: 'Firestone', addressRegion: 'CO' },
       { '@type': 'City', name: 'Frederick', addressRegion: 'CO' },
     ],
+    founder: {
+      '@type': 'Person',
+      name: 'Jordan',
+      jobTitle: 'Owner',
+    },
+    foundingDate: '2017',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
       reviewCount: '25',
       bestRating: '5',
     },
+    review: [
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+        author: { '@type': 'Person', name: 'Tyra Ware' },
+        datePublished: '2020-08-15',
+        reviewBody: 'Both my husband and I are extremely glad we picked Rock N Roll Stoneworks for our outdoor project. Jordan and Jason were a pleasure to work with from the planning of the design details to the completed backyard of our dreams.',
+      },
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+        author: { '@type': 'Person', name: 'Sara Seitzman Hazard' },
+        datePublished: '2022-08-10',
+        reviewBody: 'We are so thrilled with our new patio! These guys did a great job and were a pleasure to work with.',
+      },
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+        author: { '@type': 'Person', name: 'Rebecca Staley' },
+        datePublished: '2019-01-15',
+        reviewBody: 'Contracted with Rock n Roll Stoneworks for a large project. Jordan\'s expertise was invaluable for design and materials selection. Results exceeded our expectations.',
+      },
+    ],
     sameAs,
     priceRange: '$$$',
     knowsAbout: [
@@ -154,5 +183,121 @@ export function articleSchema(title: string, description: string, url: string, d
       name: siteConfig.name,
       url: siteConfig.url,
     },
+  };
+}
+
+export function organizationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${siteConfig.url}/#organization`,
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: { '@type': 'ImageObject', url: siteConfig.ogImage },
+    founder: { '@type': 'Person', name: 'Jordan' },
+    foundingDate: '2017',
+    numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 5, maxValue: 15 },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: siteConfig.phone,
+      contactType: 'customer service',
+      areaServed: 'US',
+      availableLanguage: 'English',
+    },
+    sameAs: [siteConfig.social.instagram, siteConfig.social.facebook].filter(Boolean),
+  };
+}
+
+export function webSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteConfig.url}/#website`,
+    name: siteConfig.name,
+    url: siteConfig.url,
+    publisher: { '@id': `${siteConfig.url}/#organization` },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: `${siteConfig.url}/blog?q={search_term_string}` },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
+
+export function reviewSchema(reviews: { author: string; quote: string; rating: number; date?: string }[]) {
+  return reviews.map((r) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: r.rating,
+      bestRating: 5,
+    },
+    author: { '@type': 'Person', name: r.author },
+    reviewBody: r.quote,
+    ...(r.date && { datePublished: r.date }),
+    itemReviewed: {
+      '@type': 'LocalBusiness',
+      '@id': `${siteConfig.url}/#business`,
+      name: siteConfig.name,
+    },
+  }));
+}
+
+export function howToSchema(name: string, description: string, steps: { title: string; description: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    step: steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.title,
+      text: s.description,
+    })),
+  };
+}
+
+export function imageGallerySchema(images: { src: string; alt: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ImageGallery',
+    name: 'Rock N Roll Stoneworks Project Portfolio',
+    description: 'Custom paver installations, fire pits, outdoor kitchens, and hardscape projects across the Colorado Front Range.',
+    image: images.map((img) => ({
+      '@type': 'ImageObject',
+      url: img.src,
+      description: img.alt,
+    })),
+  };
+}
+
+export function geoServiceSchema(name: string, description: string, url: string, geo?: { lat: number; lng: number }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    url,
+    provider: {
+      '@type': 'LocalBusiness',
+      '@id': `${siteConfig.url}/#business`,
+      name: siteConfig.name,
+      telephone: siteConfig.phone,
+    },
+    areaServed: geo
+      ? {
+          '@type': 'Place',
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: geo.lat,
+            longitude: geo.lng,
+          },
+        }
+      : {
+          '@type': 'State',
+          name: 'Colorado',
+        },
   };
 }

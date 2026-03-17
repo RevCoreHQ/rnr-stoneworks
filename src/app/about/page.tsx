@@ -10,9 +10,9 @@ import Image from 'next/image';
 import { BadgeCheck, Flame, Layers, Users } from 'lucide-react';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'About Rock N Roll Stoneworks, Lafayette, CO Hardscape Contractor',
+  title: 'About Us | Rock N Roll Stoneworks Lafayette CO',
   description:
-    'Rock N Roll Stoneworks is a Belgard Authorized, ICPI Certified hardscape contractor based in Lafayette, CO. Custom outdoor spaces built to last.',
+    'Belgard authorized, ICPI certified hardscape contractor in Lafayette CO. Meet the team behind Rock N Roll Stoneworks.',
   path: '/about',
 });
 

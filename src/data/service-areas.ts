@@ -15,6 +15,7 @@ export interface ServiceAreaData {
   nearbyNote?: string;
   heroImage?: string;
   body: AreaBodySection[];
+  geo: { lat: number; lng: number };
 }
 
 export const serviceAreas: ServiceAreaData[] = [
@@ -22,13 +23,14 @@ export const serviceAreas: ServiceAreaData[] = [
     slug: 'lafayette',
     city: 'Lafayette',
     state: 'CO',
-    metaTitle: 'Paver & Hardscape Contractor in Lafayette, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Hardscape Contractor Lafayette CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom paver installations, fire pits, outdoor kitchens, and retaining walls in Lafayette, CO. Belgard authorized contractor. ICPI certified. Free estimates.',
+      'Custom pavers, fire pits, outdoor kitchens, and retaining walls in Lafayette CO. Belgard authorized. Free estimates.',
     h1: 'Hardscape & Outdoor Living in Lafayette, CO',
     intro:
       'Rock N Roll Stoneworks is based in Lafayette and serves homeowners throughout the community with custom paver installations, fire pits, outdoor kitchens, water features, retaining walls, and complete outdoor living environments. As your local hardscape contractor, we know Lafayette\'s neighborhoods, soil conditions, and permit processes inside and out.',
     isPrimary: true,
+    geo: { lat: 39.9936, lng: -105.1019 },
     heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=700&fit=crop',
     body: [
       {
@@ -49,13 +51,14 @@ export const serviceAreas: ServiceAreaData[] = [
     slug: 'erie',
     city: 'Erie',
     state: 'CO',
-    metaTitle: 'Paver & Hardscape Contractor in Erie, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Hardscape Contractor Erie CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom paver installations, fire pits, outdoor kitchens, and hardscape in Erie, CO. Belgard authorized. ICPI certified installer. Free estimates.',
+      'Custom pavers, fire pits, outdoor kitchens, and hardscape in Erie CO. Belgard authorized. Free estimates.',
     h1: 'Hardscape & Outdoor Living in Erie, CO',
     intro:
       'Erie is one of the fastest-growing communities on the Colorado Front Range, and Rock N Roll Stoneworks serves Erie homeowners with the full range of outdoor living services, from paver patios and fire pits to complete backyard transformations. Whether your home is in a new Erie subdivision or an established neighborhood, our team brings the same craftsmanship to every project.',
     isPrimary: true,
+    geo: { lat: 40.0503, lng: -105.0500 },
     heroImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=700&fit=crop',
     body: [
       {
@@ -72,13 +75,14 @@ export const serviceAreas: ServiceAreaData[] = [
     slug: 'boulder',
     city: 'Boulder',
     state: 'CO',
-    metaTitle: 'Paver & Hardscape Contractor in Boulder, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Hardscape Contractor Boulder CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom hardscape, fire pits, outdoor kitchens, and paver installations in Boulder, CO. Belgard authorized contractor. Serving the Boulder area. Free estimates.',
+      'Custom hardscape, fire pits, outdoor kitchens, and pavers in Boulder CO. Belgard authorized. Free estimates.',
     h1: 'Hardscape & Outdoor Living in Boulder, CO',
     intro:
       'Boulder homeowners expect exceptional quality in every aspect of their property, and Rock N Roll Stoneworks delivers it. We serve the Boulder market with premium hardscape installations, fire features, outdoor kitchens, water features, and complete outdoor living designs that match the standard of care Boulder homeowners bring to their homes.',
     isPrimary: true,
+    geo: { lat: 40.0150, lng: -105.2705 },
     heroImage: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&h=700&fit=crop',
     body: [
       {
@@ -95,13 +99,14 @@ export const serviceAreas: ServiceAreaData[] = [
     slug: 'westminster',
     city: 'Westminster',
     state: 'CO',
-    metaTitle: 'Paver & Hardscape Contractor in Westminster, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Hardscape Contractor Westminster | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom paver installations, fire pits, outdoor kitchens, and hardscape in Westminster, CO. ICPI certified. Belgard authorized. Free estimates.',
+      'Custom pavers, fire pits, outdoor kitchens, and hardscape in Westminster CO. Belgard authorized. Free estimates.',
     h1: 'Hardscape & Outdoor Living in Westminster, CO',
     intro:
       'Westminster homeowners trust Rock N Roll Stoneworks for premium outdoor living construction. From custom paver patios and fire pits to retaining walls and complete backyard transformations, we serve Westminster with the same craftsmanship and professionalism we bring to every community in our service area.',
     isPrimary: true,
+    geo: { lat: 39.8367, lng: -105.0372 },
     heroImage: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&h=700&fit=crop',
     body: [
       {
@@ -114,13 +119,14 @@ export const serviceAreas: ServiceAreaData[] = [
     slug: 'longmont',
     city: 'Longmont',
     state: 'CO',
-    metaTitle: 'Paver & Hardscape Contractor in Longmont, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Hardscape Contractor Longmont CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom paver patios, fire pits, outdoor kitchens, and hardscape in Longmont, CO. Rock N Roll Stoneworks serves the Longmont area. Free estimates.',
+      'Custom pavers, fire pits, outdoor kitchens, and hardscape in Longmont CO. Free estimates available.',
     h1: 'Hardscape & Outdoor Living in Longmont, CO',
     intro:
       'Rock N Roll Stoneworks serves Longmont homeowners with the full range of outdoor living construction services. From paver installations and fire features to retaining walls and complete outdoor room designs, we bring Belgard-quality craftsmanship to Longmont properties of every size and style.',
     isPrimary: false,
+    geo: { lat: 40.1672, lng: -105.1019 },
     nearbyNote: 'Longmont is within our service area. Call us to discuss your project and confirm scheduling availability.',
     heroImage: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&h=700&fit=crop',
     body: [
@@ -134,13 +140,14 @@ export const serviceAreas: ServiceAreaData[] = [
     slug: 'firestone-frederick',
     city: 'Firestone & Frederick',
     state: 'CO',
-    metaTitle: 'Paver & Hardscape Contractor in Firestone & Frederick, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Hardscape Firestone & Frederick CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom paver installations, fire pits, and outdoor living in Firestone and Frederick, CO. Rock N Roll Stoneworks. Belgard authorized. Free estimates.',
+      'Custom pavers, fire pits, and outdoor living in Firestone and Frederick CO. Belgard authorized. Free estimates.',
     h1: 'Hardscape & Outdoor Living in Firestone & Frederick, CO',
     intro:
       'Rock N Roll Stoneworks serves homeowners in Firestone and Frederick with premium outdoor living construction. These growing communities offer larger lots and newer homes, an ideal canvas for comprehensive outdoor living projects that include paver patios, fire pits, outdoor kitchens, and complete backyard transformations.',
     isPrimary: false,
+    geo: { lat: 40.1128, lng: -104.9369 },
     nearbyNote: 'Firestone and Frederick are at the northern edge of our primary service area. Call us to discuss your project and confirm availability.',
     heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=700&fit=crop',
     body: [

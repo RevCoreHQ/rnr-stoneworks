@@ -6,20 +6,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Lightbox } from '@/components/ui/Lightbox';
 
 const projects = [
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c68ea7458e3.jpg', alt: 'Custom paver patio and outdoor kitchen in Colorado backyard', label: 'Full Hardscape & Kitchen, Lafayette, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb277ba028b8ce2268.jpg', alt: 'Custom paver patio with fire feature', label: 'Paver Patio & Fire Pit, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb070c5827655cf949.jpg', alt: 'Retaining walls and tiered landscape installation', label: 'Retaining Walls, Boulder, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbbfc81f7607ecedf1.jpg', alt: 'Custom outdoor hardscape project', label: 'Outdoor Hardscape, Lafayette, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbd548174caf1be587.jpg', alt: 'Paver patio installation in Colorado', label: 'Paver Installation, Westminster, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb0b5c435534dabbdc.jpg', alt: 'Outdoor living space with paver surround', label: 'Outdoor Living, Longmont, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb0b5c430b62dabbdb.jpg', alt: 'Custom hardscape and landscape project', label: 'Hardscape & Landscape, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487466a20d049.jpg', alt: 'Backyard transformation with pavers', label: 'Backyard Transformation, Boulder, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487d1ff20d048.jpg', alt: 'Custom paver and fire feature installation', label: 'Pavers & Fire, Lafayette, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbfb38ca4dc08ccfd8.jpg', alt: 'Outdoor kitchen and patio design', label: 'Outdoor Kitchen & Patio, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbcab7f75114aa984e.jpg', alt: 'Premium hardscape installation', label: 'Premium Hardscape, Westminster, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487271b20d047.jpg', alt: 'Complete outdoor living environment', label: 'Outdoor Living, Lafayette, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c54027458e7.jpg', alt: 'Stone patio and fire pit project', label: 'Patio & Fire Feature, Boulder, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c245a7458ee.jpg', alt: 'Custom outdoor space with pavers', label: 'Custom Paver Design, Longmont, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c68ea7458e3.jpg', alt: 'Belgard paver patio and outdoor kitchen installation in Lafayette, Colorado', label: 'Full Hardscape & Kitchen, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb277ba028b8ce2268.jpg', alt: 'Custom paver patio with natural gas fire pit in Erie, Colorado', label: 'Paver Patio & Fire Pit, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb070c5827655cf949.jpg', alt: 'Tiered natural stone retaining wall and landscape design in Boulder, Colorado', label: 'Retaining Walls, Boulder, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbbfc81f7607ecedf1.jpg', alt: 'Belgard paver patio and seat wall installation in Lafayette, Colorado', label: 'Outdoor Hardscape, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbd548174caf1be587.jpg', alt: 'Multi-level paver walkway and retaining wall in Westminster, Colorado', label: 'Paver Installation, Westminster, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb0b5c435534dabbdc.jpg', alt: 'Outdoor living space with paver patio and landscape lighting in Longmont, Colorado', label: 'Outdoor Living, Longmont, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb0b5c430b62dabbdb.jpg', alt: 'Custom hardscape design with stone planters and paver driveway in Erie, Colorado', label: 'Hardscape & Landscape, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487466a20d049.jpg', alt: 'Complete backyard transformation with Belgard pavers and stone steps in Boulder, Colorado', label: 'Backyard Transformation, Boulder, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487d1ff20d048.jpg', alt: 'Custom paver patio with built-in fire feature and seating area in Lafayette, Colorado', label: 'Pavers & Fire, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbfb38ca4dc08ccfd8.jpg', alt: 'Outdoor kitchen with granite countertops and paver patio in Erie, Colorado', label: 'Outdoor Kitchen & Patio, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbcab7f75114aa984e.jpg', alt: 'Premium Belgard paver driveway and front entry hardscape in Westminster, Colorado', label: 'Premium Hardscape, Westminster, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487271b20d047.jpg', alt: 'Complete outdoor living space with fire pit and paver patio in Lafayette, Colorado', label: 'Outdoor Living, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c54027458e7.jpg', alt: 'Natural stone patio with custom fire pit and retaining wall in Boulder, Colorado', label: 'Patio & Fire Feature, Boulder, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c245a7458ee.jpg', alt: 'Custom interlocking paver design with decorative borders in Longmont, Colorado', label: 'Custom Paver Design, Longmont, CO' },
 ];
 
 // Deterministic pseudo-random rotation per card (-3 to +3 degrees)

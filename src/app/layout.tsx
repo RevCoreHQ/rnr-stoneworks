@@ -43,6 +43,11 @@ export const metadata: Metadata = {
     'outdoor living contractor Lafayette',
     'Rock N Roll Stoneworks',
   ],
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+  },
   alternates: { canonical: siteConfig.url },
   openGraph: {
     type: 'website',
@@ -57,8 +62,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${raleway.variable} ${dmSans.variable}`}>
+    <html lang="en-US" className={`${raleway.variable} ${dmSans.variable}`}>
       <head>
+        <link rel="preconnect" href="https://assets.cdn.filesafe.space" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://assets.cdn.filesafe.space" />
         <JsonLd data={localBusinessSchema()} />
       </head>
       <body className="min-h-screen flex flex-col bg-white">

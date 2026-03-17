@@ -8,9 +8,9 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema, faqSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'FAQ, Common Questions About Paver & Hardscape Installation | Rock N Roll Stoneworks',
+  title: 'Hardscape FAQ | Rock N Roll Stoneworks Lafayette CO',
   description:
-    'Answers to common questions about paver installation, fire pits, outdoor kitchens, pricing, timelines, guarantees, and working with Rock N Roll Stoneworks in Colorado.',
+    'Answers to common questions about paver installation, pricing, timelines, and guarantees. Rock N Roll Stoneworks, Lafayette CO.',
   path: '/faq',
 });
 

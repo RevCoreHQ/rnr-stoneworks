@@ -8,7 +8,7 @@ import { services } from '@/data/services';
 import { siteConfig } from '@/data/site-config';
 import { generatePageMetadata } from '@/lib/metadata';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
+import { breadcrumbSchema, geoServiceSchema } from '@/lib/schema';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { Button } from '@/components/ui/Button';
 import { TrustStrip } from '@/components/sections/TrustStrip';
@@ -49,10 +49,11 @@ export default async function ServiceAreaPage({ params }: Props) {
             { name: 'Service Areas', url: `${siteConfig.url}/service-areas` },
             { name: `${area.city}, ${area.state}`, url: `${siteConfig.url}/service-areas/${area.slug}` },
           ]),
-          serviceSchema(
+          geoServiceSchema(
             `Hardscape Contractor in ${area.city}, ${area.state}`,
             area.metaDescription,
-            `${siteConfig.url}/service-areas/${area.slug}`
+            `${siteConfig.url}/service-areas/${area.slug}`,
+            area.geo
           ),
         ]}
       />

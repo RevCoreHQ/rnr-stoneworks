@@ -32,14 +32,14 @@ export function Hero({
       {backgroundVideo ? (
         <>
           {backgroundImage && (
-            <Image src={backgroundImage} alt="" fill priority sizes="100vw" quality={80} className="object-cover object-center" />
+            <Image src={backgroundImage} alt="Rock N Roll Stoneworks luxury outdoor hardscape project in Lafayette Colorado" fill priority sizes="100vw" quality={80} className="object-cover object-center" />
           )}
           <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover object-center">
             <source src={backgroundVideo} type="video/mp4" />
           </video>
         </>
       ) : backgroundImage ? (
-        <Image src={backgroundImage} alt="" fill priority sizes="100vw" quality={80} className="object-cover object-center" />
+        <Image src={backgroundImage} alt="Rock N Roll Stoneworks luxury outdoor hardscape project in Lafayette Colorado" fill priority sizes="100vw" quality={80} className="object-cover object-center" />
       ) : (
         <div className="absolute inset-0 bg-ink-950" />
       )}

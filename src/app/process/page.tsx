@@ -4,12 +4,12 @@ import { siteConfig } from '@/data/site-config';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CTASection } from '@/components/sections/CTASection';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { breadcrumbSchema } from '@/lib/schema';
+import { breadcrumbSchema, howToSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Our Process, From Design to Installation | Rock N Roll Stoneworks CO',
+  title: 'Our Design & Build Process | Rock N Roll Stoneworks',
   description:
-    'Learn how Rock N Roll Stoneworks takes your outdoor project from vision to reality, free consultation, 3D design, ICPI-certified installation, and final walkthrough.',
+    'From free consultation to 3D design to expert installation. See how Rock N Roll Stoneworks builds your outdoor space.',
   path: '/process',
 });
 
@@ -60,10 +60,17 @@ export default function ProcessPage() {
   return (
     <>
       <JsonLd
-        data={breadcrumbSchema([
-          { name: 'Home', url: siteConfig.url },
-          { name: 'Our Process', url: `${siteConfig.url}/process` },
-        ])}
+        data={[
+          breadcrumbSchema([
+            { name: 'Home', url: siteConfig.url },
+            { name: 'Our Process', url: `${siteConfig.url}/process` },
+          ]),
+          howToSchema(
+            'How Rock N Roll Stoneworks Builds Your Outdoor Space',
+            'Our 5-step process from free consultation to final walkthrough ensures your hardscape project is designed, approved, and built to the highest standards.',
+            steps.map((s) => ({ title: s.title, description: s.description }))
+          ),
+        ]}
       />
       <div className="section-pad relative overflow-hidden grain-light">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { blogPosts, getBlogPostBySlug } from '@/data/blog';
 import { siteConfig } from '@/data/site-config';
 import { generatePageMetadata } from '@/lib/metadata';
@@ -8,6 +9,24 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema, articleSchema } from '@/lib/schema';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CTASection } from '@/components/sections/CTASection';
+
+function renderTextWithLinks(text: string) {
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: (string | JSX.Element)[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    parts.push(
+      <Link key={match.index} href={match[2]} className="text-gold-700 hover:underline">
+        {match[1]}
+      </Link>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return parts;
+}
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -35,6 +54,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const paragraphs = post.body.split('\n\n').filter(Boolean);
+  const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   return (
     <>
@@ -97,28 +117,28 @@ export default async function BlogPostPage({ params }: Props) {
               if (para.startsWith('## ')) {
                 return (
                   <h2 key={i} className="text-2xl sm:text-3xl font-display font-bold text-ink-900 mt-10 mb-4">
-                    {para.replace('## ', '')}
+                    {renderTextWithLinks(para.replace('## ', ''))}
                   </h2>
                 );
               }
               if (para.startsWith('**') && para.endsWith('**')) {
                 return (
                   <p key={i} className="font-semibold text-ink-800 mb-3">
-                    {para.replace(/\*\*/g, '')}
+                    {renderTextWithLinks(para.replace(/\*\*/g, ''))}
                   </p>
                 );
               }
-              if (para.startsWith('**')) {
+              if (para.includes('**')) {
                 const parts = para.split('**');
                 return (
                   <p key={i} className="text-ink-700 leading-relaxed mb-5">
                     {parts.map((part, j) =>
                       j % 2 === 1 ? (
                         <strong key={j} className="font-semibold text-ink-900">
-                          {part}
+                          {renderTextWithLinks(part)}
                         </strong>
                       ) : (
-                        part
+                        <span key={j}>{renderTextWithLinks(part)}</span>
                       )
                     )}
                   </p>
@@ -126,7 +146,7 @@ export default async function BlogPostPage({ params }: Props) {
               }
               return (
                 <p key={i} className="text-ink-700 leading-relaxed mb-5">
-                  {para}
+                  {renderTextWithLinks(para)}
                 </p>
               );
             })}
@@ -137,6 +157,44 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </div>
+
+      {/* Related Posts */}
+      {relatedPosts.length > 0 && (
+        <section className="section-pad bg-cream-50 relative overflow-hidden grain-light">
+          <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+            <h2 className="text-2xl font-display font-bold text-ink-900 mb-8">Related Articles</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {relatedPosts.map((related) => (
+                <Link
+                  key={related.slug}
+                  href={`/blog/${related.slug}`}
+                  className="group bg-white rounded-2xl border border-cream-200 shadow-panel overflow-hidden hover:shadow-elevate hover:border-gold-200 transition-all"
+                >
+                  <div className="relative aspect-[16/10] bg-cream-200">
+                    <Image
+                      src={related.heroImage}
+                      alt={related.heroAlt}
+                      fill
+                      sizes="(max-width: 1024px) 50vw, 33vw"
+                      quality={60}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <span className="text-xs font-medium text-gold-700 uppercase tracking-wide">
+                      {related.category}
+                    </span>
+                    <h3 className="font-display font-semibold text-ink-900 mt-1 mb-2 line-clamp-2 group-hover:text-gold-700 transition-colors">
+                      {related.title}
+                    </h3>
+                    <p className="text-sm text-ink-500 line-clamp-2">{related.excerpt}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <CTASection />
     </>

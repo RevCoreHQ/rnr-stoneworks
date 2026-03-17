@@ -32,9 +32,9 @@ export const services: ServiceData[] = [
     title: 'Paver Installations',
     shortTitle: 'Paver Installations',
     category: 'hardscape',
-    metaTitle: 'Paver Installations in Lafayette & Boulder, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Paver Installation Lafayette CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom paver driveways, walkways, patios, and full backyard hardscape installs in Lafayette, Erie, Boulder, and surrounding Colorado communities. Free estimates.',
+      'Custom paver patios, driveways, and walkways in Lafayette, Erie, and Boulder CO. Belgard authorized. Free estimates.',
     h1: 'Custom Paver Installations in Colorado',
     intro:
       "Transform your driveway, walkway, patio, or entire backyard with a custom paver installation designed to last. Rock N Roll Stoneworks specializes in Belgard paver systems, from initial 2D and 3D design through final installation. We handle every detail so you can enjoy a seamless build and a finished outdoor space that adds lasting value to your home.",
@@ -94,9 +94,9 @@ export const services: ServiceData[] = [
     title: 'Fire Pits & Fireplaces',
     shortTitle: 'Fire Pits & Fireplaces',
     category: 'outdoor-living',
-    metaTitle: 'Custom Fire Pits & Outdoor Fireplaces in Lafayette, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Fire Pits & Fireplaces Lafayette | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom outdoor fire pits and fireplaces in Lafayette, Erie, Boulder, and surrounding Colorado communities. Hand-lit or Bluetooth remote start. Free design consultation.',
+      'Custom gas fire pits and outdoor fireplaces in Lafayette, Erie, and Boulder CO. Warming Trends burners. Free estimates.',
     h1: 'Custom Outdoor Fire Pits & Fireplaces in Colorado',
     intro:
       "A fire feature transforms your outdoor space into a true gathering place, one you can enjoy from early spring through the end of Colorado autumn. Rock N Roll Stoneworks designs and builds custom fire pits and outdoor fireplaces in a wide range of shapes, sizes, and finishes. From a simple round gas fire pit to a full masonry fireplace with stone surround, our team brings the same craftsmanship to every fire feature we build.",
@@ -147,9 +147,9 @@ export const services: ServiceData[] = [
     title: 'Outdoor Kitchens',
     shortTitle: 'Outdoor Kitchens',
     category: 'outdoor-living',
-    metaTitle: 'Custom Outdoor Kitchens in Lafayette & Boulder County, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Outdoor Kitchens Lafayette CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom outdoor kitchen installations in Lafayette, Erie, Boulder, and surrounding Colorado communities. Grills, countertops, refrigeration, and full outdoor entertaining spaces.',
+      'Custom outdoor kitchens in Lafayette, Erie, and Boulder CO. Grills, countertops, and full outdoor entertaining spaces. Free estimates.',
     h1: 'Custom Outdoor Kitchens in Colorado',
     intro:
       "An outdoor kitchen extends your living space and transforms how you entertain. Rock N Roll Stoneworks designs and builds complete outdoor kitchen installations, from a simple built-in grill station to a full L-shaped kitchen with refrigeration, sink, storage, and countertops. We integrate outdoor kitchens seamlessly into your broader patio and hardscape design for a finished, cohesive result.",
@@ -195,9 +195,9 @@ export const services: ServiceData[] = [
     title: 'Water Features',
     shortTitle: 'Water Features',
     category: 'outdoor-living',
-    metaTitle: 'Water Features & Waterfalls in Lafayette, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Water Features Lafayette CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom water features, color-changing waterfalls, and spillways in Lafayette, Erie, Boulder, and surrounding Colorado areas. Add sound and ambiance to your outdoor space.',
+      'Custom waterfalls, fountains, and spillways in Lafayette, Erie, and Boulder CO. Add sound and beauty to your outdoor space.',
     h1: 'Custom Water Features for Colorado Outdoor Spaces',
     intro:
       "The sound of moving water transforms an outdoor space. Rock N Roll Stoneworks designs and installs custom water features, from color-changing LED waterfalls and spillways to bubbling pondless fountains and stream installations. Whether you want to mask street noise, create a focal point, or simply add a layer of tranquility to your backyard, we have a water feature solution that fits your space and budget.",
@@ -243,9 +243,9 @@ export const services: ServiceData[] = [
     title: 'Retaining Walls & Stairs',
     shortTitle: 'Retaining Walls & Stairs',
     category: 'hardscape',
-    metaTitle: 'Retaining Walls & Staircase Installation in Lafayette, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Retaining Walls Lafayette CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom retaining walls, terracing, and staircase construction in Lafayette, Erie, Boulder, and surrounding Colorado communities. Belgard wall systems. Free estimates.',
+      'Custom retaining walls and stairs in Lafayette, Erie, and Boulder CO. Belgard wall systems. ICPI certified. Free estimates.',
     h1: 'Retaining Walls & Staircase Construction in Colorado',
     intro:
       "Sloped properties require thoughtful engineering to create usable, stable outdoor spaces. Rock N Roll Stoneworks designs and builds retaining walls and staircases that solve grade challenges while adding visual structure and beauty to your property. From a single low retaining wall that levels a planting bed to a multi-tiered system that creates distinct outdoor living zones, we have the experience to handle any slope.",
@@ -291,9 +291,9 @@ export const services: ServiceData[] = [
     title: 'Outdoor Lighting',
     shortTitle: 'Outdoor Lighting',
     category: 'landscape',
-    metaTitle: 'Outdoor LED Landscape Lighting in Lafayette, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Outdoor Lighting Lafayette CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Professional outdoor LED lighting installation for driveways, walkways, patios, and landscapes in Lafayette, Erie, Boulder, and surrounding Colorado areas. Free estimates.',
+      'LED landscape lighting for patios, walkways, and gardens in Lafayette, Erie, and Boulder CO. Free estimates.',
     h1: 'Professional Outdoor Lighting in Colorado',
     intro:
       "Outdoor lighting extends the life of your outdoor space well past sunset and adds security, curb appeal, and ambiance to your property. Rock N Roll Stoneworks designs and installs LED-based lighting systems that reduce energy consumption by approximately 75% compared to traditional incandescent systems while delivering superior light quality. From ground-level path lighting to dramatic uplighting and built-in patio fixtures, we design systems that enhance your space without overwhelming it.",
@@ -339,9 +339,9 @@ export const services: ServiceData[] = [
     title: 'Artificial Turf',
     shortTitle: 'Artificial Turf',
     category: 'landscape',
-    metaTitle: 'Artificial Turf Installation in Lafayette & Boulder County, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Artificial Turf Lafayette CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Professional artificial turf installation in Lafayette, Erie, Boulder, and surrounding Colorado communities. Year-round green, minimal maintenance, drought-friendly.',
+      'Artificial turf installation in Lafayette, Erie, and Boulder CO. Year-round green, zero irrigation, minimal maintenance.',
     h1: 'Artificial Turf Installation in Colorado',
     intro:
       "Colorado\'s semi-arid climate makes maintaining a lush natural lawn a constant battle against heat, drought, and water restrictions. Artificial turf eliminates the problem entirely, delivering a perfectly green lawn year-round with minimal maintenance and no irrigation requirements. Rock N Roll Stoneworks installs premium artificial turf products designed to withstand Colorado\'s UV exposure, temperature swings, and pet traffic while looking and feeling natural.",
@@ -392,9 +392,9 @@ export const services: ServiceData[] = [
     title: 'Decks & Pergolas',
     shortTitle: 'Decks & Pergolas',
     category: 'outdoor-living',
-    metaTitle: 'Decks & Pergolas in Lafayette & Boulder County, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Decks & Pergolas Lafayette CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom decks and pergola structures in Lafayette, Erie, Boulder, and surrounding Colorado communities. Covered outdoor living spaces built for Colorado\'s climate.',
+      'Custom decks and pergola structures in Lafayette, Erie, and Boulder CO. Shade and style for Colorado outdoor living.',
     h1: 'Custom Decks & Pergolas in Colorado',
     intro:
       "A well-designed deck or pergola creates a defined, comfortable outdoor living room that extends your usable square footage beyond the walls of your home. Rock N Roll Stoneworks designs and builds custom deck structures and pergolas that complement your home\'s architecture and integrate seamlessly with surrounding paving, fire features, and landscape elements.",
@@ -436,9 +436,9 @@ export const services: ServiceData[] = [
     title: 'Stamped Concrete',
     shortTitle: 'Stamped Concrete',
     category: 'hardscape',
-    metaTitle: 'Stamped Concrete Patios & Driveways in Lafayette, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Stamped Concrete Lafayette CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom stamped and colored concrete patios, driveways, and walkways in Lafayette, Erie, Boulder, and surrounding Colorado communities. Free estimates.',
+      'Stamped and colored concrete patios and driveways in Lafayette, Erie, and Boulder CO. Free estimates.',
     h1: 'Stamped Concrete Patios & Driveways in Colorado',
     intro:
       "Stamped concrete offers the look of stone, tile, or brick at a lower cost than individual paver systems, making it an excellent choice for large surface areas where budget is a primary consideration. Rock N Roll Stoneworks installs decorative stamped concrete with proper reinforcement, control joints, and integral or applied color for a finished result that holds up through Colorado\'s demanding freeze-thaw cycles.",
@@ -480,9 +480,9 @@ export const services: ServiceData[] = [
     title: 'Stone Veneers & Fireplace Surrounds',
     shortTitle: 'Stone Veneers',
     category: 'hardscape',
-    metaTitle: 'Stone Veneers & Fireplace Surrounds in Lafayette, CO | Rock N Roll Stoneworks',
+    metaTitle: 'Stone Veneers Lafayette CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Interior fireplace surrounds and exterior stone veneer applications in Lafayette, Erie, Boulder, and surrounding Colorado communities. Natural and manufactured stone options.',
+      'Fireplace surrounds and stone veneer in Lafayette, Erie, and Boulder CO. Natural and manufactured stone options.',
     h1: 'Stone Veneers & Fireplace Surrounds in Colorado',
     intro:
       "Stone veneer transforms the visual character of both interior and exterior surfaces, from an interior fireplace surround that becomes the focal point of a living room to an exterior facade that elevates the entire curb appeal of a home. Rock N Roll Stoneworks installs both natural and manufactured stone veneer systems with proper substrate preparation and waterproofing for results that look beautiful and last decades.",
@@ -519,9 +519,9 @@ export const services: ServiceData[] = [
     title: 'Swimming Pools',
     shortTitle: 'Swimming Pools',
     category: 'outdoor-living',
-    metaTitle: 'Latham Fiberglass Pools, Authorized Dealer | Rock N Roll Stoneworks, Lafayette CO',
+    metaTitle: 'Latham Pools Dealer Lafayette CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Latham Pools Authorized Dealer serving Lafayette, Erie, Boulder, and the Colorado Front Range. Premium fiberglass pool installation with complete outdoor living design. Free consultation.',
+      'Latham Pools authorized dealer in Lafayette and Boulder CO. Fiberglass pool installation with outdoor living design.',
     h1: 'Latham Pools Authorized Dealer in Colorado',
     intro:
       "As a Latham Pools Authorized Dealer, Rock N Roll Stoneworks brings you the industry's leading fiberglass pool products backed by decades of manufacturing expertise. From the pool shell to the surrounding paver deck, fire features, outdoor kitchen, and landscaping, we design and build a complete outdoor environment that works together as a cohesive whole. Latham's fiberglass shells offer unmatched durability, low maintenance, and a smooth non-abrasive finish, perfect for Colorado's climate.",
