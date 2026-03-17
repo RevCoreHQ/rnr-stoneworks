@@ -136,9 +136,27 @@ export function Footer() {
           <p className="font-body text-xs text-white/20">
             © {currentYear} {siteConfig.name}, LLC. All rights reserved.
           </p>
-          <p className="font-body text-[10px] tracking-[0.18em] uppercase text-gold-700/50">
-            Belgard Authorized · ICPI Certified · Lafayette, CO
-          </p>
+          <div className="flex items-center gap-4">
+            <p className="font-body text-[10px] tracking-[0.18em] uppercase text-gold-700/50">
+              Belgard Authorized · ICPI Certified · Lafayette, CO
+            </p>
+            <a
+              href="https://revcorehq.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-body text-xs text-white/20 hover:text-white/50 transition-colors"
+            >
+              Powered by
+              <img
+                src="https://assets.cdn.filesafe.space/NYlSya2nYSkSnnXEbY2l/media/69a9af9fb003fa7bb8bb92ee.png"
+                alt="RevCore"
+                width={16}
+                height={16}
+                className="inline-block"
+              />
+              <span>RevCore</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
