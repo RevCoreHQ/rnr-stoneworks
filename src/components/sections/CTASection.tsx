@@ -43,7 +43,7 @@ export function CTASection({
       />
 
       <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 py-24 lg:py-36">
-        <StaggerChildren stagger={0.15} className="max-w-2xl mx-auto text-center">
+        <StaggerChildren stagger={0.15} className="max-w-3xl mx-auto text-center">
           <motion.p variants={staggerItem} className="label-dark mb-8">Free Consultation</motion.p>
           <motion.h2
             variants={staggerItem}
