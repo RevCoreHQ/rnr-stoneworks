@@ -44,7 +44,7 @@ export function ProjectGrid() {
   return (
     <section className="section-pad bg-cream-50">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
           {projects.map((project, i) => (
             <motion.div
               key={i}
@@ -58,7 +58,7 @@ export function ProjectGrid() {
                 scale: 1.03,
                 boxShadow: '0 8px 30px rgba(11, 18, 25, 0.12), 0 2px 8px rgba(11, 18, 25, 0.08)',
               }}
-              className="cursor-pointer bg-white p-2 pb-8 sm:p-3 sm:pb-10"
+              className="cursor-pointer overflow-hidden rounded-sm"
               style={{ boxShadow: '0 2px 8px rgba(11, 18, 25, 0.06), 0 1px 3px rgba(11, 18, 25, 0.04)' }}
               onClick={() => setSelectedIndex(i)}
             >
@@ -73,9 +73,6 @@ export function ProjectGrid() {
                   className="object-cover object-center"
                 />
               </div>
-              <p className="font-body text-xs sm:text-sm text-ink-500 text-center mt-3 leading-snug">
-                {project.label}
-              </p>
             </motion.div>
           ))}
         </div>
