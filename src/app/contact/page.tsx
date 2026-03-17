@@ -89,9 +89,7 @@ export default function ContactPage() {
 
             {/* Right - Form */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl border border-cream-200 shadow-elevate p-6 lg:p-8">
-                <ContactForm />
-              </div>
+              <ContactForm />
             </div>
           </div>
         </div>
