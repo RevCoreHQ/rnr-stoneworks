@@ -32,6 +32,22 @@ const works = [
     href: '/gallery',
     wide: false,
   },
+  {
+    title: 'Outdoor Living & Patio Design',
+    location: 'Lafayette, CO',
+    category: 'Paver Patio · Outdoor Living',
+    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69aa9a13b003fa04e8de88ee.jpg',
+    href: '/gallery',
+    wide: false,
+  },
+  {
+    title: 'Complete Backyard Hardscape',
+    location: 'Boulder, CO',
+    category: 'Full Hardscape · Fire Feature',
+    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69aa9a13b003fa9b0bde88ef.jpg',
+    href: '/gallery',
+    wide: true,
+  },
 ];
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
