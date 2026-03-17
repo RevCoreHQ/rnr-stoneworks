@@ -9,10 +9,10 @@ import { TiltCard } from '@/components/motion/TiltCard';
 
 const works = [
   {
-    title: 'Full Backyard Hardscape & Outdoor Kitchen',
+    title: 'Custom Paver Patio & Outdoor Living',
     location: 'Lafayette, CO',
-    category: 'Paver Installation · Outdoor Kitchen',
-    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c68ea7458e3.jpg',
+    category: 'Paver Installation · Hardscape Design',
+    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79ad0276fa9e41f562.png',
     href: '/gallery',
     wide: true,
   },
@@ -20,15 +20,15 @@ const works = [
     title: 'Backyard Transformation',
     location: 'Boulder, CO',
     category: 'Paver Patio · Fire Pit',
-    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487466a20d049.jpg',
+    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79c625852f25e3df82.png',
     href: '/gallery',
     wide: false,
   },
   {
     title: 'Premium Hardscape Installation',
-    location: 'Westminster, CO',
+    location: 'Erie, CO',
     category: 'Retaining Walls · Hardscape',
-    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbcab7f75114aa984e.jpg',
+    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79b3d5f785f870b90e.png',
     href: '/gallery',
     wide: false,
   },

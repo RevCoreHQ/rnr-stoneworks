@@ -6,6 +6,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Lightbox } from '@/components/ui/Lightbox';
 
 const projects = [
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79ad0276fa9e41f562.png', alt: 'Custom paver patio and outdoor living space in Lafayette, Colorado', label: 'Custom Patio & Outdoor Living, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79b3d5f7b8e170b90f.png', alt: 'Belgard paver installation and hardscape project in Erie, Colorado', label: 'Paver Installation, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79c625852f25e3df82.png', alt: 'Backyard paver patio transformation in Boulder, Colorado', label: 'Backyard Transformation, Boulder, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79b3d5f785f870b90e.png', alt: 'Premium hardscape installation with retaining walls in Erie, Colorado', label: 'Premium Hardscape, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f7987f0f2270255e7e1.png', alt: 'Outdoor kitchen and paver patio design in Lafayette, Colorado', label: 'Outdoor Kitchen & Patio, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79ad0276705741f561.png', alt: 'Stone veneer and paver walkway installation in Westminster, Colorado', label: 'Stone & Paver Walkway, Westminster, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f7987f0f205f855e7e0.png', alt: 'Fire pit and paver patio project in Longmont, Colorado', label: 'Fire Pit & Patio, Longmont, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f795b89c789d1e7799c.png', alt: 'Complete outdoor living space with hardscape in Boulder, Colorado', label: 'Outdoor Living, Boulder, CO' },
   { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c68ea7458e3.jpg', alt: 'Belgard paver patio and outdoor kitchen installation in Lafayette, Colorado', label: 'Full Hardscape & Kitchen, Lafayette, CO' },
   { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb277ba028b8ce2268.jpg', alt: 'Custom paver patio with natural gas fire pit in Erie, Colorado', label: 'Paver Patio & Fire Pit, Erie, CO' },
   { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb070c5827655cf949.jpg', alt: 'Tiered natural stone retaining wall and landscape design in Boulder, Colorado', label: 'Retaining Walls, Boulder, CO' },
