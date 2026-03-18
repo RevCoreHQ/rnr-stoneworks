@@ -41,7 +41,7 @@ export function StatsBar() {
                   style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
                 >
                   {'target' in s ? (
-                    <AnimatedCounter target={s.target} suffix={s.suffix} />
+                    <AnimatedCounter target={s.target} suffix={s.suffix} delay={i * 0.2} />
                   ) : (
                     s.value
                   )}

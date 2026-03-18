@@ -6,6 +6,7 @@ import { siteConfig } from '@/data/site-config';
 import { serviceAreas } from '@/data/service-areas';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CTASection } from '@/components/sections/CTASection';
+import { ServiceAreaMap } from '@/components/sections/ServiceAreaMap';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema } from '@/lib/schema';
 
@@ -45,8 +46,15 @@ export default function ServiceAreasPage() {
         </div>
       </div>
 
-      <section className="section-pad pt-0 relative overflow-hidden grain-light">
+      {/* Interactive map */}
+      <section className="py-12 lg:py-16 bg-cream-50 border-b border-cream-200/60">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+          <ServiceAreaMap />
+        </div>
+      </section>
+
+      <section className="section-pad pt-0 relative overflow-hidden grain-light">
+        <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 pt-16 lg:pt-20">
           <h2 className="text-2xl font-display font-bold text-ink-900 mb-6">Primary Service Areas</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {primaryAreas.map((area) => (

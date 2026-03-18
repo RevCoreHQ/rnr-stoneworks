@@ -251,6 +251,16 @@
     background-size: 24px 24px;
   }
 
+  /* Respect OS-level reduced motion preference for CSS animations */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   /* Animated shimmer gradient text */
   @keyframes gradientShift {
     0%, 100% { background-position: 0% 50%; }

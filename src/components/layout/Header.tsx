@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Menu, X, ChevronDown } from 'lucide-react';
+import { Phone, ChevronDown } from 'lucide-react';
 import { siteConfig } from '@/data/site-config';
 import { mainNav } from '@/data/navigation';
 
@@ -135,13 +135,27 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Mobile button */}
+          {/* Mobile button — animated hamburger ↔ X */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-white/70 hover:text-white transition-colors"
+            className="lg:hidden relative w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-colors"
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <motion.span
+              animate={mobileOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: -6 }}
+              transition={{ duration: 0.3, ease }}
+              className="absolute w-5 h-[1.5px] bg-current rounded-full"
+            />
+            <motion.span
+              animate={mobileOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+              transition={{ duration: 0.2 }}
+              className="absolute w-5 h-[1.5px] bg-current rounded-full"
+            />
+            <motion.span
+              animate={mobileOpen ? { rotate: -45, y: 0 } : { rotate: 0, y: 6 }}
+              transition={{ duration: 0.3, ease }}
+              className="absolute w-5 h-[1.5px] bg-current rounded-full"
+            />
           </button>
         </div>
       </div>

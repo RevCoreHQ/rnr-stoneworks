@@ -30,6 +30,8 @@ const projects = [
   { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c245a7458ee.jpg', alt: 'Custom interlocking paver design with decorative borders in Longmont, Colorado', label: 'Custom Paver Design, Longmont, CO' },
 ];
 
+const BLUR_LIGHT = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 5%27%3E%3Cfilter id=%27b%27 color-interpolation-filters=%27sRGB%27%3E%3CfeGaussianBlur stdDeviation=%271%27/%3E%3C/filter%3E%3Crect filter=%27url(%23b)%27 width=%27100%25%27 height=%27100%25%27 fill=%27%23dfe5ea%27/%3E%3C/svg%3E';
+
 // Deterministic pseudo-random rotation per card (-3 to +3 degrees)
 const ROTATIONS = projects.map((_, i) => {
   const seed = Math.sin(i * 2654.435 + 0.1) * 10000;
@@ -70,6 +72,8 @@ export function ProjectGrid() {
                   sizes="(max-width: 1024px) 50vw, 33vw"
                   quality={75}
                   priority={i < 3}
+                  placeholder="blur"
+                  blurDataURL={BLUR_LIGHT}
                   className="object-cover object-center"
                 />
               </div>

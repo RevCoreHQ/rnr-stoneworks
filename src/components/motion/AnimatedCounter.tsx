@@ -8,6 +8,7 @@ interface AnimatedCounterProps {
   suffix?: string;
   prefix?: string;
   duration?: number;
+  delay?: number;
   className?: string;
 }
 
@@ -16,6 +17,7 @@ export function AnimatedCounter({
   suffix = '',
   prefix = '',
   duration = 2,
+  delay = 0,
   className,
 }: AnimatedCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -29,9 +31,13 @@ export function AnimatedCounter({
 
   useEffect(() => {
     if (isInView) {
+      if (delay > 0) {
+        const timer = setTimeout(() => motionValue.set(target), delay * 1000);
+        return () => clearTimeout(timer);
+      }
       motionValue.set(target);
     }
-  }, [isInView, motionValue, target]);
+  }, [isInView, motionValue, target, delay]);
 
   useEffect(() => {
     const unsubscribe = springValue.on('change', (latest) => {

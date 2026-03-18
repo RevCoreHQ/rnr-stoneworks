@@ -10,6 +10,9 @@ import { ScrollReveal } from '@/components/motion/ScrollReveal';
 import { StaggerChildren, staggerItem } from '@/components/motion/StaggerChildren';
 import { MagneticButton } from '@/components/motion/MagneticButton';
 
+// Tiny dark blur placeholder for image loading
+const BLUR_DARK = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 5%27%3E%3Cfilter id=%27b%27 color-interpolation-filters=%27sRGB%27%3E%3CfeGaussianBlur stdDeviation=%271%27/%3E%3C/filter%3E%3Crect filter=%27url(%23b)%27 width=%27100%25%27 height=%27100%25%27 fill=%27%230b1219%27/%3E%3C/svg%3E';
+
 interface HeroProps {
   headline: string;
   subheadline?: string;
@@ -32,14 +35,14 @@ export function Hero({
       {backgroundVideo ? (
         <>
           {backgroundImage && (
-            <Image src={backgroundImage} alt="Rock N Roll Stoneworks luxury outdoor hardscape project in Lafayette Colorado" fill priority sizes="100vw" quality={80} className="object-cover object-center" />
+            <Image src={backgroundImage} alt="Rock N Roll Stoneworks luxury outdoor hardscape project in Lafayette Colorado" fill priority sizes="100vw" quality={80} placeholder="blur" blurDataURL={BLUR_DARK} className="object-cover object-center" />
           )}
           <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover object-center">
             <source src={backgroundVideo} type="video/mp4" />
           </video>
         </>
       ) : backgroundImage ? (
-        <Image src={backgroundImage} alt="Rock N Roll Stoneworks luxury outdoor hardscape project in Lafayette Colorado" fill priority sizes="100vw" quality={80} className="object-cover object-center" />
+        <Image src={backgroundImage} alt="Rock N Roll Stoneworks luxury outdoor hardscape project in Lafayette Colorado" fill priority sizes="100vw" quality={80} placeholder="blur" blurDataURL={BLUR_DARK} className="object-cover object-center" />
       ) : (
         <div className="absolute inset-0 bg-ink-950" />
       )}

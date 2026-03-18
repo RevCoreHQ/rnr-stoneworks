@@ -34,6 +34,8 @@ const works = [
   },
 ];
 
+const BLUR_DARK = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 5%27%3E%3Cfilter id=%27b%27 color-interpolation-filters=%27sRGB%27%3E%3CfeGaussianBlur stdDeviation=%271%27/%3E%3C/filter%3E%3Crect filter=%27url(%23b)%27 width=%27100%25%27 height=%27100%25%27 fill=%27%230b1219%27/%3E%3C/svg%3E';
+
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export function SelectedWorks() {
@@ -84,6 +86,8 @@ export function SelectedWorks() {
                   sizes={w.wide ? '(max-width: 1024px) 100vw, 60vw' : '(max-width: 1024px) 100vw, 40vw'}
                   quality={80}
                   priority={i === 0}
+                  placeholder="blur"
+                  blurDataURL={BLUR_DARK}
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-[1.2s] ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/20 to-transparent" />
