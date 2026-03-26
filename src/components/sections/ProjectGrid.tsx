@@ -28,6 +28,17 @@ const projects = [
   { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487271b20d047.jpg', alt: 'Complete outdoor living space with fire pit and paver patio in Lafayette, Colorado', label: 'Outdoor Living, Lafayette, CO' },
   { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c54027458e7.jpg', alt: 'Natural stone patio with custom fire pit and retaining wall in Boulder, Colorado', label: 'Patio & Fire Feature, Boulder, CO' },
   { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c245a7458ee.jpg', alt: 'Custom interlocking paver design with decorative borders in Longmont, Colorado', label: 'Custom Paver Design, Longmont, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527040a4eb5da73734e0a.jpg', alt: 'Custom pool and spa installation in Lafayette, Colorado', label: 'Pool & Spa, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527047794bf345c385977.jpg', alt: 'Luxury outdoor pool and hardscape project in Erie, Colorado', label: 'Pool & Hardscape, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c5270452ad3bade2cfbc7b.jpg', alt: 'Custom pool build with paver patio surround in Boulder, Colorado', label: 'Pool & Patio, Boulder, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52704d90a23c54d504485.jpg', alt: 'Fiberglass pool installation with outdoor living space in Lafayette, Colorado', label: 'Pool Installation, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52704fc4181ea9728aebb.jpg', alt: 'Pool and spa with custom stone coping in Erie, Colorado', label: 'Pool & Spa, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c5270422e1ed0c7de40fb1.jpg', alt: 'Backyard pool transformation with paver deck in Boulder, Colorado', label: 'Pool Transformation, Boulder, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527047794bfaf5e385976.jpg', alt: 'Custom swimming pool with fire feature in Westminster, Colorado', label: 'Pool & Fire Feature, Westminster, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52704d90a23fa25504484.jpg', alt: 'Luxury pool and outdoor kitchen installation in Lafayette, Colorado', label: 'Pool & Outdoor Kitchen, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527045ebd49ff3b601867.jpg', alt: 'Residential pool build with retaining wall in Longmont, Colorado', label: 'Pool & Retaining Wall, Longmont, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527044a4efaed1d00e4a3.jpg', alt: 'Custom pool and paver patio design in Erie, Colorado', label: 'Pool & Paver Patio, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c5270422e1edaf5ce40fb2.jpg', alt: 'Complete pool and outdoor living installation in Boulder, Colorado', label: 'Pool & Outdoor Living, Boulder, CO' },
 ];
 
 const BLUR_LIGHT = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 5%27%3E%3Cfilter id=%27b%27 color-interpolation-filters=%27sRGB%27%3E%3CfeGaussianBlur stdDeviation=%271%27/%3E%3C/filter%3E%3Crect filter=%27url(%23b)%27 width=%27100%25%27 height=%27100%25%27 fill=%27%23dfe5ea%27/%3E%3C/svg%3E';
