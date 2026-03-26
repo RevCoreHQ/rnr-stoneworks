@@ -75,13 +75,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen flex flex-col bg-white">
         <MotionProvider>
-          <PromoBanner />
           <ScrollProgress />
           <Header />
           <main className="flex-1 pb-16 lg:pb-0">{children}</main>
           <Footer />
           <MobileBottomBar />
           <BackToTop />
+          <PromoBanner />
         </MotionProvider>
       </body>
     </html>
