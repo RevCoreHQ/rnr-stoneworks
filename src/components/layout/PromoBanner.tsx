@@ -16,7 +16,9 @@ export function PromoBanner() {
   useEffect(() => {
     const dismissed = sessionStorage.getItem(STORAGE_KEY);
     if (dismissed !== promo.season) {
-      const timer = setTimeout(() => setVisible(true), 2500);
+      // Longer delay on mobile to avoid feeling intrusive
+      const isMobile = window.innerWidth < 1024;
+      const timer = setTimeout(() => setVisible(true), isMobile ? 4000 : 2500);
       return () => clearTimeout(timer);
     }
   }, [promo.season]);
@@ -34,20 +36,20 @@ export function PromoBanner() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.95 }}
           transition={{ duration: 0.4, ease }}
-          className="fixed bottom-20 lg:bottom-6 right-4 sm:right-6 z-50 max-w-sm"
+          className="fixed bottom-[4.5rem] right-3 left-3 sm:left-auto sm:right-6 lg:bottom-6 z-50 sm:max-w-sm"
         >
           <div className="bg-ink-950 border border-white/10 rounded-lg shadow-glow-sm p-4 backdrop-blur-xl">
             <button
               onClick={dismiss}
-              className="absolute top-2.5 right-2.5 p-1 rounded-full text-white/40 hover:text-white/70 hover:bg-white/10 transition-colors"
+              className="absolute top-2.5 right-2.5 p-1.5 rounded-full text-white/40 hover:text-white/70 hover:bg-white/10 transition-colors"
               aria-label="Dismiss promotion"
             >
-              <X className="w-3.5 h-3.5" />
+              <X className="w-4 h-4" />
             </button>
-            <p className="font-body text-[10px] tracking-[0.18em] uppercase text-gold-400 font-semibold mb-2">
+            <p className="font-body text-[10px] tracking-[0.18em] uppercase text-gold-400 font-semibold mb-1.5">
               {promo.season} Special
             </p>
-            <p className="font-body text-[13px] text-white/80 leading-relaxed pr-4 mb-3">
+            <p className="font-body text-[13px] sm:text-[13px] text-white/80 leading-relaxed pr-6 mb-3">
               {promo.headline}
             </p>
             <Link
