@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Colorado's trusted hardscape and outdoor living contractor. Custom paver installations, fire pits, outdoor kitchens, water features, pool installations, and retaining walls in Lafayette, Erie, Boulder, and surrounding areas. Belgard Authorized. Latham Pools Dealer. Free estimates.",
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://rnrstoneworks.com',
-  ogImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=630&fit=crop',
+  ogImage: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41c34070c5886395d2f91.png',
   phone: '(303) 587-3035',
   phoneRaw: '+13035873035',
   email: 'rnrstoneworks@gmail.com',
