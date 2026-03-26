@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero';
 import { CredentialsTicker } from '@/components/sections/CredentialsTicker';
 import { EditorialIntro } from '@/components/sections/EditorialIntro';
 import { SelectedWorks } from '@/components/sections/SelectedWorks';
+import { BeforeAfterSection } from '@/components/sections/BeforeAfterSection';
 import { ServicesList } from '@/components/sections/ServicesList';
 import { StatsBar } from '@/components/sections/StatsBar';
 import { ProcessSteps } from '@/components/sections/ProcessSteps';
@@ -76,6 +77,8 @@ export default function HomePage() {
       <EditorialIntro />
 
       <SelectedWorks />
+
+      <BeforeAfterSection />
 
       <ServicesList />
 
