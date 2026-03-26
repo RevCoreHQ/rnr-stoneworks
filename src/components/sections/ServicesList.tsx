@@ -15,6 +15,7 @@ const services = [
   { num: '06', title: 'Outdoor Lighting', sub: 'LED Architectural Lighting', href: '/services/outdoor-lighting' },
   { num: '07', title: 'Artificial Turf', sub: 'Premium Synthetic Grass', href: '/services/artificial-turf' },
   { num: '08', title: 'Stamped Concrete', sub: 'Decorative Concrete Surfaces', href: '/services/stamped-concrete' },
+  { num: '09', title: 'Pools & Spas', sub: 'Fiberglass · Concrete · Gunite', href: '/pools-spas' },
 ];
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;

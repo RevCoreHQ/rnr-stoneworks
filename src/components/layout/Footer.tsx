@@ -28,7 +28,7 @@ export function Footer() {
       />
 
       <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 pt-20 pb-10">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 pb-16 border-b border-white/8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-10 pb-16 border-b border-white/8">
 
           {/* Brand */}
           <ScrollReveal direction="up" delay={0} className="lg:col-span-2">
@@ -97,6 +97,19 @@ export function Footer() {
             <StaggerChildren stagger={0.04}>
               <ul className="space-y-3">
                 {footerNav.services.map((l) => (
+                  <motion.li key={l.href} variants={staggerItem}>
+                    <Link href={l.href} className="font-body text-sm text-white/50 hover:text-gold-400 transition-colors">{l.label}</Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </StaggerChildren>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={0.125}>
+            <p className="font-body text-[10px] tracking-[0.2em] uppercase text-white/30 mb-5 font-medium">Pools & Spas</p>
+            <StaggerChildren stagger={0.04}>
+              <ul className="space-y-3">
+                {footerNav.pools.map((l) => (
                   <motion.li key={l.href} variants={staggerItem}>
                     <Link href={l.href} className="font-body text-sm text-white/50 hover:text-gold-400 transition-colors">{l.label}</Link>
                   </motion.li>

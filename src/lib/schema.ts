@@ -113,6 +113,8 @@ export function localBusinessSchema() {
       'Pergolas',
       'Stamped Concrete',
       'Stone Veneers',
+      'Fiberglass Pool Installation',
+      'Concrete Pool Construction',
       'Hardscape Design',
     ],
   };

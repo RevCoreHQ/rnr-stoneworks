@@ -18,6 +18,7 @@ export function Header() {
   const isHomePage = pathname === '/';
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -137,7 +138,7 @@ export function Header() {
 
           {/* Mobile button — animated hamburger ↔ X */}
           <button
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={() => { setMobileOpen(!mobileOpen); if (mobileOpen) setMobileDropdown(null); }}
             className="lg:hidden relative w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-colors"
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           >
@@ -174,26 +175,61 @@ export function Header() {
             <nav className="px-6 py-5 space-y-0.5">
               {mainNav.map((item) => (
                 <div key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="block py-3 text-base font-body font-medium text-white/70 hover:text-gold-400 transition-colors border-b border-white/5"
-                    onClick={() => !item.children && setMobileOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.children && (
-                    <div className="pl-4 pt-1 pb-2 space-y-0">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block py-2 text-sm text-white/45 hover:text-gold-400 transition-colors font-body"
-                          onClick={() => setMobileOpen(false)}
+                  {item.children ? (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() => setMobileDropdown(mobileDropdown === item.label ? null : item.label)}
+                        className="flex items-center justify-between w-full py-3 text-base font-body font-medium text-white/70 hover:text-gold-400 transition-colors border-b border-white/5"
+                      >
+                        {item.label}
+                        <motion.span
+                          animate={{ rotate: mobileDropdown === item.label ? 180 : 0 }}
+                          transition={{ duration: 0.2 }}
                         >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
+                          <ChevronDown className="w-4 h-4 opacity-50" />
+                        </motion.span>
+                      </button>
+                      <AnimatePresence>
+                        {mobileDropdown === item.label && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.25, ease }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pl-4 pt-1 pb-2 space-y-0">
+                              <Link
+                                href={item.href}
+                                className="block py-2 text-sm text-gold-400/70 hover:text-gold-400 transition-colors font-body font-medium"
+                                onClick={() => setMobileOpen(false)}
+                              >
+                                View All {item.label}
+                              </Link>
+                              {item.children.map((child) => (
+                                <Link
+                                  key={child.href}
+                                  href={child.href}
+                                  className="block py-2 text-sm text-white/45 hover:text-gold-400 transition-colors font-body"
+                                  onClick={() => setMobileOpen(false)}
+                                >
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="block py-3 text-base font-body font-medium text-white/70 hover:text-gold-400 transition-colors border-b border-white/5"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
                   )}
                 </div>
               ))}

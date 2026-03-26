@@ -48,6 +48,7 @@ export function BeforeAfter({ before, after, alt = 'Project transformation' }: B
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerUp}
+      onDragStart={(e) => e.preventDefault()}
       role="slider"
       aria-label={`Before and after comparison: ${alt}`}
       aria-valuenow={Math.round(position)}
@@ -64,7 +65,8 @@ export function BeforeAfter({ before, after, alt = 'Project transformation' }: B
         quality={80}
         placeholder="blur"
         blurDataURL={BLUR_DARK}
-        className="object-cover object-center"
+        className="object-cover object-center pointer-events-none"
+        draggable={false}
       />
 
       {/* Before image (clipped, top layer) */}
@@ -80,7 +82,8 @@ export function BeforeAfter({ before, after, alt = 'Project transformation' }: B
           quality={80}
           placeholder="blur"
           blurDataURL={BLUR_DARK}
-          className="object-cover object-center"
+          className="object-cover object-center pointer-events-none"
+          draggable={false}
         />
       </div>
 

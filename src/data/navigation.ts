@@ -20,7 +20,14 @@ export const mainNav: NavItem[] = [
       { label: 'Decks & Pergolas', href: '/services/decks-pergolas' },
       { label: 'Stamped Concrete', href: '/services/stamped-concrete' },
       { label: 'Stone Veneers', href: '/services/stone-veneers' },
-      { label: 'Swimming Pools (Latham)', href: '/services/swimming-pools' },
+    ],
+  },
+  {
+    label: 'Pools & Spas',
+    href: '/pools-spas',
+    children: [
+      { label: 'Fiberglass Pools', href: '/pools-spas/fiberglass-pools' },
+      { label: 'Concrete & Gunite Pools', href: '/pools-spas/concrete-gunite-pools' },
     ],
   },
   { label: 'Gallery', href: '/gallery' },
@@ -49,7 +56,10 @@ export const footerNav = {
     { label: 'Outdoor Lighting', href: '/services/outdoor-lighting' },
     { label: 'Artificial Turf', href: '/services/artificial-turf' },
     { label: 'Stamped Concrete', href: '/services/stamped-concrete' },
-    { label: 'Swimming Pools (Latham)', href: '/services/swimming-pools' },
+  ],
+  pools: [
+    { label: 'Fiberglass Pools', href: '/pools-spas/fiberglass-pools' },
+    { label: 'Concrete & Gunite Pools', href: '/pools-spas/concrete-gunite-pools' },
   ],
   company: [
     { label: 'About Us', href: '/about' },

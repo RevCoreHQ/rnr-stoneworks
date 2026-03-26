@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
 import { MapPin, ArrowRight, Phone, Shield, Clock, Star, CheckCircle } from 'lucide-react';
 import { serviceAreas, getServiceAreaBySlug } from '@/data/service-areas';
@@ -60,20 +59,6 @@ export default async function ServiceAreaPage({ params }: Props) {
 
       {/* Hero */}
       <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-24 bg-ink-950 overflow-hidden grain">
-        {area.heroImage && (
-          <>
-            <Image
-              src={area.heroImage}
-              alt={`${area.city} outdoor living and hardscape`}
-              fill
-              priority
-              sizes="100vw"
-              quality={60}
-              className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-ink-950/80" />
-          </>
-        )}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent" />
         <div className="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs

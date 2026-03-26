@@ -444,7 +444,7 @@ Want to see Belgard products in person? [Contact us](/contact) to visit our samp
     category: 'Guides',
     body: `A pool deck is not just another patio. It has specific requirements that a standard backyard patio does not: slip resistance when wet, comfort underfoot in bare feet, resistance to pool chemicals, and drainage management for large volumes of splash water. Along the Front Range, you also need a surface that handles Colorado's freeze-thaw cycles without deteriorating.
 
-Rock N Roll Stoneworks partners with [Latham Pools](/services/swimming-pools) for pool construction and installs Belgard paver systems for pool decks. Here is what to consider when planning your pool deck surface.
+Rock N Roll Stoneworks partners with [Latham Pools](/pools-spas/fiberglass-pools) for pool construction and installs Belgard paver systems for pool decks. Here is what to consider when planning your pool deck surface.
 
 ## Why Pavers Beat Poured Concrete Around Pools
 

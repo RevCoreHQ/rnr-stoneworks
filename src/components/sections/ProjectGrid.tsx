@@ -39,6 +39,9 @@ const projects = [
   { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527045ebd49ff3b601867.jpg', alt: 'Residential pool build with retaining wall in Longmont, Colorado', label: 'Pool & Retaining Wall, Longmont, CO' },
   { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527044a4efaed1d00e4a3.jpg', alt: 'Custom pool and paver patio design in Erie, Colorado', label: 'Pool & Paver Patio, Erie, CO' },
   { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c5270422e1edaf5ce40fb2.jpg', alt: 'Complete pool and outdoor living installation in Boulder, Colorado', label: 'Pool & Outdoor Living, Boulder, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52b47421e24825d6c91fc.jpg', alt: 'Custom pool and hardscape project in Lafayette, Colorado', label: 'Pool & Hardscape, Lafayette, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52b470a4eb5096173add1.jpg', alt: 'Pool installation with paver surround in Erie, Colorado', label: 'Pool Installation, Erie, CO' },
+  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52b47421e243d0c6c91fb.jpg', alt: 'Custom pool and outdoor living space in Boulder, Colorado', label: 'Pool & Outdoor Living, Boulder, CO' },
 ];
 
 const BLUR_LIGHT = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 5%27%3E%3Cfilter id=%27b%27 color-interpolation-filters=%27sRGB%27%3E%3CfeGaussianBlur stdDeviation=%271%27/%3E%3C/filter%3E%3Crect filter=%27url(%23b)%27 width=%27100%25%27 height=%27100%25%27 fill=%27%23dfe5ea%27/%3E%3C/svg%3E';

@@ -13,7 +13,7 @@ const works = [
     location: 'Lafayette, CO',
     category: 'Pool Installation · Outdoor Living',
     src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79ad0276fa9e41f562.png',
-    href: '/gallery',
+    href: '/pools-spas',
     wide: true,
   },
 ];

@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'lirp.cdn-website.com' },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/services/swimming-pools',
+        destination: '/pools-spas/fiberglass-pools',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

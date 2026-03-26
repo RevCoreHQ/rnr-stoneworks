@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { siteConfig } from '@/data/site-config';
 import { services } from '@/data/services';
+import { pools } from '@/data/pools';
 import { blogPosts } from '@/data/blog';
 import { serviceAreas } from '@/data/service-areas';
 
@@ -41,5 +42,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  return [...staticPages, ...servicePages, ...blogPages, ...areaPages];
+  const poolPages: MetadataRoute.Sitemap = [
+    { url: `${base}/pools-spas`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    ...pools.map((p) => ({
+      url: `${base}/pools-spas/${p.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    })),
+  ];
+
+  return [...staticPages, ...servicePages, ...poolPages, ...blogPages, ...areaPages];
 }
