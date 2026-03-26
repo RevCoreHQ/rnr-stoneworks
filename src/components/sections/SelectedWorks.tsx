@@ -9,26 +9,10 @@ import { TiltCard } from '@/components/motion/TiltCard';
 
 const works = [
   {
-    title: 'Custom Paver Patio & Outdoor Living',
+    title: 'Custom Pool & Spa',
     location: 'Lafayette, CO',
-    category: 'Paver Installation · Hardscape Design',
+    category: 'Pool Installation · Outdoor Living',
     src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79ad0276fa9e41f562.png',
-    href: '/gallery',
-    wide: true,
-  },
-  {
-    title: 'Outdoor Living & Patio Design',
-    location: 'Lafayette, CO',
-    category: 'Paver Patio · Outdoor Living',
-    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c54027458e7.jpg',
-    href: '/gallery',
-    wide: false,
-  },
-  {
-    title: 'Complete Backyard Hardscape',
-    location: 'Boulder, CO',
-    category: 'Full Hardscape · Fire Feature',
-    src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69aa9a13b003fa9b0bde88ef.jpg',
     href: '/gallery',
     wide: true,
   },
@@ -63,9 +47,9 @@ export function SelectedWorks() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-5">
+        <div className="grid grid-cols-1 gap-4 lg:gap-5">
           {works.map((w, i) => (
-            <TiltCard key={i} className={w.wide ? 'lg:col-span-3' : 'lg:col-span-2'} maxTilt={2.5} scale={1.01}>
+            <TiltCard key={i} maxTilt={2.5} scale={1.01}>
               <motion.div
                 initial={{ clipPath: 'inset(100% 0 0 0)' }}
                 whileInView={{ clipPath: 'inset(0% 0 0 0)' }}
@@ -74,16 +58,13 @@ export function SelectedWorks() {
               >
               <Link
                 href={w.href}
-                className={[
-                  'group relative overflow-hidden rounded-sm bg-ink-900 block',
-                  w.wide ? 'aspect-[3/2]' : 'aspect-square',
-                ].join(' ')}
+                className="group relative overflow-hidden rounded-sm bg-ink-900 block aspect-[16/9] lg:aspect-[21/9]"
               >
                 <Image
                   src={w.src}
                   alt={w.title}
                   fill
-                  sizes={w.wide ? '(max-width: 1024px) 100vw, 60vw' : '(max-width: 1024px) 100vw, 40vw'}
+                  sizes="100vw"
                   quality={80}
                   priority={i === 0}
                   placeholder="blur"
