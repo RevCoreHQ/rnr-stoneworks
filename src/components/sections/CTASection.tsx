@@ -47,7 +47,7 @@ export function CTASection({
           <motion.p variants={staggerItem} className="label-dark mb-8">Free Consultation</motion.p>
           <motion.h2
             variants={staggerItem}
-            className="font-display font-light leading-[1.06] mb-8 text-shimmer"
+            className="font-display font-light leading-[1.15] mb-8 text-shimmer"
             style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)' }}
           >
             {headline}
