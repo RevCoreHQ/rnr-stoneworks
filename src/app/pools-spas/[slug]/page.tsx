@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { pools, getPoolBySlug, getRelatedPools } from '@/data/pools';
@@ -54,39 +53,18 @@ export default async function PoolPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-24 bg-ink-950 overflow-hidden grain">
-        {pool.heroImage && (
-          <>
-            <Image
-              src={pool.heroImage}
-              alt={pool.heroAlt}
-              fill
-              priority
-              sizes="100vw"
-              quality={70}
-              className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-ink-950/80" />
-          </>
-        )}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent" />
-
-        <div className="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs
-            items={[
-              { label: 'Pools & Spas', href: '/pools-spas' },
-              { label: pool.title, href: `/pools-spas/${pool.slug}` },
-            ]}
-            variant="dark"
-          />
-          <div className="max-w-3xl mt-4">
-            <span className="inline-block px-3 py-1 text-xs font-medium bg-gold-700/30 text-gold-300 rounded-full mb-4 border border-gold-600/30">
-              Pool Installation
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6">
+      <section className="pt-36 lg:pt-44 pb-16 bg-cream-50 border-b border-gold-200/40 relative overflow-hidden topo-lines">
+        <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+          <Breadcrumbs items={[
+            { label: 'Pools & Spas', href: '/pools-spas' },
+            { label: pool.title, href: `/pools-spas/${pool.slug}` },
+          ]} />
+          <div className="max-w-3xl mt-8">
+            <p className="label mb-4">Pool Installation</p>
+            <h1 className="font-display font-light text-ink-900 mb-4" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
               {pool.h1}
             </h1>
-            <p className="text-xl text-ink-300 leading-relaxed mb-8">{pool.intro}</p>
+            <p className="font-body text-lg text-ink-500 leading-relaxed mb-8">{pool.intro}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
                 Get Your Free {pool.shortTitle} Quote
@@ -95,7 +73,6 @@ export default async function PoolPage({ params }: Props) {
                 href={`tel:${siteConfig.phoneRaw}`}
                 variant="outline"
                 size="lg"
-                className="border-white/30 text-white hover:bg-white/10"
               >
                 Call {siteConfig.phone}
               </Button>

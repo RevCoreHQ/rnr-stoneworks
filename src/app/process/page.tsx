@@ -9,7 +9,7 @@ import { breadcrumbSchema, howToSchema } from '@/lib/schema';
 export const metadata: Metadata = generatePageMetadata({
   title: 'Our Design & Build Process | Rock N Roll Stoneworks',
   description:
-    'From free consultation to 3D design to expert installation. See how Rock N Roll Stoneworks builds your outdoor space.',
+    'From free consultation to custom design to expert installation. See how Rock N Roll Stoneworks builds your outdoor space.',
   path: '/process',
 });
 
@@ -24,11 +24,11 @@ const steps = [
   },
   {
     number: '02',
-    title: '2D Layout & 3D Virtual Tour',
+    title: 'Custom Design & Layout',
     description:
-      'Based on your consultation, our design team creates a 2D layout showing dimensions and materials, plus a full 3D virtual tour that lets you walk through your completed project before any work begins.',
+      'Based on your consultation, our design team creates a detailed layout showing dimensions, materials, and how every element fits together. You review and approve the design before any work begins.',
     detail:
-      'The 3D design phase is where the vision becomes real. You can see exactly how the paver pattern looks, where the fire pit sits in relation to the seating wall, how the retaining wall integrates with the planting areas. If you want changes, we revise until you are satisfied, no charge for revisions.',
+      'The design phase is where the vision becomes real. You can see exactly how the paver pattern looks, where the fire pit sits in relation to the seating wall, how the retaining wall integrates with the planting areas. If you want changes, we revise until you are satisfied — no charge for revisions.',
   },
   {
     number: '03',

@@ -27,7 +27,7 @@ export const mainNav: NavItem[] = [
     href: '/pools-spas',
     children: [
       { label: 'Fiberglass Pools', href: '/pools-spas/fiberglass-pools' },
-      { label: 'Concrete & Gunite Pools', href: '/pools-spas/concrete-gunite-pools' },
+      { label: 'Concrete & Shotcrete Pools', href: '/pools-spas/concrete-shotcrete-pools' },
     ],
   },
   { label: 'Gallery', href: '/gallery' },
@@ -35,12 +35,17 @@ export const mainNav: NavItem[] = [
     label: 'Areas',
     href: '/service-areas',
     children: [
+      { label: 'Longmont', href: '/service-areas/longmont' },
       { label: 'Lafayette', href: '/service-areas/lafayette' },
       { label: 'Erie', href: '/service-areas/erie' },
       { label: 'Boulder', href: '/service-areas/boulder' },
       { label: 'Westminster', href: '/service-areas/westminster' },
-      { label: 'Longmont', href: '/service-areas/longmont' },
+      { label: 'Broomfield', href: '/service-areas/broomfield' },
+      { label: 'Louisville', href: '/service-areas/louisville' },
+      { label: 'Superior', href: '/service-areas/superior' },
       { label: 'Firestone & Frederick', href: '/service-areas/firestone-frederick' },
+      { label: 'Fort Collins', href: '/service-areas/fort-collins' },
+      { label: 'Loveland', href: '/service-areas/loveland' },
     ],
   },
   { label: 'About', href: '/about' },
@@ -59,7 +64,7 @@ export const footerNav = {
   ],
   pools: [
     { label: 'Fiberglass Pools', href: '/pools-spas/fiberglass-pools' },
-    { label: 'Concrete & Gunite Pools', href: '/pools-spas/concrete-gunite-pools' },
+    { label: 'Concrete & Shotcrete Pools', href: '/pools-spas/concrete-shotcrete-pools' },
   ],
   company: [
     { label: 'About Us', href: '/about' },
@@ -70,11 +75,15 @@ export const footerNav = {
     { label: 'Contact', href: '/contact' },
   ],
   areas: [
+    { label: 'Longmont, CO', href: '/service-areas/longmont' },
     { label: 'Lafayette, CO', href: '/service-areas/lafayette' },
     { label: 'Erie, CO', href: '/service-areas/erie' },
     { label: 'Boulder, CO', href: '/service-areas/boulder' },
     { label: 'Westminster, CO', href: '/service-areas/westminster' },
-    { label: 'Longmont, CO', href: '/service-areas/longmont' },
+    { label: 'Broomfield, CO', href: '/service-areas/broomfield' },
+    { label: 'Louisville, CO', href: '/service-areas/louisville' },
     { label: 'Firestone & Frederick', href: '/service-areas/firestone-frederick' },
+    { label: 'Fort Collins, CO', href: '/service-areas/fort-collins' },
+    { label: 'Loveland, CO', href: '/service-areas/loveland' },
   ],
 };

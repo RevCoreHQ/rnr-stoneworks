@@ -66,7 +66,7 @@ export default function GalleryPage() {
       <ProjectGrid />
       <CTASection
         headline="Love What You See?"
-        description="Let us create something just as beautiful for your property. Contact us for a free estimate and 3D design consultation."
+        description="Let us create something just as beautiful for your property. Contact us for a free estimate and design consultation."
       />
     </>
   );

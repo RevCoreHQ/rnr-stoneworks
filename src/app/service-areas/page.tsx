@@ -13,7 +13,7 @@ import { breadcrumbSchema } from '@/lib/schema';
 export const metadata: Metadata = generatePageMetadata({
   title: 'Service Areas | Rock N Roll Stoneworks Colorado',
   description:
-    'Serving Lafayette, Erie, Boulder, Westminster, Longmont, Firestone, and Frederick CO with custom hardscape and outdoor living.',
+    'Serving Longmont, Lafayette, Erie, Boulder, Westminster, Broomfield, Louisville, Fort Collins, Loveland, and more across the Colorado Front Range.',
   path: '/service-areas',
 });
 

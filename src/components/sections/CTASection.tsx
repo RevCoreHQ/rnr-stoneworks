@@ -15,7 +15,7 @@ interface CTASectionProps {
 
 export function CTASection({
   headline = 'Ready to Begin?',
-  description = 'Every project starts with a free consultation, we visit your property, understand your vision, and provide a no-obligation proposal with a full 3D design.',
+  description = 'Every project starts with a free consultation — we visit your property, understand your vision, and provide a no-obligation proposal with a detailed design.',
 }: CTASectionProps) {
   return (
     <section className="relative bg-ink-950 overflow-hidden grain">
@@ -72,7 +72,7 @@ export function CTASection({
                   href="/contact"
                   className="inline-flex items-center justify-center px-10 py-4 bg-gold-500 text-ink-950 font-body font-semibold text-[13px] tracking-[0.12em] uppercase hover:bg-gold-400 transition-colors duration-300 rounded-sm btn-shimmer"
                 >
-                  Get Your Free 3D Design
+                  Get Your Free Estimate
                 </Link>
               </motion.div>
             </MagneticButton>

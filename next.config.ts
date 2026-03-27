@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
         destination: '/pools-spas/fiberglass-pools',
         permanent: true,
       },
+      {
+        source: '/pools-spas/concrete-gunite-pools',
+        destination: '/pools-spas/concrete-shotcrete-pools',
+        permanent: true,
+      },
     ];
   },
   async headers() {

@@ -13,7 +13,7 @@ const steps = [
   {
     num: '02',
     title: 'Design & Proposal',
-    body: 'Our team creates a detailed 2D layout and 3D virtual tour of your project. You see exactly what we will build before a single stone is placed.',
+    body: 'Our team creates a detailed design layout of your project. You see exactly what we will build before a single stone is placed.',
   },
   {
     num: '03',

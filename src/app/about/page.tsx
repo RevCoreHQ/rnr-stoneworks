@@ -72,10 +72,10 @@ export default function AboutPage() {
                   We are a Belgard Authorized Contractor and Reseller, meaning we have completed Belgard&apos;s rigorous certification program and maintain the quality standards required to offer Belgard&apos;s lifetime material warranties. We are also ICPI Certified Installers (Interlocking Concrete Pavement Institute), the recognized credential for professional paver installation. As a Latham Pools Authorized Dealer, we bring the same level of quality to pool installations with industry-leading fiberglass pool products.
                 </p>
                 <p>
-                  Our process starts with a free on-site consultation and continues through 2D and 3D design, expert installation, and a final walkthrough where you confirm everything meets your expectations before full payment is due. That last part matters, we believe a contractor who requires full payment only upon your satisfaction is a contractor you can trust.
+                  Our process starts with a free on-site consultation and continues through custom design, expert installation, and a final walkthrough where you confirm everything meets your expectations before full payment is due. That last part matters — we believe a contractor who requires full payment only upon your satisfaction is a contractor you can trust.
                 </p>
                 <p>
-                  We serve Lafayette, Erie, Boulder, Westminster, Longmont, Firestone, Frederick, and surrounding communities. If you are in the Front Range, there is a good chance we can help with your project.
+                  We serve Longmont, Lafayette, Erie, Boulder, Westminster, Broomfield, Louisville, Superior, Fort Collins, Loveland, and surrounding communities across the Colorado Front Range. If you are in the area, there is a good chance we can help with your project.
                 </p>
               </div>
             </div>

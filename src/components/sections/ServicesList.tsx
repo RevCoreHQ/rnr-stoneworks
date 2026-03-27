@@ -8,14 +8,14 @@ import { TextReveal } from '@/components/motion/TextReveal';
 
 const services = [
   { num: '01', title: 'Paver Installations', sub: 'Driveways · Patios · Walkways', href: '/services/paver-installations' },
-  { num: '02', title: 'Retaining Walls', sub: 'Structural & Decorative Systems', href: '/services/retaining-walls' },
+  { num: '02', title: 'Retaining Walls & Stairs', sub: 'Structural & Decorative Systems', href: '/services/retaining-walls-stairs' },
   { num: '03', title: 'Fire Pits & Fireplaces', sub: 'Custom Fire Features', href: '/services/fire-pits-fireplaces' },
   { num: '04', title: 'Outdoor Kitchens', sub: 'Full Build-Outs', href: '/services/outdoor-kitchens' },
   { num: '05', title: 'Water Features', sub: 'Waterfalls · Fountains · Ponds', href: '/services/water-features' },
   { num: '06', title: 'Outdoor Lighting', sub: 'LED Architectural Lighting', href: '/services/outdoor-lighting' },
   { num: '07', title: 'Artificial Turf', sub: 'Premium Synthetic Grass', href: '/services/artificial-turf' },
   { num: '08', title: 'Stamped Concrete', sub: 'Decorative Concrete Surfaces', href: '/services/stamped-concrete' },
-  { num: '09', title: 'Pools & Spas', sub: 'Fiberglass · Concrete · Gunite', href: '/pools-spas' },
+  { num: '09', title: 'Pools & Spas', sub: 'Fiberglass · Concrete · Shotcrete', href: '/pools-spas' },
 ];
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;

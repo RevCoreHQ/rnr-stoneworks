@@ -33,7 +33,7 @@ const faqs = [
   {
     question: 'Can I see a design before you start?',
     answer:
-      'Yes. We provide a 2D layout and a full 3D virtual tour of your project before construction begins. You review, revise, and approve the design at no cost.',
+      'Yes. We provide a detailed design layout of your project before construction begins. You review, revise, and approve the design at no cost.',
   },
   {
     question: 'When do I pay?',
@@ -53,7 +53,7 @@ const faqs = [
   {
     question: 'What areas do you serve?',
     answer:
-      'Our primary service area includes Lafayette, Erie, Boulder, Westminster, Longmont, Firestone, and Frederick, Colorado. Contact us to confirm availability for your specific location.',
+      'Our primary service area includes Longmont, Lafayette, Erie, Boulder, Westminster, Broomfield, Louisville, Superior, and Firestone &amp; Frederick. We also serve extended areas including Fort Collins, Loveland, Brighton, Mead, Berthoud, Thornton, and Northglenn. Contact us to confirm availability for your specific location.',
   },
   {
     question: 'Do you handle permits?',

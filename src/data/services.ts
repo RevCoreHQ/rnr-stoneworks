@@ -37,13 +37,13 @@ export const services: ServiceData[] = [
       'Custom paver patios, driveways, and walkways in Lafayette, Erie, and Boulder CO. Belgard authorized. Free estimates.',
     h1: 'Custom Paver Installations in Colorado',
     intro:
-      "Transform your driveway, walkway, patio, or entire backyard with a custom paver installation designed to last. Rock N Roll Stoneworks specializes in Belgard paver systems, from initial 2D and 3D design through final installation. We handle every detail so you can enjoy a seamless build and a finished outdoor space that adds lasting value to your home.",
+      "Transform your driveway, walkway, patio, or entire backyard with a custom paver installation designed to last. Rock N Roll Stoneworks specializes in Belgard paver systems, from initial design through final installation. We handle every detail so you can enjoy a seamless build and a finished outdoor space that adds lasting value to your home.",
     heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=700&fit=crop',
     heroAlt: 'Custom paver patio installation in Lafayette, Colorado, Rock N Roll Stoneworks',
     features: [
       'Driveways, walkways, patios, and full backyard installs',
       'Belgard paver systems, authorized contractor and reseller',
-      '2D design and 3D virtual tour before any work begins',
+      'Custom design layout before any work begins',
       'ICPI certified installation techniques',
       'Proper base preparation and edge restraints for lasting results',
       'Wide selection of colors, patterns, and textures',
@@ -61,7 +61,7 @@ export const services: ServiceData[] = [
       },
       {
         heading: 'The Rock N Roll Stoneworks Installation Process',
-        text: "Every paver project begins with a site assessment and design consultation. We measure your space, discuss your goals and budget, and create a 2D layout with a 3D virtual tour so you can visualize the finished result before we break ground. Once approved, our ICPI-certified crew handles excavation, base preparation, sand bedding, paver placement, and final compaction and sealing. We do not rush jobs or cut corners on the base, the foundation is what separates a lasting installation from one that settles and shifts in two years.",
+        text: "Every paver project begins with a site assessment and design consultation. We measure your space, discuss your goals and budget, and create a detailed design layout so you can visualize the finished result before we break ground. Once approved, our ICPI-certified crew handles excavation, base preparation, sand bedding, paver placement, and final compaction and sealing. We do not rush jobs or cut corners on the base, the foundation is what separates a lasting installation from one that settles and shifts in two years.",
       },
     ],
     faqs: [
@@ -78,7 +78,7 @@ export const services: ServiceData[] = [
       {
         question: 'Can I see a design before you start?',
         answer:
-          'Yes. We provide both a 2D layout and a 3D virtual tour of your project before any work begins. You review and approve the design, and we do not start construction until you are satisfied.',
+          'Yes. We provide a detailed design layout of your project before any work begins. You review and approve the design, and we do not start construction until you are satisfied.',
       },
       {
         question: 'Are pavers more expensive than concrete?',
@@ -163,7 +163,7 @@ export const services: ServiceData[] = [
       'Stucco, stone veneer, or paver exterior finishes',
       'Gas line and electrical coordination',
       'Covered patio and pergola integration',
-      '3D design preview before construction begins',
+      'Custom design preview before construction begins',
     ],
     body: [
       {
@@ -172,7 +172,7 @@ export const services: ServiceData[] = [
       },
       {
         heading: 'Integration With Your Outdoor Space',
-        text: "The best outdoor kitchens do not feel like an afterthought, they feel like a natural extension of the home. We design outdoor kitchens as part of a complete outdoor living plan that may include a paver patio, pergola or shade structure, fire pit or fireplace, and landscaping. Our 3D design process lets you see the finished environment before any work begins, so you can adjust layouts, materials, and features until the design is exactly what you envisioned.",
+        text: "The best outdoor kitchens do not feel like an afterthought, they feel like a natural extension of the home. We design outdoor kitchens as part of a complete outdoor living plan that may include a paver patio, pergola or shade structure, fire pit or fireplace, and landscaping. Our design process lets you see the finished environment before any work begins, so you can adjust layouts, materials, and features until the design is exactly what you envisioned.",
       },
     ],
     faqs: [

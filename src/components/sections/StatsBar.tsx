@@ -5,9 +5,9 @@ import { ScrollReveal } from '@/components/motion/ScrollReveal';
 import { AnimatedCounter } from '@/components/motion/AnimatedCounter';
 
 const stats = [
-  { target: 500, suffix: 'K+', label: 'Project Budget Capacity' },
+  { target: 1, suffix: 'M+', label: 'Project Budget Capacity' },
   { target: 11, suffix: '', label: 'Distinct Services' },
-  { target: 6, suffix: '', label: 'Colorado Communities' },
+  { target: 15, suffix: '+', label: 'Colorado Communities' },
   { value: '2yr', label: 'Workmanship Guarantee' },
 ] as const;
 
