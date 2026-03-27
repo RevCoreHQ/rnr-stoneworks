@@ -15,7 +15,7 @@ export function BelgardFeature() {
           {/* Image */}
           <ScrollReveal direction="up">
             <motion.div
-              className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-2xl"
+              className="relative aspect-[3/2] rounded-sm overflow-hidden"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
             >
@@ -25,7 +25,7 @@ export function BelgardFeature() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 quality={85}
-                className="object-cover object-center"
+                className="object-contain"
               />
             </motion.div>
           </ScrollReveal>
