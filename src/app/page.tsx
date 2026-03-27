@@ -5,6 +5,7 @@ import { siteConfig } from '@/data/site-config';
 import { Hero } from '@/components/sections/Hero';
 import { CredentialsTicker } from '@/components/sections/CredentialsTicker';
 import { EditorialIntro } from '@/components/sections/EditorialIntro';
+import { BelgardFeature } from '@/components/sections/BelgardFeature';
 import { SelectedWorks } from '@/components/sections/SelectedWorks';
 import { BeforeAfterSection } from '@/components/sections/BeforeAfterSection';
 import { ServicesList } from '@/components/sections/ServicesList';
@@ -75,6 +76,8 @@ export default function HomePage() {
       <CredentialsTicker />
 
       <EditorialIntro />
+
+      <BelgardFeature />
 
       <SelectedWorks />
 
