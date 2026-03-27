@@ -58,7 +58,7 @@ export function SelectedWorks() {
               >
               <Link
                 href={w.href}
-                className="group relative overflow-hidden rounded-sm bg-ink-900 block aspect-[16/9] lg:aspect-[21/9]"
+                className="group relative overflow-hidden rounded-sm bg-ink-900 block aspect-[16/9] lg:aspect-[16/9]"
               >
                 <Image
                   src={w.src}
