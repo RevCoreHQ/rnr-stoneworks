@@ -18,7 +18,7 @@ const steps = [
   {
     num: '03',
     title: 'Expert Installation',
-    body: 'Our ICPI-certified crew builds your space with precision. Belgard materials, clean jobsite every evening, and a project manager on-site throughout.',
+    body: 'Our ICPI-certified crew builds your space with precision. High-end quality materials, clean jobsite every evening, and a project manager on-site throughout.',
   },
   {
     num: '04',
