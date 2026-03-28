@@ -18,29 +18,40 @@ const works = [
   },
 ];
 
-const BLUR_DARK = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 5%27%3E%3Cfilter id=%27b%27 color-interpolation-filters=%27sRGB%27%3E%3CfeGaussianBlur stdDeviation=%271%27/%3E%3C/filter%3E%3Crect filter=%27url(%23b)%27 width=%27100%25%27 height=%27100%25%27 fill=%27%230b1219%27/%3E%3C/svg%3E';
+const BLUR_LIGHT = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 5%27%3E%3Cfilter id=%27b%27 color-interpolation-filters=%27sRGB%27%3E%3CfeGaussianBlur stdDeviation=%271%27/%3E%3C/filter%3E%3Crect filter=%27url(%23b)%27 width=%27100%25%27 height=%27100%25%27 fill=%27%23e8ecf0%27/%3E%3C/svg%3E';
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export function SelectedWorks() {
   return (
-    <section className="section-pad bg-ink-950 grain">
-      <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="section-pad bg-white relative overflow-hidden">
+      {/* Low-opacity background photo */}
+      <Image
+        src="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c6912eea111792bf9a4f12.png"
+        alt=""
+        fill
+        sizes="100vw"
+        quality={40}
+        className="object-cover object-center opacity-[0.03] pointer-events-none"
+        aria-hidden="true"
+      />
+
+      <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 relative">
         <ScrollReveal direction="up">
           <div className="flex items-end justify-between mb-14">
             <div>
-              <p className="label-dark mb-5">Selected Works</p>
+              <p className="label mb-5">Selected Works</p>
               <h2
-                className="font-display font-light text-white leading-[1.06]"
+                className="font-display font-light text-ink-900 leading-[1.06]"
                 style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
               >
                 Craft you can see.<br />
-                <em className="italic text-gold-400">Quality you can feel.</em>
+                <em className="italic text-gold-600">Quality you can feel.</em>
               </h2>
             </div>
             <Link
               href="/gallery"
-              className="hidden lg:inline-flex items-center gap-2 font-body text-[11px] tracking-[0.18em] uppercase text-gold-400/70 hover:text-gold-400 transition-colors pb-0.5 border-b border-gold-800/50 hover:border-gold-500/60"
+              className="hidden lg:inline-flex items-center gap-2 font-body text-[11px] tracking-[0.18em] uppercase text-gold-700/70 hover:text-gold-700 transition-colors pb-0.5 border-b border-gold-300/50 hover:border-gold-500/60"
             >
               Full Portfolio <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>
@@ -58,7 +69,7 @@ export function SelectedWorks() {
               >
               <Link
                 href={w.href}
-                className="group relative overflow-hidden rounded-sm bg-ink-900 block aspect-[16/9] lg:aspect-[16/9]"
+                className="group relative overflow-hidden rounded-sm bg-ink-100 block aspect-[16/9] lg:aspect-[16/9] shadow-panel hover:shadow-elevate transition-shadow duration-300"
               >
                 <Image
                   src={w.src}
@@ -68,7 +79,7 @@ export function SelectedWorks() {
                   quality={80}
                   priority={i === 0}
                   placeholder="blur"
-                  blurDataURL={BLUR_DARK}
+                  blurDataURL={BLUR_LIGHT}
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-[1.2s] ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/20 to-transparent" />
@@ -99,7 +110,7 @@ export function SelectedWorks() {
         <div className="flex lg:hidden justify-center mt-8">
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 font-body text-[11px] tracking-[0.18em] uppercase text-gold-400 border-b border-gold-700/50 pb-0.5"
+            className="inline-flex items-center gap-2 font-body text-[11px] tracking-[0.18em] uppercase text-gold-700 border-b border-gold-400/50 pb-0.5"
           >
             View Full Portfolio <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
