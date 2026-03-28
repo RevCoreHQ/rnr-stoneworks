@@ -6,6 +6,7 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { PoolTypeSelector } from './PoolTypeSelector';
 import { PoolSizeSelector } from './PoolSizeSelector';
 import { PoolShapeSelector } from './PoolShapeSelector';
+import { PoolFinishSelector } from './PoolFinishSelector';
 import { PoolFeatureSelector } from './PoolFeatureSelector';
 import { PoolAddOnSelector } from './PoolAddOnSelector';
 import { EstimateSummary } from './EstimateSummary';
@@ -19,6 +20,8 @@ export function PoolBuilderPage() {
   const [poolType, setPoolType] = useState<'fiberglass' | 'concrete' | null>(null);
   const [size, setSize] = useState<string | null>(null);
   const [shape, setShape] = useState<string | null>(null);
+  const [finish, setFinish] = useState<string | null>(null);
+  const [coping, setCoping] = useState<string | null>(null);
   const [features, setFeatures] = useState<string[]>([]);
   const [addOns, setAddOns] = useState<string[]>([]);
   const [gateOpen, setGateOpen] = useState(false);
@@ -26,6 +29,7 @@ export function PoolBuilderPage() {
 
   const sizeRef = useRef<HTMLDivElement>(null);
   const shapeRef = useRef<HTMLDivElement>(null);
+  const finishRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const addOnsRef = useRef<HTMLDivElement>(null);
 
@@ -37,9 +41,10 @@ export function PoolBuilderPage() {
 
   const handleTypeChange = (type: 'fiberglass' | 'concrete') => {
     setPoolType(type);
-    // Reset downstream selections when type changes
     setSize(null);
     setShape(null);
+    setFinish(null);
+    setCoping(null);
     scrollTo(sizeRef);
   };
 
@@ -50,11 +55,24 @@ export function PoolBuilderPage() {
 
   const handleShapeChange = (s: string) => {
     setShape(s);
-    scrollTo(featuresRef);
+    scrollTo(finishRef);
   };
 
-  /* ---- Mobile bottom bar state ---- */
   const hasEstimate = poolType !== null && size !== null;
+
+  const estimateProps = {
+    poolType,
+    size,
+    shape,
+    finish,
+    coping,
+    features,
+    addOns,
+    gateOpen,
+    showGateForm,
+    onRequestUnlock: () => setShowGateForm(true),
+    onUnlock: () => setGateOpen(true),
+  };
 
   return (
     <>
@@ -91,7 +109,7 @@ export function PoolBuilderPage() {
               {/* Step 1: Pool Type */}
               <PoolTypeSelector value={poolType} onChange={handleTypeChange} />
 
-              {/* Step 2: Size (shown after type selected) */}
+              {/* Step 2: Size */}
               <AnimatePresence>
                 {poolType && (
                   <motion.div
@@ -111,7 +129,7 @@ export function PoolBuilderPage() {
                 )}
               </AnimatePresence>
 
-              {/* Step 3: Shape (shown after size selected) */}
+              {/* Step 3: Shape */}
               <AnimatePresence>
                 {poolType && size && (
                   <motion.div
@@ -131,7 +149,35 @@ export function PoolBuilderPage() {
                 )}
               </AnimatePresence>
 
-              {/* Step 4: Features (shown after shape selected) */}
+              {/* Step 4: Interior Finish & Coping */}
+              <AnimatePresence>
+                {poolType && size && shape && (
+                  <motion.div
+                    ref={finishRef}
+                    key="finish"
+                    variants={sectionVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="scroll-mt-28"
+                  >
+                    <PoolFinishSelector
+                      poolType={poolType}
+                      finish={finish}
+                      coping={coping}
+                      onFinishChange={(f) => {
+                        setFinish(f);
+                        if (!coping) scrollTo(featuresRef);
+                      }}
+                      onCopingChange={(c) => {
+                        setCoping(c);
+                        scrollTo(featuresRef);
+                      }}
+                    />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Step 5: Features */}
               <AnimatePresence>
                 {poolType && size && shape && (
                   <motion.div
@@ -147,7 +193,7 @@ export function PoolBuilderPage() {
                 )}
               </AnimatePresence>
 
-              {/* Step 5: Add-ons (shown after shape selected) */}
+              {/* Step 6: Add-ons */}
               <AnimatePresence>
                 {poolType && size && shape && (
                   <motion.div
@@ -167,17 +213,7 @@ export function PoolBuilderPage() {
             {/* Right — Sticky Estimate (desktop) */}
             <div className="hidden lg:block">
               <div className="sticky top-28">
-                <EstimateSummary
-                  poolType={poolType}
-                  size={size}
-                  shape={shape}
-                  features={features}
-                  addOns={addOns}
-                  gateOpen={gateOpen}
-                  showGateForm={showGateForm}
-                  onRequestUnlock={() => setShowGateForm(true)}
-                  onUnlock={() => setGateOpen(true)}
-                />
+                <EstimateSummary {...estimateProps} />
               </div>
             </div>
           </div>
@@ -235,17 +271,7 @@ export function PoolBuilderPage() {
               className="w-full bg-white rounded-t-lg p-6 pb-10 max-h-[85vh] overflow-y-auto"
             >
               <div className="w-12 h-1 bg-ink-200 rounded-full mx-auto mb-6" />
-              <EstimateSummary
-                poolType={poolType}
-                size={size}
-                shape={shape}
-                features={features}
-                addOns={addOns}
-                gateOpen={gateOpen}
-                showGateForm={showGateForm}
-                onRequestUnlock={() => setShowGateForm(true)}
-                onUnlock={() => setGateOpen(true)}
-              />
+              <EstimateSummary {...estimateProps} />
             </motion.div>
           </motion.div>
         )}

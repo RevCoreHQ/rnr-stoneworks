@@ -28,6 +28,14 @@ export interface PoolShapeOption {
   poolTypes: ('fiberglass' | 'concrete')[];
 }
 
+export interface PoolFinishOption {
+  id: string;
+  label: string;
+  description: string;
+  price: PriceRange;
+  poolTypes: ('fiberglass' | 'concrete')[];
+}
+
 export interface PoolFeature {
   id: string;
   label: string;
@@ -143,44 +151,153 @@ export const poolShapes: PoolShapeOption[] = [
   },
 ];
 
+/* ---- Interior finish --------------------------------------------- */
+
+export const poolFinishes: PoolFinishOption[] = [
+  {
+    id: 'standard-plaster',
+    label: 'Standard Plaster',
+    description: 'Classic white marcite finish — smooth, bright, and budget-friendly.',
+    price: { low: 0, high: 0 },
+    poolTypes: ['concrete'],
+  },
+  {
+    id: 'quartz-aggregate',
+    label: 'Quartz Aggregate',
+    description: 'Exposed quartz blend for a natural stone look and improved durability.',
+    price: { low: 5_000, high: 10_000 },
+    poolTypes: ['concrete'],
+  },
+  {
+    id: 'pebble-finish',
+    label: 'Pebble Finish',
+    description: 'PebbleTec or river-stone aggregate — premium feel and 15+ year lifespan.',
+    price: { low: 8_000, high: 15_000 },
+    poolTypes: ['concrete'],
+  },
+  {
+    id: 'glass-bead',
+    label: 'Glass Bead / Tile',
+    description: 'Luxurious glass bead or full tile interior — ultimate customization.',
+    price: { low: 15_000, high: 30_000 },
+    poolTypes: ['concrete'],
+  },
+  {
+    id: 'fiberglass-gelcoat',
+    label: 'Gelcoat Finish',
+    description: 'Factory-applied smooth gelcoat — stain-resistant and low maintenance.',
+    price: { low: 0, high: 0 },
+    poolTypes: ['fiberglass'],
+  },
+  {
+    id: 'fiberglass-shimmer',
+    label: 'Shimmer Finish',
+    description: 'Metallic shimmer gelcoat for a sparkling, high-end appearance.',
+    price: { low: 3_000, high: 6_000 },
+    poolTypes: ['fiberglass'],
+  },
+];
+
+/* ---- Coping & edge material -------------------------------------- */
+
+export const copingOptions: PoolFinishOption[] = [
+  {
+    id: 'standard-coping',
+    label: 'Standard Coping',
+    description: 'Bullnose concrete or precast coping — clean and durable.',
+    price: { low: 0, high: 0 },
+    poolTypes: ['fiberglass', 'concrete'],
+  },
+  {
+    id: 'natural-stone',
+    label: 'Natural Stone Coping',
+    description: 'Travertine, limestone, or flagstone — timeless and elegant.',
+    price: { low: 4_000, high: 10_000 },
+    poolTypes: ['fiberglass', 'concrete'],
+  },
+  {
+    id: 'paver-coping',
+    label: 'Belgard Paver Coping',
+    description: 'Premium Belgard pavers for a seamless match with your pool deck.',
+    price: { low: 3_000, high: 8_000 },
+    poolTypes: ['fiberglass', 'concrete'],
+  },
+];
+
 /* ---- Features (multi-select) ------------------------------------- */
 
 export const poolFeatures: PoolFeature[] = [
   {
     id: 'spa',
-    label: 'Attached Spa',
-    description: 'Built-in hot tub with dedicated jets and heating.',
+    label: 'Attached Spa / Hot Tub',
+    description: 'Built-in spillover spa with dedicated jets, heating, and separate controls.',
     price: { low: 20_000, high: 35_000 },
   },
   {
+    id: 'standalone-spa',
+    label: 'Standalone Spa',
+    description: 'Separate in-ground spa — can be heated independently from the pool.',
+    price: { low: 15_000, high: 28_000 },
+  },
+  {
     id: 'tanning-ledge',
-    label: 'Tanning Ledge',
-    description: 'Shallow sun shelf for lounging in inches of water.',
+    label: 'Tanning Ledge / Baja Shelf',
+    description: 'Shallow sun shelf for lounging in inches of water with optional bubblers.',
     price: { low: 5_000, high: 10_000 },
+  },
+  {
+    id: 'swim-up-bar',
+    label: 'Swim-Up Bar',
+    description: 'In-pool bar seating with a raised counter — the ultimate entertainment feature.',
+    price: { low: 8_000, high: 18_000 },
   },
   {
     id: 'water-features',
     label: 'Water Features',
-    description: 'Waterfalls, scuppers, bubblers, or deck jets.',
+    description: 'Waterfalls, scuppers, rain curtains, bubblers, or laminar jets.',
     price: { low: 3_000, high: 12_000 },
   },
   {
     id: 'led-lighting',
-    label: 'LED Lighting',
-    description: 'Color-changing underwater and perimeter lighting.',
+    label: 'LED Lighting Package',
+    description: 'Color-changing underwater, perimeter, and landscape lighting with smart controls.',
     price: { low: 3_000, high: 8_000 },
   },
   {
     id: 'auto-cover',
-    label: 'Automatic Cover',
-    description: 'Motorized safety cover for protection and heat retention.',
+    label: 'Automatic Safety Cover',
+    description: 'Motorized cover for child/pet safety, heat retention, and debris protection.',
     price: { low: 12_000, high: 22_000 },
   },
   {
     id: 'heater',
-    label: 'Pool Heater',
-    description: 'Gas or heat pump for extended swim season in Colorado.',
+    label: 'Pool Heater / Heat Pump',
+    description: 'Gas heater or energy-efficient heat pump for year-round swimming in Colorado.',
     price: { low: 5_000, high: 10_000 },
+  },
+  {
+    id: 'salt-system',
+    label: 'Saltwater System',
+    description: 'Salt chlorine generator — softer water, less chemicals, lower maintenance.',
+    price: { low: 2_000, high: 5_000 },
+  },
+  {
+    id: 'automation',
+    label: 'Pool Automation',
+    description: 'Smart control system for pumps, heater, lights, and water features from your phone.',
+    price: { low: 3_000, high: 7_000 },
+  },
+  {
+    id: 'slide',
+    label: 'Pool Slide',
+    description: 'Custom or pre-fab slide integrated into the pool design.',
+    price: { low: 4_000, high: 12_000 },
+  },
+  {
+    id: 'diving-board',
+    label: 'Diving Board / Jump Rock',
+    description: 'Diving board or natural boulder jump rock for deeper pools.',
+    price: { low: 2_000, high: 6_000 },
   },
 ];
 
@@ -222,6 +339,18 @@ export const poolAddOns: PoolAddOn[] = [
     label: 'Retaining Wall',
     description: 'Structural or decorative walls for grading and elevation.',
     price: { low: 8_000, high: 20_000 },
+  },
+  {
+    id: 'pool-fence',
+    label: 'Pool Safety Fence',
+    description: 'Code-compliant aluminum, glass, or mesh safety fencing.',
+    price: { low: 3_000, high: 10_000 },
+  },
+  {
+    id: 'pool-house',
+    label: 'Pool House / Cabana',
+    description: 'Enclosed or open-air pool house for changing, storage, and entertaining.',
+    price: { low: 30_000, high: 80_000 },
   },
 ];
 

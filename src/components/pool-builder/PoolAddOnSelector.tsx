@@ -19,7 +19,7 @@ export function PoolAddOnSelector({ value, onChange }: PoolAddOnSelectorProps) {
   return (
     <div>
       <SectionHeader
-        step={5}
+        step={6}
         title="Outdoor Living Add-Ons"
         description="Complete your backyard with hardscape, fire features, and more."
       />

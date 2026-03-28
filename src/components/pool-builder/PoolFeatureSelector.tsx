@@ -19,7 +19,7 @@ export function PoolFeatureSelector({ value, onChange }: PoolFeatureSelectorProp
   return (
     <div>
       <SectionHeader
-        step={4}
+        step={5}
         title="Add Pool Features"
         description="Select all that interest you — every feature is optional."
       />

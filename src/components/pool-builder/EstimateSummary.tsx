@@ -6,6 +6,8 @@ import {
   poolTypes,
   poolSizes,
   poolShapes,
+  poolFinishes,
+  copingOptions,
   poolFeatures,
   poolAddOns,
   formatPrice,
@@ -18,6 +20,8 @@ interface EstimateSummaryProps {
   poolType: 'fiberglass' | 'concrete' | null;
   size: string | null;
   shape: string | null;
+  finish: string | null;
+  coping: string | null;
   features: string[];
   addOns: string[];
   gateOpen: boolean;
@@ -30,6 +34,8 @@ function getLineItems(
   poolType: 'fiberglass' | 'concrete' | null,
   size: string | null,
   shape: string | null,
+  finish: string | null,
+  coping: string | null,
   features: string[],
   addOns: string[]
 ) {
@@ -47,6 +53,20 @@ function getLineItems(
     const shapeData = poolShapes.find((s) => s.id === shape);
     if (shapeData) {
       items.push({ label: shapeData.label, range: { low: 0, high: 0 } });
+    }
+  }
+
+  if (finish) {
+    const finishData = poolFinishes.find((f) => f.id === finish);
+    if (finishData) {
+      items.push({ label: finishData.label, range: finishData.price });
+    }
+  }
+
+  if (coping) {
+    const copingData = copingOptions.find((c) => c.id === coping);
+    if (copingData) {
+      items.push({ label: copingData.label, range: copingData.price });
     }
   }
 
@@ -77,6 +97,8 @@ export function EstimateSummary({
   poolType,
   size,
   shape,
+  finish,
+  coping,
   features,
   addOns,
   gateOpen,
@@ -84,7 +106,7 @@ export function EstimateSummary({
   onUnlock,
   showGateForm,
 }: EstimateSummaryProps) {
-  const items = getLineItems(poolType, size, shape, features, addOns);
+  const items = getLineItems(poolType, size, shape, finish, coping, features, addOns);
   const total = sumRanges(items);
   const hasSelections = items.length > 0;
 
