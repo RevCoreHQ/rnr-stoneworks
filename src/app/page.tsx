@@ -19,9 +19,9 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { organizationSchema, webSiteSchema, faqSchema, reviewSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Hardscape Contractor Lafayette CO | Rock N Roll Stoneworks',
+  title: 'Hardscape Contractor Colorado | Rock N Roll Stoneworks',
   description:
-    'Custom pavers, fire pits, outdoor kitchens, and hardscape in Lafayette, Erie, and Boulder CO. Belgard authorized. Free estimates. (303) 587-3035',
+    'Custom pavers, fire pits, outdoor kitchens, pools, and hardscape across the Colorado Front Range. Belgard authorized. Free estimates.',
   path: '/',
 });
 
@@ -47,7 +47,7 @@ const homeFaqs = [
   {
     question: 'What areas do you serve?',
     answer:
-      'Our primary service area covers Longmont, Lafayette, Erie, Boulder, Westminster, Broomfield, Louisville, Superior, and Firestone &amp; Frederick. We also serve Fort Collins, Loveland, Brighton, Mead, Berthoud, Thornton, and Northglenn. Contact us to confirm availability for your specific location.',
+      'We serve the entire Colorado Front Range including Denver, Boulder, Highlands Ranch, Littleton, Aurora, Lakewood, Lafayette, Erie, Westminster, Broomfield, Fort Collins, Loveland, and more. Contact us to confirm availability for your specific location.',
   },
   {
     question: 'Can I see a design before you start building?',
@@ -68,7 +68,7 @@ export default function HomePage() {
 
       <Hero
         headline="Luxury Outdoor Living, Crafted for Colorado"
-        subheadline="Belgard Authorized · Lafayette, CO"
+        subheadline="Belgard Authorized · Colorado Front Range"
         description="Complete design and build for paver installations, fire features, outdoor kitchens, water elements, and hardscape environments across the Colorado Front Range."
         backgroundImage="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41c34070c5886395d2f91.png"
       />
@@ -149,7 +149,7 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-3 text-ink-500 font-body text-[14px] leading-relaxed">
                   <p>
-                    Our primary service area includes <Link href="/service-areas/longmont" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Longmont</Link>, <Link href="/service-areas/lafayette" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Lafayette</Link>, <Link href="/service-areas/erie" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Erie</Link>, <Link href="/service-areas/boulder" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Boulder</Link>, <Link href="/service-areas/westminster" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Westminster</Link>, <Link href="/service-areas/broomfield" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Broomfield</Link>, <Link href="/service-areas/louisville" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Louisville</Link>, <Link href="/service-areas/superior" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Superior</Link>, and <Link href="/service-areas/firestone-frederick" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Firestone &amp; Frederick</Link>, Colorado. We also serve <Link href="/service-areas/fort-collins" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Fort Collins</Link>, <Link href="/service-areas/loveland" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Loveland</Link>, Brighton, and more. We are headquartered in Longmont and our crews work throughout Boulder County and the surrounding Front Range communities. See all of our <Link href="/service-areas" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">service areas</Link>.
+                    We serve homeowners across the Colorado Front Range, including <Link href="/service-areas/denver" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Denver</Link>, <Link href="/service-areas/boulder" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Boulder</Link>, <Link href="/service-areas/highlands-ranch" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Highlands Ranch</Link>, <Link href="/service-areas/lakewood" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Lakewood</Link>, <Link href="/service-areas/littleton" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Littleton</Link>, <Link href="/service-areas/aurora" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Aurora</Link>, <Link href="/service-areas/lafayette" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Lafayette</Link>, <Link href="/service-areas/erie" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Erie</Link>, <Link href="/service-areas/fort-collins" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Fort Collins</Link>, and more. Our crews work throughout the Denver metro and the surrounding Front Range communities. See all of our <Link href="/service-areas" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">service areas</Link>.
                   </p>
                   <p>
                     We know the soil conditions, permit requirements, HOA processes, and climate challenges specific to each community we serve. Lafayette&apos;s expansive clay soils require deeper aggregate bases. Boulder&apos;s building regulations demand careful impervious surface calculations. Erie&apos;s newer subdivisions need HOA-compliant designs. Our local expertise means your project is engineered correctly for your specific location.

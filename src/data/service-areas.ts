@@ -20,29 +20,25 @@ export interface ServiceAreaData {
 
 export const serviceAreas: ServiceAreaData[] = [
   {
-    slug: 'longmont',
-    city: 'Longmont',
+    slug: 'denver',
+    city: 'Denver',
     state: 'CO',
-    metaTitle: 'Hardscape Contractor Longmont CO | Rock N Roll Stoneworks',
+    metaTitle: 'Hardscape Contractor Denver CO | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom pavers, fire pits, outdoor kitchens, pools, and hardscape in Longmont CO. Belgard authorized. Free estimates.',
-    h1: 'Hardscape & Outdoor Living in Longmont, CO',
+      'Custom pavers, fire pits, outdoor kitchens, pools, and hardscape in Denver CO. Belgard authorized. Free estimates.',
+    h1: 'Hardscape & Outdoor Living in Denver, CO',
     intro:
-      'Rock N Roll Stoneworks is headquartered in Longmont and serves homeowners throughout the community with custom paver installations, fire pits, outdoor kitchens, pools, water features, retaining walls, and complete outdoor living environments. As your local hardscape contractor, we know Longmont\'s neighborhoods, soil conditions, and permit processes inside and out.',
+      'Rock N Roll Stoneworks serves Denver homeowners with custom paver installations, fire pits, outdoor kitchens, pools, water features, retaining walls, and complete outdoor living environments. From Washington Park to Cherry Creek to Stapleton, we bring premium hardscape craftsmanship to every Denver neighborhood.',
     isPrimary: true,
-    geo: { lat: 40.1672, lng: -105.1019 },
+    geo: { lat: 39.7392, lng: -104.9903 },
     body: [
       {
-        heading: 'Your Local Longmont Hardscape Contractor',
-        text: 'Rock N Roll Stoneworks is headquartered at 11021 Yellowstone Road, right here in Longmont. When you hire us, you are hiring your neighbors — a team that cares about the quality of work visible in our own community. We have built relationships with local inspectors, material suppliers, and subcontractors that allow us to move projects efficiently while maintaining the quality standards our Longmont clients expect. Our trucks are in Longmont neighborhoods most weeks of the year, and our reputation here is built on the completed projects visible in yards throughout the city.',
+        heading: 'Denver\'s Outdoor Living Market',
+        text: 'Denver\'s 300 days of sunshine and thriving outdoor culture make it one of the strongest markets for quality hardscape installations in the country. Homeowners across the city are investing in outdoor living spaces that extend their usable square footage and add lasting value to their properties. Rock N Roll Stoneworks brings Belgard-certified craftsmanship to Denver neighborhoods of every style, from historic bungalows to modern new builds.',
       },
       {
-        heading: 'Longmont Outdoor Living',
-        text: 'Longmont\'s combination of established neighborhoods and newer subdivisions makes it one of the more varied outdoor living markets on the Front Range. Older properties often have outdated or minimal hardscape that homeowners are ready to upgrade, while newer homes in developments like Prospect and the southeast quadrant come with builder-grade landscaping that leaves significant room for improvement. Rock N Roll Stoneworks serves both markets with the same quality of design and construction, from modest patio upgrades to comprehensive outdoor environment builds.',
-      },
-      {
-        heading: 'Longmont Permit Process',
-        text: 'Longmont requires permits for most structural outdoor projects, including retaining walls over four feet, decks, pergolas, and gas line connections. Rock N Roll Stoneworks handles permit research and application for every project we build in Longmont. We know what the city requires, how to prepare the documentation, and who to work with in the inspection process to keep your project on schedule.',
+        heading: 'Denver Permit Process',
+        text: 'Denver has specific permitting requirements for outdoor structures, retaining walls, and gas line connections. Rock N Roll Stoneworks handles permit research and application for every project we build in Denver. We know what the city requires and how to keep your project on schedule through the inspection process.',
       },
     ],
   },
@@ -307,6 +303,101 @@ export const serviceAreas: ServiceAreaData[] = [
       {
         heading: 'North Denver Metro Outdoor Living',
         text: 'Thornton and Northglenn\'s mix of established neighborhoods and newer development along the I-25 corridor creates strong demand for outdoor living upgrades. Whether you are updating an older patio or designing a complete outdoor environment for a newer property, Rock N Roll Stoneworks brings the same quality materials and installation practices we use throughout the Front Range.',
+      },
+    ],
+  },
+  {
+    slug: 'highlands-ranch',
+    city: 'Highlands Ranch',
+    state: 'CO',
+    metaTitle: 'Hardscape Contractor Highlands Ranch CO | Rock N Roll Stoneworks',
+    metaDescription:
+      'Custom pavers, fire pits, outdoor kitchens, and hardscape in Highlands Ranch CO. Belgard authorized. Free estimates.',
+    h1: 'Hardscape & Outdoor Living in Highlands Ranch, CO',
+    intro:
+      'Rock N Roll Stoneworks serves Highlands Ranch homeowners with premium outdoor living construction. From custom paver patios and fire features to outdoor kitchens and complete backyard transformations, we bring Belgard-certified craftsmanship to one of Colorado\'s most desirable communities.',
+    isPrimary: true,
+    geo: { lat: 39.5536, lng: -104.9689 },
+    body: [
+      {
+        heading: 'Highlands Ranch Outdoor Living',
+        text: 'Highlands Ranch\'s well-maintained neighborhoods, active community lifestyle, and generous lot sizes make it one of the strongest markets for quality outdoor living construction in the Denver metro area. Whether you are in Backcountry, Eastridge, or one of the established neighborhoods near Town Center, Rock N Roll Stoneworks designs outdoor environments that match the high standard Highlands Ranch homeowners expect.',
+      },
+    ],
+  },
+  {
+    slug: 'littleton',
+    city: 'Littleton',
+    state: 'CO',
+    metaTitle: 'Hardscape Contractor Littleton CO | Rock N Roll Stoneworks',
+    metaDescription:
+      'Custom pavers, fire pits, outdoor kitchens, and hardscape in Littleton CO. Belgard authorized. Free estimates.',
+    h1: 'Hardscape & Outdoor Living in Littleton, CO',
+    intro:
+      'Rock N Roll Stoneworks serves Littleton homeowners with custom hardscape and outdoor living construction. From paver installations and fire features to retaining walls and complete backyard transformations, we bring quality craftsmanship to the southwest Denver metro.',
+    isPrimary: true,
+    geo: { lat: 39.6133, lng: -105.0166 },
+    body: [
+      {
+        heading: 'Littleton\'s Charming Communities',
+        text: 'Littleton\'s blend of historic charm and newer development creates diverse opportunities for outdoor living projects. From the established neighborhoods near downtown to newer communities in Ken Caryl and Columbine, Rock N Roll Stoneworks designs and builds outdoor environments that complement the character of your home and neighborhood.',
+      },
+    ],
+  },
+  {
+    slug: 'aurora',
+    city: 'Aurora',
+    state: 'CO',
+    metaTitle: 'Hardscape Contractor Aurora CO | Rock N Roll Stoneworks',
+    metaDescription:
+      'Custom pavers, fire pits, outdoor kitchens, and hardscape in Aurora CO. Belgard authorized. Free estimates.',
+    h1: 'Hardscape & Outdoor Living in Aurora, CO',
+    intro:
+      'Rock N Roll Stoneworks serves Aurora homeowners with premium outdoor living construction. From custom paver patios and fire pits to outdoor kitchens and complete backyard transformations, we bring the same craftsmanship to Aurora that we deliver across the Colorado Front Range.',
+    isPrimary: true,
+    geo: { lat: 39.7294, lng: -104.8319 },
+    body: [
+      {
+        heading: 'Aurora\'s Growing Outdoor Living Market',
+        text: 'Aurora\'s diverse neighborhoods and growing communities create strong demand for quality outdoor living spaces. Whether you are in Southlands, Tallyn\'s Reach, or the established neighborhoods of central Aurora, Rock N Roll Stoneworks designs and builds hardscape environments that transform how you use your outdoor space.',
+      },
+    ],
+  },
+  {
+    slug: 'lakewood',
+    city: 'Lakewood',
+    state: 'CO',
+    metaTitle: 'Hardscape Contractor Lakewood CO | Rock N Roll Stoneworks',
+    metaDescription:
+      'Custom pavers, fire pits, outdoor kitchens, and hardscape in Lakewood CO. Belgard authorized. Free estimates.',
+    h1: 'Hardscape & Outdoor Living in Lakewood, CO',
+    intro:
+      'Rock N Roll Stoneworks serves Lakewood homeowners with custom hardscape and outdoor living construction. From paver installations and fire features to retaining walls and complete backyard transformations, we bring quality craftsmanship to the west Denver metro.',
+    isPrimary: true,
+    geo: { lat: 39.7047, lng: -105.0814 },
+    body: [
+      {
+        heading: 'Lakewood Outdoor Living',
+        text: 'Lakewood\'s proximity to the foothills, established neighborhoods, and active outdoor lifestyle make it a natural fit for premium hardscape installations. Rock N Roll Stoneworks designs outdoor spaces that take advantage of Lakewood\'s mountain views and Colorado\'s 300 days of sunshine, creating patios, fire features, and outdoor rooms built for year-round enjoyment.',
+      },
+    ],
+  },
+  {
+    slug: 'longmont',
+    city: 'Longmont',
+    state: 'CO',
+    metaTitle: 'Hardscape Contractor Longmont CO | Rock N Roll Stoneworks',
+    metaDescription:
+      'Custom pavers, fire pits, outdoor kitchens, pools, and hardscape in Longmont CO. Belgard authorized. Free estimates.',
+    h1: 'Hardscape & Outdoor Living in Longmont, CO',
+    intro:
+      'Rock N Roll Stoneworks serves Longmont homeowners with the full range of outdoor living construction services. From paver installations and fire features to pools, retaining walls, and complete outdoor room designs, we bring Belgard-quality craftsmanship to Longmont properties of every size and style.',
+    isPrimary: false,
+    geo: { lat: 40.1672, lng: -105.1019 },
+    body: [
+      {
+        heading: 'Longmont Outdoor Living',
+        text: 'Longmont\'s combination of established neighborhoods and newer subdivisions makes it one of the more varied outdoor living markets on the Front Range. Older properties often have outdated or minimal hardscape that homeowners are ready to upgrade, while newer homes in developments like Prospect and the southeast quadrant come with builder-grade landscaping that leaves significant room for improvement. Rock N Roll Stoneworks serves both markets with the same quality of design and construction, from modest patio upgrades to comprehensive outdoor environment builds.',
       },
     ],
   },

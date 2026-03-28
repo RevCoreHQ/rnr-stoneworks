@@ -75,7 +75,7 @@ export default function AboutPage() {
                   Our process starts with a free on-site consultation and continues through custom design, expert installation, and a final walkthrough where you confirm everything meets your expectations before full payment is due. That last part matters — we believe a contractor who requires full payment only upon your satisfaction is a contractor you can trust.
                 </p>
                 <p>
-                  We serve Longmont, Lafayette, Erie, Boulder, Westminster, Broomfield, Louisville, Superior, Fort Collins, Loveland, and surrounding communities across the Colorado Front Range. If you are in the area, there is a good chance we can help with your project.
+                  We serve Denver, Boulder, Highlands Ranch, Littleton, Aurora, Lakewood, Lafayette, Erie, Fort Collins, Loveland, and surrounding communities across the Colorado Front Range. If you are in the area, there is a good chance we can help with your project.
                 </p>
               </div>
             </div>

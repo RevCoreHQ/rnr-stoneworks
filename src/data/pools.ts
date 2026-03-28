@@ -6,14 +6,14 @@ export const pools: ServiceData[] = [
     title: 'Fiberglass Pools',
     shortTitle: 'Fiberglass Pools',
     category: 'outdoor-living',
-    metaTitle: 'Fiberglass Pool Installation Lafayette CO | Rock N Roll Stoneworks',
+    metaTitle: 'Fiberglass Pool Installation Colorado | Rock N Roll Stoneworks',
     metaDescription:
-      'Latham fiberglass pool installation in Lafayette, Erie, and Boulder CO. Fast install, lifetime structural warranty, low maintenance. Free design consultation.',
+      'Latham fiberglass pool installation in Colorado Front Range. Fast install, lifetime structural warranty, low maintenance. Free design consultation.',
     h1: 'Latham Fiberglass Pool Installation in Colorado',
     intro:
       "As a Latham Pools Authorized Dealer, Rock N Roll Stoneworks delivers premium fiberglass pool installations backed by decades of manufacturing expertise. Fiberglass pools are the fastest-installing, lowest-maintenance pool option available, with a smooth gel coat finish that resists algae and a flexible composite shell engineered for Colorado's freeze-thaw cycles. From pool selection through surrounding hardscape, we handle every detail.",
     heroImage: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52b47421e243d0c6c91fb.jpg',
-    heroAlt: 'Latham fiberglass pool installation with paver surround in Lafayette, Colorado',
+    heroAlt: 'Latham fiberglass pool installation with paver surround in Colorado',
     features: [
       'Latham Pools Authorized Dealer, full model catalog access',
       'Lifetime structural warranty on fiberglass shell',
@@ -68,16 +68,16 @@ export const pools: ServiceData[] = [
       },
     ],
     relatedSlugs: ['concrete-shotcrete-pools'],
-    primaryKeyword: 'fiberglass pool installation Lafayette CO',
+    primaryKeyword: 'fiberglass pool installation Colorado',
   },
   {
     slug: 'concrete-shotcrete-pools',
     title: 'Concrete & Shotcrete Pools',
     shortTitle: 'Concrete Pools',
     category: 'outdoor-living',
-    metaTitle: 'Concrete & Shotcrete Pool Builder Lafayette CO | Rock N Roll Stoneworks',
+    metaTitle: 'Concrete & Shotcrete Pool Builder Colorado | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom concrete and shotcrete pool construction in Lafayette, Erie, and Boulder CO. Fully customizable shapes, sizes, and finishes. Free design consultation.',
+      'Custom concrete and shotcrete pool construction in Colorado Front Range. Fully customizable shapes, sizes, and finishes. Free design consultation.',
     h1: 'Custom Concrete & Shotcrete Pools in Colorado',
     intro:
       "For homeowners who want a pool that is completely custom, concrete and shotcrete construction offers unlimited design freedom. Every curve, depth, shelf, and feature is built to your exact specifications. Rock N Roll Stoneworks designs and builds custom concrete pools from the ground up, integrating them seamlessly with surrounding paver decks, fire features, outdoor kitchens, and landscape elements for a complete outdoor living environment.",
@@ -137,7 +137,7 @@ export const pools: ServiceData[] = [
       },
     ],
     relatedSlugs: ['fiberglass-pools'],
-    primaryKeyword: 'concrete pool builder Lafayette CO',
+    primaryKeyword: 'concrete pool builder Colorado',
   },
 ];
 

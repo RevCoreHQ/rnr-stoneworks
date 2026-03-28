@@ -53,7 +53,7 @@ const faqs = [
   {
     question: 'What areas do you serve?',
     answer:
-      'Our primary service area includes Longmont, Lafayette, Erie, Boulder, Westminster, Broomfield, Louisville, Superior, and Firestone &amp; Frederick. We also serve extended areas including Fort Collins, Loveland, Brighton, Mead, Berthoud, Thornton, and Northglenn. Contact us to confirm availability for your specific location.',
+      'We serve the entire Colorado Front Range including Denver, Boulder, Highlands Ranch, Littleton, Aurora, Lakewood, Lafayette, Erie, Westminster, Broomfield, Fort Collins, Loveland, and more. Contact us to confirm availability for your specific location.',
   },
   {
     question: 'Do you handle permits?',

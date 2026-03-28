@@ -16,7 +16,7 @@ const BLUR_DARK = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w
 export const metadata: Metadata = generatePageMetadata({
   title: 'Pools & Spas | Rock N Roll Stoneworks CO',
   description:
-    'Custom fiberglass and concrete pool installation in Lafayette, Erie, and Boulder CO. Latham Pools authorized dealer. Complete pool and outdoor living design.',
+    'Custom fiberglass and concrete pool installation in Colorado Front Range. Latham Pools authorized dealer. Complete pool and outdoor living design.',
   path: '/pools-spas',
 });
 
@@ -31,7 +31,7 @@ export default function PoolsSpasPage() {
           ]),
           serviceSchema(
             'Pool & Spa Installation',
-            'Custom fiberglass and concrete pool installation in Lafayette, Erie, and Boulder CO.',
+            'Custom fiberglass and concrete pool installation in Colorado Front Range.',
             `${siteConfig.url}/pools-spas`
           ),
         ]}

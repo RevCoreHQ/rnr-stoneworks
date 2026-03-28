@@ -51,7 +51,7 @@ export function EditorialIntro() {
               Rock N Roll Stoneworks was built on a single principle: that your outdoor space should be as refined as the home it surrounds. Every project we take begins with a free consultation and ends with a space that commands attention.
             </motion.p>
             <motion.p variants={staggerItem} className="font-body text-ink-500 text-lg leading-relaxed mb-10">
-              As a Belgard Authorized Contractor and ICPI Certified installer, we bring the highest level of craftsmanship to paver installations, fire features, outdoor kitchens, water elements, and complete hardscape environments across Lafayette, Boulder, and the Colorado Front Range.
+              As a Belgard Authorized Contractor and ICPI Certified installer, we bring the highest level of craftsmanship to paver installations, fire features, outdoor kitchens, water elements, and complete hardscape environments across the Colorado Front Range.
             </motion.p>
 
             <motion.div variants={staggerItem} className="grid grid-cols-2 gap-6 mb-10">
