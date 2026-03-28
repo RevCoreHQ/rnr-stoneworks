@@ -123,20 +123,15 @@ export function Lightbox({ images, selectedIndex, onClose, onChangeIndex }: Ligh
             exit={{ opacity: 0, x: direction > 0 ? -40 : 40 }}
             transition={{ duration: 0.25, ease }}
           >
-            <div className="bg-white p-3 pb-14 sm:p-4 sm:pb-16 shadow-elevate">
-              <div className="relative aspect-[4/3] sm:aspect-[3/2]">
-                <Image
-                  src={current.src}
-                  alt={current.alt}
-                  fill
-                  sizes="90vw"
-                  quality={85}
-                  className="object-cover"
-                />
-              </div>
-              <p className="text-center font-body text-sm sm:text-base text-ink-700 mt-3">
-                {current.label}
-              </p>
+            <div className="relative aspect-[4/3] sm:aspect-[3/2]">
+              <Image
+                src={current.src}
+                alt={current.alt}
+                fill
+                sizes="90vw"
+                quality={85}
+                className="object-contain"
+              />
             </div>
           </motion.div>
         </AnimatePresence>
