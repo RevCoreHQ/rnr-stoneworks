@@ -10,7 +10,7 @@ import { breadcrumbSchema } from '@/lib/schema';
 export const metadata: Metadata = generatePageMetadata({
   title: 'Hardscape Services | Rock N Roll Stoneworks CO',
   description:
-    'Pavers, fire pits, outdoor kitchens, water features, retaining walls, lighting, turf, and more. Serving Lafayette, Erie, and Boulder CO.',
+    'Pavers, fire pits, outdoor kitchens, water features, retaining walls, lighting, turf, and more. Serving the Colorado Front Range.',
   path: '/services',
 });
 

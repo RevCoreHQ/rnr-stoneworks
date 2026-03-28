@@ -159,8 +159,8 @@ export default async function ServiceAreaPage({ params }: Props) {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Star, title: 'Belgard Authorized', text: 'Certified Belgard contractor and reseller with lifetime warranties on qualifying installations.' },
-              { icon: Shield, title: 'ICPI Certified', text: 'Interlocking Concrete Pavement Institute certified installer, the industry standard for paver installation.' },
+              { icon: Star, title: 'Custom Pools & Spas', text: 'Fiberglass and concrete pool installations. Latham Pools Authorized Dealer.' },
+              { icon: Shield, title: 'Hardscape & Stonework', text: 'ICPI Certified. Pavers, fire features, outdoor kitchens, retaining walls, and more.' },
               { icon: CheckCircle, title: 'Custom Design', text: 'See a detailed design layout of your project before a single stone is placed.' },
               { icon: Clock, title: 'Free Estimates', text: 'Free on-site consultations and detailed estimates with no obligation to proceed.' },
             ].map((item) => (

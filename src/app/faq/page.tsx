@@ -8,17 +8,17 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema, faqSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Hardscape FAQ | Rock N Roll Stoneworks Lafayette CO',
+  title: 'Hardscape FAQ | Rock N Roll Stoneworks Colorado',
   description:
-    'Answers to common questions about paver installation, pricing, timelines, and guarantees. Rock N Roll Stoneworks, Lafayette CO.',
+    'Answers to common questions about paver installation, pricing, timelines, and guarantees. Rock N Roll Stoneworks, Colorado.',
   path: '/faq',
 });
 
 const faqs = [
   {
-    question: 'Are you a Belgard authorized contractor?',
+    question: 'What certifications do you hold?',
     answer:
-      'Yes. Rock N Roll Stoneworks is a Belgard Authorized Contractor and Reseller. We have completed Belgard\'s certification program and maintain the standards required to offer Belgard\'s lifetime material warranties on qualifying installations.',
+      'We are a Belgard Authorized Contractor, ICPI Certified Installer, and Latham Pools Authorized Dealer. These certifications represent the highest standards in hardscape and pool construction.',
   },
   {
     question: 'What is an ICPI certified installer?',

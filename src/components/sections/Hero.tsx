@@ -35,14 +35,14 @@ export function Hero({
       {backgroundVideo ? (
         <>
           {backgroundImage && (
-            <Image src={backgroundImage} alt="Rock N Roll Stoneworks luxury outdoor hardscape project in Lafayette Colorado" fill priority sizes="100vw" quality={80} placeholder="blur" blurDataURL={BLUR_DARK} className="object-cover object-center" />
+            <Image src={backgroundImage} alt="Rock N Roll Stoneworks luxury outdoor hardscape project in Colorado" fill priority sizes="100vw" quality={80} placeholder="blur" blurDataURL={BLUR_DARK} className="object-cover object-center" />
           )}
           <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover object-center">
             <source src={backgroundVideo} type="video/mp4" />
           </video>
         </>
       ) : backgroundImage ? (
-        <Image src={backgroundImage} alt="Rock N Roll Stoneworks luxury outdoor hardscape project in Lafayette Colorado" fill priority sizes="100vw" quality={80} placeholder="blur" blurDataURL={BLUR_DARK} className="object-cover object-center" />
+        <Image src={backgroundImage} alt="Rock N Roll Stoneworks luxury outdoor hardscape project in Colorado" fill priority sizes="100vw" quality={80} placeholder="blur" blurDataURL={BLUR_DARK} className="object-cover object-center" />
       ) : (
         <div className="absolute inset-0 bg-ink-950" />
       )}
@@ -144,9 +144,9 @@ export function Hero({
               <span className="text-gold-500">★★★★★</span>
               <span>5.0 on Google</span>
               <span className="w-px h-3 bg-white/20" />
-              <span>Belgard Authorized</span>
+              <span>Custom Pools & Spas</span>
               <span className="w-px h-3 bg-white/20" />
-              <span>ICPI Certified</span>
+              <span>Hardscape & Stonework</span>
             </div>
           </ScrollReveal>
         </div>

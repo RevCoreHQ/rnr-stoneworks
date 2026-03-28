@@ -50,7 +50,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="font-body text-sm text-white/40 leading-relaxed mb-8 max-w-sm">
-              Custom outdoor living environments for discerning homeowners across the Colorado Front Range. Belgard Authorized. ICPI Certified. Design and build specialists.
+              Custom pools, spas, and outdoor living environments for homeowners across the Colorado Front Range. Design and build specialists.
             </p>
             <div className="space-y-3 mb-8">
               <a href={`tel:${siteConfig.phoneRaw}`} className="flex items-center gap-3 font-body text-sm text-white/50 hover:text-gold-400 transition-colors">

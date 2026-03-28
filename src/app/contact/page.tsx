@@ -8,9 +8,9 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Free Estimate | Rock N Roll Stoneworks Lafayette CO',
+  title: 'Free Estimate | Rock N Roll Stoneworks Colorado',
   description:
-    'Get a free estimate for pavers, fire pits, outdoor kitchens, or any hardscape project. Call (303) 587-3035. Lafayette, CO.',
+    'Get a free estimate for pools, spas, pavers, outdoor kitchens, or any outdoor project across the Colorado Front Range.',
   path: '/contact',
 });
 
@@ -82,8 +82,8 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8 p-5 bg-gold-50 rounded-2xl border border-gold-100">
-                <p className="text-sm font-semibold text-gold-900 mb-1">Belgard Authorized Contractor</p>
-                <p className="text-sm text-gold-700">ICPI Certified · 2-Year Guarantee · Full payment only upon satisfaction</p>
+                <p className="text-sm font-semibold text-gold-900 mb-1">Custom Pools · Spas · Hardscape</p>
+                <p className="text-sm text-gold-700">ICPI Certified · Latham Pools Dealer · 2-Year Guarantee</p>
               </div>
             </div>
 

@@ -2,11 +2,11 @@ export const siteConfig = {
   name: 'Rock N Roll Stoneworks',
   tagline: 'Custom Outdoor Spaces Built to Last',
   description:
-    "Colorado's trusted hardscape and outdoor living contractor. Custom paver installations, fire pits, outdoor kitchens, water features, pool installations, and retaining walls in Lafayette, Erie, Boulder, and surrounding areas. Belgard Authorized. Latham Pools Dealer. Free estimates.",
+    "Colorado's trusted custom pool, spa, and outdoor living contractor. Fiberglass and concrete pools, paver installations, fire features, outdoor kitchens, and complete hardscape across the Colorado Front Range. Free estimates.",
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://rnrstoneworks.com',
   ogImage: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41c34070c5886395d2f91.png',
-  phone: '(607) 624-9174',
-  phoneRaw: '+16076249174',
+  phone: '(720) 371-2403',
+  phoneRaw: '+17203712403',
   email: 'rnrstoneworks@gmail.com',
   address: {
     street: '11021 Yellowstone Road',

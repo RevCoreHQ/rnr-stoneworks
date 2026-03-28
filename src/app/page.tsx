@@ -19,9 +19,9 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { organizationSchema, webSiteSchema, faqSchema, reviewSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Hardscape Contractor Colorado | Rock N Roll Stoneworks',
+  title: 'Custom Pool & Outdoor Living Builder Colorado | Rock N Roll Stoneworks',
   description:
-    'Custom pavers, fire pits, outdoor kitchens, pools, and hardscape across the Colorado Front Range. Belgard authorized. Free estimates.',
+    'Custom pools, spas, pavers, fire features, outdoor kitchens, and complete outdoor living across the Colorado Front Range. Free estimates.',
   path: '/',
 });
 
@@ -35,9 +35,9 @@ const homeReviews = [
 
 const homeFaqs = [
   {
-    question: 'Are you a Belgard authorized contractor?',
+    question: 'What certifications do you hold?',
     answer:
-      'Yes. Rock N Roll Stoneworks is a Belgard Authorized Contractor and Reseller. This means we have completed Belgard\'s certification program, meet their quality standards, and can offer the Belgard lifetime material warranty on qualifying installations.',
+      'We are a Belgard Authorized Contractor, ICPI Certified Installer, and Latham Pools Authorized Dealer. These certifications mean we meet the highest industry standards for both hardscape and pool construction.',
   },
   {
     question: 'Do you offer free estimates?',
@@ -68,8 +68,8 @@ export default function HomePage() {
 
       <Hero
         headline="Luxury Outdoor Living, Crafted for Colorado"
-        subheadline="Belgard Authorized · Colorado Front Range"
-        description="Complete design and build for paver installations, fire features, outdoor kitchens, water elements, and hardscape environments across the Colorado Front Range."
+        subheadline="Custom Pools · Spas · Stonework · Colorado Front Range"
+        description="Complete design and build for custom pools, spas, paver installations, fire features, outdoor kitchens, and full outdoor living environments across the Colorado Front Range."
         backgroundImage="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41c34070c5886395d2f91.png"
       />
 
@@ -104,12 +104,11 @@ export default function HomePage() {
                 className="font-display font-light text-ink-900 leading-[1.06] mb-6"
                 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)' }}
               >
-                Colorado&apos;s Trusted Hardscape &amp; Outdoor Living Contractor
+                Colorado&apos;s Custom Pool, Spa &amp; Outdoor Living Contractor
               </h2>
               <div className="space-y-4 text-ink-500 font-body text-[15px] leading-relaxed">
                 <p>
-                  Rock N Roll Stoneworks is a full-service hardscape and outdoor living contractor based in Lafayette, Colorado. Founded by Jordan, our team specializes in transforming residential properties across the Colorado Front Range into beautiful, functional outdoor environments. We are a{' '}
-                  <strong className="text-ink-700">Belgard Authorized Contractor and Reseller</strong>, an <strong className="text-ink-700">ICPI Certified installer</strong>, a <strong className="text-ink-700">Latham Pools Authorized Dealer</strong>, and have been featured in <strong className="text-ink-700">Belgard Magazine</strong> for the quality of our craftsmanship.
+                  Rock N Roll Stoneworks is a full-service custom pool, spa, and outdoor living contractor based in Longmont, Colorado. Our team specializes in transforming residential properties across the Colorado Front Range into beautiful, functional outdoor environments — from custom fiberglass and concrete pools to complete hardscape, fire features, outdoor kitchens, and more.
                 </p>
                 <p>
                   Every project starts with a free on-site consultation where we walk your property, listen to your vision, and discuss budget. From there, our design team creates a detailed layout so you can see your finished project before we break ground. We handle everything from permits and material sourcing to expert installation and final walkthrough.
@@ -181,13 +180,13 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-3 text-ink-500 font-body text-[14px] leading-relaxed">
                   <p>
-                    As a Belgard Authorized Contractor, we meet Belgard&apos;s installation standards and can offer their lifetime material warranty on qualifying installations combined with our own 2-year workmanship guarantee. Our ICPI certification means our crew follows the Interlocking Concrete Pavement Institute&apos;s best practices for base preparation, edge restraint, and jointing, the industry standard that separates professional installations from amateur work.
+                    We hold the industry&apos;s top certifications — Belgard Authorized, ICPI Certified, and Latham Pools Authorized Dealer — because we believe in doing things right. Our crew follows best practices for every type of project, from proper base preparation on hardscape to precision pool installation. Every project is backed by our 2-year workmanship guarantee plus manufacturer warranties.
                   </p>
                   <p>
                     We provide a detailed design of every project so you can see your completed outdoor space before a single stone is placed. Revisions are unlimited and free. We do not collect final payment until the project passes your walkthrough inspection. This approach reflects our confidence in the quality of what we build and our commitment to your complete satisfaction.
                   </p>
                   <p>
-                    Our team has completed hundreds of residential hardscape projects across the Colorado Front Range since 2017. From small patio installations to complete backyard transformations including pools, kitchens, fire features, and lighting, we have the experience to handle projects of any scale. We use premium materials from trusted manufacturers, maintain clear communication throughout the build, and stand behind our work with written warranties.
+                    Our team has completed hundreds of residential projects across the Colorado Front Range since 2017. From custom pools and spas to complete backyard transformations with kitchens, fire features, and lighting, we have the experience to handle projects of any scale. We use premium materials from trusted manufacturers, maintain clear communication throughout the build, and stand behind our work with written warranties.
                   </p>
                 </div>
               </div>

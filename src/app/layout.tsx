@@ -29,19 +29,19 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Custom Outdoor Spaces in Lafayette & Boulder, CO`,
+    default: `${siteConfig.name} | Custom Pools, Spas & Outdoor Living in Colorado`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [
-    'paver installation Lafayette CO',
-    'hardscape contractor Boulder County',
-    'outdoor fire pit Colorado',
-    'outdoor kitchen Lafayette',
-    'retaining wall Erie CO',
-    'Belgard authorized contractor Colorado',
-    'paver patio Boulder CO',
-    'outdoor living contractor Lafayette',
+    'custom pool builder Colorado',
+    'fiberglass pool installation Colorado',
+    'concrete pool contractor Colorado',
+    'hardscape contractor Colorado',
+    'outdoor living contractor Colorado',
+    'paver installation Colorado',
+    'outdoor kitchen Colorado',
+    'spa builder Colorado Front Range',
     'Rock N Roll Stoneworks',
   ],
   icons: {

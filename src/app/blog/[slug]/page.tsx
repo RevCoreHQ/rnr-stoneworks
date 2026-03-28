@@ -153,7 +153,7 @@ export default async function BlogPostPage({ params }: Props) {
           </article>
 
           <div className="mt-12 pt-8 border-t border-cream-200 text-sm text-ink-400">
-            Written by {siteConfig.name} · Lafayette, CO
+            Written by {siteConfig.name} · Longmont, CO
           </div>
         </div>
       </div>

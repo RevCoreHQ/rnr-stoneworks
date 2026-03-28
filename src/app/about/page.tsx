@@ -10,9 +10,9 @@ import Image from 'next/image';
 import { BadgeCheck, Flame, Layers, Users } from 'lucide-react';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'About Us | Rock N Roll Stoneworks Lafayette CO',
+  title: 'About Us | Rock N Roll Stoneworks Colorado',
   description:
-    'Belgard authorized, ICPI certified hardscape contractor in Lafayette CO. Meet the team behind Rock N Roll Stoneworks.',
+    'Custom pool, spa, and outdoor living contractor in Colorado. Meet the team behind Rock N Roll Stoneworks.',
   path: '/about',
 });
 
@@ -25,9 +25,9 @@ const values = [
   },
   {
     icon: BadgeCheck,
-    title: 'Belgard Certified Excellence',
+    title: 'Industry-Leading Certifications',
     description:
-      'As a Belgard Authorized Contractor and Reseller and ICPI Certified Installer, we meet the industry\'s highest standards for paver installation design and technique.',
+      'As a Belgard Authorized Contractor, ICPI Certified Installer, and Latham Pools Authorized Dealer, we hold the top credentials across both hardscape and pool construction.',
   },
   {
     icon: Flame,
@@ -39,7 +39,7 @@ const values = [
     icon: Users,
     title: 'Locally Rooted',
     description:
-      'We are based in Lafayette and work primarily in the surrounding Front Range communities. Our reputation is built on the work visible in our neighbors\' yards.',
+      'We are based in Longmont and serve homeowners across the entire Colorado Front Range. Our reputation is built on the work visible in our neighbors\' yards.',
   },
 ];
 
@@ -66,10 +66,10 @@ export default function AboutPage() {
               </h1>
               <div className="space-y-4 text-ink-500 leading-relaxed">
                 <p>
-                  Rock N Roll Stoneworks, LLC is a hardscape and outdoor living contractor based in Lafayette, Colorado. We design and build custom paver installations, fire features, outdoor kitchens, water features, retaining walls, and complete outdoor living environments for homeowners across the Front Range.
+                  Rock N Roll Stoneworks, LLC is a custom pool, spa, and outdoor living contractor based in Longmont, Colorado. We design and build custom pools, spas, paver installations, fire features, outdoor kitchens, water features, retaining walls, and complete outdoor living environments for homeowners across the Front Range.
                 </p>
                 <p>
-                  We are a Belgard Authorized Contractor and Reseller, meaning we have completed Belgard&apos;s rigorous certification program and maintain the quality standards required to offer Belgard&apos;s lifetime material warranties. We are also ICPI Certified Installers (Interlocking Concrete Pavement Institute), the recognized credential for professional paver installation. As a Latham Pools Authorized Dealer, we bring the same level of quality to pool installations with industry-leading fiberglass pool products.
+                  We hold the industry&apos;s top certifications — Belgard Authorized Contractor, ICPI Certified Installer, and Latham Pools Authorized Dealer — ensuring the highest quality standards across everything we build, from custom pools and spas to complete hardscape environments.
                 </p>
                 <p>
                   Our process starts with a free on-site consultation and continues through custom design, expert installation, and a final walkthrough where you confirm everything meets your expectations before full payment is due. That last part matters — we believe a contractor who requires full payment only upon your satisfaction is a contractor you can trust.
@@ -92,17 +92,13 @@ export default function AboutPage() {
                 <p className="text-4xl font-display font-bold text-white mb-2">ICPI</p>
                 <p className="text-sm font-medium text-ink-400">Certified Installer</p>
               </div>
-              <div className="bg-cream-50 rounded-2xl p-6 text-center border border-cream-200">
-                <p className="text-xl font-display font-bold text-ink-800 mb-2">Belgard</p>
-                <p className="text-sm font-medium text-ink-500">Authorized Contractor</p>
+              <div className="bg-blue-50 rounded-2xl p-6 text-center border border-blue-100">
+                <p className="text-xl font-display font-bold text-ink-800 mb-2">Latham</p>
+                <p className="text-sm font-medium text-ink-500">Pools Authorized Dealer</p>
               </div>
-              <div className="col-span-2 bg-gradient-to-r from-gold-50 to-cream-50 rounded-2xl p-6 text-center border border-gold-100">
-                <p className="text-sm font-medium tracking-wider uppercase text-gold-600 mb-1">Featured In</p>
-                <p className="text-xl font-display font-bold text-ink-800">Belgard Magazine</p>
-              </div>
-              <div className="col-span-2 bg-blue-50 rounded-2xl p-6 text-center border border-blue-100">
-                <p className="text-sm font-medium tracking-wider uppercase text-blue-600 mb-1">Authorized Dealer</p>
-                <p className="text-xl font-display font-bold text-ink-800">Latham Pools</p>
+              <div className="col-span-2 bg-cream-50 rounded-2xl p-6 text-center border border-cream-200">
+                <p className="text-sm font-medium tracking-wider uppercase text-gold-600 mb-1">Also Certified</p>
+                <p className="text-xl font-display font-bold text-ink-800">Belgard Authorized · Featured in Belgard Magazine</p>
               </div>
             </div>
           </div>
@@ -114,7 +110,7 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/5] lg:aspect-auto">
                   <Image
                     src="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b417c2eba48773622062b2.png"
-                    alt="Jordan, Owner of Rock N Roll Stoneworks"
+                    alt="Jordan and Jason, Founders of Rock N Roll Stoneworks"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -123,23 +119,20 @@ export default function AboutPage() {
                 <div className="p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
                   <p className="inline-flex items-center gap-2 text-sm font-medium tracking-wider uppercase mb-4">
                     <span className="w-6 h-px bg-gold-500" />
-                    <span className="text-gold-400">Meet the Owner</span>
+                    <span className="text-gold-400">Meet the Founders</span>
                   </p>
                   <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mb-2">
-                    Jordan
+                    Jordan &amp; Jason
                   </h2>
                   <p className="text-gold-400 font-body text-sm tracking-wide uppercase mb-6">
-                    Founder &amp; Lead Craftsman
+                    Co-Founders
                   </p>
                   <div className="space-y-4 text-white/70 leading-relaxed">
                     <p>
-                      What started as a passion for working with my hands turned into a mission to build outdoor spaces that families actually live in, not just look at. I founded Rock N Roll Stoneworks because I saw too many contractors cutting corners on the work that matters most, the base, the grade, the details you do not see but that determine whether your patio still looks perfect in ten years.
+                      What started as a passion for working with our hands turned into a mission to build outdoor spaces that families actually live in, not just look at. We founded Rock N Roll Stoneworks because we saw too many contractors cutting corners on the work that matters most — the base, the grade, the details you don&apos;t see but that determine whether your pool, patio, or outdoor kitchen still looks perfect in ten years.
                     </p>
                     <p>
-                      Every project we take on gets my personal attention from the first design conversation through the final walkthrough. I am on your job site, not behind a desk. When you hire Rock N Roll, you are hiring a team that treats your backyard like our own.
-                    </p>
-                    <p>
-                      We are Belgard Authorized, ICPI Certified, featured in Belgard Magazine, and a Latham Pools Authorized Dealer. Those credentials were earned, not bought. They reflect the standard we hold ourselves to on every single project.
+                      Every project we take on gets our personal attention from the first design conversation through the final walkthrough. We are on your job site, not behind a desk. When you hire Rock N Roll, you are hiring a team that treats your backyard like our own.
                     </p>
                   </div>
                 </div>

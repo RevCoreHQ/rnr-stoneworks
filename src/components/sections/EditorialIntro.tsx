@@ -9,8 +9,8 @@ import { StaggerChildren, staggerItem } from '@/components/motion/StaggerChildre
 import { TextReveal } from '@/components/motion/TextReveal';
 
 const credentials = [
-  ['Belgard Authorized', 'Highest Tier Certification'],
-  ['ICPI Certified', 'Industry-Standard Mastery'],
+  ['Custom Pools & Spas', 'Fiberglass & Concrete'],
+  ['Hardscape & Stonework', 'Pavers · Walls · Kitchens'],
   ['Custom Design', 'Visualize Before We Build'],
   ['2-Year Guarantee', 'Workmanship Backed'],
 ] as const;
@@ -51,7 +51,7 @@ export function EditorialIntro() {
               Rock N Roll Stoneworks was built on a single principle: that your outdoor space should be as refined as the home it surrounds. Every project we take begins with a free consultation and ends with a space that commands attention.
             </motion.p>
             <motion.p variants={staggerItem} className="font-body text-ink-500 text-lg leading-relaxed mb-10">
-              As a Belgard Authorized Contractor and ICPI Certified installer, we bring the highest level of craftsmanship to paver installations, fire features, outdoor kitchens, water elements, and complete hardscape environments across the Colorado Front Range.
+              From custom pools and spas to paver installations, fire features, outdoor kitchens, and complete hardscape environments — we bring the highest level of craftsmanship to every project across the Colorado Front Range.
             </motion.p>
 
             <motion.div variants={staggerItem} className="grid grid-cols-2 gap-6 mb-10">
