@@ -14,6 +14,7 @@ import { ProcessSteps } from '@/components/sections/ProcessSteps';
 import { TestimonialCards } from '@/components/sections/TestimonialCards';
 import { CTASection } from '@/components/sections/CTASection';
 import { FAQAccordion } from '@/components/sections/FAQAccordion';
+import { InstagramFeed } from '@/components/sections/InstagramFeed';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { organizationSchema, webSiteSchema, faqSchema, reviewSchema } from '@/lib/schema';
 
@@ -89,6 +90,8 @@ export default function HomePage() {
       <ProcessSteps />
 
       <TestimonialCards />
+
+      <InstagramFeed />
 
       {/* Server-rendered SEO content — visible to crawlers without JS */}
       <section className="section-pad bg-cream-50 topo-lines relative overflow-hidden">
