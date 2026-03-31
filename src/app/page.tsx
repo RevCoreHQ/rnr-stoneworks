@@ -70,7 +70,8 @@ export default function HomePage() {
         headline="Luxury Outdoor Living, Crafted for Colorado"
         subheadline="Custom Pools · Spas · Stonework · Colorado Front Range"
         description="Complete design and build for custom pools, spas, paver installations, fire features, outdoor kitchens, and full outdoor living environments across the Colorado Front Range."
-        backgroundImage="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41c34070c5886395d2f91.png"
+        backgroundImage="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69cbd62d6ec634823b12bbe9.png"
+        backgroundVideo="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69cbd5d6bcc6917fa7a9e877.mp4"
       />
 
       <CredentialsTicker />
