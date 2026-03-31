@@ -8,7 +8,7 @@ export const pools: ServiceData[] = [
     category: 'outdoor-living',
     metaTitle: 'Fiberglass Pool Installation Colorado | Rock N Roll Stoneworks',
     metaDescription:
-      'Latham fiberglass pool installation in Colorado Front Range. Fast install, lifetime structural warranty, low maintenance. Free design consultation.',
+      'Latham fiberglass pool installation in Colorado Front Range. Fast install, lifetime structural warranty, low maintenance. Free estimates.',
     h1: 'Latham Fiberglass Pool Installation in Colorado',
     intro:
       "As a Latham Pools Authorized Dealer, Rock N Roll Stoneworks delivers premium fiberglass pool installations backed by decades of manufacturing expertise. Fiberglass pools are the fastest-installing, lowest-maintenance pool option available, with a smooth gel coat finish that resists algae and a flexible composite shell engineered for Colorado's freeze-thaw cycles. From pool selection through surrounding hardscape, we handle every detail.",
@@ -33,7 +33,7 @@ export const pools: ServiceData[] = [
       },
       {
         heading: 'The Latham Advantage',
-        text: "Latham is the largest manufacturer of in-ground residential swimming pools in North America. As an Authorized Dealer, Rock N Roll Stoneworks has access to their full catalog of fiberglass models, including freeform, rectangular, and contemporary designs in a wide range of sizes, depths, and colors. Every Latham pool is engineered with a proprietary composite lamination process that provides exceptional strength and durability. We help you select the right model for your yard, lifestyle, and budget during a free design consultation.",
+        text: "Latham is the largest manufacturer of in-ground residential swimming pools in North America. As an Authorized Dealer, Rock N Roll Stoneworks has access to their full catalog of fiberglass models, including freeform, rectangular, and contemporary designs in a wide range of sizes, depths, and colors. Every Latham pool is engineered with a proprietary composite lamination process that provides exceptional strength and durability. We help you select the right model for your yard, lifestyle, and budget during a free consultation.",
       },
       {
         heading: 'More Than Just a Pool',
@@ -49,7 +49,7 @@ export const pools: ServiceData[] = [
       {
         question: 'How much does a fiberglass pool cost in Colorado?',
         answer:
-          'Fiberglass pool projects typically range from $60,000 to $120,000+ depending on the pool model, site conditions, and surrounding hardscape and features. We provide detailed, transparent estimates during your free design consultation.',
+          'Fiberglass pool projects typically range from $60,000 to $120,000+ depending on the pool model, site conditions, and surrounding hardscape and features. We provide detailed, transparent estimates during your free consultation.',
       },
       {
         question: 'Are fiberglass pools durable in Colorado winters?',
@@ -77,7 +77,7 @@ export const pools: ServiceData[] = [
     category: 'outdoor-living',
     metaTitle: 'Concrete & Shotcrete Pool Builder Colorado | Rock N Roll Stoneworks',
     metaDescription:
-      'Custom concrete and shotcrete pool construction in Colorado Front Range. Fully customizable shapes, sizes, and finishes. Free design consultation.',
+      'Custom concrete and shotcrete pool construction in Colorado Front Range. Fully customizable shapes, sizes, and finishes. Free estimates.',
     h1: 'Custom Concrete & Shotcrete Pools in Colorado',
     intro:
       "For homeowners who want a pool that is completely custom, concrete and shotcrete construction offers unlimited design freedom. Every curve, depth, shelf, and feature is built to your exact specifications. Rock N Roll Stoneworks designs and builds custom concrete pools from the ground up, integrating them seamlessly with surrounding paver decks, fire features, outdoor kitchens, and landscape elements for a complete outdoor living environment.",

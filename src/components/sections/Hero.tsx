@@ -123,7 +123,7 @@ export function Hero({
                   href="/contact"
                   className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white font-display font-semibold text-[12px] tracking-[0.18em] uppercase hover:bg-gold-400 transition-colors duration-300 rounded-sm shadow-glow btn-shimmer"
                 >
-                  Get Your Free Design
+                  Get Your Free Estimate
                 </Link>
               </motion.div>
               <motion.div variants={staggerItem}>

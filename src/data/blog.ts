@@ -248,7 +248,7 @@ Colorado weather is mostly cooperative, but afternoon thunderstorms in summer an
 
 For the off-season, quality appliance covers and a winterization plan for plumbing lines protect your investment. Most outdoor-rated appliances are built for temperature extremes, but water lines and drains need to be blown out before the first hard freeze.
 
-Ready to start planning your outdoor kitchen? [Contact Rock N Roll Stoneworks](/contact) for a free design consultation. We will walk your property, discuss your goals and budget, and help you design a kitchen that works for how you actually cook and entertain.`,
+Ready to start planning your outdoor kitchen? [Contact Rock N Roll Stoneworks](/contact) for a free estimate. We will walk your property, discuss your goals and budget, and help you design a kitchen that works for how you actually cook and entertain.`,
   },
   {
     slug: 'retaining-wall-cost-colorado',
@@ -563,7 +563,7 @@ We also recommend a spring startup service where we inspect the pump, check the 
 
 ## Getting Started
 
-Water features are one of those projects where seeing examples makes the decision easier. Visit our [gallery](/gallery) to see completed water feature installations across the Front Range. When you are ready to explore options for your property, [contact us](/contact) for a free design consultation. We will assess your space, discuss your vision, and propose a feature that fits your backyard and your budget.`,
+Water features are one of those projects where seeing examples makes the decision easier. Visit our [gallery](/gallery) to see completed water feature installations across the Front Range. When you are ready to explore options for your property, [contact us](/contact) for a free estimate. We will assess your space, discuss your vision, and propose a feature that fits your backyard and your budget.`,
   },
 ];
 

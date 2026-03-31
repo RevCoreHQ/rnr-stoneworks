@@ -452,7 +452,7 @@ export const services: ServiceData[] = [
       'Patio, driveway, walkway, and pool deck applications',
       'Combination designs with pavers or natural stone borders',
       '2-year workmanship guarantee',
-      'Free design consultation',
+      'Free estimate',
     ],
     body: [
       {
@@ -496,7 +496,7 @@ export const services: ServiceData[] = [
       'Proper substrate preparation and waterproofing',
       'Wide selection of stone profiles, colors, and textures',
       'Matching stone for outdoor fire features and walls',
-      'Free design consultation',
+      'Free estimate',
     ],
     body: [
       {

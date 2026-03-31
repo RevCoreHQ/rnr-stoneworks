@@ -240,7 +240,7 @@ export function Header() {
                 className="flex-1 py-3.5 text-center text-sm font-medium font-body border border-gold-500/60 text-gold-400 hover:bg-gold-500 hover:text-ink-950 transition-all rounded-sm"
                 onClick={() => setMobileOpen(false)}
               >
-                Get Your Free Design
+                Get Your Free Estimate
               </Link>
               <a
                 href={`tel:${siteConfig.phoneRaw}`}
