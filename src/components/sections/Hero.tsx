@@ -140,7 +140,7 @@ export function Hero({
 
         {/* Video controls — bottom right */}
         {backgroundVideo && (
-          <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 z-20 flex items-center gap-2">
+          <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 z-20 flex items-center gap-2">
             <button
               onClick={toggleMute}
               aria-label={isMuted ? 'Unmute video' : 'Mute video'}
