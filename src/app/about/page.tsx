@@ -103,18 +103,29 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Meet the Owner */}
+          {/* Meet the Founders */}
           <div className="mb-20">
             <div className="bg-ink-900 rounded-2xl overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="relative aspect-[4/5] lg:aspect-auto">
-                  <Image
-                    src="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b417c2eba48773622062b2.png"
-                    alt="Jordan and Jason, Founders of Rock N Roll Stoneworks"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
+                <div className="grid grid-cols-2 min-h-[400px] lg:min-h-0">
+                  <div className="relative">
+                    <Image
+                      src="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b417c2eba48773622062b2.png"
+                      alt="Jordan, Co-Founder of Rock N Roll Stoneworks"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                    />
+                  </div>
+                  <div className="relative">
+                    <Image
+                      src="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69ccb19a5472d48257b8fe02.jpg"
+                      alt="Jason, Co-Founder of Rock N Roll Stoneworks"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                    />
+                  </div>
                 </div>
                 <div className="p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
                   <p className="inline-flex items-center gap-2 text-sm font-medium tracking-wider uppercase mb-4">
