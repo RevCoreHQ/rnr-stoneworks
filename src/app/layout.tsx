@@ -71,6 +71,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://assets.cdn.filesafe.space" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://assets.cdn.filesafe.space" />
+        <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://link.msgsndr.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://link.msgsndr.com" />
         <JsonLd data={localBusinessSchema()} />
       </head>
       <body className="min-h-screen flex flex-col bg-white">

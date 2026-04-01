@@ -18,6 +18,7 @@ export function ContactForm() {
       src="https://api.leadconnectorhq.com/widget/form/KqfvKeoGrD6B0NmO7jMm"
       style={{ width: '100%', height: '678px', border: 'none', borderRadius: '3px' }}
       id="inline-KqfvKeoGrD6B0NmO7jMm"
+      loading="eager"
       data-layout="{'id':'INLINE'}"
       data-trigger-type="alwaysShow"
       data-trigger-value=""
