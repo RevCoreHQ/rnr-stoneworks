@@ -107,23 +107,23 @@ export default function AboutPage() {
           <div className="mb-20">
             <div className="bg-ink-900 rounded-2xl overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="grid grid-cols-2 min-h-[400px] lg:min-h-0">
-                  <div className="relative">
+                <div className="flex flex-col">
+                  <div className="relative aspect-[4/3] lg:aspect-auto lg:flex-1">
                     <Image
                       src="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b417c2eba48773622062b2.png"
                       alt="Jordan, Co-Founder of Rock N Roll Stoneworks"
                       fill
                       className="object-cover"
-                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
-                  <div className="relative">
+                  <div className="relative aspect-[4/3] lg:aspect-auto lg:flex-1">
                     <Image
                       src="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69ccb19a5472d48257b8fe02.jpg"
                       alt="Jason, Co-Founder of Rock N Roll Stoneworks"
                       fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      className="object-cover object-top"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
