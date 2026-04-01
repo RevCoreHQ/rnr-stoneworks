@@ -152,13 +152,18 @@ export default function AboutPage() {
                 </div>
 
                 {/* Text content */}
-                <div className="space-y-4 text-white/70 leading-relaxed">
-                  <p>
-                    What started as a passion for working with our hands turned into a mission to build outdoor spaces that families actually live in, not just look at. We founded Rock N Roll Stoneworks because we saw too many contractors cutting corners on the work that matters most — the base, the grade, the details you don&apos;t see but that determine whether your pool, patio, or outdoor kitchen still looks perfect in ten years.
-                  </p>
-                  <p>
-                    Every project we take on gets our personal attention from the first design conversation through the final walkthrough. We are on your job site, not behind a desk. When you hire Rock N Roll, you are hiring a team that treats your backyard like our own.
-                  </p>
+                <div className="space-y-6">
+                  <blockquote className="border-l-2 border-gold-500 pl-5 text-white/90 text-lg sm:text-xl font-display italic leading-relaxed">
+                    &ldquo;We treat your backyard like our own, because that&apos;s the only way we know how to build.&rdquo;
+                  </blockquote>
+                  <div className="space-y-4 text-white/70 leading-relaxed">
+                    <p>
+                      What started as a passion for working with our hands turned into a mission to build outdoor spaces that families actually live in, not just look at. We founded Rock N Roll Stoneworks because we saw too many contractors cutting corners on the work that matters most, the base, the grade, the details you don&apos;t see but that determine whether your pool, patio, or outdoor kitchen still looks perfect in ten years.
+                    </p>
+                    <p>
+                      Every project we take on gets our personal attention from the first design conversation through the final walkthrough. We are on your job site, not behind a desk. When you hire Rock N Roll, you are hiring a team that treats your backyard like our own.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
