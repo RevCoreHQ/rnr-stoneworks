@@ -105,47 +105,60 @@ export default function AboutPage() {
 
           {/* Meet the Founders */}
           <div className="mb-20">
-            <div className="bg-ink-900 rounded-2xl overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="flex flex-col">
-                  <div className="relative aspect-[4/3] lg:aspect-auto lg:flex-1">
-                    <Image
-                      src="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b417c2eba48773622062b2.png"
-                      alt="Jordan, Co-Founder of Rock N Roll Stoneworks"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
+            <div className="bg-ink-900 rounded-2xl py-12 sm:py-16 lg:py-20 px-6 sm:px-10 lg:px-16">
+              <div className="text-center mb-10 lg:mb-14">
+                <p className="inline-flex items-center gap-2 text-sm font-medium tracking-wider uppercase mb-4">
+                  <span className="w-6 h-px bg-gold-500" />
+                  <span className="text-gold-400">Meet the Founders</span>
+                  <span className="w-6 h-px bg-gold-500" />
+                </p>
+                <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mb-2">
+                  Jordan &amp; Jason
+                </h2>
+                <p className="text-gold-400 font-body text-sm tracking-wide uppercase">
+                  Co-Founders
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                {/* Polaroid photos */}
+                <div className="flex items-start justify-center">
+                  {/* Jordan */}
+                  <div className="-rotate-6 bg-white rounded-sm p-2 sm:p-3 pb-10 sm:pb-14 shadow-elevate transition-all duration-500 ease-out-expo hover:rotate-0 hover:scale-105 hover:shadow-glow-lg hover:z-10 relative z-0">
+                    <div className="relative w-40 h-52 sm:w-52 sm:h-64">
+                      <Image
+                        src="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b417c2eba48773622062b2.png"
+                        alt="Jordan, Co-Founder of Rock N Roll Stoneworks"
+                        fill
+                        className="object-cover"
+                        sizes="250px"
+                      />
+                    </div>
+                    <p className="text-center font-display text-ink-700 text-sm font-medium mt-2 sm:mt-3">Jordan</p>
                   </div>
-                  <div className="relative aspect-[4/3] lg:aspect-auto lg:flex-1">
-                    <Image
-                      src="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69ccb19a5472d48257b8fe02.jpg"
-                      alt="Jason, Co-Founder of Rock N Roll Stoneworks"
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
+                  {/* Jason */}
+                  <div className="-ml-10 sm:-ml-12 mt-6 sm:mt-10 rotate-[5deg] bg-white rounded-sm p-2 sm:p-3 pb-10 sm:pb-14 shadow-elevate transition-all duration-500 ease-out-expo hover:rotate-0 hover:scale-105 hover:shadow-glow-lg hover:z-10 relative z-[1]">
+                    <div className="relative w-40 h-52 sm:w-52 sm:h-64">
+                      <Image
+                        src="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69ccb19a5472d48257b8fe02.jpg"
+                        alt="Jason, Co-Founder of Rock N Roll Stoneworks"
+                        fill
+                        className="object-cover object-top"
+                        sizes="250px"
+                      />
+                    </div>
+                    <p className="text-center font-display text-ink-700 text-sm font-medium mt-2 sm:mt-3">Jason</p>
                   </div>
                 </div>
-                <div className="p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
-                  <p className="inline-flex items-center gap-2 text-sm font-medium tracking-wider uppercase mb-4">
-                    <span className="w-6 h-px bg-gold-500" />
-                    <span className="text-gold-400">Meet the Founders</span>
+
+                {/* Text content */}
+                <div className="space-y-4 text-white/70 leading-relaxed">
+                  <p>
+                    What started as a passion for working with our hands turned into a mission to build outdoor spaces that families actually live in, not just look at. We founded Rock N Roll Stoneworks because we saw too many contractors cutting corners on the work that matters most — the base, the grade, the details you don&apos;t see but that determine whether your pool, patio, or outdoor kitchen still looks perfect in ten years.
                   </p>
-                  <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mb-2">
-                    Jordan &amp; Jason
-                  </h2>
-                  <p className="text-gold-400 font-body text-sm tracking-wide uppercase mb-6">
-                    Co-Founders
+                  <p>
+                    Every project we take on gets our personal attention from the first design conversation through the final walkthrough. We are on your job site, not behind a desk. When you hire Rock N Roll, you are hiring a team that treats your backyard like our own.
                   </p>
-                  <div className="space-y-4 text-white/70 leading-relaxed">
-                    <p>
-                      What started as a passion for working with our hands turned into a mission to build outdoor spaces that families actually live in, not just look at. We founded Rock N Roll Stoneworks because we saw too many contractors cutting corners on the work that matters most — the base, the grade, the details you don&apos;t see but that determine whether your pool, patio, or outdoor kitchen still looks perfect in ten years.
-                    </p>
-                    <p>
-                      Every project we take on gets our personal attention from the first design conversation through the final walkthrough. We are on your job site, not behind a desk. When you hire Rock N Roll, you are hiring a team that treats your backyard like our own.
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
