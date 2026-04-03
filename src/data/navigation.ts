@@ -74,6 +74,7 @@ export const footerNav = {
     { label: 'FAQ', href: '/faq' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
   ],
   areas: [
     { label: 'Denver, CO', href: '/service-areas/denver' },
