@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Raleway, DM_Sans } from 'next/font/google';
+import Script from 'next/script';
 import { siteConfig } from '@/data/site-config';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -78,6 +79,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd data={localBusinessSchema()} />
       </head>
       <body className="min-h-screen flex flex-col bg-white">
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=GT-MQDWGLQN"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'GT-MQDWGLQN');
+            gtag('config', 'AW-17449150936');
+          `}
+        </Script>
         <MotionProvider>
           <ScrollProgress />
           <Header />
