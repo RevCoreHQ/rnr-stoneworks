@@ -30,20 +30,19 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Custom Pools, Spas & Outdoor Living in Colorado`,
+    default: `${siteConfig.name} | Pools, Pavers & Outdoor Living on the Colorado Front Range`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [
-    'custom pool builder Colorado',
-    'fiberglass pool installation Colorado',
-    'concrete pool contractor Colorado',
-    'hardscape contractor Colorado',
-    'outdoor living contractor Colorado',
-    'paver installation Colorado',
-    'outdoor kitchen Colorado',
-    'spa builder Colorado Front Range',
-    'Rock N Roll Stoneworks',
+    'hardscape contractor Front Range',
+    'paver installation Boulder County',
+    'Belgard contractor Longmont Lafayette Erie',
+    'outdoor kitchen contractor north Denver metro',
+    'fiberglass pool installation Colorado Front Range',
+    'concrete pool contractor Loveland Fort Collins',
+    'retaining wall contractor Westminster Broomfield',
+    'Rock N Roll Stoneworks Longmont',
   ],
   icons: {
     icon: [
@@ -72,19 +71,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://assets.cdn.filesafe.space" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://assets.cdn.filesafe.space" />
-        <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://link.msgsndr.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://link.msgsndr.com" />
         <JsonLd data={localBusinessSchema()} />
       </head>
       <body className="min-h-screen flex flex-col bg-white">
-        {/* Google tag (gtag.js) */}
+        {/* Google tag — lazyOnload defers until after load (lighter main thread / LCP). Add a CMP and consent defaults here if you need GDPR-style gating. */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=GT-MQDWGLQN"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="gtag-init" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

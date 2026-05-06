@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { siteConfig } from '@/data/site-config';
 
 interface ContactPayload {
   firstName: string;
@@ -76,23 +77,16 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Please enter a valid phone number.' }, { status: 400 });
     }
 
-    console.log('📬 New contact form submission:', {
-      name: `${data.firstName} ${data.lastName}`,
-      email: data.email,
-      phone: data.phone,
-      service: data.service,
-      cityZip: data.cityZip,
-      message: data.message.slice(0, 100),
-      timestamp: new Date().toISOString(),
-    });
-
+    // Do not log PII (names, email, phone, address). Wire to your CRM/webhook here if needed.
     recordSubmission(ip);
 
     return NextResponse.json({ success: true, message: 'Thank you! We will be in touch soon.' });
-  } catch (error) {
-    console.error('Contact form error:', error);
+  } catch {
+    console.error('Contact API: unhandled error processing submission');
     return NextResponse.json(
-      { error: 'Something went wrong. Please call us directly at (303) 587-3035.' },
+      {
+        error: `Something went wrong. Please call us directly at ${siteConfig.phone}.`,
+      },
       { status: 500 }
     );
   }

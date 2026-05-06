@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { blogPosts, getBlogPostBySlug } from '@/data/blog';
+import { blogPosts, getBlogPostBySlug, getRelatedBlogPosts } from '@/data/blog';
 import { siteConfig } from '@/data/site-config';
 import { generatePageMetadata } from '@/lib/metadata';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { breadcrumbSchema, articleSchema } from '@/lib/schema';
+import { breadcrumbSchema, articleSchema, faqPageSchema } from '@/lib/schema';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CTASection } from '@/components/sections/CTASection';
 
@@ -45,6 +45,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.metaDescription,
     path: `/blog/${post.slug}`,
     ogImage: post.heroImage,
+    type: 'article',
+    keywords: post.keywords,
   });
 }
 
@@ -54,20 +56,34 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const paragraphs = post.body.split('\n\n').filter(Boolean);
-  const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const relatedPosts = getRelatedBlogPosts(post.slug, 3);
+  const heroAbsolute =
+    post.heroImage.startsWith('/') ? `${siteConfig.url}${post.heroImage}` : post.heroImage;
+  const wordCount = post.body.trim().split(/\s+/).filter(Boolean).length;
+
+  const jsonLd: Record<string, unknown>[] = [
+    breadcrumbSchema([
+      { name: 'Home', url: siteConfig.url },
+      { name: 'Blog', url: `${siteConfig.url}/blog` },
+      { name: post.title, url: `${siteConfig.url}/blog/${post.slug}` },
+    ]),
+    articleSchema(
+      post.title,
+      post.metaDescription,
+      `${siteConfig.url}/blog/${post.slug}`,
+      post.datePublished,
+      post.dateModified,
+      heroAbsolute,
+      { wordCount, articleSection: post.category },
+    ),
+  ];
+  if (post.faqs?.length) {
+    jsonLd.push(faqPageSchema(post.faqs));
+  }
 
   return (
     <>
-      <JsonLd
-        data={[
-          breadcrumbSchema([
-            { name: 'Home', url: siteConfig.url },
-            { name: 'Blog', url: `${siteConfig.url}/blog` },
-            { name: post.title, url: `${siteConfig.url}/blog/${post.slug}` },
-          ]),
-          articleSchema(post.title, post.metaDescription, `${siteConfig.url}/blog/${post.slug}`, post.datePublished, post.dateModified, post.heroImage),
-        ]}
-      />
+      <JsonLd data={jsonLd} />
 
       <div className="section-pad">
         <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16">
@@ -114,6 +130,32 @@ export default async function BlogPostPage({ params }: Props) {
 
           <article className="prose prose-stone prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-a:text-gold-700 prose-a:no-underline hover:prose-a:underline">
             {paragraphs.map((para, i) => {
+              const imgBlock = para
+                .trim()
+                .match(/^\[\[IMG:([^|]+)\|([^\]]*)\]\]$/);
+              if (imgBlock) {
+                const src = imgBlock[1].trim();
+                const alt = imgBlock[2].trim();
+                return (
+                  <figure key={i} className="my-10 not-prose max-w-none">
+                    <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden bg-cream-200 ring-1 ring-cream-200/80 shadow-sm">
+                      <Image
+                        src={src}
+                        alt={alt}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 896px"
+                        quality={80}
+                        className="object-cover"
+                      />
+                    </div>
+                    {alt ? (
+                      <figcaption className="text-sm text-ink-500 mt-3 text-center leading-snug px-2">
+                        {alt}
+                      </figcaption>
+                    ) : null}
+                  </figure>
+                );
+              }
               if (para.startsWith('## ')) {
                 return (
                   <h2 key={i} className="text-2xl sm:text-3xl font-display font-bold text-ink-900 mt-10 mb-4">

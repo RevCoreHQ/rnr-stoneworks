@@ -1,3 +1,6 @@
+import type { PageContentImage } from '@/types/page-media';
+import { buildServicePageMedia } from '@/data/page-media-paths';
+
 export interface FAQ {
   question: string;
   answer: string;
@@ -19,6 +22,8 @@ export interface ServiceData {
   intro: string;
   heroImage: string;
   heroAlt: string;
+  /** Optional inline art between sections (empty while we ship hero-only imagery). */
+  contentImages?: PageContentImage[];
   features: string[];
   body: BodySection[];
   faqs: FAQ[];
@@ -26,7 +31,7 @@ export interface ServiceData {
   primaryKeyword: string;
 }
 
-export const services: ServiceData[] = [
+const servicesBase: Omit<ServiceData, 'heroImage' | 'contentImages'>[] = [
   {
     slug: 'paver-installations',
     title: 'Paver Installations',
@@ -38,7 +43,6 @@ export const services: ServiceData[] = [
     h1: 'Custom Paver Installations in Colorado',
     intro:
       "Transform your driveway, walkway, patio, or entire backyard with a custom paver installation designed to last. Rock N Roll Stoneworks specializes in Belgard paver systems, from initial design through final installation. We handle every detail so you can enjoy a seamless build and a finished outdoor space that adds lasting value to your home.",
-    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=700&fit=crop',
     heroAlt: 'Custom paver patio installation in Colorado, Rock N Roll Stoneworks',
     features: [
       'Driveways, walkways, patios, and full backyard installs',
@@ -100,7 +104,6 @@ export const services: ServiceData[] = [
     h1: 'Custom Outdoor Fire Pits & Fireplaces in Colorado',
     intro:
       "A fire feature transforms your outdoor space into a true gathering place, one you can enjoy from early spring through the end of Colorado autumn. Rock N Roll Stoneworks designs and builds custom fire pits and outdoor fireplaces in a wide range of shapes, sizes, and finishes. From a simple round gas fire pit to a full masonry fireplace with stone surround, our team brings the same craftsmanship to every fire feature we build.",
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=700&fit=crop',
     heroAlt: 'Custom outdoor fire pit installation in Colorado',
     features: [
       'Custom design in any shape, size, or style',
@@ -153,7 +156,6 @@ export const services: ServiceData[] = [
     h1: 'Custom Outdoor Kitchens in Colorado',
     intro:
       "An outdoor kitchen extends your living space and transforms how you entertain. Rock N Roll Stoneworks designs and builds complete outdoor kitchen installations, from a simple built-in grill station to a full L-shaped kitchen with refrigeration, sink, storage, and countertops. We integrate outdoor kitchens seamlessly into your broader patio and hardscape design for a finished, cohesive result.",
-    heroImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=700&fit=crop',
     heroAlt: 'Custom outdoor kitchen build in Colorado by Rock N Roll Stoneworks',
     features: [
       'Custom layout design tailored to your entertaining style',
@@ -201,8 +203,7 @@ export const services: ServiceData[] = [
     h1: 'Custom Water Features for Colorado Outdoor Spaces',
     intro:
       "The sound of moving water transforms an outdoor space. Rock N Roll Stoneworks designs and installs custom water features, from color-changing LED waterfalls and spillways to bubbling pondless fountains and stream installations. Whether you want to mask street noise, create a focal point, or simply add a layer of tranquility to your backyard, we have a water feature solution that fits your space and budget.",
-    heroImage: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&h=700&fit=crop',
-    heroAlt: 'Custom water feature installation in Colorado by Rock N Roll Stoneworks',
+    heroAlt: 'Water feature and backyard hardscape in Colorado by Rock N Roll Stoneworks',
     features: [
       'Pondless waterfalls and stream installations',
       'Color-changing LED spillways and sheer descents',
@@ -249,7 +250,6 @@ export const services: ServiceData[] = [
     h1: 'Retaining Walls & Staircase Construction in Colorado',
     intro:
       "Sloped properties require thoughtful engineering to create usable, stable outdoor spaces. Rock N Roll Stoneworks designs and builds retaining walls and staircases that solve grade challenges while adding visual structure and beauty to your property. From a single low retaining wall that levels a planting bed to a multi-tiered system that creates distinct outdoor living zones, we have the experience to handle any slope.",
-    heroImage: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&h=700&fit=crop',
     heroAlt: 'Retaining wall installation in Colorado by Rock N Roll Stoneworks',
     features: [
       'Belgard retaining wall systems, engineered for Colorado soils',
@@ -297,7 +297,6 @@ export const services: ServiceData[] = [
     h1: 'Professional Outdoor Lighting in Colorado',
     intro:
       "Outdoor lighting extends the life of your outdoor space well past sunset and adds security, curb appeal, and ambiance to your property. Rock N Roll Stoneworks designs and installs LED-based lighting systems that reduce energy consumption by approximately 75% compared to traditional incandescent systems while delivering superior light quality. From ground-level path lighting to dramatic uplighting and built-in patio fixtures, we design systems that enhance your space without overwhelming it.",
-    heroImage: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&h=700&fit=crop',
     heroAlt: 'Outdoor LED landscape lighting installation in Colorado',
     features: [
       'LED systems, ~75% energy savings vs. incandescent',
@@ -345,7 +344,6 @@ export const services: ServiceData[] = [
     h1: 'Artificial Turf Installation in Colorado',
     intro:
       "Colorado\'s semi-arid climate makes maintaining a lush natural lawn a constant battle against heat, drought, and water restrictions. Artificial turf eliminates the problem entirely, delivering a perfectly green lawn year-round with minimal maintenance and no irrigation requirements. Rock N Roll Stoneworks installs premium artificial turf products designed to withstand Colorado\'s UV exposure, temperature swings, and pet traffic while looking and feeling natural.",
-    heroImage: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&h=700&fit=crop',
     heroAlt: 'Artificial turf installation in Colorado backyard',
     features: [
       'Premium artificial turf rated for Colorado UV and climate',
@@ -398,7 +396,6 @@ export const services: ServiceData[] = [
     h1: 'Custom Decks & Pergolas in Colorado',
     intro:
       "A well-designed deck or pergola creates a defined, comfortable outdoor living room that extends your usable square footage beyond the walls of your home. Rock N Roll Stoneworks designs and builds custom deck structures and pergolas that complement your home\'s architecture and integrate seamlessly with surrounding paving, fire features, and landscape elements.",
-    heroImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=700&fit=crop',
     heroAlt: 'Custom deck and pergola build in Colorado',
     features: [
       'Custom pergola structures, wood, aluminum, or vinyl',
@@ -442,7 +439,6 @@ export const services: ServiceData[] = [
     h1: 'Stamped Concrete Patios & Driveways in Colorado',
     intro:
       "Stamped concrete offers the look of stone, tile, or brick at a lower cost than individual paver systems, making it an excellent choice for large surface areas where budget is a primary consideration. Rock N Roll Stoneworks installs decorative stamped concrete with proper reinforcement, control joints, and integral or applied color for a finished result that holds up through Colorado\'s demanding freeze-thaw cycles.",
-    heroImage: 'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=1200&h=700&fit=crop',
     heroAlt: 'Stamped concrete patio installation in Colorado',
     features: [
       'Wide selection of patterns, slate, flagstone, cobblestone, wood plank',
@@ -486,7 +482,6 @@ export const services: ServiceData[] = [
     h1: 'Stone Veneers & Fireplace Surrounds in Colorado',
     intro:
       "Stone veneer transforms the visual character of both interior and exterior surfaces, from an interior fireplace surround that becomes the focal point of a living room to an exterior facade that elevates the entire curb appeal of a home. Rock N Roll Stoneworks installs both natural and manufactured stone veneer systems with proper substrate preparation and waterproofing for results that look beautiful and last decades.",
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=700&fit=crop',
     heroAlt: 'Stone veneer fireplace surround installation in Colorado',
     features: [
       'Interior fireplace surrounds and mantels',
@@ -515,6 +510,11 @@ export const services: ServiceData[] = [
     primaryKeyword: 'stone veneer installation Colorado',
   },
 ];
+
+export const services: ServiceData[] = servicesBase.map((s) => ({
+  ...s,
+  ...buildServicePageMedia(s.slug),
+}));
 
 export function getServiceBySlug(slug: string) {
   return services.find((s) => s.slug === slug);

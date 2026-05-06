@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 interface ButtonProps {
   href?: string;
-  variant?: 'primary' | 'ghost' | 'outline';
+  variant?: 'primary' | 'ghost' | 'outline' | 'outlineWhite';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   children: React.ReactNode;
@@ -17,6 +17,9 @@ const variants = {
   primary: 'bg-gold-500 text-ink-950 hover:bg-gold-400 shadow-glow btn-shimmer',
   ghost: 'border border-white/20 text-white/70 hover:border-gold-500/50 hover:text-gold-400',
   outline: 'border border-gold-400 text-gold-700 hover:bg-gold-50',
+  /** Matches home `Hero` phone CTA */
+  outlineWhite:
+    'border border-white/30 text-white/80 hover:border-gold-500/70 hover:text-gold-400',
 };
 
 const sizes = {

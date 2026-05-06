@@ -7,6 +7,8 @@ interface PageMetadataProps {
   path: string;
   ogImage?: string;
   type?: 'website' | 'article';
+  /** Search keywords / phrases (Next metadata `keywords`) */
+  keywords?: string[];
 }
 
 export function generatePageMetadata({
@@ -15,14 +17,18 @@ export function generatePageMetadata({
   path,
   ogImage,
   type,
+  keywords,
 }: PageMetadataProps): Metadata {
   const url = `${siteConfig.url}${path}`;
-  const image = ogImage || siteConfig.ogImage;
+  const rawImage = ogImage || siteConfig.ogImage;
+  const image =
+    rawImage.startsWith('/') ? `${siteConfig.url}${rawImage}` : rawImage;
   const ogType = type ?? (path.startsWith('/blog/') ? 'article' : 'website');
 
   return {
     title,
     description,
+    ...(keywords?.length ? { keywords } : {}),
     alternates: { canonical: url },
     openGraph: {
       title,

@@ -4,14 +4,17 @@ import Link from 'next/link';
 import { MapPin, ArrowRight, Phone, Shield, Clock, Star, CheckCircle } from 'lucide-react';
 import { serviceAreas, getServiceAreaBySlug } from '@/data/service-areas';
 import { services } from '@/data/services';
+import { pools } from '@/data/pools';
 import { siteConfig } from '@/data/site-config';
 import { generatePageMetadata } from '@/lib/metadata';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema, geoServiceSchema } from '@/lib/schema';
-import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+import { buildServiceAreaKeywords } from '@/lib/seo-keywords';
 import { Button } from '@/components/ui/Button';
 import { TrustStrip } from '@/components/sections/TrustStrip';
 import { CTASection } from '@/components/sections/CTASection';
+import { PageSpotlightGrid } from '@/components/sections/PageSpotlightGrid';
+import { PageWideImageHero } from '@/components/layout/PageWideImageHero';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -29,6 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: area.metaTitle,
     description: area.metaDescription,
     path: `/service-areas/${area.slug}`,
+    ogImage: area.heroImage,
+    keywords: buildServiceAreaKeywords(area),
   });
 }
 
@@ -57,48 +62,45 @@ export default async function ServiceAreaPage({ params }: Props) {
         ]}
       />
 
-      {/* Hero */}
-      <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-24 bg-ink-950 overflow-hidden grain topo-lines-dark">
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent" />
-        <div className="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs
-            items={[
-              { label: 'Service Areas', href: '/service-areas' },
-              { label: `${area.city}, ${area.state}`, href: `/service-areas/${area.slug}` },
-            ]}
-            variant="dark"
-          />
-          <div className="max-w-3xl mt-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium bg-gold-700/20 text-gold-300 rounded-full mb-4 border border-gold-600/30">
-              <MapPin className="w-3.5 h-3.5" />
-              {area.isPrimary ? 'Primary Service Area' : 'Extended Service Area'}
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6">
-              {area.h1}
-            </h1>
-            <p className="text-xl text-ink-300 leading-relaxed mb-8">{area.intro}</p>
-            {area.nearbyNote && (
-              <div className="bg-gold-700/10 border border-gold-500/20 rounded-xl p-4 mb-8">
-                <p className="text-gold-200 text-sm">{area.nearbyNote}</p>
-              </div>
-            )}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button href="/contact" size="lg">Get Your Free Estimate</Button>
-              <Button
-                href={`tel:${siteConfig.phoneRaw}`}
-                variant="outline"
-                size="lg"
-                className="border-white/30 text-white hover:bg-white/10"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                Call {siteConfig.phone}
-              </Button>
+      <PageWideImageHero
+        imageSrc={area.heroImage}
+        imageAlt={area.heroAlt}
+        breadcrumbs={[
+          { label: 'Service Areas', href: '/service-areas' },
+          { label: `${area.city}, ${area.state}`, href: `/service-areas/${area.slug}` },
+        ]}
+        eyebrow={`${area.city}, ${area.state} · ${area.isPrimary ? 'Primary' : 'Extended'} service area`}
+        title={area.h1}
+        description={area.intro}
+      >
+        <Button href="/contact" size="lg">
+          Get Your Free Estimate
+        </Button>
+        <Button href={`tel:${siteConfig.phoneRaw}`} variant="outlineWhite" size="lg">
+          <Phone className="w-4 h-4 mr-2" />
+          Call {siteConfig.phone}
+        </Button>
+      </PageWideImageHero>
+
+      {area.nearbyNote ? (
+        <section className="bg-cream-50 border-b border-cream-200 relative z-[3]">
+          <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 py-6">
+            <div className="max-w-3xl bg-gold-50 border border-gold-100 rounded-xl p-4">
+              <p className="text-sm text-ink-700 leading-relaxed">{area.nearbyNote}</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <TrustStrip />
+
+      {area.contentImages && area.contentImages.length > 0 && (
+        <section className="-mt-20 lg:-mt-24 pt-6 pb-14 lg:pb-16 bg-cream-50 border-b border-cream-200 relative z-[3]">
+          <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+            <PageSpotlightGrid images={area.contentImages} />
+          </div>
+        </section>
+      )}
 
       {/* Services available */}
       <section className="section-pad relative overflow-hidden grain-light">
@@ -108,23 +110,63 @@ export default async function ServiceAreaPage({ params }: Props) {
               Services Available in {area.city}
             </h2>
             <p className="text-ink-500 leading-relaxed">
-              Rock N Roll Stoneworks offers a full range of outdoor living services
-              {area.isPrimary ? ` throughout ${area.city}` : ` near ${area.city}`}.
+              Rock N Roll Stoneworks offers hardscape, outdoor living, and pool installation
+              {area.isPrimary ? ` throughout ${area.city}` : ` near ${area.city}`}. Use the links below to jump to
+              each service with local context—or open any page to read scope, process, and FAQs.
             </p>
           </div>
+          <h3 className="text-lg font-display font-semibold text-ink-900 mb-4 mt-2">
+            Hardscape & outdoor living
+          </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((s) => (
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="flex items-center justify-between px-5 py-4 bg-white rounded-xl border border-cream-200 shadow-panel hover:shadow-elevate hover:border-gold-200 transition-all group"
+                aria-label={`${s.title} in ${area.city}, ${area.state}`}
+                className="flex items-start justify-between gap-3 px-5 py-4 bg-white rounded-xl border border-cream-200 shadow-panel hover:shadow-elevate hover:border-gold-200 transition-all group text-left"
               >
-                <span className="text-sm font-medium text-ink-700 group-hover:text-gold-700 transition-colors">
-                  {s.title}
+                <span className="min-w-0">
+                  <span className="block text-sm font-semibold text-ink-900 group-hover:text-gold-800 transition-colors leading-snug">
+                    {s.title} in {area.city}
+                  </span>
+                  <span className="block text-xs text-ink-500 mt-1 leading-snug">
+                    {s.shortTitle} · Free estimates in {area.city}
+                  </span>
                 </span>
-                <ArrowRight className="w-4 h-4 text-ink-300 group-hover:text-gold-600 transition-colors shrink-0" />
+                <ArrowRight className="w-4 h-4 text-ink-300 group-hover:text-gold-600 transition-colors shrink-0 mt-0.5" aria-hidden />
               </Link>
             ))}
+          </div>
+
+          <h3 className="text-lg font-display font-semibold text-ink-900 mb-4 mt-12">
+            Pools & spas
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {pools.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/pools-spas/${p.slug}`}
+                aria-label={`${p.title} in ${area.city}, ${area.state}`}
+                className="flex items-start justify-between gap-3 px-5 py-4 bg-white rounded-xl border border-cream-200 shadow-panel hover:shadow-elevate hover:border-gold-200 transition-all group text-left"
+              >
+                <span className="min-w-0">
+                  <span className="block text-sm font-semibold text-ink-900 group-hover:text-gold-800 transition-colors leading-snug">
+                    {p.title} in {area.city}
+                  </span>
+                  <span className="block text-xs text-ink-500 mt-1 leading-snug">
+                    {p.shortTitle} · Latham & custom builds · {area.city}
+                  </span>
+                </span>
+                <ArrowRight className="w-4 h-4 text-ink-300 group-hover:text-gold-600 transition-colors shrink-0 mt-0.5" aria-hidden />
+              </Link>
+            ))}
+            <Link
+              href="/pools-spas"
+              className="flex items-center justify-center px-5 py-4 rounded-xl border border-dashed border-cream-300 text-sm font-medium text-gold-800 hover:bg-gold-50 hover:border-gold-300 transition-colors sm:col-span-2 lg:col-span-1"
+            >
+              View all pools & spas →
+            </Link>
           </div>
         </div>
       </section>

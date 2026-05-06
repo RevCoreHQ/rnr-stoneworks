@@ -31,6 +31,7 @@ export const mainNav: NavItem[] = [
     ],
   },
   { label: 'Gallery', href: '/gallery' },
+  { label: 'Blog', href: '/blog' },
   {
     label: 'Areas',
     href: '/service-areas',
@@ -71,6 +72,7 @@ export const footerNav = {
     { label: 'About Us', href: '/about' },
     { label: 'Our Process', href: '/process' },
     { label: 'Gallery', href: '/gallery' },
+    { label: 'Patio Builders (CO)', href: '/patio-builders-in-colorado' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },

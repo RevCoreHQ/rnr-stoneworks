@@ -3,6 +3,9 @@ export interface AreaBodySection {
   text: string;
 }
 
+import type { PageContentImage } from '@/types/page-media';
+import { buildAreaPageMedia } from '@/data/page-media-paths';
+
 export interface ServiceAreaData {
   slug: string;
   city: string;
@@ -13,12 +16,14 @@ export interface ServiceAreaData {
   intro: string;
   isPrimary: boolean;
   nearbyNote?: string;
-  heroImage?: string;
+  heroImage: string;
+  heroAlt: string;
+  contentImages?: PageContentImage[];
   body: AreaBodySection[];
   geo: { lat: number; lng: number };
 }
 
-export const serviceAreas: ServiceAreaData[] = [
+const serviceAreasBase: Omit<ServiceAreaData, 'heroImage' | 'heroAlt' | 'contentImages'>[] = [
   {
     slug: 'denver',
     city: 'Denver',
@@ -402,6 +407,11 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
   },
 ];
+
+export const serviceAreas: ServiceAreaData[] = serviceAreasBase.map((a) => ({
+  ...a,
+  ...buildAreaPageMedia(a.slug, a.city),
+}));
 
 export function getServiceAreaBySlug(slug: string) {
   return serviceAreas.find((a) => a.slug === slug);

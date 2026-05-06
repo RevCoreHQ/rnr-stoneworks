@@ -52,10 +52,14 @@ export function localBusinessSchema() {
       '@type': 'ContactPoint',
       telephone: siteConfig.phone,
       contactType: 'customer service',
-      areaServed: 'CO',
+      areaServed: [
+        { '@type': 'AdministrativeArea', name: 'Colorado Front Range' },
+        { '@type': 'State', name: 'Colorado' },
+      ],
       availableLanguage: 'English',
     },
     areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Colorado Front Range' },
       { '@type': 'City', name: 'Denver', addressRegion: 'CO' },
       { '@type': 'City', name: 'Boulder', addressRegion: 'CO' },
       { '@type': 'City', name: 'Highlands Ranch', addressRegion: 'CO' },
@@ -83,35 +87,9 @@ export function localBusinessSchema() {
       jobTitle: 'Owner',
     },
     foundingDate: '2017',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '25',
-      bestRating: '5',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-        author: { '@type': 'Person', name: 'Tyra Ware' },
-        datePublished: '2020-08-15',
-        reviewBody: 'Both my husband and I are extremely glad we picked Rock N Roll Stoneworks for our outdoor project. Jordan and Jason were a pleasure to work with from the planning of the design details to the completed backyard of our dreams.',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-        author: { '@type': 'Person', name: 'Sara Seitzman Hazard' },
-        datePublished: '2022-08-10',
-        reviewBody: 'We are so thrilled with our new patio! These guys did a great job and were a pleasure to work with.',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-        author: { '@type': 'Person', name: 'Rebecca Staley' },
-        datePublished: '2019-01-15',
-        reviewBody: 'Contracted with Rock n Roll Stoneworks for a large project. Jordan\'s expertise was invaluable for design and materials selection. Results exceeded our expectations.',
-      },
-    ],
+    // Intentionally no aggregateRating / review here: Google requires review markup to reflect
+    // verifiable, crawlable sources (e.g. first-party page or eligible third-party). Testimonials
+    // on the homepage use reviewSchema() separately; add AggregateRating only when tied to a compliant feed.
     sameAs,
     priceRange: '$$$',
     knowsAbout: [
@@ -129,6 +107,9 @@ export function localBusinessSchema() {
       'Fiberglass Pool Installation',
       'Concrete Pool Construction',
       'Hardscape Design',
+      'Freeze-thaw hardscape Colorado',
+      'ICPI paver base clay soil Front Range',
+      'Belgard authorized contractor Boulder County',
     ],
   };
 }
@@ -159,10 +140,10 @@ export function serviceSchema(name: string, description: string, url: string) {
       name: siteConfig.name,
       telephone: siteConfig.phone,
     },
-    areaServed: {
-      '@type': 'State',
-      name: 'Colorado',
-    },
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Colorado Front Range' },
+      { '@type': 'State', name: 'Colorado' },
+    ],
   };
 }
 
@@ -188,6 +169,7 @@ export function articleSchema(
   datePublished: string,
   dateModified?: string,
   image?: string,
+  opts?: { wordCount?: number; articleSection?: string },
 ) {
   return {
     '@context': 'https://schema.org',
@@ -197,12 +179,14 @@ export function articleSchema(
     url,
     datePublished,
     dateModified: dateModified || datePublished,
+    ...(opts?.wordCount != null && { wordCount: opts.wordCount }),
+    ...(opts?.articleSection && { articleSection: opts.articleSection }),
     ...(image && {
       image: {
         '@type': 'ImageObject',
         url: image,
-        width: 1200,
-        height: 700,
+        width: 1600,
+        height: 900,
       },
     }),
     author: {
@@ -217,6 +201,23 @@ export function articleSchema(
       url: siteConfig.url,
       logo: { '@type': 'ImageObject', url: siteConfig.ogImage },
     },
+  };
+}
+
+export function faqPageSchema(
+  items: readonly { question: string; answer: string }[],
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
   };
 }
 

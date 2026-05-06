@@ -1,6 +1,7 @@
 import { ServiceData } from './services';
+import { buildPoolPageMedia } from '@/data/page-media-paths';
 
-export const pools: ServiceData[] = [
+const poolsBase: Omit<ServiceData, 'heroImage' | 'contentImages'>[] = [
   {
     slug: 'fiberglass-pools',
     title: 'Fiberglass Pools',
@@ -12,7 +13,6 @@ export const pools: ServiceData[] = [
     h1: 'Latham Fiberglass Pool Installation in Colorado',
     intro:
       "As a Latham Pools Authorized Dealer, Rock N Roll Stoneworks delivers premium fiberglass pool installations backed by decades of manufacturing expertise. Fiberglass pools are the fastest-installing, lowest-maintenance pool option available, with a smooth gel coat finish that resists algae and a flexible composite shell engineered for Colorado's freeze-thaw cycles. From pool selection through surrounding hardscape, we handle every detail.",
-    heroImage: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52b47421e243d0c6c91fb.jpg',
     heroAlt: 'Latham fiberglass pool installation with paver surround in Colorado',
     features: [
       'Latham Pools Authorized Dealer, full model catalog access',
@@ -81,7 +81,6 @@ export const pools: ServiceData[] = [
     h1: 'Custom Concrete & Shotcrete Pools in Colorado',
     intro:
       "For homeowners who want a pool that is completely custom, concrete and shotcrete construction offers unlimited design freedom. Every curve, depth, shelf, and feature is built to your exact specifications. Rock N Roll Stoneworks designs and builds custom concrete pools from the ground up, integrating them seamlessly with surrounding paver decks, fire features, outdoor kitchens, and landscape elements for a complete outdoor living environment.",
-    heroImage: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c68f2eb84af4d72e905ae7.jpeg',
     heroAlt: 'Custom concrete shotcrete pool with outdoor living space in Erie, Colorado',
     features: [
       'Fully custom shapes, sizes, and depths',
@@ -140,6 +139,11 @@ export const pools: ServiceData[] = [
     primaryKeyword: 'concrete pool builder Colorado',
   },
 ];
+
+export const pools: ServiceData[] = poolsBase.map((p) => ({
+  ...p,
+  ...buildPoolPageMedia(p.slug),
+}));
 
 export function getPoolBySlug(slug: string) {
   return pools.find((p) => p.slug === slug);

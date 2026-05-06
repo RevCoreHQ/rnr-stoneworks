@@ -12,6 +12,7 @@ import { ServicesList } from '@/components/sections/ServicesList';
 import { StatsBar } from '@/components/sections/StatsBar';
 import { ProcessSteps } from '@/components/sections/ProcessSteps';
 import { TestimonialCards } from '@/components/sections/TestimonialCards';
+import { LatestBlogSection } from '@/components/sections/LatestBlogSection';
 import { CTASection } from '@/components/sections/CTASection';
 import { FAQAccordion } from '@/components/sections/FAQAccordion';
 import { InstagramFeed } from '@/components/sections/InstagramFeed';
@@ -19,10 +20,17 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { organizationSchema, webSiteSchema, faqSchema, reviewSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Custom Pool & Outdoor Living Builder Colorado | Rock N Roll Stoneworks',
+  title: 'Front Range Pool & Hardscape Builder | Longmont-Based Rock N Roll Stoneworks',
   description:
-    'Custom pools, spas, pavers, fire features, outdoor kitchens, and complete outdoor living across the Colorado Front Range. Free estimates.',
+    'Belgard-authorized paver, pool, and outdoor living design-build from Longmont: Boulder County, Fort Collins–Loveland, and the north Denver metro. Free estimates.',
   path: '/',
+  keywords: [
+    'hardscape contractor Longmont',
+    'pool builder Boulder County',
+    'Belgard paver installer Lafayette Erie',
+    'outdoor kitchen Westminster Broomfield',
+    'fiberglass pool Front Range',
+  ],
 });
 
 const homeReviews = [
@@ -47,7 +55,7 @@ const homeFaqs = [
   {
     question: 'What areas do you serve?',
     answer:
-      'We serve the entire Colorado Front Range including Denver, Boulder, Highlands Ranch, Littleton, Aurora, Lakewood, Lafayette, Erie, Westminster, Broomfield, Fort Collins, Loveland, and more. Contact us to confirm availability for your specific location.',
+      'We are based in Longmont and focus on the Colorado Front Range: Boulder County (Boulder, Lafayette, Erie, Louisville, Superior, Longmont), Fort Collins and Loveland, and the north Denver metro including Westminster, Thornton, Northglenn, Brighton, Broomfield, and Denver proper. We also work select south-metro projects in Aurora, Lakewood, Highlands Ranch, and Littleton. Contact us to confirm availability for your address.',
   },
   {
     question: 'Can I see a design before you start building?',
@@ -68,8 +76,8 @@ export default function HomePage() {
 
       <Hero
         headline="Luxury Outdoor Living, Crafted for Colorado"
-        subheadline="Custom Pools · Spas · Stonework · Colorado Front Range"
-        description="Complete design and build for custom pools, spas, paver installations, fire features, outdoor kitchens, and full outdoor living environments across the Colorado Front Range."
+        subheadline="Custom Pools · Spas · Stonework · Boulder County & the Front Range"
+        description="Design-build for pools, spas, Belgard pavers, fire features, outdoor kitchens, and full outdoor living—engineered for freeze-thaw, UV, and Front Range soils from our Longmont headquarters."
         backgroundImage="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69cbe3ac75f2f8fe39d9b06d.png"
         backgroundVideo="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69cbe3675ac7f358f6669926.mp4"
       />
@@ -91,6 +99,8 @@ export default function HomePage() {
       <ProcessSteps />
 
       <TestimonialCards />
+
+      <LatestBlogSection />
 
       <InstagramFeed />
 

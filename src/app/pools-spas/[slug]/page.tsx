@@ -7,10 +7,13 @@ import { siteConfig } from '@/data/site-config';
 import { generatePageMetadata } from '@/lib/metadata';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema, serviceSchema, faqSchema } from '@/lib/schema';
-import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { Button } from '@/components/ui/Button';
 import { FAQAccordion } from '@/components/sections/FAQAccordion';
 import { CTASection } from '@/components/sections/CTASection';
+import { PageSpotlightGrid } from '@/components/sections/PageSpotlightGrid';
+import { PageWideImageHero } from '@/components/layout/PageWideImageHero';
+import { ServiceAreaCoverageSection } from '@/components/sections/ServiceAreaCoverageSection';
+import { buildPoolPageKeywords } from '@/lib/seo-keywords';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -28,6 +31,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: pool.metaTitle,
     description: pool.metaDescription,
     path: `/pools-spas/${pool.slug}`,
+    ogImage: pool.heroImage,
+    keywords: buildPoolPageKeywords(pool),
   });
 }
 
@@ -52,36 +57,33 @@ export default async function PoolPage({ params }: Props) {
         ]}
       />
 
-      {/* Hero */}
-      <section className="pt-36 lg:pt-44 pb-16 bg-cream-50 border-b border-gold-200/40 relative overflow-hidden topo-lines">
-        <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
-          <Breadcrumbs items={[
-            { label: 'Pools & Spas', href: '/pools-spas' },
-            { label: pool.title, href: `/pools-spas/${pool.slug}` },
-          ]} />
-          <div className="max-w-3xl mt-8">
-            <p className="label mb-4">Pool Installation</p>
-            <h1 className="font-display font-light text-ink-900 mb-4" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
-              {pool.h1}
-            </h1>
-            <p className="font-body text-lg text-ink-500 leading-relaxed mb-8">{pool.intro}</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button href="/contact" size="lg">
-                Get Your Free {pool.shortTitle} Quote
-              </Button>
-              <Button
-                href={`tel:${siteConfig.phoneRaw}`}
-                variant="outline"
-                size="lg"
-              >
-                Call {siteConfig.phone}
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageWideImageHero
+        imageSrc={pool.heroImage}
+        imageAlt={pool.heroAlt}
+        breadcrumbs={[
+          { label: 'Pools & Spas', href: '/pools-spas' },
+          { label: pool.title, href: `/pools-spas/${pool.slug}` },
+        ]}
+        eyebrow="Pool installation"
+        title={pool.h1}
+        description={pool.intro}
+      >
+        <Button href="/contact" size="lg">
+          Get Your Free {pool.shortTitle} Quote
+        </Button>
+        <Button href={`tel:${siteConfig.phoneRaw}`} variant="outlineWhite" size="lg">
+          Call {siteConfig.phone}
+        </Button>
+      </PageWideImageHero>
 
-      {/* Features */}
+      {pool.contentImages?.[0] && (
+        <section className="-mt-24 lg:-mt-28 pt-8 pb-16 bg-cream-50 relative z-[3]">
+          <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+            <PageSpotlightGrid images={[pool.contentImages[0]]} />
+          </div>
+        </section>
+      )}
+
       <section className="section-pad relative overflow-hidden grain-light">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <h2 className="text-3xl font-display font-bold text-ink-900 mb-8">
@@ -100,7 +102,6 @@ export default async function PoolPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Body content */}
       {pool.body.length > 0 && (
         <section className="section-pad bg-gradient-to-b from-cream-50 to-white relative overflow-hidden topo-lines">
           <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16">
@@ -113,6 +114,11 @@ export default async function PoolPage({ params }: Props) {
                   <p className="text-ink-500 leading-relaxed text-base lg:text-lg">
                     {section.text}
                   </p>
+                  {i === 0 && pool.contentImages?.[1] ? (
+                    <div className="mt-10 not-prose">
+                      <PageSpotlightGrid images={[pool.contentImages[1]]} singleMaxWidth="3xl" />
+                    </div>
+                  ) : null}
                 </div>
               ))}
             </div>
@@ -120,10 +126,10 @@ export default async function PoolPage({ params }: Props) {
         </section>
       )}
 
-      {/* FAQ */}
+      <ServiceAreaCoverageSection offeringLabel={pool.title} />
+
       <FAQAccordion faqs={pool.faqs} title="Common Questions" subtitle="FAQ" />
 
-      {/* Related Pools */}
       {related.length > 0 && (
         <section className="section-pad relative overflow-hidden grain-light">
           <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">

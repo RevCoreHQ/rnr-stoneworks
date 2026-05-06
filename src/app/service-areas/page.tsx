@@ -11,10 +11,15 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Service Areas | Rock N Roll Stoneworks Colorado',
+  title: 'Front Range & Boulder County Service Areas | Rock N Roll Stoneworks',
   description:
-    'Serving Denver, Boulder, Highlands Ranch, Littleton, Aurora, Lakewood, Lafayette, Erie, Fort Collins, and more across the Colorado Front Range.',
+    'Longmont-based hardscape and pool contractor serving Fort Collins, Loveland, Boulder, Lafayette, Erie, Westminster, Thornton, Brighton, Broomfield, Denver, and nearby Front Range communities.',
   path: '/service-areas',
+  keywords: [
+    'hardscape contractor service area Longmont',
+    'paver installer Boulder County cities',
+    'pool builder northern Denver metro',
+  ],
 });
 
 export default function ServiceAreasPage() {

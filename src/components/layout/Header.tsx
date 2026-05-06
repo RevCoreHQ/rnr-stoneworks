@@ -13,22 +13,34 @@ const LOGO_URL = 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/6
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
+/** Same full-bleed image hero as home: transparent header until scroll (see `PageWideImageHero`). */
+function pathnameUsesImageHeroNav(pathname: string | null): boolean {
+  if (!pathname) return false;
+  if (pathname === '/') return true;
+  if (/^\/services\/.+/.test(pathname)) return true;
+  if (/^\/service-areas\/.+/.test(pathname)) return true;
+  if (/^\/pools-spas\/.+/.test(pathname)) return true;
+  return false;
+}
+
 export function Header() {
   const pathname = usePathname();
-  const isHomePage = pathname === '/';
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
+  const isImageHeroPage = pathnameUsesImageHeroNav(pathname);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
+    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [pathname]);
 
-  // Transparent only on homepage before scrolling; solid everywhere else
-  const isActive = !isHomePage || scrolled || mobileOpen;
+  // Transparent on home + image-hero detail pages until scroll; solid on index/list pages (e.g. /services, /pools-spas)
+  const isActive = !isImageHeroPage || scrolled || mobileOpen;
 
   return (
     <motion.header
@@ -179,6 +191,9 @@ export function Header() {
                     <>
                       <button
                         type="button"
+                        id={`nav-mobile-trigger-${item.href.slice(1).replace(/\//g, '-')}`}
+                        aria-expanded={mobileDropdown === item.label}
+                        aria-controls={`nav-mobile-panel-${item.href.slice(1).replace(/\//g, '-')}`}
                         onClick={() => setMobileDropdown(mobileDropdown === item.label ? null : item.label)}
                         className="flex items-center justify-between w-full py-3 text-base font-body font-medium text-white/70 hover:text-gold-400 transition-colors border-b border-white/5"
                       >
@@ -193,6 +208,9 @@ export function Header() {
                       <AnimatePresence>
                         {mobileDropdown === item.label && (
                           <motion.div
+                            id={`nav-mobile-panel-${item.href.slice(1).replace(/\//g, '-')}`}
+                            role="region"
+                            aria-labelledby={`nav-mobile-trigger-${item.href.slice(1).replace(/\//g, '-')}`}
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}

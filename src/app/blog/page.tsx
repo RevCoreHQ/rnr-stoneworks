@@ -11,10 +11,17 @@ import { breadcrumbSchema } from '@/lib/schema';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Hardscape Blog | Rock N Roll Stoneworks CO',
+  title: 'Hardscape Blog | Front Range Pavers, Pools & Outdoor Living',
   description:
-    'Expert guides on paver installation, fire pits, outdoor kitchens, and hardscape construction for Colorado homeowners from Rock N Roll Stoneworks.',
+    'Guides for Boulder County and the north Denver metro: paver costs, fire features, outdoor kitchens, stamped concrete, pool decks, and freeze-thaw hardscape from Longmont-based Rock N Roll Stoneworks.',
   path: '/blog',
+  keywords: [
+    'paver patio cost Lafayette Erie',
+    'outdoor kitchen planning Boulder County',
+    'fire pit vs fireplace Colorado Front Range',
+    'stamped concrete vs pavers Longmont',
+    'pool deck pavers Westminster',
+  ],
 });
 
 export default function BlogPage() {

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { generatePageMetadata } from '@/lib/metadata';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
-import { ContactForm } from '@/components/forms/ContactForm';
+import { ContactFormIsland } from '@/components/forms/ContactFormIsland';
 import { siteConfig } from '@/data/site-config';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { JsonLd } from '@/components/seo/JsonLd';
@@ -89,7 +89,7 @@ export default function ContactPage() {
 
             {/* Right - Form */}
             <div className="lg:col-span-3">
-              <ContactForm />
+              <ContactFormIsland />
             </div>
           </div>
         </div>

@@ -1,84 +1,185 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { ScrollReveal } from '@/components/motion/ScrollReveal';
 import { TextReveal } from '@/components/motion/TextReveal';
-
-const services = [
-  { num: '01', title: 'Paver Installations', sub: 'Driveways · Patios · Walkways', href: '/services/paver-installations' },
-  { num: '02', title: 'Retaining Walls & Stairs', sub: 'Structural & Decorative Systems', href: '/services/retaining-walls-stairs' },
-  { num: '03', title: 'Fire Pits & Fireplaces', sub: 'Custom Fire Features', href: '/services/fire-pits-fireplaces' },
-  { num: '04', title: 'Outdoor Kitchens', sub: 'Full Build-Outs', href: '/services/outdoor-kitchens' },
-  { num: '05', title: 'Water Features', sub: 'Waterfalls · Fountains · Ponds', href: '/services/water-features' },
-  { num: '06', title: 'Outdoor Lighting', sub: 'LED Architectural Lighting', href: '/services/outdoor-lighting' },
-  { num: '07', title: 'Artificial Turf', sub: 'Premium Synthetic Grass', href: '/services/artificial-turf' },
-  { num: '08', title: 'Stamped Concrete', sub: 'Decorative Concrete Surfaces', href: '/services/stamped-concrete' },
-  { num: '09', title: 'Pools & Spas', sub: 'Fiberglass · Concrete · Shotcrete', href: '/pools-spas' },
-];
+import { getServiceBySlug } from '@/data/services';
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
+type HomeRowDef =
+  | { type: 'service'; slug: string; eyebrow: string }
+  | { type: 'pools'; eyebrow: string };
+
+/** Order: flagship hardscape, pools hub, then remaining services. */
+const HOME_ROWS: HomeRowDef[] = [
+  { type: 'service', slug: 'paver-installations', eyebrow: 'Driveways · Patios · Walkways' },
+  { type: 'pools', eyebrow: 'Fiberglass · Concrete · Shotcrete' },
+  { type: 'service', slug: 'outdoor-kitchens', eyebrow: 'Full Build-Outs · Grills · Stone' },
+  { type: 'service', slug: 'fire-pits-fireplaces', eyebrow: 'Custom Fire Features' },
+  { type: 'service', slug: 'retaining-walls-stairs', eyebrow: 'Structural & Decorative Systems' },
+  { type: 'service', slug: 'water-features', eyebrow: 'Waterfalls · Fountains · Ponds' },
+  { type: 'service', slug: 'outdoor-lighting', eyebrow: 'LED Architectural Lighting' },
+  { type: 'service', slug: 'artificial-turf', eyebrow: 'Premium Synthetic Grass' },
+  { type: 'service', slug: 'decks-pergolas', eyebrow: 'Shade · Structure · Cedar & Composite' },
+  { type: 'service', slug: 'stamped-concrete', eyebrow: 'Decorative Concrete Surfaces' },
+  { type: 'service', slug: 'stone-veneers', eyebrow: 'Exterior & Fireplace Cladding' },
+];
+
+const POOLS_ROW = {
+  href: '/pools-spas',
+  title: 'Pools & Spas',
+  intro:
+    'Custom fiberglass pools from Latham and engineered shotcrete pools designed for Colorado freeze-thaw, UV, and your site. From spa spillways to full outdoor pool rooms, we handle design, excavation, shell, equipment, and hardscape integration.',
+  image: '/images/pages/pools/fiberglass-pools-hero.webp',
+  imageAlt: 'Residential fiberglass pool with deck and coping in Colorado',
+} as const;
+
+function excerpt(text: string, max = 300) {
+  const t = text.trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > 40 ? cut.slice(0, lastSpace) : cut).trim() + '…';
+}
+
 export function ServicesList() {
+  const rows: Array<{
+    key: string;
+    href: string;
+    title: string;
+    eyebrow: string;
+    body: string;
+    image: string;
+    imageAlt: string;
+    index: number;
+  }> = [];
+
+  HOME_ROWS.forEach((def, index) => {
+    if (def.type === 'pools') {
+      rows.push({
+        key: 'pools-spas',
+        href: POOLS_ROW.href,
+        title: POOLS_ROW.title,
+        eyebrow: def.eyebrow,
+        body: POOLS_ROW.intro,
+        image: POOLS_ROW.image,
+        imageAlt: POOLS_ROW.imageAlt,
+        index,
+      });
+      return;
+    }
+    const svc = getServiceBySlug(def.slug);
+    if (!svc) return;
+    rows.push({
+      key: svc.slug,
+      href: `/services/${svc.slug}`,
+      title: svc.title,
+      eyebrow: def.eyebrow,
+      body: excerpt(svc.intro),
+      image: svc.heroImage,
+      imageAlt: svc.heroAlt,
+      index,
+    });
+  });
+
   return (
-    <section className="section-pad bg-cream-50 relative overflow-hidden topo-lines">
-      <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-24 items-start">
-
-          <div className="lg:col-span-2">
-            <ScrollReveal direction="right">
-              <p className="label mb-6">What We Build</p>
-            </ScrollReveal>
-            <TextReveal
-              text="Every element of a refined outdoor environment."
-              as="h2"
-              className="font-display font-light text-ink-900 leading-[1.08]"
-              style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)' }}
-              delay={0.2}
-            />
-            <ScrollReveal direction="up" delay={0.4}>
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 mt-8 font-body text-[12px] tracking-[0.15em] uppercase font-semibold text-ink-900 hover-gold-line pb-0.5"
-              >
-                All Services <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </ScrollReveal>
-          </div>
-
-          <div className="lg:col-span-3">
-            {services.map((s, i) => (
-              <motion.div
-                key={s.href}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.06, ease }}
-              >
-                <motion.div
-                  whileHover={{ x: 8 }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-                >
-                  <Link
-                    href={s.href}
-                    className="group flex items-center justify-between py-5 border-b border-gold-100 hover:border-gold-300 transition-all duration-300 hover:bg-gradient-to-r hover:from-gold-50/50 hover:to-transparent"
-                  >
-                    <div className="flex items-center gap-6">
-                      <span className="font-display text-xl font-light text-gold-300 w-9 shrink-0">{s.num}</span>
-                      <div>
-                        <p className="font-body font-semibold text-ink-900 group-hover:text-gold-700 transition-colors">{s.title}</p>
-                        <p className="font-body text-ink-400 text-sm">{s.sub}</p>
-                      </div>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-gold-400 shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
+    <div className="relative overflow-hidden">
+      <section className="section-pad bg-cream-50 relative topo-lines grain-light">
+        <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+          <ScrollReveal direction="right">
+            <p className="label mb-6">What We Build</p>
+          </ScrollReveal>
+          <TextReveal
+            text="Every element of a refined outdoor environment."
+            as="h2"
+            className="font-display font-light text-ink-900 leading-[1.08] max-w-3xl"
+            style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)' }}
+            delay={0.15}
+          />
+          <ScrollReveal direction="up" delay={0.35}>
+            <p className="mt-6 max-w-2xl text-ink-500 font-body text-base lg:text-lg leading-relaxed">
+              Belgard-authorized hardscape, custom pools, and outdoor living—designed and built for Front Range homes from
+              our Longmont headquarters.
+            </p>
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 mt-8 font-body text-[12px] tracking-[0.15em] uppercase font-semibold text-ink-900 hover-gold-line pb-0.5"
+            >
+              All Services <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </ScrollReveal>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {rows.map((row) => {
+        const bg = row.index % 2 === 0 ? 'bg-white' : 'bg-cream-50';
+        const flipped = row.index % 2 === 1;
+
+        const textBlock = (
+          <div className="flex flex-col justify-center">
+            <p className="label mb-3">{row.eyebrow}</p>
+            <h3 className="font-display font-light text-ink-900 text-3xl sm:text-4xl leading-tight tracking-[-0.02em] mb-8">
+              {row.title}
+            </h3>
+            <p className="text-ink-500 font-body text-[15px] sm:text-base leading-relaxed mb-8 max-w-xl">{row.body}</p>
+            <Link
+              href={row.href}
+              className="inline-flex items-center gap-2 font-body text-[12px] tracking-[0.15em] uppercase font-semibold text-ink-900 hover-gold-line pb-0.5 w-fit group"
+            >
+              Explore {row.title}
+              <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </div>
+        );
+
+        const imageBlock = (
+          <Link
+            href={row.href}
+            className="block group rounded-2xl overflow-hidden ring-1 ring-cream-200/90 shadow-panel focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2"
+          >
+            <div className="relative aspect-[16/10] w-full">
+              <Image
+                src={row.image}
+                alt={row.imageAlt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={85}
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+            </div>
+          </Link>
+        );
+
+        return (
+          <section key={row.key} className={`section-pad ${bg} relative ${row.index % 2 === 0 ? 'grain-light' : ''}`}>
+            <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.55, ease }}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 lg:items-center"
+              >
+                {flipped ? (
+                  <>
+                    {imageBlock}
+                    {textBlock}
+                  </>
+                ) : (
+                  <>
+                    {textBlock}
+                    {imageBlock}
+                  </>
+                )}
+              </motion.div>
+            </div>
+          </section>
+        );
+      })}
+    </div>
   );
 }

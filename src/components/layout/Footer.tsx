@@ -156,7 +156,7 @@ export function Footer() {
             className="inline-flex items-center gap-1.5 font-body text-xs text-white/20 hover:text-white/50 transition-colors"
           >
             Powered by
-            <img
+            <Image
               src="https://assets.cdn.filesafe.space/NYlSya2nYSkSnnXEbY2l/media/69a9af9fb003fa7bb8bb92ee.png"
               alt="RevCore"
               width={16}

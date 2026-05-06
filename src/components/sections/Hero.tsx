@@ -98,6 +98,7 @@ export function Hero({
               muted
               loop
               playsInline
+              preload="metadata"
               className="absolute inset-0 w-full h-full object-cover object-center"
             >
               <source src={backgroundVideo} type="video/mp4" />
@@ -249,6 +250,7 @@ export function Hero({
               loop
               playsInline
               controls
+              preload="metadata"
               className="w-full h-full object-contain"
             >
               <source src={backgroundVideo} type="video/mp4" />
