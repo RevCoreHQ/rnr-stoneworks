@@ -181,7 +181,14 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
   };
 }
 
-export function articleSchema(title: string, description: string, url: string, datePublished: string) {
+export function articleSchema(
+  title: string,
+  description: string,
+  url: string,
+  datePublished: string,
+  dateModified?: string,
+  image?: string,
+) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -189,14 +196,26 @@ export function articleSchema(title: string, description: string, url: string, d
     description,
     url,
     datePublished,
+    dateModified: dateModified || datePublished,
+    ...(image && {
+      image: {
+        '@type': 'ImageObject',
+        url: image,
+        width: 1200,
+        height: 700,
+      },
+    }),
     author: {
       '@type': 'Organization',
       name: siteConfig.name,
+      url: siteConfig.url,
+      logo: { '@type': 'ImageObject', url: siteConfig.ogImage },
     },
     publisher: {
       '@type': 'Organization',
       name: siteConfig.name,
       url: siteConfig.url,
+      logo: { '@type': 'ImageObject', url: siteConfig.ogImage },
     },
   };
 }

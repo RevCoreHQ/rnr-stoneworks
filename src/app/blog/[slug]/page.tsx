@@ -65,7 +65,7 @@ export default async function BlogPostPage({ params }: Props) {
             { name: 'Blog', url: `${siteConfig.url}/blog` },
             { name: post.title, url: `${siteConfig.url}/blog/${post.slug}` },
           ]),
-          articleSchema(post.title, post.metaDescription, `${siteConfig.url}/blog/${post.slug}`, post.datePublished),
+          articleSchema(post.title, post.metaDescription, `${siteConfig.url}/blog/${post.slug}`, post.datePublished, post.dateModified, post.heroImage),
         ]}
       />
 
