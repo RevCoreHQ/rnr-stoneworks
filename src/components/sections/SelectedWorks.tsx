@@ -7,8 +7,11 @@ import { ArrowUpRight } from 'lucide-react';
 import { ScrollReveal } from '@/components/motion/ScrollReveal';
 import { TiltCard } from '@/components/motion/TiltCard';
 import { selectedWorksFeatured } from '@/data/selected-works';
+import { selectedWorksBlurBySrc } from '@/data/selected-works-blur';
 
-const BLUR_LIGHT = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 5%27%3E%3Cfilter id=%27b%27 color-interpolation-filters=%27sRGB%27%3E%3CfeGaussianBlur stdDeviation=%271%27/%3E%3C/filter%3E%3Crect filter=%27url(%23b)%27 width=%27100%25%27 height=%27100%25%27 fill=%27%23e8ecf0%27/%3E%3C/svg%3E';
+/** Fallback if a src is missing from the generated blur map */
+const BLUR_FALLBACK =
+  'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 5%27%3E%3Cfilter id=%27b%27 color-interpolation-filters=%27sRGB%27%3E%3CfeGaussianBlur stdDeviation=%271%27/%3E%3C/filter%3E%3Crect filter=%27url(%23b)%27 width=%27100%25%27 height=%27100%25%27 fill=%27%23e8ecf0%27/%3E%3C/svg%3E';
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
@@ -17,6 +20,13 @@ function tileAspectClass(wide: boolean | undefined, aspect: 'cinematic' | 'stand
     return 'aspect-[16/10] lg:aspect-[2.4/1]';
   }
   return 'aspect-[4/3]';
+}
+
+/** Quality tiers: first tile sharper for LCP in section, lower for below-fold bandwidth */
+function tileQuality(index: number): number {
+  if (index === 0) return 80;
+  if (index <= 2) return 75;
+  return 72;
 }
 
 export function SelectedWorks() {
@@ -60,11 +70,12 @@ export function SelectedWorks() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5">
           {selectedWorksFeatured.map((w, i) => (
             <TiltCard key={w.src} maxTilt={2.5} scale={1.01} className={w.wide ? 'lg:col-span-2' : undefined}>
+              {/* Fade-up only: clip-path hid tiles until animation finished, which felt like slow loading */}
               <motion.div
-                initial={{ clipPath: 'inset(100% 0 0 0)' }}
-                whileInView={{ clipPath: 'inset(0% 0 0 0)' }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.8, delay: i * 0.08, ease }}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '120px 0px -40px 0px' }}
+                transition={{ duration: 0.32, delay: Math.min(i * 0.03, 0.12), ease }}
               >
                 <Link
                   href={w.href}
@@ -74,11 +85,16 @@ export function SelectedWorks() {
                     src={w.src}
                     alt={w.alt}
                     fill
-                    sizes={w.wide ? '(max-width: 1024px) 100vw, min(1280px, 92vw)' : '(max-width: 1024px) 100vw, 45vw'}
-                    quality={82}
+                    sizes={
+                      w.wide
+                        ? '(max-width: 1024px) 100vw, min(1280px, 92vw)'
+                        : '(max-width: 1024px) 100vw, 45vw'
+                    }
+                    quality={tileQuality(i)}
                     priority={i === 0}
+                    fetchPriority={i === 0 ? 'high' : 'auto'}
                     placeholder="blur"
-                    blurDataURL={BLUR_LIGHT}
+                    blurDataURL={selectedWorksBlurBySrc[w.src] ?? BLUR_FALLBACK}
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-[1.2s] ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/25 to-transparent" />

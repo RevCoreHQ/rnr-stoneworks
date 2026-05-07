@@ -18,7 +18,8 @@
     "seed:page-placeholders": "node scripts/seed-page-visual-placeholders.mjs",
     "ensure:page-visuals": "node scripts/ensure-page-visuals.mjs",
     "import:phase1-heroes": "node scripts/import-phase1-heroes.mjs",
-    "convert:webp": "node scripts/convert-images-to-webp.mjs"
+    "convert:webp": "node scripts/convert-images-to-webp.mjs",
+    "generate:selected-works-blur": "node scripts/generate-selected-works-blur.mjs"
   },
   "dependencies": {
     "@behold/react": "^0.1.11",
