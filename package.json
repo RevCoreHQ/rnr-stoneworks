@@ -17,7 +17,8 @@
     "verify:page-visuals": "node scripts/verify-page-visuals.mjs",
     "seed:page-placeholders": "node scripts/seed-page-visual-placeholders.mjs",
     "ensure:page-visuals": "node scripts/ensure-page-visuals.mjs",
-    "import:phase1-heroes": "node scripts/import-phase1-heroes.mjs"
+    "import:phase1-heroes": "node scripts/import-phase1-heroes.mjs",
+    "convert:webp": "node scripts/convert-images-to-webp.mjs"
   },
   "dependencies": {
     "@behold/react": "^0.1.11",

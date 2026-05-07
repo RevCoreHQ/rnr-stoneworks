@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
       'Fiberglass shells install fast; concrete pools offer unlimited shape and finish options. Here is how Colorado climate, site access, and budget usually steer the decision.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/fiberglass-vs-concrete-pools-colorado.jpg',
+    heroImage: '/images/blog/fiberglass-vs-concrete-pools-colorado.webp',
     heroAlt:
       'Residential backyard pool with natural stone coping, light paver deck, and clear water at golden hour, Colorado-style outdoor setting',
     category: 'Pools',
@@ -101,7 +101,7 @@ Ready to compare on your lot? [Contact us](/contact) for a free consultation, or
       'Pool quotes vary widely. Here are typical Colorado Front Range budget bands for fiberglass vs custom concrete pools, and the line items that separate a responsible bid from a lowball.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/how-much-does-pool-cost-colorado-front-range.jpg',
+    heroImage: '/images/blog/how-much-does-pool-cost-colorado-front-range.webp',
     heroAlt:
       'Custom residential pool under construction: excavation and structural phase in a Colorado backyard with mountain sky',
     category: 'Pools',
@@ -177,7 +177,7 @@ Want numbers for your property? [Contact us](/contact) for a free consultation. 
       'Every municipality handles pool permits differently. Here is the typical sequence, the inspections that slow schedules, and how to avoid the avoidable delays.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/pool-permits-inspections-colorado-guide.jpg',
+    heroImage: '/images/blog/pool-permits-inspections-colorado-guide.webp',
     heroAlt:
       'Backyard pool excavation with utility locate flags and stakes marking underground lines before construction',
     category: 'Pools',
@@ -249,7 +249,7 @@ Rock N Roll Stoneworks often coordinates **deck drainage**, **bond beam coping**
       'Good outdoor lighting is subtle, safe, and serviceable. Here is how to plan zones around patios, steps, and pools, and why Front Range freeze-thaw favors professional installs.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/outdoor-lighting-planning-guide-colorado.jpg',
+    heroImage: '/images/blog/outdoor-lighting-planning-guide-colorado.webp',
     heroAlt:
       'Paver patio at twilight with warm path lights, uplighting on stone columns and trees, low-voltage outdoor lighting scene',
     category: 'Guides',
@@ -331,7 +331,7 @@ Planning a patio or pool and want lighting integrated from day one? [Contact us]
       'Veneer gives you the look of stone without carrying full wall thickness. Full masonry is structural. Here is how Colorado freeze-thaw and outdoor living loads steer the choice.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/stone-veneer-vs-full-masonry-colorado.jpg',
+    heroImage: '/images/blog/stone-veneer-vs-full-masonry-colorado.webp',
     heroAlt:
       'Home exterior with natural stone veneer wainscot on the lower wall and smooth stucco above, craftsman-style Colorado elevation',
     category: 'Guides',
@@ -405,7 +405,7 @@ Questions about veneer on your project? [Contact us](/contact) for a free estima
       'Stone faces are only as good as what is behind them. Here is the building-science case for drainage cavities, through-wall flashing, and proper caps on Front Range projects.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/stone-veneer-drainage-flashing-colorado.jpg',
+    heroImage: '/images/blog/stone-veneer-drainage-flashing-colorado.webp',
     heroAlt:
       'Rain-wet stone veneer wall with sill and flashing detail at a window, moisture management on a residential exterior',
     category: 'Guides',
@@ -483,7 +483,7 @@ Compare assembly types in [stone veneer vs full masonry](/blog/stone-veneer-vs-f
       'Colorado gives you a wide building season if soils are handled correctly, but some windows are easier for compaction, turf repair, and plant establishment. Here is how we calendar work.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/best-time-install-pavers-hardscape-colorado.jpg',
+    heroImage: '/images/blog/best-time-install-pavers-hardscape-colorado.webp',
     heroAlt:
       'Paver patio installation in progress: gravel base, paver pallets, and tools on a Colorado residential yard in morning light',
     category: 'Guides',
@@ -555,7 +555,7 @@ If your goal is **next summer**, call now: design, HOA, and utility locates cons
       'Paver patio costs in Colorado typically range from $15 to $35 per square foot installed. Here is what drives the price and what to expect from a quality installation.',
     datePublished: '2025-03-01',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/how-much-does-paver-patio-cost-colorado.jpg',
+    heroImage: '/images/blog/how-much-does-paver-patio-cost-colorado.webp',
     heroAlt: 'New paver patio and outdoor living space on a Colorado Front Range property',
     category: 'Guides',
     keywords: [
@@ -645,7 +645,7 @@ The only way to get an accurate estimate for your specific project is an on-site
       'Gas fire pits and outdoor fireplaces both create great gathering spaces, but they serve different needs. Here is how to decide which is right for your Colorado backyard.',
     datePublished: '2025-02-15',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/best-outdoor-fire-feature-colorado.jpg',
+    heroImage: '/images/blog/best-outdoor-fire-feature-colorado.webp',
     heroAlt: 'Gas fire pit and paver patio at dusk in Colorado',
     category: 'Guides',
     keywords: [
@@ -732,7 +732,7 @@ For most Colorado homeowners, we recommend starting with a custom gas fire pit i
       'Pavers are low maintenance, but a little attention every few years keeps them looking their best for decades. Here is our guide for Colorado homeowners.',
     datePublished: '2025-01-20',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/paver-maintenance-guide-colorado.jpg',
+    heroImage: '/images/blog/paver-maintenance-guide-colorado.webp',
     heroAlt: 'Wet paver driveway detail showing joints and edge restraint in Colorado',
     category: 'Maintenance',
     keywords: [
@@ -809,7 +809,7 @@ For any maintenance questions or concerns about your Rock N Roll Stoneworks inst
       "Colorado's freeze-thaw cycles punish the wrong patio material. Here is an honest comparison of pavers, poured concrete, stamped concrete, and flagstone to help you choose the right surface for your backyard.",
     datePublished: '2025-04-10',
     dateModified: '2025-04-10',
-    heroImage: '/images/blog/best-patio-materials-colorado.jpg',
+    heroImage: '/images/blog/best-patio-materials-colorado.webp',
     heroAlt: 'Colorado backyard showing paver patio, stone steps, and contrasting slab surfaces',
     category: 'Guides',
     keywords: [
@@ -877,7 +877,7 @@ If you are weighing options for a new patio, [contact us](/contact) for a free o
       'An outdoor kitchen is one of the highest-impact upgrades you can make to a Colorado backyard. Here is what to plan for before you build, from layout and appliances to altitude considerations and realistic budgets.',
     datePublished: '2025-06-22',
     dateModified: '2025-06-22',
-    heroImage: '/images/blog/outdoor-kitchen-planning-guide-colorado.jpg',
+    heroImage: '/images/blog/outdoor-kitchen-planning-guide-colorado.webp',
     heroAlt: 'Outdoor kitchen with stone veneer and pergola in Colorado',
     category: 'Guides',
     keywords: [
@@ -945,7 +945,7 @@ Ready to start planning your outdoor kitchen? [Contact Rock N Roll Stoneworks](/
       'Retaining wall pricing in Colorado is not one-size-fits-all. Height, material, drainage requirements, and soil conditions all play a role. Here is a straightforward breakdown of what to expect.',
     datePublished: '2025-09-05',
     dateModified: '2025-09-05',
-    heroImage: '/images/blog/retaining-wall-cost-colorado.jpg',
+    heroImage: '/images/blog/retaining-wall-cost-colorado.webp',
     heroAlt: 'Terraced segmental retaining wall with drainage stone on a Colorado slope',
     category: 'Guides',
     keywords: [
@@ -1005,7 +1005,7 @@ Retaining wall estimates require an on-site visit. The slope, soil, drainage, ac
       'Not every backyard project adds the same value. Here are seven outdoor living upgrades that consistently deliver strong returns for Colorado homeowners along the Front Range.',
     datePublished: '2025-11-18',
     dateModified: '2025-11-18',
-    heroImage: '/images/blog/outdoor-living-ideas-add-value-colorado.jpg',
+    heroImage: '/images/blog/outdoor-living-ideas-add-value-colorado.webp',
     heroAlt: 'Colorado backyard outdoor living with patio, fire table, and string lights at sunset',
     category: 'Inspiration',
     keywords: [
@@ -1075,7 +1075,7 @@ The strongest outdoor living designs combine multiple features into a cohesive w
       'There are several quality paver manufacturers in the market. Here is an honest look at how Belgard compares to Techo-Bloc, Unilock, and Cambridge, and why we built our business around Belgard products.',
     datePublished: '2026-01-14',
     dateModified: '2026-01-14',
-    heroImage: '/images/blog/belgard-pavers-vs-other-brands.jpg',
+    heroImage: '/images/blog/belgard-pavers-vs-other-brands.webp',
     heroAlt: 'Close-up of fresh modular paver installation texture in Colorado',
     category: 'Guides',
     keywords: [
@@ -1145,7 +1145,7 @@ Want to see Belgard products in person? [Contact us](/contact) to visit our samp
       'Your pool deck needs to be safe, durable, and attractive. Here is what Colorado homeowners should know about paver options for pool decks, from material selection to cost and design.',
     datePublished: '2026-02-08',
     dateModified: '2026-02-08',
-    heroImage: '/images/blog/pool-deck-paver-options-colorado.jpg',
+    heroImage: '/images/blog/pool-deck-paver-options-colorado.webp',
     heroAlt: 'Light paver pool deck and clear water in Colorado sunlight',
     category: 'Guides',
     keywords: [
@@ -1221,7 +1221,7 @@ Ready to plan your pool deck? [Contact Rock N Roll Stoneworks](/contact) for a f
       'Moving water transforms a backyard. Here is a guide to the most popular water feature styles for Colorado homes, including pondless waterfalls, spillways, and bubbling fountains, plus what you need to know about winter care and lighting.',
     datePublished: '2026-03-12',
     dateModified: '2026-03-12',
-    heroImage: '/images/blog/water-features-colorado-backyards.jpg',
+    heroImage: '/images/blog/water-features-colorado-backyards.webp',
     heroAlt: 'Pondless boulder waterfall in a Colorado xeriscape backyard',
     category: 'Inspiration',
     keywords: [
@@ -1295,7 +1295,7 @@ Water features are one of those projects where seeing examples makes the decisio
       'Pavers and stamped concrete are the two most popular patio materials in Colorado, and homeowners ask us to compare them constantly. Here is an honest breakdown of cost, durability, maintenance, and long-term value.',
     datePublished: '2024-08-15',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/pavers-vs-stamped-concrete-colorado.jpg',
+    heroImage: '/images/blog/pavers-vs-stamped-concrete-colorado.webp',
     heroAlt: 'Split comparison of stamped concrete sample and modular pavers',
     category: 'Guides',
     keywords: [
@@ -1396,7 +1396,7 @@ Also worth reading: [Why some paver installations fail](/blog/why-paver-installs
       'Paver patios should last decades. Many do not. Here are the most common reasons paver installations fail in Colorado, and the questions to ask before you hire a contractor.',
     datePublished: '2024-06-10',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/why-paver-installs-fail-colorado.jpg',
+    heroImage: '/images/blog/why-paver-installs-fail-colorado.webp',
     heroAlt: 'Open excavation showing aggregate base lifts over geotextile in Colorado clay',
     category: 'Guides',
     keywords: [
@@ -1509,7 +1509,7 @@ See also: [Pavers vs. stamped concrete](/blog/pavers-vs-stamped-concrete-colorad
       'Colorado weather swings from hail afternoons to blazing high-UV sun. A quality enclosure or patio cover keeps you outside longer, here is why we reach for Suncoast products when the design calls for adjustable shade, screens, or a true three-season room.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/suncoast-enclosures/dsc02374.png',
+    heroImage: '/images/blog/suncoast-enclosures/dsc02374.webp',
     heroAlt:
       'Bronze powder-coated louvered patio cover over tan pavers, circular stone fire pit with glass guard, and wicker seating, Colorado outdoor living',
     category: 'Guides',
@@ -1541,7 +1541,7 @@ See also: [Pavers vs. stamped concrete](/blog/pavers-vs-stamped-concrete-colorad
 
 That is why we install **Suncoast Enclosures** when homeowners want real flexibility: strong closures, clean powder-coated aluminum aesthetics, and a product family wide enough to match how you live, whether that is a **louvered roof**, **screen room**, **retractable screens**, **three-season glass**, or a **residential patio cover** that ties into the architecture of the home. Commercial applications are available as well for builders and property managers with repeatable specs.
 
-[[IMG:/images/blog/suncoast-enclosures/dsc02374.png|Louvered bronze patio cover over light tan pavers, circular stone fire pit with glass wind guard, and cushioned wicker seating, adjustable shade over a true outdoor room.]]
+[[IMG:/images/blog/suncoast-enclosures/dsc02374.webp|Louvered bronze patio cover over light tan pavers, circular stone fire pit with glass wind guard, and cushioned wicker seating, adjustable shade over a true outdoor room.]]
 
 ## Why “just add a pergola” is not always enough
 
@@ -1555,7 +1555,7 @@ Suncoast’s lineup lets us match the **performance tier** to your budget: fixed
 
 Suncoast’s modularity matters because Colorado lots are rarely flat rectangles. We are often tying a cover into multi-level patios, seat walls, or pool bond beams, coordination that has to be modeled before concrete and footings are poured.
 
-[[IMG:/images/blog/suncoast-enclosures/dsc02349.png|Low-angle detail of powder-coated aluminum louvered roof: structural corner, partially open blades for drainage and light control, suburban Colorado backdrop.]]
+[[IMG:/images/blog/suncoast-enclosures/dsc02349.webp|Low-angle detail of powder-coated aluminum louvered roof: structural corner, partially open blades for drainage and light control, suburban Colorado backdrop.]]
 
 ## Materials that survive Front Range reality
 
@@ -1563,7 +1563,7 @@ We are picky about anything overhead in hail country. Suncoast builds around **d
 
 If you select a **louvered roof** on a freestanding patio cover, you get a lightweight assembly that still reads substantial: engineered blades, positive drainage intent, and hardware that is not going to rust through in two winters. Finishes are selected to complement the bronze, charcoal, and warm-gray palettes we see on modern Colorado exteriors, so the cover looks like it belongs with your windows and trim, not like a temporary tent.
 
-[[IMG:/images/blog/suncoast-enclosures/dsc02352.png|Black louvered pergola over stone-veneered outdoor kitchen island, wicker seating, and large-format patio pavers, integrated shade, cooking, and hardscape in one composition.]]
+[[IMG:/images/blog/suncoast-enclosures/dsc02352.webp|Black louvered pergola over stone-veneered outdoor kitchen island, wicker seating, and large-format patio pavers, integrated shade, cooking, and hardscape in one composition.]]
 
 ## Pairing enclosures with the rest of your hardscape
 
@@ -1595,7 +1595,7 @@ When you are ready, we will walk the site, talk HOA design rules if applicable, 
       'Lee Sorensen’s Westminster outdoor refresh paired stamped concrete with a water-wise planting plan by Abby Rupsa of Botanical Living. Here is how the patio tiers, side-yard planters, and front entry details came together.',
     datePublished: '2024-04-20',
     dateModified: '2026-05-07',
-    heroImage: '/images/blog/sorensen-project/sorensen-09.png',
+    heroImage: '/images/blog/sorensen-project/sorensen-09.webp',
     heroAlt:
       'Sorensen Westminster backyard: stamped concrete patio with barrel-style fire table, wooden sling chairs, dining zone under umbrella, and olive-toned siding',
     category: 'Project Spotlights',
@@ -1627,35 +1627,35 @@ When you are ready, we will walk the site, talk HOA design rules if applicable, 
 
 The planting palette leans low-water and high-impact: aronia, blue oat grass, Manhattan euonymus, dwarf mugo pine, candytuft evergreen, and penstemon, all suited to Colorado’s sunny, drying wind cycles once established. The backyard now reads as a series of outdoor rooms rather than a single slab dropped behind the house.
 
-[[IMG:/images/blog/sorensen-project/sorensen-08.png|Wide backyard view: two-tier stamped concrete patio, dining under umbrella, lounge seating, hot tub, grill under deck, and lawn, Westminster Sorensen project.]]
+[[IMG:/images/blog/sorensen-project/sorensen-08.webp|Wide backyard view: two-tier stamped concrete patio, dining under umbrella, lounge seating, hot tub, grill under deck, and lawn, Westminster Sorensen project.]]
 
-[[IMG:/images/blog/sorensen-project/sorensen-05.png|Stamped concrete patio with outdoor dining set, cushions, and shade umbrella on a bright Colorado day.]]
+[[IMG:/images/blog/sorensen-project/sorensen-05.webp|Stamped concrete patio with outdoor dining set, cushions, and shade umbrella on a bright Colorado day.]]
 
-[[IMG:/images/blog/sorensen-project/sorensen-07.png|Side yard: stamped concrete walk, stained cedar raised beds on pea gravel, and stone veneer at the base of the grey-sided home.]]
+[[IMG:/images/blog/sorensen-project/sorensen-07.webp|Side yard: stamped concrete walk, stained cedar raised beds on pea gravel, and stone veneer at the base of the grey-sided home.]]
 
 ## Privacy, planters, and the “hell strip” conversation
 
 Lee wanted privacy along one property line. Abby specified a modest berm planted with **Karl Foerster grass**, about twenty-four inches of lift, to soften views without building a fortress wall. The movement of the grass catches afternoon light and reads modern against the cool gray concrete.
 
-[[IMG:/images/blog/sorensen-project/sorensen-01.png|Ornamental grasses and smooth river-rock mulch along planting beds, low-water texture at the property edge.]]
+[[IMG:/images/blog/sorensen-project/sorensen-01.webp|Ornamental grasses and smooth river-rock mulch along planting beds, low-water texture at the property edge.]]
 
 Lee is an avid gardener, so pots and seasonal color mattered. Abby suggested stained cedar planters that echo the wood tones of the deck and fence; we built those along the side yard so herbs and annuals sit at waist height where they are easy to water without drowning the xeric beds.
 
-[[IMG:/images/blog/sorensen-project/sorensen-06.png|Gas fire pit table with wooden sling chairs on stamped concrete, one of the backyard gathering zones.]]
+[[IMG:/images/blog/sorensen-project/sorensen-06.webp|Gas fire pit table with wooden sling chairs on stamped concrete, one of the backyard gathering zones.]]
 
 The front yard includes a classic “hell strip” between sidewalk and street. Lee hoped to xeriscape that strip differently from the neighbors. HOA timing paused that slice of the project, but Abby is working with the HOA on templates so homeowners can adopt low-water hell strips without guesswork, exactly the kind of neighborhood leadership we like to see on the Front Range.
 
-[[IMG:/images/blog/sorensen-project/sorensen-02.png|Front elevation with landscaped walk-up beds: brick base, siding, and house number 14276, Westminster.]]
+[[IMG:/images/blog/sorensen-project/sorensen-02.webp|Front elevation with landscaped walk-up beds: brick base, siding, and house number 14276, Westminster.]]
 
 Warm brick on the home ties to a low segmental wall and cap at the entry walk, so hardscape reads intentional rather than pieced together.
 
-[[IMG:/images/blog/sorensen-project/sorensen-04.png|Craftsman porch with white railings, brick column bases, capped stone planter, and gravel transition to the lawn.]]
+[[IMG:/images/blog/sorensen-project/sorensen-04.webp|Craftsman porch with white railings, brick column bases, capped stone planter, and gravel transition to the lawn.]]
 
 ## Front yard stonework and water-smart details
 
 Closer to the street, a segmental retaining wall and cap define planting zones, keep mulch and gravel contained, and give the front elevation the same “designed” language as the rear patio. Decorative gravel bands, a young shade tree, and tight irrigation zoning keep maintenance predictable for a busy homeowner.
 
-[[IMG:/images/blog/sorensen-project/sorensen-03.png|Segmental block retaining wall with dark capstone, mulch, shrubs, and purple accents along the walk, Westminster front yard.]]
+[[IMG:/images/blog/sorensen-project/sorensen-03.webp|Segmental block retaining wall with dark capstone, mulch, shrubs, and purple accents along the walk, Westminster front yard.]]
 
 ## Takeaways for your own Westminster or Front Range backyard
 

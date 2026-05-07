@@ -45,7 +45,7 @@ const legacyPortfolioProjects: GalleryProject[] = [
 /** Standalone marketing CGI (also used on Selected Works); not tied to the matched before/after slider pair */
 const marketingConceptGallery: GalleryProject[] = [
   {
-    src: '/images/design-visualization/luxury-dusk-pavilion-concept.png',
+    src: '/images/design-visualization/luxury-dusk-pavilion-concept.webp',
     alt: 'Illustrative dusk visualization of infinity pool, spa, stone pavilion, and outdoor kitchen, generic marketing image, not a specific client home',
     label: 'Concept visualization · Hillside pool & pavilion (CGI)',
   },
