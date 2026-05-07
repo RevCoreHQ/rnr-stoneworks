@@ -35,7 +35,7 @@ export const selectedWorksFeatured: SelectedWork[] = [
     src: '/images/selected-works/sw-02-pavilion-kitchen-sunset.webp',
     alt: 'Stone pavilion with outdoor kitchen, fireplace wall, and infinity pool edge at Colorado sunset',
     href: '/services/outdoor-kitchens',
-    aspect: 'cinematic',
+    aspect: 'standard',
   },
   {
     title: 'Culinary Terrace & Stone Kitchen',
@@ -71,6 +71,7 @@ export const selectedWorksFeatured: SelectedWork[] = [
     src: '/images/selected-works/sw-06-arrival-court.webp',
     alt: 'Premium modular paver driveway and motor court with stone pillars and structured evergreen planting',
     href: '/services/paver-installations',
-    aspect: 'standard',
+    wide: true,
+    aspect: 'cinematic',
   },
 ];
