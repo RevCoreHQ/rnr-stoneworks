@@ -70,6 +70,7 @@ export const footerNav = {
   ],
   company: [
     { label: 'About Us', href: '/about' },
+    { label: 'Design visualization', href: '/design-visualization' },
     { label: 'Our Process', href: '/process' },
     { label: 'Gallery', href: '/gallery' },
     { label: 'Patio Builders (CO)', href: '/patio-builders-in-colorado' },

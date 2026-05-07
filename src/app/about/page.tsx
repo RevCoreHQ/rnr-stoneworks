@@ -69,10 +69,10 @@ export default function AboutPage() {
                   Rock N Roll Stoneworks, LLC is a custom pool, spa, and outdoor living contractor based in Longmont, Colorado. We design and build custom pools, spas, paver installations, fire features, outdoor kitchens, water features, retaining walls, and complete outdoor living environments for homeowners across the Front Range.
                 </p>
                 <p>
-                  We hold the industry&apos;s top certifications — Belgard Authorized Contractor, ICPI Certified Installer, and Latham Pools Authorized Dealer — ensuring the highest quality standards across everything we build, from custom pools and spas to complete hardscape environments.
+                  We hold the industry&apos;s top certifications, Belgard Authorized Contractor, ICPI Certified Installer, and Latham Pools Authorized Dealer, and we apply those standards across everything we build, from custom pools and spas to complete hardscape environments.
                 </p>
                 <p>
-                  Our process starts with a free on-site consultation and continues through custom design, expert installation, and a final walkthrough where you confirm everything meets your expectations before full payment is due. That last part matters — we believe a contractor who requires full payment only upon your satisfaction is a contractor you can trust.
+                  Our process starts with a free on-site consultation and continues through custom design, expert installation, and a final walkthrough where you confirm everything meets your expectations before full payment is due. That last part matters, and we believe a contractor who requires full payment only upon your satisfaction is a contractor you can trust.
                 </p>
                 <p>
                   We serve Denver, Boulder, Highlands Ranch, Littleton, Aurora, Lakewood, Lafayette, Erie, Fort Collins, Loveland, and surrounding communities across the Colorado Front Range. If you are in the area, there is a good chance we can help with your project.

@@ -16,6 +16,10 @@ function injectFormEmbedScript() {
   document.body.appendChild(script);
 }
 
+/**
+ * Go High Level (LeadConnector) embedded form, leads stay in your GHL workflow.
+ * To add qualification (budget, scope, pool, timeline), mirror those fields in the GHL form builder.
+ */
 export function ContactForm() {
   useEffect(() => {
     injectFormEmbedScript();
@@ -26,7 +30,21 @@ export function ContactForm() {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full space-y-5" id="contact-form">
+      <div className="rounded-xl border border-cream-200 bg-white/90 p-4 sm:p-5 text-sm text-ink-600 leading-relaxed">
+        <p className="font-display text-[11px] tracking-[0.16em] uppercase text-gold-700 mb-2">
+          Help us route your inquiry
+        </p>
+        <p className="mb-2">
+          In the message box below, consider including:
+        </p>
+        <ul className="list-disc pl-4 space-y-1 text-ink-600">
+          <li>Rough budget band and whether this is a full-yard / multi-trade project or a single feature</li>
+          <li>Whether a pool or spa is in scope, or if you are not sure yet</li>
+          <li>Ideal start timing and any HOA, access, or drainage constraints</li>
+        </ul>
+      </div>
+
       <iframe
         src={FORM_IFRAME_SRC}
         style={{ width: '100%', height: '678px', border: 'none', borderRadius: '12px' }}
@@ -43,7 +61,7 @@ export function ContactForm() {
         data-height="678"
         data-layout-iframe-id="inline-KqfvKeoGrD6B0NmO7jMm"
         data-form-id="KqfvKeoGrD6B0NmO7jMm"
-        title="Request a free estimate — Rock N Roll Stoneworks"
+        title="Request a free estimate, Rock N Roll Stoneworks"
       />
     </div>
   );

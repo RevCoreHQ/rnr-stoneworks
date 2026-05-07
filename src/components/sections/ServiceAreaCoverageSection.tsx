@@ -3,7 +3,7 @@ import { MapPin } from 'lucide-react';
 import { serviceAreas } from '@/data/service-areas';
 
 interface ServiceAreaCoverageSectionProps {
-  /** e.g. "Paver Installations" or "Fiberglass Pools" — used in headings only */
+  /** e.g. "Paver Installations" or "Fiberglass Pools", used in headings only */
   offeringLabel: string;
 }
 
@@ -25,8 +25,8 @@ export function ServiceAreaCoverageSection({ offeringLabel }: ServiceAreaCoverag
           <p className="text-ink-600 leading-relaxed text-base lg:text-lg">
             Rock N Roll Stoneworks is based in Longmont and builds throughout Boulder County, the north Denver metro,
             and nearby Front Range communities. Each local page lists every outdoor living service we offer in that
-            area—including{' '}
-            <strong className="font-semibold text-ink-800">{offeringLabel}</strong>—with city-specific context when
+            area, including{' '}
+            <strong className="font-semibold text-ink-800">{offeringLabel}</strong>, with city-specific context when
             permits, soils, or HOA rules matter.
           </p>
           <p className="text-ink-600 leading-relaxed text-base lg:text-lg mt-4">

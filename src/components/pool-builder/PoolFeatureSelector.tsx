@@ -21,7 +21,7 @@ export function PoolFeatureSelector({ value, onChange }: PoolFeatureSelectorProp
       <SectionHeader
         step={5}
         title="Add Pool Features"
-        description="Select all that interest you — every feature is optional."
+        description="Select all that interest you, every feature is optional."
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {poolFeatures.map((feature) => (

@@ -13,15 +13,32 @@
 }
 
 @layer base {
+  /*
+   * Hide the document scrollbar only. The fixed ScrollProgress bar shows depth;
+   * wheel, trackpad, keyboard, and touch still scroll. Inner regions with
+   * overflow-auto keep normal scrollbars.
+   */
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
   }
 
   body {
     @apply font-body text-ink-800 bg-white;
     font-feature-settings: 'kern' 1, 'liga' 1;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -59,7 +76,7 @@
     background: linear-gradient(90deg, var(--blue), transparent);
   }
 
-  /* Label / eyebrow — all-caps small sans */
+  /* Label / eyebrow, all-caps small sans */
   .label {
     @apply font-display text-[11px] font-semibold tracking-[0.22em] uppercase text-gold-500;
   }
@@ -140,7 +157,7 @@
     left: 100%;
   }
 
-  /* Hover underline — brand blue */
+  /* Hover underline, brand blue */
   .hover-gold-line {
     @apply relative;
   }
@@ -154,6 +171,10 @@
 
   .hover-gold-line:hover::after {
     width: 100%;
+  }
+
+  .link-gold {
+    @apply text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors;
   }
 
   /* Vertical text */
@@ -176,7 +197,7 @@
     -webkit-box-orient: vertical;
   }
 
-  /* Film grain overlay — premium texture on dark sections */
+  /* Film grain overlay, premium texture on dark sections */
   .grain {
     position: relative;
   }
@@ -195,7 +216,7 @@
     will-change: auto;
   }
 
-  /* Light paper/linen grain — subtle texture for white sections */
+  /* Light paper/linen grain, subtle texture for white sections */
   .grain-light {
     position: relative;
   }
@@ -212,7 +233,7 @@
     background-size: 256px 256px;
   }
 
-  /* Topographic contour lines — stone/terrain texture for cream sections */
+  /* Topographic contour lines, stone/terrain texture for cream sections */
   .topo-lines {
     position: relative;
   }
@@ -234,7 +255,7 @@
       radial-gradient(ellipse 300px 450px at 90% 40%, transparent 58%, #0b1219 58.5%, transparent 59%);
   }
 
-  /* Topographic contour lines — light variant for dark sections */
+  /* Topographic contour lines, light variant for dark sections */
   .topo-lines-dark {
     position: relative;
   }
@@ -256,7 +277,7 @@
       radial-gradient(ellipse 300px 450px at 90% 40%, transparent 58%, #c8a55a 58.5%, transparent 59%);
   }
 
-  /* Fine dot grid — precision/engineering texture for cream sections */
+  /* Fine dot grid, precision/engineering texture for cream sections */
   .dot-grid {
     position: relative;
   }

@@ -104,7 +104,7 @@ export function PoolBuilderPage() {
       <section className="section-pad relative overflow-hidden grain-light">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
-            {/* Left — Selectors */}
+            {/* Left, Selectors */}
             <div className="lg:col-span-2 space-y-12">
               {/* Step 1: Pool Type */}
               <PoolTypeSelector value={poolType} onChange={handleTypeChange} />
@@ -210,7 +210,7 @@ export function PoolBuilderPage() {
               </AnimatePresence>
             </div>
 
-            {/* Right — Sticky Estimate (desktop) */}
+            {/* Right, Sticky Estimate (desktop) */}
             <div className="hidden lg:block">
               <div className="sticky top-28">
                 <EstimateSummary {...estimateProps} />

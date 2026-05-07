@@ -45,7 +45,7 @@ function getLineItems(
     const sizeData = poolSizes.find((s) => s.id === size);
     const typeLabel = poolTypes.find((t) => t.id === poolType)?.title ?? '';
     if (sizeData) {
-      items.push({ label: `${typeLabel} — ${sizeData.label}`, range: sizeData.price[poolType] });
+      items.push({ label: `${typeLabel}, ${sizeData.label}`, range: sizeData.price[poolType] });
     }
   }
 

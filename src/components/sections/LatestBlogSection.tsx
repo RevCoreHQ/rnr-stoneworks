@@ -22,7 +22,7 @@ export function LatestBlogSection() {
               Front Range outdoor living guides
             </h2>
             <p className="text-lg text-ink-500 leading-relaxed">
-              Practical reads on paver costs, fire features, materials, and maintenance—written for Colorado homeowners.
+              Practical reads on paver costs, fire features, materials, and maintenance, written for Colorado homeowners.
             </p>
           </div>
           <Link

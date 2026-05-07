@@ -14,7 +14,7 @@ const faqs = [
   {
     question: 'What areas do you serve as patio and paver builders in Colorado?',
     answer:
-      'Rock N Roll Stoneworks is based in Longmont and builds across the Colorado Front Range, including Boulder County (Boulder, Lafayette, Erie, Louisville, Superior, Longmont), Fort Collins and Loveland, and the north Denver metro (Westminster, Thornton, Northglenn, Brighton, Broomfield, Denver). We also take select projects farther south—ask about your address.',
+      'Rock N Roll Stoneworks is based in Longmont and builds across the Colorado Front Range, including Boulder County (Boulder, Lafayette, Erie, Louisville, Superior, Longmont), Fort Collins and Loveland, and the north Denver metro (Westminster, Thornton, Northglenn, Brighton, Broomfield, Denver). We also take select projects farther south, ask about your address.',
   },
   {
     question: 'Why Belgard pavers for a Colorado patio?',
@@ -69,7 +69,7 @@ export default function PatioBuildersColoradoPage() {
               Patio builders in Colorado who engineer for freeze-thaw
             </h1>
             <p className="text-lg text-ink-500 leading-relaxed mb-6">
-              Colorado homeowners search for patio builders who can explain materials honestly—and then install them to survive hail, UV, and freeze-thaw. That is our lane:{' '}
+              Colorado homeowners search for patio builders who can explain materials honestly, and then install them to survive hail, UV, and freeze-thaw. That is our lane:{' '}
               <Link href="/services/paver-installations" className="text-gold-700 font-semibold hover:text-gold-800 underline decoration-gold-700/30">
                 Belgard paver patios, driveways, and outdoor rooms
               </Link>{' '}
@@ -93,13 +93,13 @@ export default function PatioBuildersColoradoPage() {
           <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start">
             <div>
               <h2 className="text-2xl font-display font-bold text-ink-900 mb-4">
-                Built for Colorado soils—not a generic catalog install
+                Built for Colorado soils, not a generic catalog install
               </h2>
               <ul className="space-y-3 text-ink-600">
                 <li className="flex gap-2">
                   <CheckCircle className="w-5 h-5 text-gold-600 shrink-0 mt-0.5" />
                   <span>
-                    ICPI-certified process for base, bedding, edge restraint, and polymeric joints—what keeps pavers flat after hail season and spring clay movement.
+                    ICPI-certified process for base, bedding, edge restraint, and polymeric joints, what keeps pavers flat after hail season and spring clay movement.
                   </span>
                 </li>
                 <li className="flex gap-2">
@@ -130,8 +130,7 @@ export default function PatioBuildersColoradoPage() {
                     and{' '}
                     <Link href="/blog/how-much-does-paver-patio-cost-colorado" className="text-gold-700 font-medium hover:underline">
                       real patio budgets on the Front Range
-                    </Link>
-                    —so you are not guessing after the crew leaves.
+                    </Link>, so you are not guessing after the crew leaves.
                   </span>
                 </li>
               </ul>
@@ -160,7 +159,7 @@ export default function PatioBuildersColoradoPage() {
                 <Link href="/service-areas" className="text-gold-700 font-medium hover:underline">
                   Browse all service areas
                 </Link>{' '}
-                or call—we will tell you quickly.
+                or call, we will tell you quickly.
               </p>
             </div>
           </div>

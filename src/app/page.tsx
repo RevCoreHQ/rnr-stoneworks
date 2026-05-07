@@ -1,28 +1,27 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { generatePageMetadata } from '@/lib/metadata';
-import { siteConfig } from '@/data/site-config';
 import { Hero } from '@/components/sections/Hero';
 import { CredentialsTicker } from '@/components/sections/CredentialsTicker';
 import { EditorialIntro } from '@/components/sections/EditorialIntro';
-import { BelgardFeature } from '@/components/sections/BelgardFeature';
 import { SelectedWorks } from '@/components/sections/SelectedWorks';
-import { BeforeAfterSection } from '@/components/sections/BeforeAfterSection';
-import { ServicesList } from '@/components/sections/ServicesList';
+import { DesignVisualizationTeaser } from '@/components/sections/DesignVisualizationTeaser';
+import { BelgardFeature } from '@/components/sections/BelgardFeature';
+import { FeaturedServicesGrid } from '@/components/sections/FeaturedServicesGrid';
 import { StatsBar } from '@/components/sections/StatsBar';
 import { ProcessSteps } from '@/components/sections/ProcessSteps';
 import { TestimonialCards } from '@/components/sections/TestimonialCards';
 import { LatestBlogSection } from '@/components/sections/LatestBlogSection';
-import { CTASection } from '@/components/sections/CTASection';
-import { FAQAccordion } from '@/components/sections/FAQAccordion';
 import { InstagramFeed } from '@/components/sections/InstagramFeed';
+import { BrandLongform } from '@/components/sections/BrandLongform';
+import { FAQAccordion } from '@/components/sections/FAQAccordion';
+import { CTASection } from '@/components/sections/CTASection';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { organizationSchema, webSiteSchema, faqSchema, reviewSchema } from '@/lib/schema';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Front Range Pool & Hardscape Builder | Longmont-Based Rock N Roll Stoneworks',
   description:
-    'Belgard-authorized paver, pool, and outdoor living design-build from Longmont: Boulder County, Fort Collins–Loveland, and the north Denver metro. Free estimates.',
+    'Longmont outdoor design-build: pools, spas, Belgard hardscape, kitchens, and full-yard living across the Front Range from Fort Collins through Boulder County and the north Denver metro. Free on-site consults.',
   path: '/',
   keywords: [
     'hardscape contractor Longmont',
@@ -38,7 +37,7 @@ const homeReviews = [
   { author: 'Sara Seitzman Hazard', quote: 'We are so thrilled with our new patio! These guys did a great job and were a pleasure to work with. We\'ve already had so many compliments from neighbors and friends.', rating: 5, date: '2022-08-10' },
   { author: 'Cindy Anderson Fox', quote: 'Rock n Roll Stoneworks just installed a stunning new paver stairway and patio in my back yard and I could not be more thrilled! The workmanship, attention to detail, and beauty of the finished product is second to none.', rating: 5, date: '2019-08-20' },
   { author: 'Rebecca Staley', quote: 'Contracted with Rock n Roll Stoneworks for a large project that included driveway, all walkways, front porch and back patio. Jordan\'s expertise was invaluable for design and materials selection. Results exceeded our expectations.', rating: 5, date: '2019-01-15' },
-  { author: 'Kris Burneson Hodgson', quote: 'Jordan had the best ideas for the shape of our patio and we drew it all out and loved it. They have an awesome crew and they work so hard. We couldn\'t be happier — it\'s beautiful.', rating: 5, date: '2019-08-22' },
+  { author: 'Kris Burneson Hodgson', quote: 'Jordan had the best ideas for the shape of our patio and we drew it all out and loved it. They have an awesome crew and they work so hard. We couldn\'t be happier, it\'s beautiful.', rating: 5, date: '2019-08-22' },
 ];
 
 const homeFaqs = [
@@ -75,150 +74,56 @@ export default function HomePage() {
       <JsonLd data={[organizationSchema(), webSiteSchema(), faqSchema(homeFaqs), ...reviewSchema(homeReviews)]} />
 
       <Hero
-        headline="Luxury Outdoor Living, Crafted for Colorado"
-        subheadline="Custom Pools · Spas · Stonework · Boulder County & the Front Range"
-        description="Design-build for pools, spas, Belgard pavers, fire features, outdoor kitchens, and full outdoor living—engineered for freeze-thaw, UV, and Front Range soils from our Longmont headquarters."
+        headline={`Luxury Outdoor Living,
+Crafted for Colorado`}
+        subheadline={`Custom Pools · Spas · Stonework
+Boulder County & the Front Range`}
+        subheadlineWide="Custom Pools · Spas · Stonework · Boulder County & the Front Range"
+        description="Single-contract outdoor design-build: pools, spas, Belgard hardscape, fire, kitchens, and full-yard living, phased when it helps and engineered for Colorado freeze-thaw, UV, and Front Range soils from Longmont."
         backgroundImage="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69cbe3ac75f2f8fe39d9b06d.png"
         backgroundVideo="https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69cbe3675ac7f358f6669926.mp4"
       />
 
+      {/* 1. Immediate credibility band right under hero */}
       <CredentialsTicker />
 
+      {/* 2. Single editorial intro: who we are + who we're built for */}
       <EditorialIntro />
 
-      <BelgardFeature />
-
+      {/* 3. Show the work first */}
       <SelectedWorks />
 
-      <BeforeAfterSection />
+      {/* 4. The design tool that gets clients to commit */}
+      <DesignVisualizationTeaser />
 
-      <ServicesList />
+      {/* 5. Quiet, narrow credibility moment */}
+      <BelgardFeature />
 
+      {/* 6. Six flagship offerings as a 3x2 grid (full catalog on /services) */}
+      <FeaturedServicesGrid />
+
+      {/* 7. Numeric proof */}
       <StatsBar />
 
+      {/* 8. How we work */}
       <ProcessSteps />
 
+      {/* 9. Voices */}
       <TestimonialCards />
 
+      {/* 10. Resources */}
       <LatestBlogSection />
 
+      {/* 11. Live field photos */}
       <InstagramFeed />
 
-      {/* Server-rendered SEO content — visible to crawlers without JS */}
-      <section className="section-pad bg-cream-50 topo-lines relative overflow-hidden">
-        <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
-          <p className="font-body text-[11px] tracking-[0.22em] uppercase text-gold-700 mb-5">About Our Company</p>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-            {/* Left column — main intro */}
-            <div className="lg:col-span-5">
-              <h2
-                className="font-display font-light text-ink-900 leading-[1.06] mb-6"
-                style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)' }}
-              >
-                Colorado&apos;s Custom Pool, Spa &amp; Outdoor Living Contractor
-              </h2>
-              <div className="space-y-4 text-ink-500 font-body text-[15px] leading-relaxed">
-                <p>
-                  Rock N Roll Stoneworks is a full-service custom pool, spa, and outdoor living contractor based in Longmont, Colorado. Our team specializes in transforming residential properties across the Colorado Front Range into beautiful, functional outdoor environments — from custom fiberglass and concrete pools to complete hardscape, fire features, outdoor kitchens, and more.
-                </p>
-                <p>
-                  Every project starts with a free on-site consultation where we walk your property, listen to your vision, and discuss budget. From there, our design team creates a detailed layout so you can see your finished project before we break ground. We handle everything from permits and material sourcing to expert installation and final walkthrough.
-                </p>
-              </div>
-            </div>
+      {/* 12. Compressed SEO long-form (replaces inline text walls) */}
+      <BrandLongform />
 
-            {/* Right column — detailed sections */}
-            <div className="lg:col-span-7 space-y-10">
-              <div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="h-px flex-1 bg-gold-700/20" />
-                  <h3 className="font-display font-light text-ink-800 text-lg whitespace-nowrap">Our Services</h3>
-                  <div className="h-px flex-1 bg-gold-700/20" />
-                </div>
-                <div className="space-y-3 text-ink-500 font-body text-[14px] leading-relaxed">
-                  <p>
-                    We offer a comprehensive range of services to create the outdoor space you have been imagining. Our <Link href="/services/paver-installations" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">paver installations</Link> include driveways, walkways, patios, and full backyard hardscape using premium Belgard products with lifetime material warranties. Custom <Link href="/services/fire-pits-fireplaces" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">fire pits and fireplaces</Link> extend your outdoor season with Warming Trends burner systems available in hand-lit, electronic, or Bluetooth remote start options.
-                  </p>
-                  <p>
-                    Our <Link href="/services/outdoor-kitchens" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">outdoor kitchens</Link> range from compact grilling stations to full cooking suites with sinks, refrigerators, and pizza ovens, all built with galvanized steel frames, granite countertops, and stone veneer facing designed for Colorado&apos;s climate. We design and install custom <Link href="/services/water-features" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">water features</Link> including pondless waterfalls, spillways, and bubbling fountains that bring the sound and beauty of moving water to your backyard.
-                  </p>
-                  <p>
-                    Our <Link href="/services/retaining-walls-stairs" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">retaining walls and stairs</Link> solve grading challenges while creating usable flat space on sloped lots, using Belgard segmental wall systems engineered for Colorado&apos;s expansive clay soils. Professional <Link href="/services/outdoor-lighting" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">outdoor LED lighting</Link> transforms your property after dark with path lights, up-lighting, accent lighting, and task lighting for cooking areas.
-                  </p>
-                  <p>
-                    We also install <Link href="/services/artificial-turf" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">artificial turf</Link> that stays green year-round with zero irrigation, build custom <Link href="/services/decks-pergolas" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">decks and pergolas</Link> for shade and structure, pour <Link href="/services/stamped-concrete" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">stamped concrete</Link> patios and driveways, apply <Link href="/services/stone-veneers" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">stone veneers</Link> to fireplaces and outdoor structures, and install <Link href="/pools-spas/fiberglass-pools" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Latham fiberglass swimming pools</Link> as a Latham Pools Authorized Dealer. View all of our <Link href="/services" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">hardscape services</Link>.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="h-px flex-1 bg-gold-700/20" />
-                  <h3 className="font-display font-light text-ink-800 text-lg whitespace-nowrap">Service Areas</h3>
-                  <div className="h-px flex-1 bg-gold-700/20" />
-                </div>
-                <div className="space-y-3 text-ink-500 font-body text-[14px] leading-relaxed">
-                  <p>
-                    We serve homeowners across the Colorado Front Range, including <Link href="/service-areas/denver" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Denver</Link>, <Link href="/service-areas/boulder" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Boulder</Link>, <Link href="/service-areas/highlands-ranch" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Highlands Ranch</Link>, <Link href="/service-areas/lakewood" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Lakewood</Link>, <Link href="/service-areas/littleton" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Littleton</Link>, <Link href="/service-areas/aurora" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Aurora</Link>, <Link href="/service-areas/lafayette" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Lafayette</Link>, <Link href="/service-areas/erie" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Erie</Link>, <Link href="/service-areas/fort-collins" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Fort Collins</Link>, and more. Our crews work throughout the Denver metro and the surrounding Front Range communities. See all of our <Link href="/service-areas" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">service areas</Link>.
-                  </p>
-                  <p>
-                    We know the soil conditions, permit requirements, HOA processes, and climate challenges specific to each community we serve. Lafayette&apos;s expansive clay soils require deeper aggregate bases. Boulder&apos;s building regulations demand careful impervious surface calculations. Erie&apos;s newer subdivisions need HOA-compliant designs. Our local expertise means your project is engineered correctly for your specific location.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="h-px flex-1 bg-gold-700/20" />
-                  <h3 className="font-display font-light text-ink-800 text-lg whitespace-nowrap">Design &amp; Build Process</h3>
-                  <div className="h-px flex-1 bg-gold-700/20" />
-                </div>
-                <div className="space-y-3 text-ink-500 font-body text-[14px] leading-relaxed">
-                  <p>
-                    Every Rock N Roll Stoneworks project follows a proven five-step process designed to eliminate surprises. It begins with a <Link href="/process" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">free on-site consultation</Link> where we walk your property, discuss your vision, and establish a realistic budget range. Next, our design team creates a detailed layout showing dimensions and material selections so you can see your completed outdoor space before any construction begins. You can request unlimited design revisions at no additional cost.
-                  </p>
-                  <p>
-                    Once you approve the design, we provide a written proposal with line-item pricing so you know exactly what you are getting and what it costs. Our ICPI-certified crew then handles every phase of installation, from site preparation and excavation to base compaction, material placement, and finishing. We take base preparation seriously because the base determines whether a paver installation lasts five years or fifty. We use proper aggregate depth, plate compaction at multiple stages, and correctly anchored edge restraints. The project concludes with a final walkthrough where you confirm the work meets your expectations before we collect final payment.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="h-px flex-1 bg-gold-700/20" />
-                  <h3 className="font-display font-light text-ink-800 text-lg whitespace-nowrap">Why Homeowners Choose Us</h3>
-                  <div className="h-px flex-1 bg-gold-700/20" />
-                </div>
-                <div className="space-y-3 text-ink-500 font-body text-[14px] leading-relaxed">
-                  <p>
-                    We hold the industry&apos;s top certifications — Belgard Authorized, ICPI Certified, and Latham Pools Authorized Dealer — because we believe in doing things right. Our crew follows best practices for every type of project, from proper base preparation on hardscape to precision pool installation. Every project is backed by our 2-year workmanship guarantee plus manufacturer warranties.
-                  </p>
-                  <p>
-                    We provide a detailed design of every project so you can see your completed outdoor space before a single stone is placed. Revisions are unlimited and free. We do not collect final payment until the project passes your walkthrough inspection. This approach reflects our confidence in the quality of what we build and our commitment to your complete satisfaction.
-                  </p>
-                  <p>
-                    Our team has completed hundreds of residential projects across the Colorado Front Range since 2017. From custom pools and spas to complete backyard transformations with kitchens, fire features, and lighting, we have the experience to handle projects of any scale. We use premium materials from trusted manufacturers, maintain clear communication throughout the build, and stand behind our work with written warranties.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="h-px flex-1 bg-gold-700/20" />
-                  <h3 className="font-display font-light text-ink-800 text-lg whitespace-nowrap">Get Started Today</h3>
-                  <div className="h-px flex-1 bg-gold-700/20" />
-                </div>
-                <p className="text-ink-500 font-body text-[14px] leading-relaxed">
-                  Ready to transform your outdoor space? <Link href="/contact" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">Contact us for a free estimate</Link> or call us directly at <a href={`tel:${siteConfig.phoneRaw}`} className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">{siteConfig.phone}</a>. There is no cost and no obligation for the initial consultation. Read our <Link href="/blog" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">hardscape blog</Link> for guides on costs, materials, and design ideas, or browse our <Link href="/gallery" className="text-gold-700 hover:text-gold-800 underline decoration-gold-700/30 hover:decoration-gold-700/60 transition-colors">project gallery</Link> to see our completed work across the Front Range. We look forward to helping you create the outdoor living space you have been imagining.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* 13. Top objections answered */}
       <FAQAccordion faqs={homeFaqs} title="Frequently Asked Questions" subtitle="Common Questions" />
 
+      {/* 14. Final ask */}
       <CTASection />
     </>
   );

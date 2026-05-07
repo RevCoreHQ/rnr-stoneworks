@@ -1,5 +1,5 @@
 /**
- * Regenerates scripts/page-visual-prompts.json — **hero WebP only** (phase 1).
+ * Regenerates scripts/page-visual-prompts.json, **hero WebP only** (phase 1).
  * When you want inline spotlight/detail art again, extend this script and page-media-paths.
  *
  *   npm run build:page-prompts
@@ -27,7 +27,7 @@ const services = [
   },
   {
     slug: 'outdoor-kitchens',
-    hero: 'Outdoor kitchen island with stone fascia, grill deck, and counter — sunny backyard.',
+    hero: 'Outdoor kitchen island with stone fascia, grill deck, and counter, sunny backyard.',
   },
   {
     slug: 'water-features',
@@ -43,19 +43,19 @@ const services = [
   },
   {
     slug: 'artificial-turf',
-    hero: 'Backyard with synthetic turf meeting a paver border — realistic pile and grading.',
+    hero: 'Backyard with synthetic turf meeting a paver border, realistic pile and grading.',
   },
   {
     slug: 'decks-pergolas',
-    hero: 'Cedar pergola over composite deck with mountain-soft sky — residential rear yard.',
+    hero: 'Cedar pergola over composite deck with mountain-soft sky, residential rear yard.',
   },
   {
     slug: 'stamped-concrete',
-    hero: 'Two-level stamped concrete patio with outdoor seating — ashlar texture.',
+    hero: 'Two-level stamped concrete patio with outdoor seating, ashlar texture.',
   },
   {
     slug: 'stone-veneers',
-    hero: 'Home exterior with stacked stone veneer around entry — warm afternoon light.',
+    hero: 'Home exterior with stacked stone veneer around entry, warm afternoon light.',
   },
 ];
 
@@ -94,7 +94,7 @@ const areas = [
 ];
 
 function entry(file, body) {
-  return { file, prompt: `${BASE} ${file} — ${body}` };
+  return { file, prompt: `${BASE} ${file}, ${body}` };
 }
 
 const items = [];
@@ -111,7 +111,7 @@ for (const [slug, city] of areas) {
   items.push(
     entry(
       `pages/areas/${slug}-hero.webp`,
-      `Hero establishing shot: premium outdoor living and hardscape near ${city}, Colorado — patio, planting, and home context.`
+      `Hero establishing shot: premium outdoor living and hardscape near ${city}, Colorado, patio, planting, and home context.`
     )
   );
 }

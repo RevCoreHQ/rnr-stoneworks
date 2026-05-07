@@ -16,7 +16,7 @@ export function PoolSizeSelector({ poolType, value, onChange }: PoolSizeSelector
       <SectionHeader
         step={2}
         title="Select Pool Size"
-        description="Approximate dimensions — your final design will be customized to your yard."
+        description="Approximate dimensions, your final design will be customized to your yard."
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {poolSizes.map((size) => (

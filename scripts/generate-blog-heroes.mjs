@@ -6,7 +6,7 @@
  *    (one image per slug). Save or copy each file to:
  *      public/images/blog/{slug}.jpg
  * 2. Run: npm run generate:blog-heroes
- *    — resizes every hero to 1600×900 JPEG (cover) for consistent layout and smaller files.
+ *, resizes every hero to 1600×900 JPEG (cover) for consistent layout and smaller files.
  *
  * Optional: npm run generate:blog-heroes -- --slug <slug>  (only that file if it exists)
  *

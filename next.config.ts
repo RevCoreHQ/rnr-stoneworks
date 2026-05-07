@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 // Next 16+ Turbopack can infer the wrong monorepo root (e.g. a parent ~/package-lock.json),
-// which makes `public/` resolve from the wrong directory — local `/images/*` then 404 and
+// which makes `public/` resolve from the wrong directory, local `/images/*` then 404 and
 // <Image> shows only the parent `bg-cream-200` on blog cards.
 const turbopackProjectRoot = path.dirname(fileURLToPath(import.meta.url));
 
@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
   },
   images: {
     // Next 16 defaults to qualities: [75] only; any other `quality` on <Image> returns 400 from /_next/image.
-    qualities: [40, 60, 65, 75, 80, 85],
+    qualities: [35, 40, 60, 65, 75, 80, 82, 85],
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       { protocol: 'https', hostname: 'assets.cdn.filesafe.space' },

@@ -41,6 +41,9 @@ function sanitize(str: string): string {
   return str.trim().replace(/<[^>]*>/g, '').slice(0, 1000);
 }
 
+/**
+ * Legacy / optional JSON endpoint. Primary leads use the Go High Level embedded form on /contact.
+ */
 export async function POST(request: NextRequest) {
   try {
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0] || 'unknown';

@@ -112,7 +112,7 @@ export default async function ServiceAreaPage({ params }: Props) {
             <p className="text-ink-500 leading-relaxed">
               Rock N Roll Stoneworks offers hardscape, outdoor living, and pool installation
               {area.isPrimary ? ` throughout ${area.city}` : ` near ${area.city}`}. Use the links below to jump to
-              each service with local context—or open any page to read scope, process, and FAQs.
+              each service with local context, or open any page to read scope, process, and FAQs.
             </p>
           </div>
           <h3 className="text-lg font-display font-semibold text-ink-900 mb-4 mt-2">

@@ -1,7 +1,7 @@
 import type { ServiceData } from '@/data/services';
 import type { ServiceAreaData } from '@/data/service-areas';
 
-/** Unique phrases for `<meta name="keywords">` — supplement titles/descriptions, avoid stuffing. */
+/** Unique phrases for `<meta name="keywords">`, supplement titles/descriptions, avoid stuffing. */
 export function buildServicePageKeywords(service: ServiceData): string[] {
   const cityHints = [
     'Denver',

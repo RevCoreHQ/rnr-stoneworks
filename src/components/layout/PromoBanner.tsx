@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
@@ -9,19 +9,47 @@ import { getCurrentPromo } from '@/data/seasonal-promos';
 const STORAGE_KEY = 'rnr-promo-dismissed';
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
+/** Scroll past ~half the viewport so the home hero isn’t interrupted. */
+const SCROLL_VIEWPORT_RATIO = 0.52;
+/** If the visitor never scrolls, show after this idle delay (ms). */
+const IDLE_REVEAL_MS = 14_000;
+
 export function PromoBanner() {
   const [visible, setVisible] = useState(false);
   const promo = getCurrentPromo();
+  const revealedRef = useRef(false);
+
+  const reveal = useCallback(() => {
+    if (revealedRef.current) return;
+    revealedRef.current = true;
+    setVisible(true);
+  }, []);
 
   useEffect(() => {
-    const dismissed = sessionStorage.getItem(STORAGE_KEY);
-    if (dismissed !== promo.season) {
-      // Longer delay on mobile to avoid feeling intrusive
-      const isMobile = window.innerWidth < 1024;
-      const timer = setTimeout(() => setVisible(true), isMobile ? 4000 : 2500);
-      return () => clearTimeout(timer);
-    }
-  }, [promo.season]);
+    revealedRef.current = false;
+
+    if (typeof window === 'undefined') return;
+    if (sessionStorage.getItem(STORAGE_KEY) === promo.season) return;
+
+    const tryRevealFromScroll = () => {
+      const threshold = window.innerHeight * SCROLL_VIEWPORT_RATIO;
+      if (window.scrollY >= threshold) reveal();
+    };
+
+    const onScroll = () => {
+      tryRevealFromScroll();
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    tryRevealFromScroll();
+
+    const timer = window.setTimeout(reveal, IDLE_REVEAL_MS);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.clearTimeout(timer);
+    };
+  }, [promo.season, reveal]);
 
   const dismiss = () => {
     setVisible(false);
@@ -47,7 +75,7 @@ export function PromoBanner() {
               <X className="w-4 h-4" />
             </button>
             <p className="font-body text-[10px] tracking-[0.18em] uppercase text-gold-400 font-semibold mb-1.5">
-              {promo.season} Special
+              {promo.label} Special
             </p>
             <p className="font-body text-[13px] sm:text-[13px] text-white/80 leading-relaxed pr-6 mb-3">
               {promo.headline}

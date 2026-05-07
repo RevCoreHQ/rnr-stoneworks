@@ -138,10 +138,10 @@ export default function PoolsSpasPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { title: 'Latham Authorized', desc: 'Full access to North America\'s largest fiberglass pool catalog with lifetime structural warranty.' },
-              { title: 'Complete Design-Build', desc: 'Pool, deck, fire features, outdoor kitchen, lighting — designed and built as one cohesive environment.' },
+              { title: 'Complete Design-Build', desc: 'Pool, deck, fire features, outdoor kitchen, lighting, designed and built as one cohesive environment.' },
               { title: 'Custom Design', desc: 'See your complete outdoor space in a detailed design layout before any work begins.' },
               { title: 'Belgard & ICPI Certified', desc: 'Premium paver pool decks installed to the highest industry standards.' },
-              { title: 'Colorado Specialists', desc: 'We engineer for freeze-thaw, expansive soils, and altitude — not guessing, building from experience.' },
+              { title: 'Colorado Specialists', desc: 'We engineer for freeze-thaw, expansive soils, and altitude, not guessing, building from experience.' },
               { title: 'One Team, One Vision', desc: 'No subcontractor shuffle. Our crew handles everything from excavation to the final walkthrough.' },
             ].map((item, i) => (
               <div key={i} className="p-5 border border-white/8 rounded-sm">

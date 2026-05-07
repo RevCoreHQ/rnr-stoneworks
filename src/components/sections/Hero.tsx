@@ -16,7 +16,10 @@ const BLUR_DARK = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w
 
 interface HeroProps {
   headline: string;
+  /** Mobile/small screens, may include line breaks (template literal with real newline in source). */
   subheadline?: string;
+  /** lg+ single-line eyebrow; when omitted, `subheadline` is used everywhere. */
+  subheadlineWide?: string;
   description?: string;
   backgroundImage?: string;
   backgroundVideo?: string;
@@ -25,6 +28,7 @@ interface HeroProps {
 export function Hero({
   headline,
   subheadline,
+  subheadlineWide,
   description,
   backgroundImage,
   backgroundVideo,
@@ -86,7 +90,7 @@ export function Hero({
     <>
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden grain">
 
-        {/* Background — fills full viewport including behind the nav */}
+        {/* Background, fills full viewport including behind the nav */}
         {backgroundVideo ? (
           <>
             {backgroundImage && (
@@ -110,14 +114,14 @@ export function Hero({
           <div className="absolute inset-0 bg-ink-950" />
         )}
 
-        {/* Bottom-up gradient — darkens where text lives */}
+        {/* Bottom-up gradient, darkens where text lives */}
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/55 to-ink-950/10" />
-        {/* Left-side vignette — frames the text */}
+        {/* Left-side vignette, frames the text */}
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950/60 via-ink-950/20 to-transparent" />
-        {/* Top-down gradient — keeps nav area readable */}
+        {/* Top-down gradient, keeps nav area readable */}
         <div className="absolute inset-0 bg-gradient-to-b from-ink-950/40 via-transparent to-transparent" />
 
-        {/* Aurora mesh — three overlapping radial gradients for ambient depth */}
+        {/* Aurora mesh, three overlapping radial gradients for ambient depth */}
         <motion.div
           className="absolute -inset-12 pointer-events-none"
           style={{ background: 'radial-gradient(ellipse 60% 50% at 20% 50%, rgba(26,171,227,0.06), transparent)' }}
@@ -137,7 +141,7 @@ export function Hero({
           transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut', delay: 7 }}
         />
 
-        {/* Video controls — bottom left */}
+        {/* Video controls, bottom left */}
         {backgroundVideo && (
           <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 z-20 flex items-center gap-2">
             <button
@@ -169,14 +173,27 @@ export function Hero({
           </motion.div>
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 pt-32 lg:pt-40 pb-16 lg:pb-20">
-          <div className="max-w-3xl">
+        {/* Content, responsive width: comfortable measure on phone, full use of canvas on desktop */}
+        <div className="relative z-10 max-w-screen-xl mx-auto px-5 sm:px-10 lg:px-16 pt-24 sm:pt-28 lg:pt-32 xl:pt-36 pb-14 sm:pb-16 lg:pb-20">
+          <div className="max-w-[min(100%,36rem)] sm:max-w-3xl lg:max-w-5xl xl:max-w-6xl">
             {subheadline && (
               <ScrollReveal direction="right" delay={0.2}>
-                <div className="flex items-center gap-3 mb-8">
-                  <span className="gold-line" />
-                  <span className="label-dark">{subheadline}</span>
+                <div className="flex items-start lg:items-center gap-2 sm:gap-2.5 mb-3.5 sm:mb-4 lg:mb-5">
+                  <span className="gold-line mt-1 sm:mt-1.5 lg:mt-0 shrink-0" />
+                  {subheadlineWide ? (
+                    <>
+                      <span className="label-dark whitespace-pre-line leading-snug sm:leading-relaxed tracking-[0.16em] sm:tracking-[0.2em] lg:tracking-[0.22em] text-[10px] sm:text-[11px] lg:hidden">
+                        {subheadline}
+                      </span>
+                      <span className="label-dark hidden lg:inline leading-relaxed tracking-[0.22em] text-[11px]">
+                        {subheadlineWide}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="label-dark whitespace-pre-line leading-snug sm:leading-relaxed tracking-[0.16em] sm:tracking-[0.2em] lg:tracking-[0.22em] text-[10px] sm:text-[11px]">
+                      {subheadline}
+                    </span>
+                  )}
                 </div>
               </ScrollReveal>
             )}
@@ -184,14 +201,13 @@ export function Hero({
             <TextReveal
               text={headline}
               as="h1"
-              className="font-display font-light text-white leading-[1.04] mb-8 tracking-[-0.02em]"
-              style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5rem)' }}
+              className="font-display font-light text-white tracking-[-0.02em] mb-7 sm:mb-8 lg:mb-9 leading-[0.82] text-[clamp(2.3rem,6.5vw_+_0.2rem,3.2rem)] sm:text-[clamp(2.45rem,5.2vw_+_0.35rem,3.65rem)] md:text-[clamp(2.65rem,4.5vw_+_0.5rem,4.1rem)] lg:text-[clamp(2.95rem,3.8vw_+_0.75rem,4.75rem)] xl:text-[clamp(3.2rem,3.25vw_+_1rem,5.75rem)]"
               delay={0.3}
             />
 
             {description && (
               <ScrollReveal direction="up" delay={0.5}>
-                <p className="font-body text-lg lg:text-xl text-white/80 leading-relaxed mb-12 max-w-xl">
+                <p className="font-body text-base sm:text-lg lg:text-xl xl:text-2xl text-white/80 leading-relaxed sm:leading-relaxed mb-10 sm:mb-11 lg:mb-12 max-w-lg sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
                   {description}
                 </p>
               </ScrollReveal>
@@ -219,15 +235,15 @@ export function Hero({
               </div>
             </StaggerChildren>
 
-            {/* Trust strip */}
+            {/* Trust strip, credentials & proof (eyebrow already states service scope) */}
             <ScrollReveal direction="up" delay={1}>
-              <div className="flex flex-wrap items-center gap-4 mt-8 text-white/40 text-xs font-body">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-8 text-white/40 text-xs font-body">
                 <span className="text-gold-500">★★★★★</span>
                 <span>5.0 on Google</span>
-                <span className="w-px h-3 bg-white/20" />
-                <span>Custom Pools & Spas</span>
-                <span className="w-px h-3 bg-white/20" />
-                <span>Hardscape & Stonework</span>
+                <span className="hidden sm:inline w-px h-3 bg-white/20" aria-hidden />
+                <span>Belgard Authorized Contractor</span>
+                <span className="w-px h-3 bg-white/20" aria-hidden />
+                <span>ICPI Certified · Latham Pools Authorized Dealer</span>
               </div>
             </ScrollReveal>
           </div>

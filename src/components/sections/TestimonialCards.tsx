@@ -8,7 +8,7 @@ import { StaggerChildren, staggerItem } from '@/components/motion/StaggerChildre
 const GOOGLE_REVIEWS_URL = 'https://share.google/E0p9OvVIvtdbw18jH';
 
 const featured = {
-  quote: "Both my husband and I are extremely glad we picked Rock N Roll Stoneworks for our outdoor project. Jordan and Jason were a pleasure to work with from the planning of the design details to the completed backyard of our dreams. They actually listened to the ideas we had and incorporated them into the plan. We had an extensive plan — outdoor kitchen, large hardscape area with mixed materials, a raised garden bed, sod, plants, and even a beach area. We were amazed at how well everything turned out. We now have our own backyard oasis!",
+  quote: "Both my husband and I are extremely glad we picked Rock N Roll Stoneworks for our outdoor project. Jordan and Jason were a pleasure to work with from the planning of the design details to the completed backyard of our dreams. They actually listened to the ideas we had and incorporated them into the plan. We had an extensive plan, outdoor kitchen, large hardscape area with mixed materials, a raised garden bed, sod, plants, and even a beach area. We were amazed at how well everything turned out. We now have our own backyard oasis!",
   author: 'Tyra Ware',
   date: 'August 2020',
   service: 'Outdoor Kitchen & Full Hardscape',
@@ -35,7 +35,7 @@ const secondary = [
     service: 'Driveway, Walkways & Patio',
   },
   {
-    quote: "Jordan had the best ideas for the shape of our patio and we drew it all out and loved it. Like lightening out went our old rotten deck and in went the patio with no hassle. They have an awesome crew and they work so hard. We couldn't be happier — it's beautiful.",
+    quote: "Jordan had the best ideas for the shape of our patio and we drew it all out and loved it. Like lightening out went our old rotten deck and in went the patio with no hassle. They have an awesome crew and they work so hard. We couldn't be happier, it's beautiful.",
     author: 'Kris Burneson Hodgson',
     date: 'August 2019',
     service: 'Patio Installation',
@@ -44,7 +44,7 @@ const secondary = [
 
 export function TestimonialCards() {
   return (
-    <section className="section-pad bg-white relative overflow-hidden grain-light">
+    <section className="section-pad bg-cream-50 relative overflow-hidden topo-lines">
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] pointer-events-none" style={{ background: 'radial-gradient(ellipse at 0% 100%, rgba(26,171,227,0.02), transparent 70%)' }} />
       <div className="relative z-10 max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
         <ScrollReveal direction="up">
@@ -65,7 +65,7 @@ export function TestimonialCards() {
 
         {/* Featured pull-quote */}
         <ScrollReveal direction="up" duration={0.9}>
-          <div className="relative border border-gold-200 rounded-sm p-10 lg:p-16 mb-8 overflow-hidden hover:border-gold-300 hover:shadow-glow-sm transition-all duration-500">
+          <div className="relative bg-white border border-gold-200 rounded-sm p-10 lg:p-16 mb-8 overflow-hidden shadow-panel hover:border-gold-300 hover:shadow-glow-sm transition-all duration-500">
             <motion.div
               initial={{ scale: 0, rotate: -20 }}
               whileInView={{ scale: 1, rotate: 0 }}
@@ -104,7 +104,7 @@ export function TestimonialCards() {
           </div>
         </ScrollReveal>
 
-        {/* Secondary quotes — 2x2 grid */}
+        {/* Secondary quotes, 2x2 grid */}
         <StaggerChildren stagger={0.1} className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {secondary.map((t, i) => (
             <motion.div
@@ -112,7 +112,7 @@ export function TestimonialCards() {
               variants={staggerItem}
               whileHover={{ y: -4, boxShadow: '0 20px 50px -12px rgba(11, 18, 25, 0.12)' }}
               transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-              className="bg-cream-50 border border-gold-100 rounded-sm p-7 cursor-default"
+              className="bg-white border border-gold-100 rounded-sm p-7 cursor-default shadow-panel"
             >
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: 5 }).map((_, j) => (

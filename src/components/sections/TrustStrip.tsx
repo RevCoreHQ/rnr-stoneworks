@@ -1,17 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { BadgeCheck, Shield, Star, FileText } from 'lucide-react';
+import { BadgeCheck, Shield, Star, FileText, Layers } from 'lucide-react';
 import { siteConfig } from '@/data/site-config';
 import { ScrollReveal } from '@/components/motion/ScrollReveal';
 
-const iconMap = { BadgeCheck, Shield, Star, FileText } as const;
+const iconMap = { BadgeCheck, Shield, Star, FileText, Layers } as const;
 
 export function TrustStrip() {
   return (
     <div className="bg-cream-50 border-b border-gold-200/40">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="grid grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
           {siteConfig.trustPoints.map((point, i) => {
             const Icon = iconMap[point.icon];
             return (

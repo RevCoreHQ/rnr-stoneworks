@@ -43,7 +43,7 @@ export function BelgardFeature() {
                 Featured in the Belgard Pro Consultation Guide
               </h2>
               <p className="font-body text-white/50 text-base leading-relaxed mb-6">
-                Our craftsmanship is showcased in Belgard&apos;s official Pro Consultation Guide — the resource Belgard provides to their top-tier authorized contractors nationwide. Being featured alongside the best in the industry is a testament to the quality of work we deliver on every project.
+                Our craftsmanship is showcased in Belgard&apos;s official Pro Consultation Guide, the resource Belgard provides to their top-tier authorized contractors nationwide. Being featured alongside the best in the industry is a testament to the quality of work we deliver on every project.
               </p>
               <div className="flex items-center gap-4">
                 <div className="h-px flex-1 bg-gold-500/20" />

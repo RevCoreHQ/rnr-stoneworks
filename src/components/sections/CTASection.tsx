@@ -15,7 +15,7 @@ interface CTASectionProps {
 
 export function CTASection({
   headline = 'Ready to Begin?',
-  description = 'Every project starts with a free consultation — we visit your property, understand your vision, and provide a no-obligation proposal with a detailed design.',
+  description = 'Every project starts with a free consultation, and we visit your property, understand your vision, and provide a no-obligation proposal with a detailed design.',
 }: CTASectionProps) {
   return (
     <section className="relative bg-ink-950 overflow-hidden grain">

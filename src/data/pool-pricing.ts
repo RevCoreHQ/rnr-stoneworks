@@ -65,7 +65,7 @@ export const poolTypes: PoolTypeOption[] = [
     title: 'Concrete / Shotcrete Pool',
     tagline: 'Fully Custom · Unlimited Design',
     description:
-      'Completely custom-built on site. Choose any shape, size, depth, or finish — the only limit is your imagination.',
+      'Completely custom-built on site. Choose any shape, size, depth, or finish, the only limit is your imagination.',
   },
 ];
 
@@ -116,7 +116,7 @@ export const poolShapes: PoolShapeOption[] = [
   {
     id: 'rectangle',
     label: 'Rectangle',
-    description: 'Clean, classic lines — ideal for lap swimming and modern aesthetics.',
+    description: 'Clean, classic lines, ideal for lap swimming and modern aesthetics.',
     poolTypes: ['fiberglass', 'concrete'],
   },
   {
@@ -140,13 +140,13 @@ export const poolShapes: PoolShapeOption[] = [
   {
     id: 'infinity',
     label: 'Infinity Edge',
-    description: 'Vanishing edge that creates a stunning visual effect — premium concrete only.',
+    description: 'Vanishing edge that creates a stunning visual effect, premium concrete only.',
     poolTypes: ['concrete'],
   },
   {
     id: 'geometric',
     label: 'Geometric',
-    description: 'Bold, angular shapes — hexagons, octagons, and custom polygons.',
+    description: 'Bold, angular shapes, hexagons, octagons, and custom polygons.',
     poolTypes: ['concrete'],
   },
 ];
@@ -157,7 +157,7 @@ export const poolFinishes: PoolFinishOption[] = [
   {
     id: 'standard-plaster',
     label: 'Standard Plaster',
-    description: 'Classic white marcite finish — smooth, bright, and budget-friendly.',
+    description: 'Classic white marcite finish, smooth, bright, and budget-friendly.',
     price: { low: 0, high: 0 },
     poolTypes: ['concrete'],
   },
@@ -171,21 +171,21 @@ export const poolFinishes: PoolFinishOption[] = [
   {
     id: 'pebble-finish',
     label: 'Pebble Finish',
-    description: 'PebbleTec or river-stone aggregate — premium feel and 15+ year lifespan.',
+    description: 'PebbleTec or river-stone aggregate, premium feel and 15+ year lifespan.',
     price: { low: 8_000, high: 15_000 },
     poolTypes: ['concrete'],
   },
   {
     id: 'glass-bead',
     label: 'Glass Bead / Tile',
-    description: 'Luxurious glass bead or full tile interior — ultimate customization.',
+    description: 'Luxurious glass bead or full tile interior, ultimate customization.',
     price: { low: 15_000, high: 30_000 },
     poolTypes: ['concrete'],
   },
   {
     id: 'fiberglass-gelcoat',
     label: 'Gelcoat Finish',
-    description: 'Factory-applied smooth gelcoat — stain-resistant and low maintenance.',
+    description: 'Factory-applied smooth gelcoat, stain-resistant and low maintenance.',
     price: { low: 0, high: 0 },
     poolTypes: ['fiberglass'],
   },
@@ -204,14 +204,14 @@ export const copingOptions: PoolFinishOption[] = [
   {
     id: 'standard-coping',
     label: 'Standard Coping',
-    description: 'Bullnose concrete or precast coping — clean and durable.',
+    description: 'Bullnose concrete or precast coping, clean and durable.',
     price: { low: 0, high: 0 },
     poolTypes: ['fiberglass', 'concrete'],
   },
   {
     id: 'natural-stone',
     label: 'Natural Stone Coping',
-    description: 'Travertine, limestone, or flagstone — timeless and elegant.',
+    description: 'Travertine, limestone, or flagstone, timeless and elegant.',
     price: { low: 4_000, high: 10_000 },
     poolTypes: ['fiberglass', 'concrete'],
   },
@@ -236,7 +236,7 @@ export const poolFeatures: PoolFeature[] = [
   {
     id: 'standalone-spa',
     label: 'Standalone Spa',
-    description: 'Separate in-ground spa — can be heated independently from the pool.',
+    description: 'Separate in-ground spa, can be heated independently from the pool.',
     price: { low: 15_000, high: 28_000 },
   },
   {
@@ -248,7 +248,7 @@ export const poolFeatures: PoolFeature[] = [
   {
     id: 'swim-up-bar',
     label: 'Swim-Up Bar',
-    description: 'In-pool bar seating with a raised counter — the ultimate entertainment feature.',
+    description: 'In-pool bar seating with a raised counter, the ultimate entertainment feature.',
     price: { low: 8_000, high: 18_000 },
   },
   {
@@ -278,7 +278,7 @@ export const poolFeatures: PoolFeature[] = [
   {
     id: 'salt-system',
     label: 'Saltwater System',
-    description: 'Salt chlorine generator — softer water, less chemicals, lower maintenance.',
+    description: 'Salt chlorine generator, softer water, less chemicals, lower maintenance.',
     price: { low: 2_000, high: 5_000 },
   },
   {

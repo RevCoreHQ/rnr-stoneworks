@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: 'Rock N Roll Stoneworks',
-  tagline: 'Custom Outdoor Spaces Built to Last',
+  tagline: 'Outdoor Design-Build for Colorado',
   description:
-    "Longmont-based hardscape, pool, and outdoor living contractor serving the Colorado Front Range from Fort Collins and Loveland through Boulder County (Boulder, Lafayette, Erie, Louisville, Superior, Longmont) and the north Denver metro (Westminster, Thornton, Northglenn, Brighton, Broomfield). Belgard-authorized paver and fire-feature installs, outdoor kitchens, retaining walls, fiberglass and concrete pools. Free estimates.",
+    'Longmont-based outdoor design-build: pools, spas, Belgard hardscape, outdoor kitchens, fire features, and full-yard living as a single contract, phased when it makes sense. Front Range from Fort Collins and Loveland through Boulder County and the north Denver metro. Free on-site consultations and detailed estimates.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://rnrstoneworks.com',
   ogImage: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41c34070c5886395d2f91.png',
   phone: '(720) 371-2403',
@@ -30,8 +30,9 @@ export const siteConfig = {
     { label: 'Belgard Authorized Contractor', icon: 'BadgeCheck' as const },
     { label: 'ICPI Certified Installer', icon: 'Shield' as const },
     { label: 'Latham Pools Authorized Dealer', icon: 'BadgeCheck' as const },
+    { label: 'Integrated design-build', icon: 'Layers' as const },
     { label: '2-Year Guarantee', icon: 'Star' as const },
-    { label: 'Free Estimates', icon: 'FileText' as const },
+    { label: 'Free on-site consults', icon: 'FileText' as const },
   ],
 } as const;
 

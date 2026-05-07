@@ -1,6 +1,6 @@
 /**
  * Creates missing hero WebPs from page-visual-prompts.json (neutral placeholders).
- * Does not overwrite existing files — safe to run before dev or build.
+ * Does not overwrite existing files, safe to run before dev or build.
  */
 import { existsSync, readFileSync } from 'fs';
 import { mkdirSync } from 'fs';

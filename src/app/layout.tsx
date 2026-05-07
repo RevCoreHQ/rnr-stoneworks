@@ -76,7 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd data={localBusinessSchema()} />
       </head>
       <body className="min-h-screen flex flex-col bg-white">
-        {/* Google tag — lazyOnload defers until after load (lighter main thread / LCP). Add a CMP and consent defaults here if you need GDPR-style gating. */}
+        {/* Google tag, lazyOnload defers until after load (lighter main thread / LCP). Add a CMP and consent defaults here if you need GDPR-style gating. */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=GT-MQDWGLQN"
           strategy="lazyOnload"

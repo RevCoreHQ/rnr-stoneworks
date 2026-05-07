@@ -20,7 +20,7 @@ export function PoolShapeSelector({ poolType, value, onChange }: PoolShapeSelect
         title="Pick a Shape"
         description={
           poolType === 'concrete'
-            ? 'Concrete pools can be built in virtually any shape — these are our most popular.'
+            ? 'Concrete pools can be built in virtually any shape, these are our most popular.'
             : 'Choose from our most popular Latham fiberglass shell shapes.'
         }
       />

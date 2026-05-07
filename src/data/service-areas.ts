@@ -144,7 +144,7 @@ const serviceAreasBase: Omit<ServiceAreaData, 'heroImage' | 'heroAlt' | 'content
       'Custom pavers, fire pits, and outdoor living in Firestone and Frederick CO. Belgard authorized. Free estimates.',
     h1: 'Hardscape & Outdoor Living in Firestone & Frederick, CO',
     intro:
-      'Rock N Roll Stoneworks serves homeowners in Firestone and Frederick with premium outdoor living construction. These growing communities offer larger lots and newer homes — an ideal canvas for comprehensive outdoor living projects that include paver patios, fire pits, outdoor kitchens, and complete backyard transformations.',
+      'Rock N Roll Stoneworks serves homeowners in Firestone and Frederick with premium outdoor living construction. These growing communities offer larger lots and newer homes, an ideal canvas for comprehensive outdoor living projects that include paver patios, fire pits, outdoor kitchens, and complete backyard transformations.',
     isPrimary: true,
     geo: { lat: 40.1128, lng: -104.9369 },
     body: [
@@ -280,7 +280,7 @@ const serviceAreasBase: Omit<ServiceAreaData, 'heroImage' | 'heroAlt' | 'content
       'Custom pavers, fire pits, and outdoor living in Mead and Berthoud CO. Free estimates available.',
     h1: 'Hardscape & Outdoor Living in Mead & Berthoud, CO',
     intro:
-      'Rock N Roll Stoneworks serves homeowners in Mead and Berthoud with custom hardscape and outdoor living construction. These growing Northern Colorado communities offer generous lot sizes and mountain views — the perfect foundation for premium outdoor environments.',
+      'Rock N Roll Stoneworks serves homeowners in Mead and Berthoud with custom hardscape and outdoor living construction. These growing Northern Colorado communities offer generous lot sizes and mountain views, the perfect foundation for premium outdoor environments.',
     isPrimary: false,
     geo: { lat: 40.2336, lng: -105.0781 },
     nearbyNote: 'Mead and Berthoud are within our extended service area. Contact us to discuss your project.',

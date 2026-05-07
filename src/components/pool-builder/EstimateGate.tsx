@@ -71,7 +71,7 @@ export function EstimateGate({ summary, onUnlock }: EstimateGateProps) {
           Unlock Your Estimate
         </p>
         <p className="font-body text-ink-400 text-xs mb-4">
-          Enter your info below and we&apos;ll reveal your personalized price range — plus a team member will follow up to discuss your project.
+          Enter your info below and we&apos;ll reveal your personalized price range, plus a team member will follow up to discuss your project.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-3">

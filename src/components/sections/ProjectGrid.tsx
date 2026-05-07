@@ -4,50 +4,12 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lightbox } from '@/components/ui/Lightbox';
-
-const projects = [
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79ad0276fa9e41f562.png', alt: 'Custom paver patio and outdoor living space in Colorado', label: 'Custom Patio & Outdoor Living, Colorado' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79b3d5f7b8e170b90f.png', alt: 'Belgard paver installation and hardscape project in Erie, Colorado', label: 'Paver Installation, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79c625852f25e3df82.png', alt: 'Backyard paver patio transformation in Boulder, Colorado', label: 'Backyard Transformation, Boulder, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79b3d5f785f870b90e.png', alt: 'Premium hardscape installation with retaining walls in Erie, Colorado', label: 'Premium Hardscape, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f7987f0f2270255e7e1.png', alt: 'Outdoor kitchen and paver patio design in Colorado', label: 'Outdoor Kitchen & Patio, Colorado' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f79ad0276705741f561.png', alt: 'Stone veneer and paver walkway installation in Westminster, Colorado', label: 'Stone & Paver Walkway, Westminster, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f7987f0f205f855e7e0.png', alt: 'Fire pit and paver patio project in Longmont, Colorado', label: 'Fire Pit & Patio, Longmont, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b90f795b89c789d1e7799c.png', alt: 'Complete outdoor living space with hardscape in Boulder, Colorado', label: 'Outdoor Living, Boulder, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c68ea7458e3.jpg', alt: 'Belgard paver patio and outdoor kitchen installation in Colorado', label: 'Full Hardscape & Kitchen, Colorado' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb277ba028b8ce2268.jpg', alt: 'Custom paver patio with natural gas fire pit in Erie, Colorado', label: 'Paver Patio & Fire Pit, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb070c5827655cf949.jpg', alt: 'Tiered natural stone retaining wall and landscape design in Boulder, Colorado', label: 'Retaining Walls, Boulder, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbbfc81f7607ecedf1.jpg', alt: 'Belgard paver patio and seat wall installation in Colorado', label: 'Outdoor Hardscape, Colorado' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbd548174caf1be587.jpg', alt: 'Multi-level paver walkway and retaining wall in Westminster, Colorado', label: 'Paver Installation, Westminster, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb0b5c435534dabbdc.jpg', alt: 'Outdoor living space with paver patio and landscape lighting in Longmont, Colorado', label: 'Outdoor Living, Longmont, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abb0b5c430b62dabbdb.jpg', alt: 'Custom hardscape design with stone planters and paver driveway in Erie, Colorado', label: 'Hardscape & Landscape, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487466a20d049.jpg', alt: 'Complete backyard transformation with Belgard pavers and stone steps in Boulder, Colorado', label: 'Backyard Transformation, Boulder, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487d1ff20d048.jpg', alt: 'Custom paver patio with built-in fire feature and seating area in Colorado', label: 'Pavers & Fire, Colorado' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbfb38ca4dc08ccfd8.jpg', alt: 'Outdoor kitchen with granite countertops and paver patio in Erie, Colorado', label: 'Outdoor Kitchen & Patio, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbcab7f75114aa984e.jpg', alt: 'Premium Belgard paver driveway and front entry hardscape in Westminster, Colorado', label: 'Premium Hardscape, Westminster, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbeba487271b20d047.jpg', alt: 'Complete outdoor living space with fire pit and paver patio in Colorado', label: 'Outdoor Living, Colorado' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c54027458e7.jpg', alt: 'Natural stone patio with custom fire pit and retaining wall in Boulder, Colorado', label: 'Patio & Fire Feature, Boulder, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69b41abbe8487c245a7458ee.jpg', alt: 'Custom interlocking paver design with decorative borders in Longmont, Colorado', label: 'Custom Paver Design, Longmont, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527040a4eb5da73734e0a.jpg', alt: 'Custom pool and spa installation in Colorado', label: 'Pool & Spa, Colorado' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527047794bf345c385977.jpg', alt: 'Luxury outdoor pool and hardscape project in Erie, Colorado', label: 'Pool & Hardscape, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c5270452ad3bade2cfbc7b.jpg', alt: 'Custom pool build with paver patio surround in Boulder, Colorado', label: 'Pool & Patio, Boulder, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52704d90a23c54d504485.jpg', alt: 'Fiberglass pool installation with outdoor living space in Colorado', label: 'Pool Installation, Colorado' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52704fc4181ea9728aebb.jpg', alt: 'Pool and spa with custom stone coping in Erie, Colorado', label: 'Pool & Spa, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c5270422e1ed0c7de40fb1.jpg', alt: 'Backyard pool transformation with paver deck in Boulder, Colorado', label: 'Pool Transformation, Boulder, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527047794bfaf5e385976.jpg', alt: 'Custom swimming pool with fire feature in Westminster, Colorado', label: 'Pool & Fire Feature, Westminster, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52704d90a23fa25504484.jpg', alt: 'Luxury pool and outdoor kitchen installation in Colorado', label: 'Pool & Outdoor Kitchen, Colorado' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527045ebd49ff3b601867.jpg', alt: 'Residential pool build with retaining wall in Longmont, Colorado', label: 'Pool & Retaining Wall, Longmont, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c527044a4efaed1d00e4a3.jpg', alt: 'Custom pool and paver patio design in Erie, Colorado', label: 'Pool & Paver Patio, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c5270422e1edaf5ce40fb2.jpg', alt: 'Complete pool and outdoor living installation in Boulder, Colorado', label: 'Pool & Outdoor Living, Boulder, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52b47421e24825d6c91fc.jpg', alt: 'Custom pool and hardscape project in Colorado', label: 'Pool & Hardscape, Colorado' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52b470a4eb5096173add1.jpg', alt: 'Pool installation with paver surround in Erie, Colorado', label: 'Pool Installation, Erie, CO' },
-  { src: 'https://assets.cdn.filesafe.space/9Er0a3QxE3UXUVoCQNyS/media/69c52b47421e243d0c6c91fb.jpg', alt: 'Custom pool and outdoor living space in Boulder, Colorado', label: 'Pool & Outdoor Living, Boulder, CO' },
-];
+import { galleryProjects } from '@/data/gallery-projects';
 
 const BLUR_LIGHT = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 5%27%3E%3Cfilter id=%27b%27 color-interpolation-filters=%27sRGB%27%3E%3CfeGaussianBlur stdDeviation=%271%27/%3E%3C/filter%3E%3Crect filter=%27url(%23b)%27 width=%27100%25%27 height=%27100%25%27 fill=%27%23dfe5ea%27/%3E%3C/svg%3E';
 
 // Deterministic pseudo-random rotation per card (-3 to +3 degrees)
-const ROTATIONS = projects.map((_, i) => {
+const ROTATIONS = galleryProjects.map((_, i) => {
   const seed = Math.sin(i * 2654.435 + 0.1) * 10000;
   return (seed - Math.floor(seed)) * 6 - 3;
 });
@@ -61,9 +23,9 @@ export function ProjectGrid() {
     <section className="section-pad bg-cream-50">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
-          {projects.map((project, i) => (
+          {galleryProjects.map((project, i) => (
             <motion.div
-              key={i}
+              key={project.src}
               initial={{ opacity: 0, y: 40, rotate: 0 }}
               whileInView={{ opacity: 1, y: 0, rotate: ROTATIONS[i] }}
               viewport={{ once: true, margin: '-40px' }}
@@ -99,7 +61,7 @@ export function ProjectGrid() {
       <AnimatePresence>
         {selectedIndex !== null && (
           <Lightbox
-            images={projects}
+            images={galleryProjects}
             selectedIndex={selectedIndex}
             onClose={() => setSelectedIndex(null)}
             onChangeIndex={setSelectedIndex}

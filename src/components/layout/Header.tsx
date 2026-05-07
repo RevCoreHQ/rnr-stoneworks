@@ -148,7 +148,7 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Mobile button — animated hamburger ↔ X */}
+          {/* Mobile button, animated hamburger ↔ X */}
           <button
             onClick={() => { setMobileOpen(!mobileOpen); if (mobileOpen) setMobileDropdown(null); }}
             className="lg:hidden relative w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-colors"

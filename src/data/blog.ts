@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: '2026-05-07',
     heroImage: '/images/blog/fiberglass-vs-concrete-pools-colorado.jpg',
     heroAlt:
-      'Residential backyard pool with natural stone coping, light paver deck, and clear water at golden hour—Colorado-style outdoor setting',
+      'Residential backyard pool with natural stone coping, light paver deck, and clear water at golden hour, Colorado-style outdoor setting',
     category: 'Pools',
     keywords: [
       'fiberglass vs concrete pool Colorado',
@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'Which installs faster?',
         answer:
-          'Fiberglass typically has a shorter on-site construction window because the shell arrives pre-formed. Shotcrete or concrete pools require forming, steel, plumbing, gunite or shotcrete placement, and cure cycles before finishes—often a longer build calendar.',
+          'Fiberglass typically has a shorter on-site construction window because the shell arrives pre-formed. Shotcrete or concrete pools require forming, steel, plumbing, gunite or shotcrete placement, and cure cycles before finishes, often a longer build calendar.',
       },
       {
         question: 'Can I get a vanishing edge or fully custom shape with fiberglass?',
@@ -55,7 +55,7 @@ export const blogPosts: BlogPost[] = [
           'Fiberglass offers many models and sizes but not unlimited geometry. Complex perimeter overflow, tight radiuses, or one-of-a-kind outlines are usually better served by a custom concrete or shotcrete pool.',
       },
     ],
-    body: `Choosing a pool type is not about which material is “best” in the abstract—it is about your site, how you use the pool, how much customization you want, and how your schedule and budget line up. Along the Front Range, Rock N Roll Stoneworks installs [Latham fiberglass pools](/pools-spas/fiberglass-pools) and builds [custom concrete and shotcrete pools](/pools-spas/concrete-shotcrete-pools), and we route homeowners based on those real-world constraints.
+    body: `Choosing a pool type is not about which material is “best” in the abstract, it is about your site, how you use the pool, how much customization you want, and how your schedule and budget line up. Along the Front Range, Rock N Roll Stoneworks installs [Latham fiberglass pools](/pools-spas/fiberglass-pools) and builds [custom concrete and shotcrete pools](/pools-spas/concrete-shotcrete-pools), and we route homeowners based on those real-world constraints.
 
 ## Fiberglass: speed, predictability, and factory quality control
 
@@ -65,13 +65,13 @@ Fiberglass pools arrive as a single engineered shell, craned into an excavated h
 
 ## Shotcrete / concrete: customization and architectural freedom
 
-Custom concrete pools—often shotcrete shells with steel reinforcement—shine when the design is the design: tight urban lots, dramatic depth changes, long benches, integrated spas, perimeter overflows, or a layout that follows an unusual property line. You trade some schedule and complexity for freedom of form and finish.
+Custom concrete pools, often shotcrete shells with steel reinforcement, shine when the design is the design: tight urban lots, dramatic depth changes, long benches, integrated spas, perimeter overflows, or a layout that follows an unusual property line. You trade some schedule and complexity for freedom of form and finish.
 
 **Best concrete fits**: sites where fiberglass models do not match the available footprint, homeowners who want a unique interior finish or tile layout, and projects where the pool is one piece of a larger outdoor living composition (boulder water features, raised bond beams, outdoor kitchens) that all need to tie together structurally.
 
 ## Colorado-specific considerations
 
-**Freeze-thaw and soils**: Colorado’s clay-heavy soils and temperature swings reward careful compaction, drainage, and bond beam / deck integration—regardless of shell type. The shell choice does not remove the need for a disciplined hardscape and deck plan.
+**Freeze-thaw and soils**: Colorado’s clay-heavy soils and temperature swings reward careful compaction, drainage, and bond beam / deck integration, regardless of shell type. The shell choice does not remove the need for a disciplined hardscape and deck plan.
 
 **Altitude and UV**: Decking and coping see intense sun. Lighter paver colors and slip-resistant textures matter for comfort and safety; see our [pool deck paver guide](/blog/pool-deck-paver-options-colorado).
 
@@ -87,7 +87,7 @@ Ready to compare on your lot? [Contact us](/contact) for a free consultation, or
 
 **Do fiberglass pools crack in Colorado freeze-thaw?** Quality fiberglass shells are engineered as a monolithic structure with flexible finishes. Issues more often relate to decking, plumbing, or improper backfill than the shell itself. Concrete pools rely on steel and shotcrete engineering; both systems perform when built to manufacturer and structural specifications.
 
-**Which installs faster?** Fiberglass typically has a shorter on-site construction window because the shell arrives pre-formed. Shotcrete or concrete pools require forming, steel, plumbing, shotcrete placement, and cure cycles before finishes—often a longer build calendar.
+**Which installs faster?** Fiberglass typically has a shorter on-site construction window because the shell arrives pre-formed. Shotcrete or concrete pools require forming, steel, plumbing, shotcrete placement, and cure cycles before finishes, often a longer build calendar.
 
 **Can I get a vanishing edge or fully custom shape with fiberglass?** Fiberglass offers many models and sizes but not unlimited geometry. Complex perimeter overflow or one-of-a-kind outlines are usually better served by a custom concrete or shotcrete pool.`,
   },
@@ -98,7 +98,7 @@ Ready to compare on your lot? [Contact us](/contact) for a free consultation, or
     metaDescription:
       'Realistic fiberglass vs custom pool cost ranges in Colorado, what drives price (access, soils, decking, equipment), and how to compare bids apples-to-apples.',
     excerpt:
-      'Pool quotes vary widely. Here are typical Colorado Front Range budget bands for fiberglass vs custom concrete pools—and the line items that separate a responsible bid from a lowball.',
+      'Pool quotes vary widely. Here are typical Colorado Front Range budget bands for fiberglass vs custom concrete pools, and the line items that separate a responsible bid from a lowball.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
     heroImage: '/images/blog/how-much-does-pool-cost-colorado-front-range.jpg',
@@ -137,7 +137,7 @@ Rock N Roll Stoneworks builds [fiberglass pools](/pools-spas/fiberglass-pools) a
 
 Fiberglass pricing is often easier to bracket because the shell is a defined product. Even so, **site work** (tight gate, rock excavation, groundwater handling), **utility runs**, **heat and automation**, **interior tile and waterline detail**, **cover systems**, and especially **the deck and coping** can swing the total dramatically. A pool without a usable deck is not a finished backyard.
 
-**Rule of thumb**: many residential fiberglass packages we see in our market fall in a broad band from the **mid five figures into the low six figures** all-in depending on those variables—not counting major retaining walls or full outdoor kitchens unless scoped together.
+**Rule of thumb**: many residential fiberglass packages we see in our market fall in a broad band from the **mid five figures into the low six figures** all-in depending on those variables, not counting major retaining walls or full outdoor kitchens unless scoped together.
 
 ## Custom concrete / shotcrete: wider range, more levers
 
@@ -151,13 +151,13 @@ Custom pools inherit every structural decision: depth transitions, benches, spas
 
 **Energy and code**: Heaters, pumps, and panel work must meet current electrical expectations; that is not the line item to value-engineer incorrectly.
 
-**Hardscape integration**: Plan [pool deck pavers](/blog/pool-deck-paver-options-colorado) early so drainage, bond beam height, and future [low-voltage lighting](/services/outdoor-lighting) are coordinated—not retrofitted.
+**Hardscape integration**: Plan [pool deck pavers](/blog/pool-deck-paver-options-colorado) early so drainage, bond beam height, and future [low-voltage lighting](/services/outdoor-lighting) are coordinated, not retrofitted.
 
 ## How to compare bids
 
 Ask each builder to separate **pool structure**, **equipment**, **utilities**, **permits**, and **deck / coping / hardscape**. If one bid assumes you are keeping a giant lawn panel and another assumes a wraparound patio, the totals will never match.
 
-Want numbers for your property? [Contact us](/contact) for a free consultation. Bring a plat if you have one—we will translate your goals into an itemized plan.
+Want numbers for your property? [Contact us](/contact) for a free consultation. Bring a plat if you have one, we will translate your goals into an itemized plan.
 
 ## Frequently Asked Questions
 
@@ -172,7 +172,7 @@ Want numbers for your property? [Contact us](/contact) for a free consultation. 
     title: 'Pool Permits & Inspections in Colorado: What Homeowners Should Expect',
     metaTitle: 'Pool Permits Colorado Guide | Rock N Roll Stoneworks',
     metaDescription:
-      'A practical overview of pool permitting, setbacks, utility locates, and inspections on the Colorado Front Range—without replacing advice from your city or county.',
+      'A practical overview of pool permitting, setbacks, utility locates, and inspections on the Colorado Front Range, without replacing advice from your city or county.',
     excerpt:
       'Every municipality handles pool permits differently. Here is the typical sequence, the inspections that slow schedules, and how to avoid the avoidable delays.',
     datePublished: '2026-05-07',
@@ -202,10 +202,10 @@ Want numbers for your property? [Contact us](/contact) for a free consultation. 
       {
         question: 'Do I need a fence before I can fill the pool?',
         answer:
-          'Most Colorado communities require compliant barriers before final approval or before the pool can be placed into service. Requirements vary by code cycle and jurisdiction—confirm with your local authority.',
+          'Most Colorado communities require compliant barriers before final approval or before the pool can be placed into service. Requirements vary by code cycle and jurisdiction, confirm with your local authority.',
       },
     ],
-    body: `This article is **general guidance**, not legal advice. Your city, county, or water district has the final word on setbacks, barriers, and fees. That said, after years of coordinating pool and hardscape work from Longmont through the north Denver metro, we see the same pattern of questions—and the same preventable delays.
+    body: `This article is **general guidance**, not legal advice. Your city, county, or water district has the final word on setbacks, barriers, and fees. That said, after years of coordinating pool and hardscape work from Longmont through the north Denver metro, we see the same pattern of questions, and the same preventable delays.
 
 ## The usual permit pathway
 
@@ -237,7 +237,7 @@ Rock N Roll Stoneworks often coordinates **deck drainage**, **bond beam coping**
 
 **Why do pool schedules slip even when the weather is fine?** Inspection queues, revised engineering, utility conflicts, and incomplete plan sets are common. Starting utility locates and plan approvals early reduces idle crew time.
 
-**Do I need a fence before I can fill the pool?** Most Colorado communities require compliant barriers before final approval or before the pool can be placed into service. Requirements vary—confirm with your local authority.`,
+**Do I need a fence before I can fill the pool?** Most Colorado communities require compliant barriers before final approval or before the pool can be placed into service. Requirements vary, confirm with your local authority.`,
   },
   {
     slug: 'outdoor-lighting-planning-guide-colorado',
@@ -246,12 +246,12 @@ Rock N Roll Stoneworks often coordinates **deck drainage**, **bond beam coping**
     metaDescription:
       'Low-voltage landscape lighting for Colorado homes: layering light, transformer sizing, wet locations, timers, and what to leave to a licensed electrician.',
     excerpt:
-      'Good outdoor lighting is subtle, safe, and serviceable. Here is how to plan zones around patios, steps, and pools—and why Front Range freeze-thaw favors professional installs.',
+      'Good outdoor lighting is subtle, safe, and serviceable. Here is how to plan zones around patios, steps, and pools, and why Front Range freeze-thaw favors professional installs.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
     heroImage: '/images/blog/outdoor-lighting-planning-guide-colorado.jpg',
     heroAlt:
-      'Paver patio at twilight with warm path lights, uplighting on stone columns and trees—low-voltage outdoor lighting scene',
+      'Paver patio at twilight with warm path lights, uplighting on stone columns and trees, low-voltage outdoor lighting scene',
     category: 'Guides',
     keywords: [
       'low voltage landscape lighting Colorado',
@@ -277,15 +277,15 @@ Rock N Roll Stoneworks often coordinates **deck drainage**, **bond beam coping**
           'Quality brass or copper composite fixtures with sealed gaskets outperform cheap aluminum in UV, hail, and thermal cycling. LEDs themselves last years; the housing determines whether you are replacing fixtures after two winters.',
       },
     ],
-    body: `Outdoor lighting should do three jobs at once: **keep people safe** on steps and walks, **define the architecture** you invested in, and **extend usable hours** without washing out the stars. Along the Front Range, freeze-thaw, hail, and intense UV punish cheap fixtures—so we specify like we mean it.
+    body: `Outdoor lighting should do three jobs at once: **keep people safe** on steps and walks, **define the architecture** you invested in, and **extend usable hours** without washing out the stars. Along the Front Range, freeze-thaw, hail, and intense UV punish cheap fixtures, so we specify like we mean it.
 
 Rock N Roll Stoneworks installs [low-voltage outdoor lighting](/services/outdoor-lighting) as part of patios, retaining walls, water features, and pool environments. Here is how we plan a system that still looks good after a few Colorado winters.
 
 ## Layering: task, focal, and ambient
 
-**Task lighting** answers “can I walk here safely?”—step risers, handrails, and changes in elevation around [paver patios](/services/paver-installations) and pool decks.
+**Task lighting** answers “can I walk here safely?”, step risers, handrails, and changes in elevation around [paver patios](/services/paver-installations) and pool decks.
 
-**Focal lighting** answers “what should the eye notice?”—a stone veneer column, a sculptural tree, or the face of a spillway.
+**Focal lighting** answers “what should the eye notice?”, a stone veneer column, a sculptural tree, or the face of a spillway.
 
 **Ambient fill** is the gentle bounce off ceilings, soffits, or pergolas so the space does not feel like a spotlight interrogation.
 
@@ -301,7 +301,7 @@ Anything near splash water or spray needs appropriate **wet or damp location** h
 
 ## Controls homeowners actually use
 
-Astronomic timers, simple app control, and discrete scene presets beat “everything on one switch.” We like systems you will use after the novelty wears off—especially when paired with [water features](/services/water-features) or fire elements that share evening scenes.
+Astronomic timers, simple app control, and discrete scene presets beat “everything on one switch.” We like systems you will use after the novelty wears off, especially when paired with [water features](/services/water-features) or fire elements that share evening scenes.
 
 ## Dark-sky courtesy
 
@@ -309,7 +309,7 @@ Shielded fixtures, aimed downlight, and lower color temperatures where appropria
 
 ## When to bring in an electrician
 
-Line-voltage bistro drops, panel upgrades, and GFCI protection strategies are licensed electrical work. Low-voltage design still has to respect separation, burial depth, and listing requirements—professional install protects your warranty story.
+Line-voltage bistro drops, panel upgrades, and GFCI protection strategies are licensed electrical work. Low-voltage design still has to respect separation, burial depth, and listing requirements, professional install protects your warranty story.
 
 Planning a patio or pool and want lighting integrated from day one? [Contact us](/contact). If pools are in the mix, pair this read with [pool deck pavers](/blog/pool-deck-paver-options-colorado) and [pool permits](/blog/pool-permits-inspections-colorado-guide).
 
@@ -333,7 +333,7 @@ Planning a patio or pool and want lighting integrated from day one? [Contact us]
     dateModified: '2026-05-07',
     heroImage: '/images/blog/stone-veneer-vs-full-masonry-colorado.jpg',
     heroAlt:
-      'Home exterior with natural stone veneer wainscot on the lower wall and smooth stucco above—craftsman-style Colorado elevation',
+      'Home exterior with natural stone veneer wainscot on the lower wall and smooth stucco above, craftsman-style Colorado elevation',
     category: 'Guides',
     keywords: [
       'stone veneer vs full stone Colorado',
@@ -346,7 +346,7 @@ Planning a patio or pool and want lighting integrated from day one? [Contact us]
       {
         question: 'Is stone veneer just cosmetic?',
         answer:
-          'Adhered veneer is a finish layer over a structural substrate—CMU, framed wall with appropriate sheathing, or cast-in-place concrete. It carries its own weight through anchors and adhesive but does not replace structural design.',
+          'Adhered veneer is a finish layer over a structural substrate, CMU, framed wall with appropriate sheathing, or cast-in-place concrete. It carries its own weight through anchors and adhesive but does not replace structural design.',
       },
       {
         question: 'Can veneer go behind a grill?',
@@ -371,11 +371,11 @@ Adhered veneer is a **thin finish** over a prepared wall. The substrate does the
 
 ## Full masonry: when mass matters
 
-**Seat walls**, **true retaining walls**, **columns** carrying pergola or roof loads, and **pool bond beams** often want concrete masonry or steel-reinforced cores first, with stone as a facing or cap. That is not “veneer instead of structure”—it is structure plus finish.
+**Seat walls**, **true retaining walls**, **columns** carrying pergola or roof loads, and **pool bond beams** often want concrete masonry or steel-reinforced cores first, with stone as a facing or cap. That is not “veneer instead of structure”, it is structure plus finish.
 
 ## Freeze-thaw and Colorado performance
 
-Water that gets **behind** stone and freezes is the enemy—not the stone face itself. Both veneer and full masonry rely on correct **cap flashings**, **weep paths**, and **sealed penetrations** for hose bibs, lighting, and outlets.
+Water that gets **behind** stone and freezes is the enemy, not the stone face itself. Both veneer and full masonry rely on correct **cap flashings**, **weep paths**, and **sealed penetrations** for hose bibs, lighting, and outlets.
 
 ## Cost and schedule
 
@@ -383,7 +383,7 @@ Veneer on a framed kitchen can be quicker than laying full-thickness coursing, b
 
 ## Pairing with the rest of the yard
 
-Veneer columns bookend [paver patios](/services/paver-installations) beautifully. If you are also planning [low-voltage lighting](/blog/outdoor-lighting-planning-guide-colorado), block for conduit and junction locations **before** stone goes up—retrofits are expensive.
+Veneer columns bookend [paver patios](/services/paver-installations) beautifully. If you are also planning [low-voltage lighting](/blog/outdoor-lighting-planning-guide-colorado), block for conduit and junction locations **before** stone goes up, retrofits are expensive.
 
 Questions about veneer on your project? [Contact us](/contact) for a free estimate.
 
@@ -400,14 +400,14 @@ Questions about veneer on your project? [Contact us](/contact) for a free estima
     title: 'Drainage & Flashing Behind Stone Veneer: What Colorado Freeze-Thaw Demands',
     metaTitle: 'Stone Veneer Drainage Flashing Colorado | Rock N Roll Stoneworks',
     metaDescription:
-      'Why weeps, drainage mats, and cap flashing matter behind exterior stone veneer in Colorado—and how improper details lead to spalling, stains, and failed adhesive.',
+      'Why weeps, drainage mats, and cap flashing matter behind exterior stone veneer in Colorado, and how improper details lead to spalling, stains, and failed adhesive.',
     excerpt:
       'Stone faces are only as good as what is behind them. Here is the building-science case for drainage cavities, through-wall flashing, and proper caps on Front Range projects.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
     heroImage: '/images/blog/stone-veneer-drainage-flashing-colorado.jpg',
     heroAlt:
-      'Rain-wet stone veneer wall with sill and flashing detail at a window—moisture management on a residential exterior',
+      'Rain-wet stone veneer wall with sill and flashing detail at a window, moisture management on a residential exterior',
     category: 'Guides',
     keywords: [
       'stone veneer weep holes Colorado',
@@ -425,12 +425,12 @@ Questions about veneer on your project? [Contact us](/contact) for a free estima
       {
         question: 'Are weep screeds required on framed veneer?',
         answer:
-          'Model codes and manufacturer details for adhered veneer require predictable drainage paths at bases and often at heads of openings. Execution varies by assembly—your jurisdiction and engineer of record govern.',
+          'Model codes and manufacturer details for adhered veneer require predictable drainage paths at bases and often at heads of openings. Execution varies by assembly, your jurisdiction and engineer of record govern.',
       },
       {
         question: 'Do outdoor kitchens need a drainage cavity?',
         answer:
-          'Many island builds benefit from ventilated cavities, sleeve penetrations for condensate and utilities, and careful sequencing of WRB behind stone—especially near sinks, ice makers, and coolers.',
+          'Many island builds benefit from ventilated cavities, sleeve penetrations for condensate and utilities, and careful sequencing of WRB behind stone, especially near sinks, ice makers, and coolers.',
       },
     ],
     body: `The pretty part of [stone veneer](/services/stone-veneers) is what you see. The **performance** is almost entirely what you do not: weather-resistive barriers, flashings at openings, weeps, and caps that shed water instead of storing it.
@@ -459,7 +459,7 @@ Islands with grills, sinks, and refrigerators generate **heat, steam, and conden
 
 ## Inspection mindset
 
-When you review bids, ask **how** the contractor handles **penetrations** for [lighting](/services/outdoor-lighting), outlets, and gas lines—not only what stone color they propose.
+When you review bids, ask **how** the contractor handles **penetrations** for [lighting](/services/outdoor-lighting), outlets, and gas lines, not only what stone color they propose.
 
 ## Related reading
 
@@ -469,9 +469,9 @@ Compare assembly types in [stone veneer vs full masonry](/blog/stone-veneer-vs-f
 
 **Why do veneers fail in Colorado?** Trapped moisture behind the face cycles through freeze and thaw, stressing adhesive and mortar. Good details shed water before it becomes a problem.
 
-**Are weep screeds required on framed veneer?** Model codes and manufacturer details for adhered veneer require predictable drainage paths. Execution varies by assembly—your jurisdiction governs.
+**Are weep screeds required on framed veneer?** Model codes and manufacturer details for adhered veneer require predictable drainage paths. Execution varies by assembly, your jurisdiction governs.
 
-**Do outdoor kitchens need a drainage cavity?** Many island builds benefit from ventilated cavities, sleeve penetrations, and careful WRB sequencing—especially near sinks and coolers.`,
+**Do outdoor kitchens need a drainage cavity?** Many island builds benefit from ventilated cavities, sleeve penetrations, and careful WRB sequencing, especially near sinks and coolers.`,
   },
   {
     slug: 'best-time-install-pavers-hardscape-colorado',
@@ -480,7 +480,7 @@ Compare assembly types in [stone veneer vs full masonry](/blog/stone-veneer-vs-f
     metaDescription:
       'When to schedule paver patios, walls, and pool decks on the Front Range: frost, spring mud, monsoon moisture, and how booking early keeps your summer open.',
     excerpt:
-      'Colorado gives you a wide building season if soils are handled correctly—but some windows are easier for compaction, turf repair, and plant establishment. Here is how we calendar work.',
+      'Colorado gives you a wide building season if soils are handled correctly, but some windows are easier for compaction, turf repair, and plant establishment. Here is how we calendar work.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
     heroImage: '/images/blog/best-time-install-pavers-hardscape-colorado.jpg',
@@ -508,7 +508,7 @@ Compare assembly types in [stone veneer vs full masonry](/blog/stone-veneer-vs-f
       {
         question: 'When should I call to get on the summer schedule?',
         answer:
-          'Earlier than you think—quality crews book spring and early summer slots in Q1–Q2. Design, permits, and HOA reviews also consume calendar time before excavation.',
+          'Earlier than you think, quality crews book spring and early summer slots in Q1–Q2. Design, permits, and HOA reviews also consume calendar time before excavation.',
       },
     ],
     body: `If you want a new patio ready for **Memorial Day**, the mistake is calling on Memorial Day. Colorado’s building season is long enough to deliver beautiful [paver work](/services/paver-installations) most of the year, but **soil moisture**, **frost**, and **inspection pacing** still move the practical calendar.
@@ -519,11 +519,11 @@ March through May is when everyone remembers they want a backyard. Subsurface fr
 
 ## Early summer: prime paver weather
 
-Longer days and predictable drying help large patios, [retaining walls](/services/retaining-walls-stairs), and [pool decks](/blog/pool-deck-paver-options-colorado). This is also when HOA and city inspection queues get busy—another reason to start planning early.
+Longer days and predictable drying help large patios, [retaining walls](/services/retaining-walls-stairs), and [pool decks](/blog/pool-deck-paver-options-colorado). This is also when HOA and city inspection queues get busy, another reason to start planning early.
 
 ## Monsoon moisture: manage drainage, not panic
 
-Afternoon storms are normal. The answer is **grading**, **drainage details**, and **proper jointing**—not avoiding July entirely. If your yard is a clay bowl, we solve that in design rather than hoping the weather cooperates.
+Afternoon storms are normal. The answer is **grading**, **drainage details**, and **proper jointing**, not avoiding July entirely. If your yard is a clay bowl, we solve that in design rather than hoping the weather cooperates.
 
 ## Fall: excellent for hardscape, trickier for softscape
 
@@ -531,7 +531,7 @@ Autumn can be ideal for paver and wall work while temperatures remain workable f
 
 ## Winter: staging and exceptions
 
-Frozen ground is a hard stop for **new base excavation** in most cases. We sometimes use winter for design, permits, material orders, and **demolition that does not compromise frost-sensitive adjacent work**—depends on the site.
+Frozen ground is a hard stop for **new base excavation** in most cases. We sometimes use winter for design, permits, material orders, and **demolition that does not compromise frost-sensitive adjacent work**, depends on the site.
 
 ## How to use this for your project
 
@@ -543,7 +543,7 @@ If your goal is **next summer**, call now: design, HOA, and utility locates cons
 
 **Is summer too hot?** We manage hydration on mortared work and adjust jointing timing. Experienced crews work around heat.
 
-**When should I call to get on the summer schedule?** Earlier than you think—quality crews book spring and early summer in Q1–Q2.`,
+**When should I call to get on the summer schedule?** Earlier than you think, quality crews book spring and early summer in Q1–Q2.`,
   },
   {
     slug: 'how-much-does-paver-patio-cost-colorado',
@@ -579,7 +579,7 @@ If your goal is **next summer**, call now: design, HOA, and utility locates cons
       {
         question: 'Is gravel base alone enough on Front Range clay soils?',
         answer:
-          'No. A properly compacted aggregate base engineered to your soil and drainage—sometimes with geotextile—is what keeps pavers from settling. Shallow base work is the most common reason low bids turn into expensive repairs.',
+          'No. A properly compacted aggregate base engineered to your soil and drainage, sometimes with geotextile, is what keeps pavers from settling. Shallow base work is the most common reason low bids turn into expensive repairs.',
       },
       {
         question: 'How long does paver patio installation take?',
@@ -595,7 +595,7 @@ In the Lafayette, Boulder, and Erie area, professionally installed paver patios 
 
 ## Where Front Range Estimates Actually Diverge
 
-Drive times, staging space for pallets, and municipal inspection calendars are not the same on a [Longmont](/service-areas/longmont) infill lot as they are near downtown [Denver](/service-areas/denver) or in south [Littleton](/service-areas/littleton). Boulder County and northern Adams/Broomfield jobs often mean tighter side-yard machine access, clay soils that deserve deeper aggregate lifts, and drainage details that matter after spring foothills runoff. None of that automatically means a higher price—it means your bid should reflect your address, not a generic “Colorado” flyer price.
+Drive times, staging space for pallets, and municipal inspection calendars are not the same on a [Longmont](/service-areas/longmont) infill lot as they are near downtown [Denver](/service-areas/denver) or in south [Littleton](/service-areas/littleton). Boulder County and northern Adams/Broomfield jobs often mean tighter side-yard machine access, clay soils that deserve deeper aggregate lifts, and drainage details that matter after spring foothills runoff. None of that automatically means a higher price, it means your bid should reflect your address, not a generic “Colorado” flyer price.
 
 When you compare proposals, ask whether **permits, utility locates, and inspection pacing** are spelled out for your city. [Lafayette](/service-areas/lafayette), [Erie](/service-areas/erie), [Westminster](/service-areas/westminster), and the [Thornton–Northglenn](/service-areas/thornton-northglenn) corridor can each move a few days differently; we bake realistic mobilization buffers into schedules so paver crews are not idle waiting on paperwork.
 
@@ -631,7 +631,7 @@ The only way to get an accurate estimate for your specific project is an on-site
 
 **Does a paver patio add resale value in Colorado?** Yes. Buyers respond well to durable outdoor living space that survives UV, hail, and freeze-thaw. A well-built paver patio also photographs strongly for listings, which helps first impressions online.
 
-**Is gravel base alone enough on Front Range clay soils?** No. A properly compacted aggregate base engineered to your soil and drainage—sometimes with geotextile—is what keeps pavers from settling. Shallow base work is the most common reason low bids turn into expensive repairs.
+**Is gravel base alone enough on Front Range clay soils?** No. A properly compacted aggregate base engineered to your soil and drainage, sometimes with geotextile, is what keeps pavers from settling. Shallow base work is the most common reason low bids turn into expensive repairs.
 
 **How long does paver patio installation take?** Many residential projects take roughly 3 to 10 working days on site once excavation begins, depending on size, pattern, and weather. Permitting can add time before mobilization; we spell out schedule expectations in writing.`,
   },
@@ -706,7 +706,7 @@ Gas fire features require a licensed plumber for the fuel connection and often a
 
 ## Municipality-Specific Reality on the Front Range
 
-“Colorado” is not one uniform code book. Denver, Boulder County towns, and northern suburbs handle gas-line offsets, property-line setbacks, and accessory structure heights differently for fireplaces versus pits. Properties along the [Thornton–Northglenn](/service-areas/thornton-northglenn) corridor may see different mechanical inspection sequencing than a lot in [Louisville](/service-areas/louisville) or [Superior](/service-areas/superior). If wood is still on the table, rural-adjacent pockets near [Mead–Berthoud](/service-areas/mead-berthoud) are not the same conversation as a zero-lot-line home in [Westminster](/service-areas/westminster). We run permit research for your exact address—not just your ZIP prefix—before we lock fuel type and footprint.
+“Colorado” is not one uniform code book. Denver, Boulder County towns, and northern suburbs handle gas-line offsets, property-line setbacks, and accessory structure heights differently for fireplaces versus pits. Properties along the [Thornton–Northglenn](/service-areas/thornton-northglenn) corridor may see different mechanical inspection sequencing than a lot in [Louisville](/service-areas/louisville) or [Superior](/service-areas/superior). If wood is still on the table, rural-adjacent pockets near [Mead–Berthoud](/service-areas/mead-berthoud) are not the same conversation as a zero-lot-line home in [Westminster](/service-areas/westminster). We run permit research for your exact address, not just your ZIP prefix, before we lock fuel type and footprint.
 
 ## Our Recommendation
 
@@ -783,7 +783,7 @@ For most Colorado homeowners, we recommend starting with a custom gas fire pit i
 
 ## How Micro-Climates Along the Front Range Change Wear Patterns
 
-Wind-exposed lots in [Fort Collins](/service-areas/fort-collins) and [Loveland](/service-areas/loveland) can see more grit blasting joint lines, which matters if you use a glossy topical sealer. [Boulder](/service-areas/boulder) foothills properties may shed surprising sheet flow after fast storms—worth checking downspouts and irrigation spray heads aimed at the pavement. East of I-25 in [Brighton](/service-areas/brighton) or [Firestone and Frederick](/service-areas/firestone-frederick), blowing dust can make light-colored pavers look dull faster; penetrating sealers and sensible cleaning cadence usually beat aggressive acids. If efflorescence shows the first spring after install, it is often seasonal; if it persists past a couple of wet/dry cycles, have the joint activation and irrigation aim reviewed before trying stripper chemistry.
+Wind-exposed lots in [Fort Collins](/service-areas/fort-collins) and [Loveland](/service-areas/loveland) can see more grit blasting joint lines, which matters if you use a glossy topical sealer. [Boulder](/service-areas/boulder) foothills properties may shed surprising sheet flow after fast storms, worth checking downspouts and irrigation spray heads aimed at the pavement. East of I-25 in [Brighton](/service-areas/brighton) or [Firestone and Frederick](/service-areas/firestone-frederick), blowing dust can make light-colored pavers look dull faster; penetrating sealers and sensible cleaning cadence usually beat aggressive acids. If efflorescence shows the first spring after install, it is often seasonal; if it persists past a couple of wet/dry cycles, have the joint activation and irrigation aim reviewed before trying stripper chemistry.
 
 ## When to Call a Pro
 
@@ -1506,12 +1506,12 @@ See also: [Pavers vs. stamped concrete](/blog/pavers-vs-stamped-concrete-colorad
     metaDescription:
       'Why Rock N Roll Stoneworks installs Suncoast Enclosures on the Front Range: louvered roofs, screen rooms, powder-coated aluminum, and how covers pair with pavers, kitchens, and fire features.',
     excerpt:
-      'Colorado weather swings from hail afternoons to blazing high-UV sun. A quality enclosure or patio cover keeps you outside longer—here is why we reach for Suncoast products when the design calls for adjustable shade, screens, or a true three-season room.',
+      'Colorado weather swings from hail afternoons to blazing high-UV sun. A quality enclosure or patio cover keeps you outside longer, here is why we reach for Suncoast products when the design calls for adjustable shade, screens, or a true three-season room.',
     datePublished: '2026-05-07',
     dateModified: '2026-05-07',
     heroImage: '/images/blog/suncoast-enclosures/dsc02374.png',
     heroAlt:
-      'Bronze powder-coated louvered patio cover over tan pavers, circular stone fire pit with glass guard, and wicker seating—Colorado outdoor living',
+      'Bronze powder-coated louvered patio cover over tan pavers, circular stone fire pit with glass guard, and wicker seating, Colorado outdoor living',
     category: 'Guides',
     keywords: [
       'Suncoast Enclosures Colorado',
@@ -1524,12 +1524,12 @@ See also: [Pavers vs. stamped concrete](/blog/pavers-vs-stamped-concrete-colorad
       {
         question: 'What is a louvered roof patio cover?',
         answer:
-          'A louvered roof uses adjustable horizontal blades—usually powder-coated aluminum—that can tilt open for sun and air or close to shed rain. It gives you more control than a fixed open pergola without the full footprint of a traditional room addition.',
+          'A louvered roof uses adjustable horizontal blades, usually powder-coated aluminum, that can tilt open for sun and air or close to shed rain. It gives you more control than a fixed open pergola without the full footprint of a traditional room addition.',
       },
       {
         question: 'Can an enclosure work with an outdoor kitchen?',
         answer:
-          'Yes, when heat clearances, ventilation, and structure loads are planned together. We coordinate footing, utilities, and finish heights so stone veneer, countertops, and cover posts read as one system—not a cover dropped onto a patio as an afterthought.',
+          'Yes, when heat clearances, ventilation, and structure loads are planned together. We coordinate footing, utilities, and finish heights so stone veneer, countertops, and cover posts read as one system, not a cover dropped onto a patio as an afterthought.',
       },
       {
         question: 'Do you install Suncoast products across the Front Range?',
@@ -1537,15 +1537,15 @@ See also: [Pavers vs. stamped concrete](/blog/pavers-vs-stamped-concrete-colorad
           'Rock N Roll Stoneworks is based in Longmont and builds across Boulder County, the northern Denver metro, and nearby communities. Contact us to review your site, HOA requirements, and how a Suncoast system can pair with your pavers, kitchen, or pool deck.',
       },
     ],
-    body: `One of our core jobs as a hardscape and outdoor living contractor is simple to say and hard to execute: **give you a backyard you actually use.** Colorado delivers incredible outdoor days—but also mid-summer intensity, fast-moving thunderstorms, and shoulder-season evenings that cool off quickly. A fixed open pergola helps with shade; a **thoughtful enclosure or engineered cover** helps with *weather*, so the patio stays comfortable when the forecast is not postcard-perfect.
+    body: `One of our core jobs as a hardscape and outdoor living contractor is simple to say and hard to execute: **give you a backyard you actually use.** Colorado delivers incredible outdoor days, but also mid-summer intensity, fast-moving thunderstorms, and shoulder-season evenings that cool off quickly. A fixed open pergola helps with shade; a **thoughtful enclosure or engineered cover** helps with *weather*, so the patio stays comfortable when the forecast is not postcard-perfect.
 
-That is why we install **Suncoast Enclosures** when homeowners want real flexibility: strong closures, clean powder-coated aluminum aesthetics, and a product family wide enough to match how you live—whether that is a **louvered roof**, **screen room**, **retractable screens**, **three-season glass**, or a **residential patio cover** that ties into the architecture of the home. Commercial applications are available as well for builders and property managers with repeatable specs.
+That is why we install **Suncoast Enclosures** when homeowners want real flexibility: strong closures, clean powder-coated aluminum aesthetics, and a product family wide enough to match how you live, whether that is a **louvered roof**, **screen room**, **retractable screens**, **three-season glass**, or a **residential patio cover** that ties into the architecture of the home. Commercial applications are available as well for builders and property managers with repeatable specs.
 
-[[IMG:/images/blog/suncoast-enclosures/dsc02374.png|Louvered bronze patio cover over light tan pavers, circular stone fire pit with glass wind guard, and cushioned wicker seating—adjustable shade over a true outdoor room.]]
+[[IMG:/images/blog/suncoast-enclosures/dsc02374.png|Louvered bronze patio cover over light tan pavers, circular stone fire pit with glass wind guard, and cushioned wicker seating, adjustable shade over a true outdoor room.]]
 
 ## Why “just add a pergola” is not always enough
 
-Open-slat pergolas are beautiful and we still build plenty of wood, aluminum, and hybrid [decks and pergolas](/services/decks-pergolas) when partial shade is the goal. But when you want **rain management**, **afternoon sun control without moving furniture**, or **insect relief** during monsoon season, you need engineered systems with predictable weather performance—not a decorative lattice that looks great in a catalog and leaves you sprinting for the door when the sky opens.
+Open-slat pergolas are beautiful and we still build plenty of wood, aluminum, and hybrid [decks and pergolas](/services/decks-pergolas) when partial shade is the goal. But when you want **rain management**, **afternoon sun control without moving furniture**, or **insect relief** during monsoon season, you need engineered systems with predictable weather performance, not a decorative lattice that looks great in a catalog and leaves you sprinting for the door when the sky opens.
 
 Suncoast’s lineup lets us match the **performance tier** to your budget: fixed patio covers for straightforward shade, louvered assemblies when you want daily adjustability, and screened or glass-forward rooms when you want a near-interior experience without leaving the backyard.
 
@@ -1553,7 +1553,7 @@ Suncoast’s lineup lets us match the **performance tier** to your budget: fixed
 
 “Custom” should not mean vague. On our projects, customization usually shows up as: column placement that clears grill islands and sight lines, beam runs that align with [paver](/services/paver-installations) joints and step transitions, integrated lighting zones (see our [outdoor lighting guide](/blog/outdoor-lighting-planning-guide-colorado)), and finishes that play nicely with [stone veneer](/services/stone-veneers) or stucco returns on the house.
 
-Suncoast’s modularity matters because Colorado lots are rarely flat rectangles. We are often tying a cover into multi-level patios, seat walls, or pool bond beams—coordination that has to be modeled before concrete and footings are poured.
+Suncoast’s modularity matters because Colorado lots are rarely flat rectangles. We are often tying a cover into multi-level patios, seat walls, or pool bond beams, coordination that has to be modeled before concrete and footings are poured.
 
 [[IMG:/images/blog/suncoast-enclosures/dsc02349.png|Low-angle detail of powder-coated aluminum louvered roof: structural corner, partially open blades for drainage and light control, suburban Colorado backdrop.]]
 
@@ -1561,25 +1561,25 @@ Suncoast’s modularity matters because Colorado lots are rarely flat rectangles
 
 We are picky about anything overhead in hail country. Suncoast builds around **durable substrates**: powder-coated aluminum structures for strength-to-weight, **polycarbonate or engineered roof panels** where the design calls for a bright, weather-protected shell, **three-season window options** when you want more enclosure than a screen, and a range of **screen densities** for insects, dust, and pet resistance.
 
-If you select a **louvered roof** on a freestanding patio cover, you get a lightweight assembly that still reads substantial: engineered blades, positive drainage intent, and hardware that is not going to rust through in two winters. Finishes are selected to complement the bronze, charcoal, and warm-gray palettes we see on modern Colorado exteriors—so the cover looks like it belongs with your windows and trim, not like a temporary tent.
+If you select a **louvered roof** on a freestanding patio cover, you get a lightweight assembly that still reads substantial: engineered blades, positive drainage intent, and hardware that is not going to rust through in two winters. Finishes are selected to complement the bronze, charcoal, and warm-gray palettes we see on modern Colorado exteriors, so the cover looks like it belongs with your windows and trim, not like a temporary tent.
 
-[[IMG:/images/blog/suncoast-enclosures/dsc02352.png|Black louvered pergola over stone-veneered outdoor kitchen island, wicker seating, and large-format patio pavers—integrated shade, cooking, and hardscape in one composition.]]
+[[IMG:/images/blog/suncoast-enclosures/dsc02352.png|Black louvered pergola over stone-veneered outdoor kitchen island, wicker seating, and large-format patio pavers, integrated shade, cooking, and hardscape in one composition.]]
 
 ## Pairing enclosures with the rest of your hardscape
 
-The best installs are **one plan**: footings, utilities, and structure loads decided before the [outdoor kitchen](/services/outdoor-kitchens) stone goes up and before final paver bond beams are set. That is especially true if you are also adding a [fire feature](/services/fire-pits-fireplaces) or wrapping a [pool deck](/blog/pool-deck-paver-options-colorado)—any element that changes heat, splash, or egress paths.
+The best installs are **one plan**: footings, utilities, and structure loads decided before the [outdoor kitchen](/services/outdoor-kitchens) stone goes up and before final paver bond beams are set. That is especially true if you are also adding a [fire feature](/services/fire-pits-fireplaces) or wrapping a [pool deck](/blog/pool-deck-paver-options-colorado), any element that changes heat, splash, or egress paths.
 
-We like Suncoast here because the systems are designed for **real outdoor rooms**, not bolt-on accessories. You still get an open-air feel when you want it—screens that retract, louvers that open, doors that slide—but you gain protection when Colorado does what Colorado does.
+We like Suncoast here because the systems are designed for **real outdoor rooms**, not bolt-on accessories. You still get an open-air feel when you want it, screens that retract, louvers that open, doors that slide, but you gain protection when Colorado does what Colorado does.
 
 ## Is a Suncoast system right for your yard?
 
-Start with how you want to use the space: **morning coffee**, **kids’ homework outside**, **evening dinner without moths in the plate**, **watching a storm roll over the foothills without folding the umbrella army**. If those scenarios sound familiar, a cover or enclosure is probably not a luxury add-on—it is the piece that unlocks the investment you already made in pavers, seating, and cooking.
+Start with how you want to use the space: **morning coffee**, **kids’ homework outside**, **evening dinner without moths in the plate**, **watching a storm roll over the foothills without folding the umbrella army**. If those scenarios sound familiar, a cover or enclosure is probably not a luxury add-on, it is the piece that unlocks the investment you already made in pavers, seating, and cooking.
 
 When you are ready, we will walk the site, talk HOA design rules if applicable, and show how a Suncoast specification fits into your broader hardscape scope. [Contact Rock N Roll Stoneworks](/contact) for a free estimate across our [Front Range service areas](/service-areas). Want more seasonal context? Read [best time of year to install pavers and hardscape](/blog/best-time-install-pavers-hardscape-colorado) so sequencing between structure, patio, and plantings stays sane.
 
 ## Frequently Asked Questions
 
-**What is a louvered roof patio cover?** A louvered roof uses adjustable horizontal blades—usually powder-coated aluminum—that can tilt open for sun and air or close to shed rain. It gives you more control than a fixed open pergola without the full footprint of a traditional room addition.
+**What is a louvered roof patio cover?** A louvered roof uses adjustable horizontal blades, usually powder-coated aluminum, that can tilt open for sun and air or close to shed rain. It gives you more control than a fixed open pergola without the full footprint of a traditional room addition.
 
 **Can an enclosure work with an outdoor kitchen?** Yes, when heat clearances, ventilation, and structure loads are planned together. We coordinate footing, utilities, and finish heights so stone, countertops, and cover posts read as one system.
 
@@ -1590,7 +1590,7 @@ When you are ready, we will walk the site, talk HOA design rules if applicable, 
     title: 'Sorensen Property: Stamped Concrete Patio & Xeriscape in Westminster, CO',
     metaTitle: 'Sorensen Westminster Stamped Concrete & Xeriscape | Rock N Roll Stoneworks',
     metaDescription:
-      'Westminster backyard spotlight: two-tier stamped concrete patio, cedar planters, low-water plant palette with Botanical Living, and front-yard stonework—built by Rock N Roll Stoneworks.',
+      'Westminster backyard spotlight: two-tier stamped concrete patio, cedar planters, low-water plant palette with Botanical Living, and front-yard stonework, built by Rock N Roll Stoneworks.',
     excerpt:
       'Lee Sorensen’s Westminster outdoor refresh paired stamped concrete with a water-wise planting plan by Abby Rupsa of Botanical Living. Here is how the patio tiers, side-yard planters, and front entry details came together.',
     datePublished: '2024-04-20',
@@ -1620,14 +1620,14 @@ When you are ready, we will walk the site, talk HOA design rules if applicable, 
       {
         question: 'Do you build stamped concrete patios in other Front Range cities?',
         answer:
-          'Yes. We are based in Longmont and work across the Front Range—see our [Westminster service area](/service-areas/westminster) page and [stamped concrete service](/services/stamped-concrete) for scope, process, and how we pair concrete with drainage on Colorado soils.',
+          'Yes. We are based in Longmont and work across the Front Range, see our [Westminster service area](/service-areas/westminster) page and [stamped concrete service](/services/stamped-concrete) for scope, process, and how we pair concrete with drainage on Colorado soils.',
       },
     ],
-    body: `Lee Sorensen’s home sits in a 38-home neighborhood in Westminster, Colorado. He wanted a backyard oasis that felt finished, invited people to linger, and stayed responsible on water. He teamed up with Abby Rupsa, one of our go-to landscape designers at Botanical Living, for a plan that layered xeric plants, custom cedar planters, and a two-tier [stamped concrete](/services/stamped-concrete) patio. We usually steer homeowners toward Belgard pavers when long-term freeze-thaw performance is the top priority, but Lee appreciated stamped concrete’s value—and with careful grading and jointing, it was the right fit for this yard.
+    body: `Lee Sorensen’s home sits in a 38-home neighborhood in Westminster, Colorado. He wanted a backyard oasis that felt finished, invited people to linger, and stayed responsible on water. He teamed up with Abby Rupsa, one of our go-to landscape designers at Botanical Living, for a plan that layered xeric plants, custom cedar planters, and a two-tier [stamped concrete](/services/stamped-concrete) patio. We usually steer homeowners toward Belgard pavers when long-term freeze-thaw performance is the top priority, but Lee appreciated stamped concrete’s value, and with careful grading and jointing, it was the right fit for this yard.
 
-The planting palette leans low-water and high-impact: aronia, blue oat grass, Manhattan euonymus, dwarf mugo pine, candytuft evergreen, and penstemon—all suited to Colorado’s sunny, drying wind cycles once established. The backyard now reads as a series of outdoor rooms rather than a single slab dropped behind the house.
+The planting palette leans low-water and high-impact: aronia, blue oat grass, Manhattan euonymus, dwarf mugo pine, candytuft evergreen, and penstemon, all suited to Colorado’s sunny, drying wind cycles once established. The backyard now reads as a series of outdoor rooms rather than a single slab dropped behind the house.
 
-[[IMG:/images/blog/sorensen-project/sorensen-08.png|Wide backyard view: two-tier stamped concrete patio, dining under umbrella, lounge seating, hot tub, grill under deck, and lawn—Westminster Sorensen project.]]
+[[IMG:/images/blog/sorensen-project/sorensen-08.png|Wide backyard view: two-tier stamped concrete patio, dining under umbrella, lounge seating, hot tub, grill under deck, and lawn, Westminster Sorensen project.]]
 
 [[IMG:/images/blog/sorensen-project/sorensen-05.png|Stamped concrete patio with outdoor dining set, cushions, and shade umbrella on a bright Colorado day.]]
 
@@ -1635,17 +1635,17 @@ The planting palette leans low-water and high-impact: aronia, blue oat grass, Ma
 
 ## Privacy, planters, and the “hell strip” conversation
 
-Lee wanted privacy along one property line. Abby specified a modest berm planted with **Karl Foerster grass**—about twenty-four inches of lift—to soften views without building a fortress wall. The movement of the grass catches afternoon light and reads modern against the cool gray concrete.
+Lee wanted privacy along one property line. Abby specified a modest berm planted with **Karl Foerster grass**, about twenty-four inches of lift, to soften views without building a fortress wall. The movement of the grass catches afternoon light and reads modern against the cool gray concrete.
 
-[[IMG:/images/blog/sorensen-project/sorensen-01.png|Ornamental grasses and smooth river-rock mulch along planting beds—low-water texture at the property edge.]]
+[[IMG:/images/blog/sorensen-project/sorensen-01.png|Ornamental grasses and smooth river-rock mulch along planting beds, low-water texture at the property edge.]]
 
 Lee is an avid gardener, so pots and seasonal color mattered. Abby suggested stained cedar planters that echo the wood tones of the deck and fence; we built those along the side yard so herbs and annuals sit at waist height where they are easy to water without drowning the xeric beds.
 
-[[IMG:/images/blog/sorensen-project/sorensen-06.png|Gas fire pit table with wooden sling chairs on stamped concrete—one of the backyard gathering zones.]]
+[[IMG:/images/blog/sorensen-project/sorensen-06.png|Gas fire pit table with wooden sling chairs on stamped concrete, one of the backyard gathering zones.]]
 
-The front yard includes a classic “hell strip” between sidewalk and street. Lee hoped to xeriscape that strip differently from the neighbors. HOA timing paused that slice of the project, but Abby is working with the HOA on templates so homeowners can adopt low-water hell strips without guesswork—exactly the kind of neighborhood leadership we like to see on the Front Range.
+The front yard includes a classic “hell strip” between sidewalk and street. Lee hoped to xeriscape that strip differently from the neighbors. HOA timing paused that slice of the project, but Abby is working with the HOA on templates so homeowners can adopt low-water hell strips without guesswork, exactly the kind of neighborhood leadership we like to see on the Front Range.
 
-[[IMG:/images/blog/sorensen-project/sorensen-02.png|Front elevation with landscaped walk-up beds: brick base, siding, and house number 14276—Westminster.]]
+[[IMG:/images/blog/sorensen-project/sorensen-02.png|Front elevation with landscaped walk-up beds: brick base, siding, and house number 14276, Westminster.]]
 
 Warm brick on the home ties to a low segmental wall and cap at the entry walk, so hardscape reads intentional rather than pieced together.
 
@@ -1655,11 +1655,11 @@ Warm brick on the home ties to a low segmental wall and cap at the entry walk, s
 
 Closer to the street, a segmental retaining wall and cap define planting zones, keep mulch and gravel contained, and give the front elevation the same “designed” language as the rear patio. Decorative gravel bands, a young shade tree, and tight irrigation zoning keep maintenance predictable for a busy homeowner.
 
-[[IMG:/images/blog/sorensen-project/sorensen-03.png|Segmental block retaining wall with dark capstone, mulch, shrubs, and purple accents along the walk—Westminster front yard.]]
+[[IMG:/images/blog/sorensen-project/sorensen-03.png|Segmental block retaining wall with dark capstone, mulch, shrubs, and purple accents along the walk, Westminster front yard.]]
 
 ## Takeaways for your own Westminster or Front Range backyard
 
-This project is a strong example of how stamped concrete and disciplined planting can coexist: hardscape carries the geometry, plants carry the softness, and both share the same water budget. If you are weighing materials, start with our [pavers vs. stamped concrete](/blog/pavers-vs-stamped-concrete-colorado) guide, then read [what paver installs fail without](/blog/why-paver-installs-fail-colorado) so you know what “done right” looks like under Colorado soils—whether you ultimately choose pavers or concrete.
+This project is a strong example of how stamped concrete and disciplined planting can coexist: hardscape carries the geometry, plants carry the softness, and both share the same water budget. If you are weighing materials, start with our [pavers vs. stamped concrete](/blog/pavers-vs-stamped-concrete-colorado) guide, then read [what paver installs fail without](/blog/why-paver-installs-fail-colorado) so you know what “done right” looks like under Colorado soils, whether you ultimately choose pavers or concrete.
 
 Ready to talk through your site? [Contact us](/contact) for a free estimate in [Westminster](/service-areas/westminster) and across our [Front Range service areas](/service-areas). Prefer visuals first? Browse the [project gallery](/gallery) for more hardscape and pool work.
 
@@ -1669,7 +1669,7 @@ Ready to talk through your site? [Contact us](/contact) for a free estimate in [
 
 **Who designed the planting plan?** Abby Rupsa of Botanical Living led the planting design and layout. Rock N Roll Stoneworks executed the hardscape, coordinated grades with the planting plan, and built the custom cedar planters along the side yard.
 
-**Do you build stamped concrete patios in other Front Range cities?** Yes. We are based in Longmont and work across the Front Range—see our [Westminster service area](/service-areas/westminster) page and [stamped concrete service](/services/stamped-concrete) for scope, process, and how we pair concrete with drainage on Colorado soils.`,
+**Do you build stamped concrete patios in other Front Range cities?** Yes. We are based in Longmont and work across the Front Range, see our [Westminster service area](/service-areas/westminster) page and [stamped concrete service](/services/stamped-concrete) for scope, process, and how we pair concrete with drainage on Colorado soils.`,
   },
 ];
 
@@ -1681,7 +1681,7 @@ function postRecencyMs(p: BlogPost): number {
   return new Date(p.dateModified).getTime();
 }
 
-/** Same-category posts first (newest first), then other posts by recency — for blog detail “related” rails. */
+/** Same-category posts first (newest first), then other posts by recency, for blog detail “related” rails. */
 export function getRelatedBlogPosts(slug: string, limit = 3): BlogPost[] {
   const current = getBlogPostBySlug(slug);
   if (!current) return [];

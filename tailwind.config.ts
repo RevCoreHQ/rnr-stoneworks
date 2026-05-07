@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand blue — pulled from logo ring (~#1AABE3)
+        // Brand blue, pulled from logo ring (~#1AABE3)
         gold: {
           50:  '#f0f9ff',
           100: '#ddf1fc',
@@ -19,7 +19,7 @@ const config: Config = {
           900: '#082e48',
           950: '#041b2c',
         },
-        // Dark navy — from logo camo darks
+        // Dark navy, from logo camo darks
         ink: {
           50:  '#f3f5f8',
           100: '#e4e9ef',

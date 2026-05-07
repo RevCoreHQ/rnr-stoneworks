@@ -31,7 +31,7 @@ export function PoolFinishSelector({
           title="Interior Finish"
           description={
             poolType === 'concrete'
-              ? 'Choose your pool\'s interior surface — affects color, texture, durability, and cost.'
+              ? 'Choose your pool\'s interior surface, affects color, texture, durability, and cost.'
               : 'Select your fiberglass shell finish.'
           }
         />
